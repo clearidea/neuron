@@ -1,6 +1,5 @@
 # Versions
 
-## 0.50.0 - 2016-09-03
+## 0.50.1 2015-09-03
 
-* First release.
-
+Updates to work with travis-ci.
