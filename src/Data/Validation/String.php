@@ -8,6 +8,11 @@
 
 namespace Neuron\Data\Validation;
 
+/**
+ * Class String
+ * @package Neuron\Data\Validation
+ */
+
 class String
 	extends Validator
 {

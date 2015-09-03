@@ -10,6 +10,11 @@ namespace Neuron\Log\Destination;
 
 use Neuron\Log;
 
+/**
+ * Class Null
+ * @package Neuron\Log\Destination
+ */
+
 class Null
 	extends DestinationBase
 {

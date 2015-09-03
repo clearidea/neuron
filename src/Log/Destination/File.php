@@ -8,6 +8,11 @@ namespace Neuron\Log\Destination;
 
 use \Neuron\Log;
 
+/**
+ * Class File
+ * @package Neuron\Log\Destination
+ */
+
 class File
 	extends DestinationBase
 {

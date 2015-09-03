@@ -12,14 +12,23 @@ use Neuron\Log;
 use Neuron\Util;
 use SebastianBergmann\RecursionContext\Exception;
 
+/**
+ * Class ApplicationBase
+ * @package Neuron
+ */
+
 abstract class ApplicationBase
 	implements Log\ILogger
 {
 	private $_Logger;
+	private $_aParameters;
 
-	//
-	// Logging..
-	//
+	protected function getParameter( $s )
+	{ return $this->_aParameters[ $s ]; }
+
+	/**
+	 * @return Log\Logger
+	 */
 
 	public function getLogger()
 	{
@@ -38,6 +47,10 @@ abstract class ApplicationBase
 	{
 		$this->_Logger->log( get_class( $this ).': '.$s, $iLevel );
 	}
+
+	/**
+	 * @return bool
+	 */
 
 	public function isCommandLine()
 	{
@@ -72,6 +85,11 @@ abstract class ApplicationBase
 		$this->log( 'Application finished '.date( 'Y-m-d H:i:s' ), Log\ILogger::INFO );
 	}
 
+	/**
+	 * @param \Exception $ex
+	 * @return bool
+	 */
+
 	protected function onError( \Exception $ex )
 	{
 		$this->log( get_class( $ex ).', msg: '.$ex->getMessage(), Log\ILogger::ERROR );
@@ -83,8 +101,16 @@ abstract class ApplicationBase
 
 	protected abstract function onRun();
 
-	public function run()
+	public abstract function getVersion();
+
+	/**
+	 * @param array|null $aArgv
+	 */
+
+	public function run( array $aArgv = null )
 	{
+		$this->_aParameters = $aArgv;
+
 		if( !$this->onStart() )
 		{
 			$this->log( "onStart() returned false. Aborting.", Log\ILogger::ERROR );

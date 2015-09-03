@@ -8,6 +8,10 @@
 
 namespace Neuron\Data\Validation;
 
+/**
+ * Class Email
+ * @package Neuron\Data\Validation
+ */
 
 class Email
 	extends Validator

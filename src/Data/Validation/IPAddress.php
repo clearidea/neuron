@@ -8,6 +8,10 @@
 
 namespace Neuron\Data\Validation;
 
+/**
+ * Class IPAddress
+ * @package Neuron\Data\Validation
+ */
 
 class IPAddress
 	extends Validator

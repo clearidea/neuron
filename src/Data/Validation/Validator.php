@@ -8,6 +8,11 @@
 
 namespace Neuron\Data\Validation;
 
+/**
+ * Class Validator
+ * @package Neuron\Data\Validation
+ */
+
 abstract class Validator
 {
 

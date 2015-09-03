@@ -8,6 +8,11 @@
 
 namespace Neuron\Data\Validation;
 
+/**
+ * Class Date
+ * @package Neuron\Data\Validation
+ */
+
 class Date
 	extends Validator
 {

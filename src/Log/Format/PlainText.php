@@ -14,6 +14,11 @@ namespace Neuron\Log\Format;
 
 use \Neuron\Log;
 
+/**
+ * Class PlainText
+ * @package Neuron\Log\Format
+ */
+
 class PlainText
 	implements IFormat
 {

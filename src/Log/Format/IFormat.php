@@ -10,6 +10,11 @@ namespace Neuron\Log\Format;
 
 use \Neuron\Log;
 
+/**
+ * Interface IFormat
+ * @package Neuron\Log\Format
+ */
+
 interface IFormat
 {
 	public static function format( Log\Data $data );

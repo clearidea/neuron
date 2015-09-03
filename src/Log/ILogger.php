@@ -6,6 +6,11 @@
 
 namespace Neuron\Log;
 
+/**
+ * Interface ILogger
+ * @package Neuron\Log
+ */
+
 interface ILogger
 {
 	const DEBUG 	= 0;		// Log all

@@ -7,7 +7,7 @@ class CSVTest extends PHPUnit_Framework_TestCase
 
 	public function testCSV()
 	{
-		$Parser = new Synapse\Parser\CSV;
+		$Parser = new \Neuron\Parser\CSV;
 
 		$aHeaders = array( 'col1', 'col2', 'col3', 'col4' );
 

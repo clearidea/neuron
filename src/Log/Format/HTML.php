@@ -14,6 +14,11 @@ namespace Neuron\Log\Format;
 
 use \Neuron\Log;
 
+/**
+ * Class HTML
+ * @package Neuron\Log\Format
+ */
+
 class HTML
 	implements IFormat
 {

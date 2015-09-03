@@ -7,11 +7,11 @@
  * Sarasota, FL 34231
  *
  * 941-362-1799
- * support@clearidea.us
+ * support@Synapse.us
  *
  ***************************************************************************************************/
 
-namespace ClearIdea\Util;
+namespace Neuron\Util;
 
 
 class Email
@@ -53,7 +53,7 @@ class Email
 		array_push( $this->_aToList, $sAddr );
 	}
 
-	public function getAToList()
+	public function getToList()
 	{
 		return $this->_aToList;
 	}
@@ -67,7 +67,7 @@ class Email
 		array_push( $this->_aCCList, $sAddr );
 	}
 
-	public function getACCList()
+	public function getCCList()
 	{
 		return $this->_aCCList;
 	}
@@ -81,7 +81,7 @@ class Email
 		array_push( $this->_aBCCList, $sAddr );
 	}
 
-	public function getABCCList()
+	public function getBCCList()
 	{
 		return $this->_aBCCList;
 	}
@@ -95,7 +95,7 @@ class Email
 		array_push( $this->_aAttachList, $sFile );
 	}
 
-	public function getAAttachList()
+	public function getAttachList()
 	{
 		return $this->_aAttachList;
 	}
@@ -215,7 +215,7 @@ class Email
 			$this->_sHeaders .= "Content-Type: multipart/mixed;\n" .
 									" boundary=\"{$this->_sMimeBoundry}\"";
 
-			foreach( $this->getAAttachList() as $strName )
+			foreach( $this->getAttachList() as $strName )
 				$message .= $this->getAttachmentCode( $strName );
 		}
 		else
@@ -232,10 +232,10 @@ class Email
 		// Send the message
 
 		$headers .= "From: {$this->getFrom()}\nMIME-Version: 1.0\n";
-		$headers .= "CC: ".$this->getArrayList( $this->getACCList() )."\n";
-		$headers .= "BCC: ".$this->getArrayList( $this->getABCCList() )."\n";
+		$headers .= "CC: ".$this->getArrayList( $this->getCCList() )."\n";
+		$headers .= "BCC: ".$this->getArrayList( $this->getBCCList() )."\n";
 
-		$ret = @mail(	$this->getArrayList( $this->getAToList() ),
+		$ret = @mail(	$this->getArrayList( $this->getToList() ),
 							$this->getSubject(),
 							$message,
 							$headers );

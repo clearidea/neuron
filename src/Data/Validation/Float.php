@@ -8,6 +8,11 @@
 
 namespace Neuron\Data\Validation;
 
+/**
+ * Class Float
+ * @package Neuron\Data\Validation
+ */
+
 class Float
 	extends Validator
 {

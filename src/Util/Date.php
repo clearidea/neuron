@@ -8,8 +8,8 @@
  * Sarasota, FL 34376
  *
  * 800-958-9047
- * info@clearidea.us
- * http://www.clearidea.us
+ * info@Synapse.us
+ * http://www.Synapse.us
  *
  ********************************************************************/
 
@@ -27,6 +27,8 @@
 //////////////////////////////////////////////////////////////////////////
 
 namespace Neuron\Util;
+
+use Neuron\Util;
 
 class Date
 {
@@ -117,7 +119,7 @@ class Date
 	{
 		$dt = date( "Y-m" );
 
-		$days = Date::getDaysInMonth( date( "n" ) );
+		$days = Util\Date::getDaysInMonth( date( "n" ) );
 
 		$dt .= "-".$days;
 
@@ -236,8 +238,8 @@ class Date
 
 	static function diff( $endDate, $beginDate )
 	{
-		$start_date =  Date::dateToJulian( $beginDate );
-		$end_date	=	Date::dateToJulian( $endDate );
+		$start_date =  Util\Date::dateToJulian( $beginDate );
+		$end_date	=	Util\Date::dateToJulian( $endDate );
 
 		return $end_date - $start_date;
 	}

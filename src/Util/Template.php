@@ -9,10 +9,10 @@
 /**
  * Description of Template
  *
- * @author clearideatech
+ * @author Synapsetech
  */
 
-namespace ClearIdea\Util;
+namespace Synapse\Util;
 
 class Template 
 {

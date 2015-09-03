@@ -12,6 +12,11 @@
 
 namespace Neuron\Log;
 
+/**
+ * Class Logger
+ * @package Neuron\Log
+ */
+
 class Logger
 	implements ILogger
 {
@@ -20,40 +25,67 @@ class Logger
 
 	//////////////////////////////////////////////////////////////////////////
 
+	/**
+	 * @param Destination\DestinationBase $Dest
+	 */
+
 	public function setDestination( Destination\DestinationBase $Dest )
 	{ $this->_Destination = $Dest; }
+
+	/**
+	 * @return mixed
+	 */
 
 	public function getDestination()
 	{ return $this->_Destination; }
 
+	/**
+	 * @param $i
+	 */
 
 	public function setRunLevel( $i )
 	{ $this->_iRunLevel = $i; }
+
+	/**
+	 * @return int
+	 */
 
 	public function getRunLevel()
 	{ return $this->_iRunLevel; }
 
 	//////////////////////////////////////////////////////////////////////////
 
+	/**
+	 * @param Destination\DestinationBase $Dest
+	 */
+
 	public function __construct( Destination\DestinationBase $Dest )
 	{
 		$this->setDestination( $Dest );
 	}
+
+	/**
+	 * @return mixed
+	 */
 
 	public function open()
 	{
 		return $this->getDestination()->open();
 	}
 
+	/**
+	 *
+	 */
+
 	public function close()
 	{
 		$this->getDestination()->close();
 	}
 
-	function __destruct()
-	{
-		$this->close();
-	}
+	/**
+	 * @param $s
+	 * @param $iLevel
+	 */
 
 	public function log( $s, $iLevel )
 	{

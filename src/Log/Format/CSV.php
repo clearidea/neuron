@@ -14,6 +14,11 @@ namespace Neuron\Log\Format;
 
 use \Neuron\Log;
 
+/**
+ * Class CSV
+ * @package Neuron\Log\Format
+ */
+
 class CSV
 	implements IFormat
 {

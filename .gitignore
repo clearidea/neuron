@@ -1,9 +1,10 @@
-phpunit.xml
-composer.phar
 composer.lock
 composer-test.lock
 vendor/
 docs/_build
 docs/*.pyc
+docs/phpdoc-cache*
+node_modules
+docs-cache
 .idea
 .DS_STORE

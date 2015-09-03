@@ -15,9 +15,19 @@ namespace Neuron\Log\Destination;
 use \Neuron\Log;
 use \Neuron\Log\Format;
 
+/**
+ * Class DestinationBase
+ * @package Neuron\Log\Destination
+ */
+
 abstract class DestinationBase
 {
 	private $_Format;
+
+	/**
+	 * @param $i
+	 * @return string
+	 */
 
 	public function getLevelText( $i )
 	{
@@ -43,17 +53,41 @@ abstract class DestinationBase
 		}
 	}
 
+	/**
+	 * @param Format\IFormat $Format
+	 */
+
 	public function __construct( Format\IFormat $Format )
 	{
 		$this->setFormat( $Format );
 	}
 
+	/**
+	 * @param Format\IFormat $Format
+	 */
+
 	public function setFormat( Format\IFormat $Format )
 	{ $this->_Format = $Format; }
 
+	/**
+	 * @param $s
+	 * @param Log\Data $Data
+	 * @return mixed
+	 */
+
 	protected abstract function write( $s, Log\Data $Data );
 
+	/**
+	 * @param array $aParams
+	 * @return mixed
+	 */
+
 	public abstract function open( array $aParams );
+
+	/**
+	 * @param $s
+	 * @param $iLevel
+	 */
 
 	public function log( $s, $iLevel )
 	{
