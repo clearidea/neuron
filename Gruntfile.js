@@ -16,8 +16,7 @@ module.exports = function(grunt) {
         dist: {
            options: {
              directory : './src',
-             target : 'docs',
-             cache-folder: 'docs-cache'
+             target : 'docs'
            }
          }
       },
