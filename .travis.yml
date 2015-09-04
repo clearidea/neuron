@@ -8,3 +8,6 @@ php:
 before_script: composer install
 
 script: phpunit --configuration tests/phpunit.xml
+
+notifications:
+  slack: clearidea:UL7PtI529f0u9rcGW108IoE0
