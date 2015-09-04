@@ -10,7 +10,6 @@ namespace Neuron;
 
 use Neuron\Log;
 use Neuron\Util;
-use SebastianBergmann\RecursionContext\Exception;
 
 /**
  * Class ApplicationBase
@@ -21,10 +20,28 @@ abstract class ApplicationBase
 	implements Log\ILogger
 {
 	private $_Logger;
-	private $_aParameters;
+	protected $_aParameters;
+
+	/**
+	 * @return array
+	 *
+	 * returns all parameters
+	 */
+
+	protected function getParameters()
+	{
+		return $this->_aParameters;
+	}
+
+	/**
+	 * @param $s
+	 * @return mixed
+	 */
 
 	protected function getParameter( $s )
-	{ return $this->_aParameters[ $s ]; }
+	{
+		return $this->_aParameters[ $s ];
+	}
 
 	/**
 	 * @return Log\Logger
@@ -78,6 +95,8 @@ abstract class ApplicationBase
 	protected function onStart()
 	{
 		$this->log( 'Application started '.date( 'Y-m-d H:i:s' ), Log\ILogger::INFO );
+
+		return true;
 	}
 
 	protected function onFinish()
@@ -113,7 +132,7 @@ abstract class ApplicationBase
 
 		if( !$this->onStart() )
 		{
-			$this->log( "onStart() returned false. Aborting.", Log\ILogger::ERROR );
+			$this->log( "onStart() returned false. Aborting.", Log\ILogger::FATAL );
 			return;
 		}
 
