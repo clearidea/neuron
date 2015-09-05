@@ -32,6 +32,11 @@ use Neuron\Util;
 
 class Date
 {
+	static function isLeapYear( $iYear )
+	{
+		return ((($iYear % 4) == 0) && ((($iYear % 100) != 0) || (($iYear %400) == 0)));
+	}
+
 	//////////////////////////////////////////////////////////////////////////
 	///
 	/// Returns the current month starting date.
@@ -70,7 +75,7 @@ class Date
 				$days = 31;
 			break;
 			case 2:
-				if( date('L', strtotime( $iYear ) ) )
+				if( self::isLeapYear( $iYear ) )
 					$days = 29;
 				else
 					$days = 28;
