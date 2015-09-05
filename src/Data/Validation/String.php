@@ -14,7 +14,7 @@ namespace Neuron\Data\Validation;
  */
 
 class String
-	extends Validator
+	extends ValidatorBase
 {
 	protected function validate( $s )
 	{

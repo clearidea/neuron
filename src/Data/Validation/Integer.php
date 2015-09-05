@@ -14,7 +14,7 @@ namespace Neuron\Data\Validation;
  */
 
 class Integer
-	extends Validator
+	extends ValidatorBase
 {
 	protected function validate( $i )
 	{

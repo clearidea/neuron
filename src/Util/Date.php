@@ -60,7 +60,7 @@ class Date
 	///	1-31
 	//////////////////////////////////////////////////////////////////////////
 
-	static function getDaysInMonth( $iMonth )
+	static function getDaysInMonth( $iMonth, $iYear = null )
 	{
 		$days = 0;
 
@@ -70,7 +70,10 @@ class Date
 				$days = 31;
 			break;
 			case 2:
-				$days = 28;
+				if( date('L', strtotime( $iYear ) ) )
+					$days = 29;
+				else
+					$days = 28;
 			break;
 			case 3:
 				$days = 31;

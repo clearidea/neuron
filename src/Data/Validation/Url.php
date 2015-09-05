@@ -14,10 +14,10 @@ namespace Neuron\Data\Validation;
  */
 
 class Url
-	extends Validator
+	extends ValidatorBase
 {
 	protected function validate( $s )
 	{
-		return filter_var( $s, FILTER_VALIDATE_URL );
+		return filter_var( $s, FILTER_VALIDATE_URL ) ? true : false;
 	}
 }

@@ -13,7 +13,7 @@ namespace Neuron\Data\Validation;
  * @package Neuron\Data\Validation
  */
 
-abstract class Validator
+abstract class ValidatorBase
 {
 
 	abstract protected function validate( $data );

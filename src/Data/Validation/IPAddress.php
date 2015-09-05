@@ -14,10 +14,10 @@ namespace Neuron\Data\Validation;
  */
 
 class IPAddress
-	extends Validator
+	extends ValidatorBase
 {
 	protected function validate( $s )
 	{
-		return filter_var( $s, FILTER_VALIDATE_IP );
+		return filter_var( $s, FILTER_VALIDATE_IP )? true : false;
 	}
 }
