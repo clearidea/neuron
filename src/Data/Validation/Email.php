@@ -1,16 +1,10 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: lee
- * Date: 3/31/15
- * Time: 1:48 PM
- */
+
 
 namespace Neuron\Data\Validation;
 
 /**
- * Class Email
- * @package Neuron\Data\Validation
+ * Email address validation.
  */
 
 class Email

@@ -1,10 +1,5 @@
 <?php
 
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 
 /**
  * Description of Template
@@ -12,10 +7,16 @@
  * @author Synapsetech
  */
 
-namespace Synapse\Util;
+namespace Neuron\Util;
 
 class Template 
 {
+	/**
+	 * @param $file
+	 * @param $fields
+	 * @return mixed
+	 */
+
 	static function fromFile( $file, $fields )
 	{
 		$file = "templates/$file";
@@ -27,6 +28,12 @@ class Template
 
 		return self::fromText( $text, $fields );
 	}
+
+	/**
+	 * @param $text
+	 * @param $fields
+	 * @return mixed
+	 */
 
 	static function fromText( $text, $fields )
 	{

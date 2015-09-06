@@ -1,16 +1,9 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: lee
- * Date: 3/31/15
- * Time: 1:48 PM
- */
 
 namespace Neuron\Data\Validation;
 
 /**
- * Class Integer
- * @package Neuron\Data\Validation
+ * Integer validation.
  */
 
 class Integer

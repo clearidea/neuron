@@ -16,7 +16,7 @@ module.exports = function(grunt) {
         dist: {
            options: {
              directory : './src',
-             target : 'docs'
+             target : 'doc'
            }
          }
       },

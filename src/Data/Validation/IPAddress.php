@@ -1,16 +1,10 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: lee
- * Date: 3/31/15
- * Time: 1:48 PM
- */
+
 
 namespace Neuron\Data\Validation;
 
 /**
- * Class IPAddress
- * @package Neuron\Data\Validation
+ * IPAddress validation.
  */
 
 class IPAddress

@@ -1,16 +1,9 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: lee
- * Date: 3/31/15
- * Time: 1:48 PM
- */
 
 namespace Neuron\Data\Validation;
 
 /**
- * Class Date
- * @package Neuron\Data\Validation
+ * Date validation.
  */
 
 class Date
@@ -23,6 +16,10 @@ class Date
 		$d = \DateTime::createFromFormat( $this->_sFormat, $date );
 		return $d && $d->format( $this->_sFormat ) == $date;
 	}
+
+	/**
+	 * @param $sFormat Specify the date format to validate to. Defaults to Y-m-d
+	 */
 
 	public function setFormat( $sFormat )
 	{

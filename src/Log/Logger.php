@@ -13,7 +13,7 @@
 namespace Neuron\Log;
 
 /**
- * Class Logger
+ * Class for writing formatted output to specific destinations.
  * @package Neuron\Log
  */
 

@@ -1,16 +1,9 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: lee
- * Date: 3/31/15
- * Time: 1:44 PM
- */
 
 namespace Neuron\Data\Validation;
 
 /**
- * Class Validator
- * @package Neuron\Data\Validation
+ * Validator base class.
  */
 
 abstract class ValidatorBase
@@ -20,6 +13,11 @@ abstract class ValidatorBase
 
 	public function __construct()
 	{}
+
+	/**
+	 * @param $data
+	 * @return bool
+	 */
 
 	public function isValid( $data )
 	{
