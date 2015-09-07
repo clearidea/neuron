@@ -1,22 +1,11 @@
 <?php
 
-/*
- *
- */
-
-//////////////////////////////////////////////////////////////////////////////
-//
-// Outputs to screen in html format.
-//
-//////////////////////////////////////////////////////////////////////////////
-
 namespace Neuron\Log\Format;
 
-use \Neuron\Log;
+use Neuron\Log;
 
 /**
- * Class HTML
- * @package Neuron\Log\Format
+ * Formats log data as html.
  */
 
 class HTML

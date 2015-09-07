@@ -19,6 +19,11 @@ interface ILogger
 	const ERROR		= 30;		// Log error
 	const FATAL		= 40;		// Log fatal
 
+	/**
+	 * @param $s
+	 * @param $iLevel
+	 */
+
 	public function log( $s, $iLevel );
 }
 ?>

@@ -1,16 +1,12 @@
 <?php
 
-/*
- *
- */
-
 namespace Neuron\Log\Destination;
 
-use \Neuron\Log;
+use Neuron\Log;
 
 /**
- * Class File
- * @package Neuron\Log\Destination
+ * Writes log data to a file.
+ * Use the 'file_name' parameter in the open param array.
  */
 
 class File

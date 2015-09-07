@@ -1,10 +1,4 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: lee
- * Date: 8/31/15
- * Time: 6:00 PM
- */
 
 namespace Neuron;
 
@@ -12,9 +6,9 @@ use Neuron\Log;
 use Neuron\Util;
 
 /**
- * Class ApplicationBase
- * @package Neuron
+ * Defines base functionality for applications.
  */
+
 
 abstract class ApplicationBase
 	implements Log\ILogger
@@ -56,8 +50,8 @@ abstract class ApplicationBase
 	 * @param $s
 	 * @param int $iLevel
 	 *
-	 * Writes to the log file. Defaults to debug mode.
-	 * Data is only written to the log based on teh current run-level.
+	 * Writes to the logger. Defaults to debug mode.
+	 * Data is only written to the log based on the loggers run-level.
 	 */
 
 	public function log( $s, $iLevel = self::DEBUG )

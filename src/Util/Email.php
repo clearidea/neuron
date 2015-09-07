@@ -2,7 +2,6 @@
 
 namespace Neuron\Util;
 
-
 class Email
 {
 	const EMAIL_TEXT = 0;

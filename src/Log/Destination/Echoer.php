@@ -1,18 +1,11 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: lee
- * Date: 9/5/15
- * Time: 1:43 PM
- */
 
 namespace Neuron\Log\Destination;
 
 use Neuron\Log;
 
 /**
- * Class Echo
- * @package Neuron\Log\Destination
+ * Outputs information using the php echo command. (non stdout)
  */
 
 class Echoer

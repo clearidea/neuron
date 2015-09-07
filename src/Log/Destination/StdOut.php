@@ -1,18 +1,11 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: lee
- * Date: 8/18/15
- * Time: 5:26 PM
- */
 
 namespace Neuron\Log\Destination;
 
-use \Neuron\Log;
+use Neuron\Log;
 
 /**
- * Class StdOut
- * @package Neuron\Log\Destination
+ * Outputs to stdout
  */
 
 class StdOut

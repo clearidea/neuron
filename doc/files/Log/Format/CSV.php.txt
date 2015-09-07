@@ -1,22 +1,11 @@
 <?php
 
-/*
- *
- */
-
-//////////////////////////////////////////////////////////////////////////////
-//
-// Outputs to screen in plaintext format.
-//
-//////////////////////////////////////////////////////////////////////////////
-
 namespace Neuron\Log\Format;
 
-use \Neuron\Log;
+use Neuron\Log;
 
 /**
- * Class CSV
- * @package Neuron\Log\Format
+ * Formats log data into a CSV format.
  */
 
 class CSV

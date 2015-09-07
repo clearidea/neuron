@@ -1,12 +1,5 @@
 <?php
 
-
-/**
- * Description of Template
- *
- * @author Synapsetech
- */
-
 namespace Neuron\Util;
 
 class Template 

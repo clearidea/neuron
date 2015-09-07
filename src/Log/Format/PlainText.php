@@ -1,22 +1,11 @@
 <?php
 
-/*
- *
- */
-
-//////////////////////////////////////////////////////////////////////////////
-//
-// Outputs to screen in plaintext format.
-//
-//////////////////////////////////////////////////////////////////////////////
-
 namespace Neuron\Log\Format;
 
 use \Neuron\Log;
 
 /**
- * Class PlainText
- * @package Neuron\Log\Format
+ * Formats data as plain text.
  */
 
 class PlainText
