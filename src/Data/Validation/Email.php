@@ -1,23 +1,17 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: lee
- * Date: 3/31/15
- * Time: 1:48 PM
- */
+
 
 namespace Neuron\Data\Validation;
 
 /**
- * Class Email
- * @package Neuron\Data\Validation
+ * Email address validation.
  */
 
 class Email
-	extends Validator
+	extends ValidatorBase
 {
 	protected function validate( $s )
 	{
-		return filter_var( $s, FILTER_VALIDATE_EMAIL );
+		return filter_var( $s, FILTER_VALIDATE_EMAIL ) ? true : false;
 	}
 }

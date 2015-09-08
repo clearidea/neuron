@@ -1,20 +1,13 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: lee
- * Date: 3/31/15
- * Time: 1:48 PM
- */
 
 namespace Neuron\Data\Validation;
 
 /**
- * Class String
- * @package Neuron\Data\Validation
+ * String string validation.
  */
 
 class String
-	extends Validator
+	extends ValidatorBase
 {
 	protected function validate( $s )
 	{

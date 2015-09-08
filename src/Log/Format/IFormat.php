@@ -1,18 +1,11 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: lee
- * Date: 8/18/15
- * Time: 4:44 PM
- */
 
 namespace Neuron\Log\Format;
 
-use \Neuron\Log;
+use Neuron\Log;
 
 /**
  * Interface IFormat
- * @package Neuron\Log\Format
  */
 
 interface IFormat

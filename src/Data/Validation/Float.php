@@ -1,23 +1,16 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: lee
- * Date: 3/31/15
- * Time: 1:48 PM
- */
 
 namespace Neuron\Data\Validation;
 
 /**
- * Class Float
- * @package Neuron\Data\Validation
+ * Floating point validation.
  */
 
 class Float
-	extends Validator
+	extends ValidatorBase
 {
 	protected function validate( $f )
 	{
-		return is_int( $f + 0 );
+		return is_float( $f );
 	}
 }

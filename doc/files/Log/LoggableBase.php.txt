@@ -1,10 +1,4 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: lee
- * Date: 8/26/15
- * Time: 4:13 PM
- */
 
 namespace Neuron\Log;
 
@@ -13,10 +7,18 @@ class LoggableBase
 {
 	private $_Logger;
 
+	/**
+	 * @param Logger $Logger
+	 */
+
 	public function __construct( Logger $Logger )
 	{
 		$this->_Logger = $Logger;
 	}
+
+	/**
+	 * @return Logger
+	 */
 
 	public function getLogger()
 	{
@@ -26,9 +28,6 @@ class LoggableBase
 	/**
 	 * @param $s
 	 * @param int $iLevel
-	 *
-	 * Writes to the log file. Defaults to debug mode.
-	 * Data is only written to the log based on teh current run-level.
 	 */
 
 	public function log( $s, $iLevel = self::DEBUG )

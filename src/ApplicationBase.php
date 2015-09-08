@@ -1,30 +1,41 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: lee
- * Date: 8/31/15
- * Time: 6:00 PM
- */
 
 namespace Neuron;
 
 use Neuron\Log;
 use Neuron\Util;
-use SebastianBergmann\RecursionContext\Exception;
 
 /**
- * Class ApplicationBase
- * @package Neuron
+ * Defines base functionality for applications.
  */
+
 
 abstract class ApplicationBase
 	implements Log\ILogger
 {
-	private $_Logger;
-	private $_aParameters;
+	private		$_Logger;
+	protected	$_aParameters;
+
+	/**
+	 * @return array
+	 *
+	 * returns parameters passed to the run method.
+	 */
+
+	protected function getParameters()
+	{
+		return $this->_aParameters;
+	}
+
+	/**
+	 * @param $s
+	 * @return mixed
+	 */
 
 	protected function getParameter( $s )
-	{ return $this->_aParameters[ $s ]; }
+	{
+		return $this->_aParameters[ $s ];
+	}
 
 	/**
 	 * @return Log\Logger
@@ -39,8 +50,8 @@ abstract class ApplicationBase
 	 * @param $s
 	 * @param int $iLevel
 	 *
-	 * Writes to the log file. Defaults to debug mode.
-	 * Data is only written to the log based on teh current run-level.
+	 * Writes to the logger. Defaults to debug level.
+	 * Data is only written to the log based on the loggers run-level.
 	 */
 
 	public function log( $s, $iLevel = self::DEBUG )
@@ -57,9 +68,9 @@ abstract class ApplicationBase
 		return Util\System::isCommandLine();
 	}
 
-	//
-	//
-	//
+	/**
+	 *  Creates and configures the default logger.
+	 */
 
 	public function __construct()
 	{
@@ -71,14 +82,23 @@ abstract class ApplicationBase
 		$this->_Logger = $Logger;
 	}
 
-	//
-	// Application mechanics..
-	//
+	/**
+	 * @return bool
+	 *
+	 * Called before onRun. If false is returned, application terminates
+	 * without executing onRun.
+	 */
 
 	protected function onStart()
 	{
 		$this->log( 'Application started '.date( 'Y-m-d H:i:s' ), Log\ILogger::INFO );
+
+		return true;
 	}
+
+	/**
+	 * Called immediately after onRun.
+	 */
 
 	protected function onFinish()
 	{
@@ -88,6 +108,7 @@ abstract class ApplicationBase
 	/**
 	 * @param \Exception $ex
 	 * @return bool
+	 * Called for any unhandled exceptions.
 	 */
 
 	protected function onError( \Exception $ex )
@@ -99,7 +120,18 @@ abstract class ApplicationBase
 		return true;
 	}
 
+	/**
+	 * @return mixed
+	 * Must be implemented by derived classes.
+	 */
+
 	protected abstract function onRun();
+
+	/**
+	 * @return string
+	 * Application version number.
+	 * Must be implemented by derived classes.
+	 */
 
 	public abstract function getVersion();
 
@@ -113,7 +145,7 @@ abstract class ApplicationBase
 
 		if( !$this->onStart() )
 		{
-			$this->log( "onStart() returned false. Aborting.", Log\ILogger::ERROR );
+			$this->log( "onStart() returned false. Aborting.", Log\ILogger::FATAL );
 			return;
 		}
 

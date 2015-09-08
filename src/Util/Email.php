@@ -1,18 +1,6 @@
 <?php
 
-/****************************************************************************************************
- *
- * Clear Idea Labs, LLC
- * 2627 Mall Drive
- * Sarasota, FL 34231
- *
- * 941-362-1799
- * support@Synapse.us
- *
- ***************************************************************************************************/
-
 namespace Neuron\Util;
-
 
 class Email
 {
@@ -32,77 +20,97 @@ class Email
 
 	private $_type = Email::EMAIL_HTML;
 
-	//
-	// Type..
-	//
+	/**
+	 * @param $type
+	 */
 
 	public function setType( $type )
 	{
 		$this->_type = $type;
 	}
 
+	/**
+	 * @return int
+	 */
+
 	public function getType()
 	{ return $this->_type; }
 
-	//
-	// To..
-	//
+	/**
+	 * @param $sAddr
+	 */
 
 	public function addTo( $sAddr )
 	{
 		array_push( $this->_aToList, $sAddr );
 	}
 
+	/**
+	 * @return array
+	 */
+
 	public function getToList()
 	{
 		return $this->_aToList;
 	}
 
-	//
-	// CC..
-	//
+	/**
+	 * @param $sAddr
+	 */
 
 	public function addCC( $sAddr )
 	{
 		array_push( $this->_aCCList, $sAddr );
 	}
 
+	/**
+	 * @return array
+	 */
+
 	public function getCCList()
 	{
 		return $this->_aCCList;
 	}
 
-	//
-	// BCC..
-	//
+	/**
+	 * @param $sAddr
+	 */
 
 	public function addBCC( $sAddr )
 	{
 		array_push( $this->_aBCCList, $sAddr );
 	}
 
+	/**
+	 * @return array
+	 */
+
 	public function getBCCList()
 	{
 		return $this->_aBCCList;
 	}
 
-	//
-	// Attachments..
-	//
+	/**
+	 * @param $sFile
+	 */
 
 	public function attachFile( $sFile )
 	{
 		array_push( $this->_aAttachList, $sFile );
 	}
 
+	/**
+	 * @return array
+	 */
+
 	public function getAttachList()
 	{
 		return $this->_aAttachList;
 	}
 
-	//
-	// From..
-	//
+	/**
+	 * @param $sFrom
+	 */
 
 	public function setFrom( $sFrom )
 	{
@@ -114,35 +122,46 @@ class Email
 		return $this->_sFrom;
 	}
 
-	//
-	// Subject..
-	//
+	/**
+	 * @param $sSubject
+	 */
 
 	public function setSubject( $sSubject )
 	{
 		$this->_sSubject = $sSubject;
 	}
 
+	/**
+	 * @return mixed
+	 */
+
 	public function getSubject()
 	{
 		return $this->_sSubject;
 	}
 
-	//
-	// Body..
-	//
+	/**
+	 * @param $sBody
+	 */
 
 	public function setBody( $sBody )
 	{
 		$this->_sBody = $sBody;
 	}
 
+	/**
+	 * @return mixed
+	 */
+
 	public function getBody()
 	{
 		return $this->_sBody;
 	}
 
-	//
+	/**
+	 * @param $arr
+	 * @return string
+	 */
 
 	protected function getArrayList( $arr )
 	{
@@ -156,6 +175,11 @@ class Email
 		}
 		return $sList;
 	}
+
+	/**
+	 * @param $sName
+	 * @return string
+	 */
 
 	protected function getAttachmentCode( $sName )
 	{
@@ -198,9 +222,9 @@ class Email
 		return $message;
 	}
 
-	//
-	// Send..
-	//
+	/**
+	 * @return bool
+	 */
 
 	public function send()
 	{

@@ -1,24 +1,5 @@
 <?php
-/*******************************************************************
- *
- * Copyright (c) 2009 Clear Idea Technology, Inc.
- *
- * Clear Idea Technology, Inc.
- * PO Box 18514
- * Sarasota, FL 34376
- *
- * 800-958-9047
- * info@Synapse.us
- * http://www.Synapse.us
- *
- ********************************************************************/
 
-//////////////////////////////////////////////////////////////////////////
-///
-/// @file
-/// Date & Time related functions.
-///
-//////////////////////////////////////////////////////////////////////////
 
 
 //////////////////////////////////////////////////////////////////////////
@@ -32,6 +13,11 @@ use Neuron\Util;
 
 class Date
 {
+	static function isLeapYear( $iYear )
+	{
+		return ((($iYear % 4) == 0) && ((($iYear % 100) != 0) || (($iYear %400) == 0)));
+	}
+
 	//////////////////////////////////////////////////////////////////////////
 	///
 	/// Returns the current month starting date.
@@ -60,7 +46,7 @@ class Date
 	///	1-31
 	//////////////////////////////////////////////////////////////////////////
 
-	static function getDaysInMonth( $iMonth )
+	static function getDaysInMonth( $iMonth, $iYear = null )
 	{
 		$days = 0;
 
@@ -70,7 +56,10 @@ class Date
 				$days = 31;
 			break;
 			case 2:
-				$days = 28;
+				if( self::isLeapYear( $iYear ) )
+					$days = 29;
+				else
+					$days = 28;
 			break;
 			case 3:
 				$days = 31;
