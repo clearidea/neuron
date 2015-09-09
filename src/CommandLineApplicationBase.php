@@ -79,12 +79,15 @@ abstract class CommandLineApplicationBase
 
 	protected function help()
 	{
-		echo get_class( $this )."\n";
+		echo basename( $_SERVER['PHP_SELF'], '.php' )."\n";
 		echo 'v'.$this->getVersion()."\n";
+		echo "Switches:\n";
+		$aHandlers = $this->getHandlers();
+		ksort( $aHandlers );
 
-		foreach( $this->getHandlers() as $sSwitch => $aInfo )
+		foreach( $aHandlers as $sSwitch => $aInfo )
 		{
-			echo "$sSwitch\t\t$aInfo[description]\n";
+			echo str_pad( $sSwitch, 20 )."$aInfo[description]\n";
 		}
 	}
 

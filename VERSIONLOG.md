@@ -1,6 +1,9 @@
 # Versions
 
-## 0.5.5 0215-09-08
+## 0.5.6 2015-09-09
+* Cleanup of --help information for commandline applications.
+
+## 0.5.5 2015-09-08
 * More unit tests.
 * Beginning of examples.
 * Updates to CommandlineApplication.
