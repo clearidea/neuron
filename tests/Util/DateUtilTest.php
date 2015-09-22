@@ -37,6 +37,15 @@ class DateUtilTest extends PHPUnit_Framework_TestCase
 		$this->assertTrue(
 			Neuron\Util\Date::diff( date( 'Y-m-d' ), date( 'Y-m-d', strtotime( "-30 days" ) ) ) == 30
 		);
+
+		$this->assertTrue(
+			Neuron\Util\Date::subtractDays( 8, '2015-01-30' ) == '2015-01-22'
+		);
+
+		$this->assertFalse(
+			Neuron\Util\Date::subtractDays( 8, '2015-01-30' ) == '2015-01-21'
+		);
+
 	}
 
 	protected function tearDown()
