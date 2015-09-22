@@ -1,6 +1,6 @@
 # Versions
 
-## 0.5.8
+## 0.5.8 2015-09-22
 * Added Date::subtractDays
 
 ## 0.5.7
