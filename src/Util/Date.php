@@ -26,7 +26,7 @@ class Date
 	/**
 	 * @param $iDays
 	 * @param string $sDate
-	 * @return bool|string
+	 * @return bool|string - new date
 	 */
 
 	static function subtractDays( $iDays, $sDate = '' )
