@@ -1,5 +1,8 @@
 # Versions
 
+## 0.5.9 2015-09-24
+* Fixed missing $ in subtractDays.
+
 ## 0.5.8 2015-09-22
 * Added Date::subtractDays
 
