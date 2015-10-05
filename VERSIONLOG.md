@@ -1,5 +1,8 @@
 # Versions
 
+## 0.5.10 2015-10-04
+* Fixed random text in ISettingSource.php
+
 ## 0.5.9 2015-09-24
 * Fixed missing $ in subtractDays.
 
