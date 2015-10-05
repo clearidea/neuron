@@ -5,7 +5,7 @@
  */
 
 namespace Neuron\Setting\Source;
-cd
+
 interface ISettingSource
 {
 	public function get( $sSection, $sName );

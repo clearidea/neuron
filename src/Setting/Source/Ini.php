@@ -43,6 +43,11 @@ class Ini
 	{
 		return array_keys( $this->_aSettings[ $sSection ] );
 	}
+
+	public function save()
+	{
+		return false;
+	}
 }
 
 ?>

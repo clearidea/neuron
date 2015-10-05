@@ -4,23 +4,24 @@ namespace Neuron\Log\Destination;
 
 use Neuron\Log;
 
-/**
- * Outputs to stdout
- */
+// todo: webservice..
 
-class StdOut
+class WebService
 	extends DestinationBase
 {
+	private $_sEndPoint;
+
 	public function open( array $aParams )
-	{ return true; }
+	{
+		$this->_sEndPoint = $aParams[ 'endpoint' ];
+		return true;
+	}
 
 	public function close()
-	{}
+	{
+	}
 
 	public function write( $s, Log\Data $Data )
 	{
-		if(!defined('STDOUT')) define('STDOUT', fopen('php://stdout', 'w'));
-
-		fwrite( STDOUT, $s."\r\n" );
 	}
 }

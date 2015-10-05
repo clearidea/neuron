@@ -12,7 +12,9 @@ abstract class ValidatorBase
 	abstract protected function validate( $data );
 
 	public function __construct()
-	{}
+	{
+		return $this;
+	}
 
 	/**
 	 * @param $data
