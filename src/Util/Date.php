@@ -31,7 +31,7 @@ class Date
 
 	static function subtractDays( $iDays, $sDate = '' )
 	{
-		if( !sDate )
+		if( !$sDate )
 		{
 			$sDate = date( 'Y-m-d' );
 		}
