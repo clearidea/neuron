@@ -1,5 +1,9 @@
 # Versions
 
+## 0.5.11 2015-11-23
+* Added IApplication
+* Added application settings.
+
 ## 0.5.10 2015-10-04
 * Fixed random text in ISettingSource.php
 
