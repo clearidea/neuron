@@ -11,10 +11,21 @@ use Neuron\Util;
 
 
 abstract class ApplicationBase
-	implements Log\ILogger
+	implements IApplication
 {
 	private		$_Logger;
 	protected	$_aParameters;
+	protected	$_aSettings;
+
+	public function getSetting( $sName, $sSection = 'default' )
+	{
+		return $this->_aSettings[ $sSection ][ $sName ];
+	}
+
+	public function setSetting( $sName, $sValue, $sSection = 'default' )
+	{
+		$this->_aSettings[ $sSection ][ $sName ] = $sValue;
+	}
 
 	/**
 	 * @return array
@@ -32,7 +43,7 @@ abstract class ApplicationBase
 	 * @return mixed
 	 */
 
-	protected function getParameter( $s )
+	public function getParameter( $s )
 	{
 		return $this->_aParameters[ $s ];
 	}
