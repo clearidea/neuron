@@ -1,5 +1,8 @@
 # Versions
 
+## 0.5.12 2015-11-23
+* Fix (again) for subtract days.
+
 ## 0.5.11 2015-11-23
 * Added IApplication
 * Added application settings.
