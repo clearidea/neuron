@@ -1,6 +1,6 @@
 # Versions
 
-## 0.5.13
+## 0.5.13 0215-11-25
 
 * Adds initial H\Error class.
 
