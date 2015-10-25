@@ -1,5 +1,9 @@
 # Versions
 
+## 0.5.13
+
+* Adds initial H\Error class.
+
 ## 0.5.12 2015-11-23
 * Fix (again) for subtract days.
 
