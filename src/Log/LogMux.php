@@ -16,6 +16,8 @@ class LogMux
 
 	/**
 	 * @param ILogger $Log
+	 *
+	 * todo: add ability to map loggers to different levels.
 	 */
 
 	public function addLog( ILogger $Log )

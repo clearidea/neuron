@@ -1,13 +1,17 @@
 # Versions
 
-## 0.5.13 0215-11-25
+## 0.5.14 2015-11-09
+
+* Adds LastFirstMI parser.
+
+## 0.5.13 2015-10-25
 
 * Adds initial H\Error class.
 
-## 0.5.12 2015-11-23
+## 0.5.12 2015-10-23
 * Fix (again) for subtract days.
 
-## 0.5.11 2015-11-23
+## 0.5.11 2015-10-23
 * Added IApplication
 * Added application settings.
 
