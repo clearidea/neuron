@@ -14,7 +14,7 @@ class LogMux
 {
 	const LOG_ALL = 100;
 
-	private $_aLogs = array();
+	private $_aLogs = [];
 
 	/**
 	 * @param ILogger $Log
@@ -25,6 +25,19 @@ class LogMux
 	{
 		$this->_aLogs[ $iLevel ][] = $Log;
 	}
+
+	/**
+	 * Clears all attached logs.
+	 */
+
+	public function reset()
+	{
+		$this->_aLogs = [];
+	}
+
+	/**
+	 * @param $iLevel
+	 */
 
 	public function setRunLevel( $iLevel )
 	{
