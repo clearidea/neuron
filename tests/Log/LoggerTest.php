@@ -16,7 +16,8 @@ class LoggerTest
 	{
 		$this->_Logger = new Neuron\Log\Logger(
 			new Neuron\Log\Destination\Echoer(
-				new Neuron\Log\Format\PlainText() )
+				new Neuron\Log\Format\PlainText()
+			)
 		);
 	}
 

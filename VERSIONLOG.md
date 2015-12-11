@@ -1,5 +1,11 @@
 # Versions
 
+## 0.5.15 2015-12-11
+
+* Adds LogMux and the ability to map logs to different levels.
+* Adds LogMux unit test.
+* Adds a parameter to the plain text log constructor to disable the timestamp.
+
 ## 0.5.14 2015-11-09
 
 * Adds LastFirstMI parser.
