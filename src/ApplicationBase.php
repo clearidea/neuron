@@ -86,11 +86,12 @@ abstract class ApplicationBase
 	public function __construct()
 	{
 		$Destination	= new Log\Destination\StdOut( new Log\Format\PlainText );
-		$Logger 			= new Log\Logger( $Destination );
+		$Log 				= new Log\Logger( $Destination );
 
-		$Logger->setRunLevel( $Logger::DEBUG );
+		$Log->setRunLevel( $Log::DEBUG );
 
-		$this->_Logger = $Logger;
+		$this->_Logger = new Log\LogMux();
+		$this->_Logger->addLog( $Log );
 	}
 
 	/**
