@@ -1,5 +1,8 @@
 # Versions
 
+## 0.5.16
+
+
 ## 0.5.15 2015-12-11
 
 * Adds LogMux and the ability to map logs to different levels.
