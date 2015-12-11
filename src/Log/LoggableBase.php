@@ -35,4 +35,28 @@ class LoggableBase
 		$this->_Logger->log( get_class( $this ).': '.$s, $iLevel );
 	}
 
+	public function debug( $s )
+	{
+		$this->debug( $s );
+	}
+
+	public function info( $s )
+	{
+		$this->info( $s );
+	}
+
+	public function warning( $s )
+	{
+		$this->warning( $s );
+	}
+
+	public function error( $s )
+	{
+		$this->error( $s );
+	}
+
+	public function fatal( $s )
+	{
+		$this->fatal( $s );
+	}
 }

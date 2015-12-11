@@ -83,6 +83,32 @@ class Logger
 			$this->getDestination()->log( $s, $iLevel );
 		}
 	}
+
+	public function debug( $s )
+	{
+		$this->log( $s, self::DEBUG );
+	}
+
+	public function info( $s )
+	{
+		$this->log( $s, self::INFO );
+	}
+
+	public function warning( $s )
+	{
+		$this->log( $s, self::WARNING );
+	}
+
+	public function error( $s )
+	{
+		$this->log( $s, self::ERROR );
+	}
+
+	public function fatal( $s )
+	{
+		$this->log( $s, self::FATAL );
+	}
+
 };
 
 ?>
