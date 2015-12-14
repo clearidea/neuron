@@ -93,7 +93,7 @@ abstract class ApplicationBase extends Log\LoggableBase
 
 		$this->_Logger->setRunLevel( Log\ILogger::INFO );
 
-		$parent::__contstruct( $this->_Logger );
+		parent::__contstruct( $this->_Logger );
 	}
 
 	/**
