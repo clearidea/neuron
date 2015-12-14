@@ -1,5 +1,7 @@
 # Versions
 
+## 0.5.18
+
 ## 0.5.17 2015-12-14
 
 * ApplicationBase now extends LoggableBase.
