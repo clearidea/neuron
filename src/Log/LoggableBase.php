@@ -8,10 +8,10 @@ class LoggableBase
 	private $_Logger;
 
 	/**
-	 * @param Logger $Logger
+	 * @param ILogger $Logger
 	 */
 
-	public function __construct( Logger $Logger )
+	public function __construct( ILogger $Logger )
 	{
 		$this->_Logger = $Logger;
 	}
