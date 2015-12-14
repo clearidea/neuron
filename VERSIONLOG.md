@@ -1,6 +1,7 @@
 # Versions
 
-## 0.5.18
+## 0.5.18i 2015-12-14
+* Fix to applicationbase.
 
 ## 0.5.17 2015-12-14
 
