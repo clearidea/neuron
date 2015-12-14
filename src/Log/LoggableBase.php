@@ -37,26 +37,26 @@ class LoggableBase
 
 	public function debug( $s )
 	{
-		$this->debug( $s );
+		$this->_Logger->debug( $s );
 	}
 
 	public function info( $s )
 	{
-		$this->info( $s );
+		$this->_Logger->info( $s );
 	}
 
 	public function warning( $s )
 	{
-		$this->warning( $s );
+		$this->_Logger->warning( $s );
 	}
 
 	public function error( $s )
 	{
-		$this->error( $s );
+		$this->_Logger->error( $s );
 	}
 
 	public function fatal( $s )
 	{
-		$this->fatal( $s );
+		$this->_Logger->fatal( $s );
 	}
 }

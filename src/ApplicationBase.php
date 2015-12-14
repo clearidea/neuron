@@ -10,7 +10,7 @@ use Neuron\Util;
  */
 
 
-abstract class ApplicationBase
+abstract class ApplicationBase extends Log\LoggableBase
 	implements IApplication
 {
 	private		$_Logger;
@@ -49,7 +49,7 @@ abstract class ApplicationBase
 	}
 
 	/**
-	 * @return Log\Logger
+	 * @return Log\LogMux
 	 */
 
 	public function getLogger()
@@ -88,10 +88,12 @@ abstract class ApplicationBase
 		$Destination	= new Log\Destination\StdOut( new Log\Format\PlainText );
 		$Log 				= new Log\Logger( $Destination );
 
-		$Log->setRunLevel( $Log::DEBUG );
-
 		$this->_Logger = new Log\LogMux();
 		$this->_Logger->addLog( $Log );
+
+		$this->_Logger->setRunLevel( Log\ILogger::INFO );
+
+		$parent::__contstruct( $this->_Logger );
 	}
 
 	/**

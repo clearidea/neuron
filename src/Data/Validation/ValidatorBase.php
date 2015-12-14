@@ -6,7 +6,7 @@ namespace Neuron\Data\Validation;
  * Validator base class.
  */
 
-abstract class ValidatorBase
+abstract class ValidatorBase implements IValidator
 {
 
 	abstract protected function validate( $data );
