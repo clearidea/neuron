@@ -1,5 +1,10 @@
 # Versions
 
+## 0.5.17 2015-12-14
+
+* ApplicationBase now extends LoggableBase.
+* Fixes to LoggableBase.
+
 ## 0.5.16 2015-12-11
 
 * Adds reset method to LogMux.

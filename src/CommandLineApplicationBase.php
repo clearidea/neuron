@@ -8,8 +8,7 @@ namespace Neuron;
  * Allows for easy addition and handling of command line parameters.
  */
 
-abstract class CommandLineApplicationBase
-	extends ApplicationBase
+abstract class CommandLineApplicationBase extends ApplicationBase
 {
 	private $_aHandlers;
 
