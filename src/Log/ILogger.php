@@ -25,6 +25,7 @@ interface ILogger
 	 */
 
 	public function log( $s, $iLevel );
+	public function setRunLevel( $iLevel );
 
 	public function debug( $s );
 	public function info( $s );

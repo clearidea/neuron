@@ -1,6 +1,11 @@
 # Versions
 
-## 0.5.21
+## 0.5.22 2015-12-20
+
+* Adds setRunLevel to ILogger.
+* Remaps settings control in ApplicationBase.
+
+## 0.5.21 2015-12-20
 
 * Removes LogMux level mapping. Upon further thought, this should be handled by each individual log's runlevel.
 
