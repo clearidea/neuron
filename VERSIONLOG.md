@@ -1,6 +1,10 @@
 # Versions
 
-## 0.5.21
+## 0.5.22
+
+
+
+## 0.5.21 2015-12-20
 
 * Removes LogMux level mapping. Upon further thought, this should be handled by each individual log's runlevel.
 
