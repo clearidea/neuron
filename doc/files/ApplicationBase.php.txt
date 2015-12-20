@@ -10,16 +10,27 @@ use Neuron\Util;
  */
 
 
-abstract class ApplicationBase
-	implements Log\ILogger
+abstract class ApplicationBase extends Log\LoggableBase
+	implements IApplication
 {
-	private $_Logger;
-	protected $_aParameters;
+	private		$_Logger;
+	protected	$_aParameters;
+	protected	$_aSettings;
+
+	public function getSetting( $sName, $sSection = 'default' )
+	{
+		return $this->_aSettings[ $sSection ][ $sName ];
+	}
+
+	public function setSetting( $sName, $sValue, $sSection = 'default' )
+	{
+		$this->_aSettings[ $sSection ][ $sName ] = $sValue;
+	}
 
 	/**
 	 * @return array
 	 *
-	 * returns all parameters
+	 * returns parameters passed to the run method.
 	 */
 
 	protected function getParameters()
@@ -32,13 +43,13 @@ abstract class ApplicationBase
 	 * @return mixed
 	 */
 
-	protected function getParameter( $s )
+	public function getParameter( $s )
 	{
 		return $this->_aParameters[ $s ];
 	}
 
 	/**
-	 * @return Log\Logger
+	 * @return Log\LogMux
 	 */
 
 	public function getLogger()
@@ -50,7 +61,7 @@ abstract class ApplicationBase
 	 * @param $s
 	 * @param int $iLevel
 	 *
-	 * Writes to the logger. Defaults to debug mode.
+	 * Writes to the logger. Defaults to debug level.
 	 * Data is only written to the log based on the loggers run-level.
 	 */
 
@@ -68,23 +79,29 @@ abstract class ApplicationBase
 		return Util\System::isCommandLine();
 	}
 
-	//
-	//
-	//
+	/**
+	 *  Creates and configures the default logger.
+	 */
 
 	public function __construct()
 	{
 		$Destination	= new Log\Destination\StdOut( new Log\Format\PlainText );
-		$Logger 			= new Log\Logger( $Destination );
+		$Log 				= new Log\Logger( $Destination );
 
-		$Logger->setRunLevel( $Logger::DEBUG );
+		$this->_Logger = new Log\LogMux();
+		$this->_Logger->addLog( $Log );
 
-		$this->_Logger = $Logger;
+		$this->_Logger->setRunLevel( Log\ILogger::INFO );
+
+		parent::__construct( $this->_Logger );
 	}
 
-	//
-	// Application mechanics..
-	//
+	/**
+	 * @return bool
+	 *
+	 * Called before onRun. If false is returned, application terminates
+	 * without executing onRun.
+	 */
 
 	protected function onStart()
 	{
@@ -92,6 +109,10 @@ abstract class ApplicationBase
 
 		return true;
 	}
+
+	/**
+	 * Called immediately after onRun.
+	 */
 
 	protected function onFinish()
 	{
@@ -101,6 +122,7 @@ abstract class ApplicationBase
 	/**
 	 * @param \Exception $ex
 	 * @return bool
+	 * Called for any unhandled exceptions.
 	 */
 
 	protected function onError( \Exception $ex )
@@ -112,7 +134,18 @@ abstract class ApplicationBase
 		return true;
 	}
 
+	/**
+	 * @return mixed
+	 * Must be implemented by derived classes.
+	 */
+
 	protected abstract function onRun();
+
+	/**
+	 * @return string
+	 * Application version number.
+	 * Must be implemented by derived classes.
+	 */
 
 	public abstract function getVersion();
 

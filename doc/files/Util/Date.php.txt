@@ -13,9 +13,33 @@ use Neuron\Util;
 
 class Date
 {
+	/**
+	 * @param $iYear
+	 * @return bool
+	 */
+
 	static function isLeapYear( $iYear )
 	{
 		return ((($iYear % 4) == 0) && ((($iYear % 100) != 0) || (($iYear %400) == 0)));
+	}
+
+	/**
+	 * @param $iDays
+	 * @param string $sDate
+	 * @return bool|string - new date
+	 */
+
+	static function subtractDays( $iDays, $sDate = '' )
+	{
+		if( !$sDate )
+		{
+			$sDate = date( 'Y-m-d' );
+		}
+
+		$jd = \Neuron\Util\Date::dateToJulian( $sDate );
+		$jd -= $iDays;
+
+		return Date::julianToDate( $jd );
 	}
 
 	//////////////////////////////////////////////////////////////////////////

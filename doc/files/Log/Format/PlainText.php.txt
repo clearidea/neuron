@@ -11,9 +11,23 @@ use \Neuron\Log;
 class PlainText
 	implements IFormat
 {
-	public static function format( Log\Data $Data )
+	private $_bShowDate;
+
+	public function __construct( $bShowDate = true )
 	{
-		return date( "[Y-m-d G:i:s]", $Data->_TimeStamp ) . "[$Data->_sLevel] $Data->_sText";
+		$this->_bShowDate = $bShowDate;
+	}
+
+	public function format( Log\Data $Data )
+	{
+		$s = '';
+
+		if( $this->_bShowDate )
+		{
+			$s .= date( "[Y-m-d G:i:s]", $Data->_TimeStamp );
+		}
+
+		return  $s."[$Data->_sLevel] $Data->_sText";
 	}
 }
 

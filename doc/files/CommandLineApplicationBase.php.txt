@@ -8,10 +8,13 @@ namespace Neuron;
  * Allows for easy addition and handling of command line parameters.
  */
 
-abstract class CommandLineApplicationBase
-	extends ApplicationBase
+abstract class CommandLineApplicationBase extends ApplicationBase
 {
 	private $_aHandlers;
+
+	/**
+	 * @return array - accessor for the parameter array.
+	 */
 
 	protected function getHandlers()
 	{
@@ -23,6 +26,11 @@ abstract class CommandLineApplicationBase
 	 * @param $sDescription
 	 * @param $method
 	 * @param bool|false $bParam
+	 *
+	 * Adds a handler for command line parameters.
+	 * The switch is the parameter that causes the specified method to be called.
+	 * If the bParam parameter is set to true, the token immediately follwing the
+	 * switch on the command line will be passed as the parameter to the handler.
 	 */
 
 	protected function addHandler( $sSwitch, $sDescription, $method, $bParam = false )
@@ -33,6 +41,10 @@ abstract class CommandLineApplicationBase
 			'param'			=> $bParam
 		];
 	}
+
+	/**
+	 * Processes the argv array.
+	 */
 
 	protected function processParameters()
 	{
@@ -59,29 +71,38 @@ abstract class CommandLineApplicationBase
 		}
 	}
 
+	/**
+	 * Activated by he --help parameter. Shows all configured switches and their
+	 * hints.
+	 */
+
 	protected function help()
 	{
-		echo get_class( $this )."\n";
+		echo basename( $_SERVER['PHP_SELF'], '.php' )."\n";
 		echo 'v'.$this->getVersion()."\n";
+		echo "Switches:\n";
+		$aHandlers = $this->getHandlers();
+		ksort( $aHandlers );
 
-		foreach( $this->getHandlers() as $sSwitch => $aInfo )
+		foreach( $aHandlers as $sSwitch => $aInfo )
 		{
-			echo "$sSwitch\t\t$aInfo[description]\n";
+			echo str_pad( $sSwitch, 20 )."$aInfo[description]\n";
 		}
 	}
 
 	protected function onStart()
 	{
-		$this->addHandler( '--help', 'Help', 'help' );
-
 		if( !$this->isCommandLine() )
 		{
 			$this->log( "Application must be run from the command line.", Log\ILogger::FATAL );
 			return false;
 		}
 
+		$this->addHandler( '--help', 'Help', 'help' );
+
 		$this->processParameters();
 
 		return parent::onStart();
 	}
 }
+

@@ -12,8 +12,6 @@ namespace Neuron\Log;
 class LogMux
 	implements ILogger
 {
-	const LOG_ALL = 100;
-
 	private $_aLogs = [];
 
 	/**
@@ -21,9 +19,9 @@ class LogMux
 	 * @param int $iLevel
 	 */
 
-	public function addLog( ILogger $Log, $iLevel = 100 )
+	public function addLog( ILogger $Log )
 	{
-		$this->_aLogs[ $iLevel ][] = $Log;
+		$this->_aLogs[] = $Log;
 	}
 
 	/**
@@ -36,21 +34,6 @@ class LogMux
 	}
 
 	/**
-	 * @param $iLevel
-	 */
-
-	public function setRunLevel( $iLevel )
-	{
-		foreach( $this->getLogs() as $aLogs )
-		{
-			foreach( $aLogs as $level => $Log )
-			{
-				$Log->setRunLevel( $iLevel );
-			}
-		}
-	}
-
-	/**
 	 * @return mixed
 	 */
 
@@ -60,21 +43,30 @@ class LogMux
 	}
 
 	/**
+	 * @param $iLevel
+	 *
+	 * Sync run levels for all loggers.
+	 */
+
+	public function setRunLevel( $iLevel )
+	{
+		foreach( $this->getLogs() as $Log )
+		{
+			$Log->setRunLevel( $iLevel );
+		}
+	}
+
+	//region ILogger
+	/**
 	 * @param $s
 	 * @param $iLevel
 	 */
 
 	public function log( $s, $iLevel )
 	{
-		foreach( $this->getLogs() as $level => $aLogs )
+		foreach( $this->getLogs() as $Log )
 		{
-			foreach( $aLogs as $Log )
-			{
-				if( $level == self::LOG_ALL || $level == $iLevel )
-				{
-					$Log->log( $s, $iLevel );
-				}
-			}
+			$Log->log( $s, $iLevel );
 		}
 	}
 
@@ -122,5 +114,6 @@ class LogMux
 	{
 		$this->log( $s, self::FATAL );
 	}
+	//endregion
 
 }
