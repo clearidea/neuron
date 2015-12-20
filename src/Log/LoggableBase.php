@@ -35,6 +35,11 @@ class LoggableBase
 		$this->_Logger->log( get_class( $this ).': '.$s, $iLevel );
 	}
 
+	public function setRunLevel( $iLevel )
+	{
+		$this->_Logger->setRunLevel( $iLevel );
+	}
+
 	public function debug( $s )
 	{
 		$this->_Logger->debug( $s );

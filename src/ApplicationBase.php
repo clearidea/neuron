@@ -2,6 +2,7 @@
 
 namespace Neuron;
 
+use Neuron\Setting;
 use Neuron\Log;
 use Neuron\Util;
 
@@ -9,22 +10,32 @@ use Neuron\Util;
  * Defines base functionality for applications.
  */
 
-
 abstract class ApplicationBase extends Log\LoggableBase
 	implements IApplication
 {
 	private		$_Logger;
 	protected	$_aParameters;
-	protected	$_aSettings;
+	protected	$_Settings;
+
+	/**
+	 * @param Setting\Source\ISettingSource $Source
+	 * @return $this
+	 */
+
+	public function setConfig( Setting\Source\ISettingSource $Source )
+	{
+		$this->_Settings = new Setting\SettingManager( $Source );
+		return $this;
+	}
 
 	public function getSetting( $sName, $sSection = 'default' )
 	{
-		return $this->_aSettings[ $sSection ][ $sName ];
+		return $this->_Settings->get( $sSection, $sName );
 	}
 
 	public function setSetting( $sName, $sValue, $sSection = 'default' )
 	{
-		$this->_aSettings[ $sSection ][ $sName ] = $sValue;
+		$this->_Settings->set( $sSection, $sName, $sValue );
 	}
 
 	/**

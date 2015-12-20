@@ -2,7 +2,8 @@
 
 ## 0.5.22
 
-
+* Adds setRunLevel to ILogger.
+* Remaps settings control in ApplicationBase.
 
 ## 0.5.21 2015-12-20
 
