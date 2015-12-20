@@ -4,5 +4,5 @@ namespace Neuron\Data\Filter;
 
 interface IFilter
 {
-	public function filter();
+	public function filterScalar( $data );
 }

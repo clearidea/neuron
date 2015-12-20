@@ -25,6 +25,12 @@ interface ILogger
 	 */
 
 	public function log( $s, $iLevel );
+
+	public function debug( $s );
+	public function info( $s );
+	public function warning( $s );
+	public function error( $s );
+	public function fatal( $s );
 }
 ?>
 

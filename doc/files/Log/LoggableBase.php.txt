@@ -8,10 +8,10 @@ class LoggableBase
 	private $_Logger;
 
 	/**
-	 * @param Logger $Logger
+	 * @param ILogger $Logger
 	 */
 
-	public function __construct( Logger $Logger )
+	public function __construct( ILogger $Logger )
 	{
 		$this->_Logger = $Logger;
 	}
@@ -35,4 +35,29 @@ class LoggableBase
 		$this->_Logger->log( get_class( $this ).': '.$s, $iLevel );
 	}
 
+	public function debug( $s )
+	{
+		$this->_Logger->debug( $s );
+	}
+
+	public function info( $s )
+	{
+		$this->_Logger->info( $s );
+	}
+
+	public function warning( $s )
+	{
+		$this->_Logger->warning( $s );
+	}
+
+	public function error( $s )
+	{
+		$this->_Logger->error( $s );
+	}
+
+	public function fatal( $s )
+	{
+		$this->_Logger->fatal( $s );
+	}
 }
+

@@ -19,6 +19,9 @@ class StdOut
 
 	public function write( $s, Log\Data $Data )
 	{
+		if(!defined('STDOUT')) define('STDOUT', fopen('php://stdout', 'w'));
+
 		fwrite( STDOUT, $s."\r\n" );
 	}
 }
+
