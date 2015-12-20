@@ -3,6 +3,7 @@
 ## 0.5.21
 
 * Removes LogMux level mapping. Upon further thought, this should be handled by each individual log's runlevel.
+* Makes 
 
 ## 0.5.20 2015-12-14
 * :|
