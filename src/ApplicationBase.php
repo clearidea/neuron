@@ -14,6 +14,7 @@ abstract class ApplicationBase extends Log\LoggableBase
 	implements IApplication
 {
 	private		$_Logger;
+	private		$_Registry;
 	protected	$_aParameters;
 	protected	$_Settings;
 
@@ -28,57 +29,26 @@ abstract class ApplicationBase extends Log\LoggableBase
 		return $this;
 	}
 
+	/**
+	 * @param $sName
+	 * @param string $sSection
+	 * @return mixed
+	 */
+
 	public function getSetting( $sName, $sSection = 'default' )
 	{
 		return $this->_Settings->get( $sSection, $sName );
 	}
 
+	/**
+	 * @param $sName
+	 * @param $sValue
+	 * @param string $sSection
+	 */
+
 	public function setSetting( $sName, $sValue, $sSection = 'default' )
 	{
 		$this->_Settings->set( $sSection, $sName, $sValue );
-	}
-
-	/**
-	 * @return array
-	 *
-	 * returns parameters passed to the run method.
-	 */
-
-	protected function getParameters()
-	{
-		return $this->_aParameters;
-	}
-
-	/**
-	 * @param $s
-	 * @return mixed
-	 */
-
-	public function getParameter( $s )
-	{
-		return $this->_aParameters[ $s ];
-	}
-
-	/**
-	 * @return Log\LogMux
-	 */
-
-	public function getLogger()
-	{
-		return $this->_Logger;
-	}
-
-	/**
-	 * @param $s
-	 * @param int $iLevel
-	 *
-	 * Writes to the logger. Defaults to debug level.
-	 * Data is only written to the log based on the loggers run-level.
-	 */
-
-	public function log( $s, $iLevel = self::DEBUG )
-	{
-		$this->_Logger->log( get_class( $this ).': '.$s, $iLevel );
 	}
 
 	/**
@@ -96,6 +66,8 @@ abstract class ApplicationBase extends Log\LoggableBase
 
 	public function __construct()
 	{
+		$this->_Registry = Registry::getInstance();
+
 		$Destination	= new Log\Destination\StdOut( new Log\Format\PlainText );
 		$Log 				= new Log\Logger( $Destination );
 
@@ -186,4 +158,75 @@ abstract class ApplicationBase extends Log\LoggableBase
 
 		$this->onFinish();
 	}
+
+	//region Parameters
+	/**
+	 * @return array
+	 *
+	 * returns parameters passed to the run method.
+	 */
+
+	protected function getParameters()
+	{
+		return $this->_aParameters;
+	}
+
+	/**
+	 * @param $s
+	 * @return mixed
+	 */
+
+	public function getParameter( $s )
+	{
+		return $this->_aParameters[ $s ];
+	}
+	//endregion
+
+	//region Logging
+	/**
+	 * @return Log\LogMux
+	 */
+
+	public function getLogger()
+	{
+		return $this->_Logger;
+	}
+
+	/**
+	 * @param $s
+	 * @param int $iLevel
+	 *
+	 * Writes to the logger. Defaults to debug level.
+	 * Data is only written to the log based on the loggers run-level.
+	 */
+
+	public function log( $s, $iLevel = self::DEBUG )
+	{
+		$this->_Logger->log( get_class( $this ).': '.$s, $iLevel );
+	}
+	//endregion
+
+	//region Registry
+
+	/**
+	 * @param $name
+	 * @param $object
+	 */
+
+	public function setRegistry( $name, $object )
+	{
+		$this->_Registry->set( $name, $object );
+	}
+
+	/**
+	 * @param $name
+	 * @return mixed
+	 */
+
+	public function getRegistry( $name )
+	{
+		return $this->_Registry->get( $name );
+	}
+	//endregion
+
 }

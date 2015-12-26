@@ -1,5 +1,10 @@
 # Versions
 
+## 0.5.23
+
+* Adds Singleton mechanisms
+* Adds Registry
+
 ## 0.5.22 2015-12-20
 
 * Adds setRunLevel to ILogger.
