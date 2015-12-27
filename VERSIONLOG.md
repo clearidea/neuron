@@ -4,6 +4,7 @@
 
 * Adds Singleton mechanisms
 * Adds Registry
+* Application->run now returns a boolean result
 
 ## 0.5.22 2015-12-20
 

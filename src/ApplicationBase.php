@@ -134,6 +134,7 @@ abstract class ApplicationBase extends Log\LoggableBase
 
 	/**
 	 * @param array|null $aArgv
+	 * @return bool
 	 */
 
 	public function run( array $aArgv = null )
@@ -143,7 +144,7 @@ abstract class ApplicationBase extends Log\LoggableBase
 		if( !$this->onStart() )
 		{
 			$this->log( "onStart() returned false. Aborting.", Log\ILogger::FATAL );
-			return;
+			return false;
 		}
 
 		try
@@ -153,10 +154,11 @@ abstract class ApplicationBase extends Log\LoggableBase
 		catch( \Exception $Ex )
 		{
 			if( !$this->onError( $Ex ) )
-				return;
+				return false;
 		}
 
 		$this->onFinish();
+		return true;
 	}
 
 	//region Parameters
