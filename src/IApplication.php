@@ -1,9 +1,9 @@
 <?php
 /**
- * Created by PhpStorm.
- * User: lee
- * Date: 10/23/15
- * Time: 10:22 AM
+ * The goal of the IApplication interface is to provide access to basic application services:
+ * - Logging
+ * - Settings
+ * - Registry
  */
 
 namespace Neuron;
@@ -14,4 +14,7 @@ interface IApplication
 {
 	public function getSetting( $sName, $sSection = 'default' );
 	public function setSetting( $sName, $sValue, $sSection = 'default' );
+
+	public function setRegistry( $name, $object );
+	public function getRegistry( $name, $object );
 }

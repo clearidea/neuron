@@ -1,5 +1,11 @@
 # Versions
 
+## 0.5.23 2015-12-27
+
+* Adds Singleton mechanisms
+* Adds Registry
+* Application->run now returns a boolean result
+
 ## 0.5.22 2015-12-20
 
 * Adds setRunLevel to ILogger.
