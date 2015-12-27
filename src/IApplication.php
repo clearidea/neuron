@@ -15,6 +15,6 @@ interface IApplication
 	public function getSetting( $sName, $sSection = 'default' );
 	public function setSetting( $sName, $sValue, $sSection = 'default' );
 
-	public function setRegistry( $name, $object );
-	public function getRegistry( $name, $object );
+	public function setRegistryObject( $name, $object );
+	public function getRegistryObject( $name );
 }

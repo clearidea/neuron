@@ -215,7 +215,7 @@ abstract class ApplicationBase extends Log\LoggableBase
 	 * @param $object
 	 */
 
-	public function setRegistry( $name, $object )
+	public function setRegistryObject( $name, $object )
 	{
 		$this->_Registry->set( $name, $object );
 	}
@@ -225,7 +225,7 @@ abstract class ApplicationBase extends Log\LoggableBase
 	 * @return mixed
 	 */
 
-	public function getRegistry( $name )
+	public function getRegistryObject( $name )
 	{
 		return $this->_Registry->get( $name );
 	}
