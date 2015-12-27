@@ -1,6 +1,6 @@
 # Versions
 
-## 0.5.24
+## 0.5.24 2015-12-27
 * Fix to IApplication registry methods.
 
 ## 0.5.23 2015-12-27
