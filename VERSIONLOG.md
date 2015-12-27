@@ -1,6 +1,6 @@
 # Versions
 
-## 0.5.23
+## 0.5.23 2015-12-27
 
 * Adds Singleton mechanisms
 * Adds Registry
