@@ -1,5 +1,9 @@
 # Versions
 
+## 0.5.25
+
+* Adds column vs data sanity check in CSV parser.
+
 ## 0.5.24 2015-12-27
 * Fix to IApplication registry methods.
 

@@ -10,8 +10,19 @@ is to provide mostly decoupled php components that aid in any sort of applicatio
 
 ## Settings
 
+## Registry
+
 ## Parsers
 
 ## Applications
+
+### Generic Application
+
+### Commandline Application
+
+### WebApplication
+
+The web application components have been spun off into another project that supports routing and dispatching etc.
+See [Concept](http://www.github.com/clearidea/concept)
 
 ## Concept
