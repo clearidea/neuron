@@ -17,6 +17,8 @@ abstract class ValidatorBase implements IValidator
 	}
 
 	/**
+	 * Returns true if validation is successful
+	 *
 	 * @param $data
 	 * @return bool
 	 */

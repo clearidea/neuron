@@ -1,5 +1,9 @@
 # Versions
 
+## 0.5.26
+
+* Data filters for get and post.
+
 ## 0.5.25
 
 * Adds column vs data sanity check in CSV parser.

@@ -88,7 +88,7 @@ abstract class ApplicationBase extends Log\LoggableBase
 
 	protected function onStart()
 	{
-		$this->log( 'Application started '.date( 'Y-m-d H:i:s' ), Log\ILogger::INFO );
+		// $this->log( 'Application started '.date( 'Y-m-d H:i:s' ), Log\ILogger::INFO );
 
 		return true;
 	}
@@ -99,7 +99,7 @@ abstract class ApplicationBase extends Log\LoggableBase
 
 	protected function onFinish()
 	{
-		$this->log( 'Application finished '.date( 'Y-m-d H:i:s' ), Log\ILogger::INFO );
+		// $this->log( 'Application finished '.date( 'Y-m-d H:i:s' ), Log\ILogger::INFO );
 	}
 
 	/**
