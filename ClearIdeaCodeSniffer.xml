@@ -22,7 +22,6 @@
 <rule ref="Generic.Strings.UnnecessaryStringConcat"/>
 <rule ref="Generic.WhiteSpace.DisallowSpaceIndent"/>
 <rule ref="PSR2.Classes.ClassDeclaration"/>
-<rule ref="PSR2.Classes.PropertyDeclaration"/>
 <rule ref="PSR2.Namespaces.NamespaceDeclaration"/>
 <rule ref="Squiz.PHP.CommentedOutCode"/>
 <rule ref="Squiz.WhiteSpace.LanguageConstructSpacing"/>
@@ -30,4 +29,5 @@
 <rule ref="Squiz.WhiteSpace.ObjectOperatorSpacing"/>
 <rule ref="Squiz.WhiteSpace.OperatorSpacing"/>
 <rule ref="Squiz.WhiteSpace.SemicolonSpacing"/>
+
 </ruleset>
