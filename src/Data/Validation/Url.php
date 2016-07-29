@@ -9,8 +9,8 @@ namespace Neuron\Data\Validation;
 class Url
 	extends ValidatorBase
 {
-	protected function validate( $s )
+	protected function validate( $url )
 	{
-		return filter_var( $s, FILTER_VALIDATE_URL ) ? true : false;
+		return filter_var( $url, FILTER_VALIDATE_URL ) ? true : false;
 	}
 }

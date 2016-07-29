@@ -16,7 +16,6 @@ class LogMux
 
 	/**
 	 * @param ILogger $Log
-	 * @param int $iLevel
 	 */
 
 	public function addLog( ILogger $Log )

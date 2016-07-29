@@ -9,8 +9,8 @@ namespace Neuron\Data\Validation;
 class String
 	extends ValidatorBase
 {
-	protected function validate( $s )
+	protected function validate( $string )
 	{
-		return is_string( $s );
+		return is_string( $string );
 	}
 }

@@ -10,8 +10,7 @@ use Neuron\Util;
  * Defines base functionality for applications.
  */
 
-abstract class ApplicationBase extends Log\LoggableBase
-	implements IApplication
+abstract class ApplicationBase extends Log\LoggableBase implements IApplication
 {
 	private		$_Logger;
 	private		$_Registry;
@@ -88,8 +87,6 @@ abstract class ApplicationBase extends Log\LoggableBase
 
 	protected function onStart()
 	{
-		// $this->log( 'Application started '.date( 'Y-m-d H:i:s' ), Log\ILogger::INFO );
-
 		return true;
 	}
 
@@ -99,7 +96,6 @@ abstract class ApplicationBase extends Log\LoggableBase
 
 	protected function onFinish()
 	{
-		// $this->log( 'Application finished '.date( 'Y-m-d H:i:s' ), Log\ILogger::INFO );
 	}
 
 	/**

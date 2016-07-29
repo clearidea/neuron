@@ -36,7 +36,7 @@ class Date
 			$sDate = date( 'Y-m-d' );
 		}
 
-		$jd = \Neuron\Util\Date::dateToJulian( $sDate );
+		$jd = self::dateToJulian( $sDate );
 		$jd -= $iDays;
 
 		return Date::julianToDate( $jd );

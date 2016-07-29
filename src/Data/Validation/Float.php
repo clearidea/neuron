@@ -9,8 +9,8 @@ namespace Neuron\Data\Validation;
 class Float
 	extends ValidatorBase
 {
-	protected function validate( $f )
+	protected function validate( $float )
 	{
-		return is_float( $f );
+		return is_float( $float );
 	}
 }

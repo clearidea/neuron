@@ -19,11 +19,11 @@ class DateRange extends Date
 		if( !parent::validate( $date ) )
 			return false;
 
-		$start	= strtotime( $this->_sMinDate );
-		$end		= strtotime( $this->_sMaxDate );
-		$dt		= strtotime( $date );
+		$startTS	= strtotime( $this->_sMinDate );
+		$endTS	= strtotime( $this->_sMaxDate );
+		$dateTS	= strtotime( $date );
 
-		return ( ( $dt >= $start ) && ( $dt <= $end ) );
+		return ( ( $dateTS >= $startTS ) && ( $dateTS <= $endTS ) );
 	}
 
 	/**

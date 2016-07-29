@@ -20,7 +20,9 @@ abstract class Base
 			$sClass = get_called_class();
 			$c = new $sClass;
 			$c->serialize();
-			return $c;;
+			return $c;
 		}
+
+		return null;
 	}
 }
