@@ -12,8 +12,8 @@ script:
   - phpunit --configuration tests/phpunit.xml
   - ./vendor/bin/phpcs --standard=ClearIdeaCodeSniffer.xml src
   - ./vendor/bin/phpcs --standard=ClearIdeaCodeSniffer.xml tests
-  - ./vendor/bin/phpmd src  xml codesize,unusedcode,naming,cleancode,design
-  - ./vendor/bin/phpmd tests xml codesize,unusedcode,naming,cleancode,design
+  - ./vendor/bin/phpmd src  text codesize,unusedcode,naming,cleancode,design
+  - ./vendor/bin/phpmd tests text codesize,unusedcode,naming,cleancode,design
 
 notifications:
   slack: clearidea:UL7PtI529f0u9rcGW108IoE0
