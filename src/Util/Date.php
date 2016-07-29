@@ -36,8 +36,8 @@ class Date
 			$sDate = date( 'Y-m-d' );
 		}
 
-		$jd = self::dateToJulian( $sDate );
-		$jd -= $iDays;
+		$julian = self::dateToJulian( $sDate );
+		$julian -= $iDays;
 
 		return Date::julianToDate( $jd );
 	}
@@ -52,10 +52,10 @@ class Date
 
 	static function getCurrentMonthStartDate()
 	{
-		$dt = date( "Y-m" );
-		$dt .= "-1";
+		$date = date( "Y-m" );
+		$date .= "-1";
 
-		return $dt;
+		return $date;
 	}
 
 	//////////////////////////////////////////////////////////////////////////
@@ -68,6 +68,7 @@ class Date
 	///
 	/// @return
 	///	1-31
+	/// @SuppressWarnings(PHPMD)
 	//////////////////////////////////////////////////////////////////////////
 
 	static function getDaysInMonth( $iMonth, $iYear = null )
@@ -130,13 +131,13 @@ class Date
 
 	static function getCurrentMonthEndDate()
 	{
-		$dt = date( "Y-m" );
+		$date = date( "Y-m" );
 
 		$days = Util\Date::getDaysInMonth( date( "n" ) );
 
-		$dt .= "-".$days;
+		$date .= "-".$days;
 
-		return $dt;
+		return $date;
 	}
 
 	//////////////////////////////////////////////////////////////////////////

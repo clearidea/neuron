@@ -104,9 +104,9 @@ abstract class ApplicationBase extends Log\LoggableBase implements IApplication
 	 * Called for any unhandled exceptions.
 	 */
 
-	protected function onError( \Exception $ex )
+	protected function onError( \Exception $exception )
 	{
-		$this->log( get_class( $ex ).', msg: '.$ex->getMessage(), Log\ILogger::ERROR );
+		$this->log( get_class( $exception ).', msg: '.$exception->getMessage(), Log\ILogger::ERROR );
 
 		// Returning false skips executing onFinish.
 
@@ -147,9 +147,9 @@ abstract class ApplicationBase extends Log\LoggableBase implements IApplication
 		{
 			$this->onRun();
 		}
-		catch( \Exception $Ex )
+		catch( \Exception $exception )
 		{
-			if( !$this->onError( $Ex ) )
+			if( !$this->onError( $exception ) )
 			{
 				return false;
 			}
@@ -176,9 +176,9 @@ abstract class ApplicationBase extends Log\LoggableBase implements IApplication
 	 * @return mixed
 	 */
 
-	public function getParameter( $s )
+	public function getParameter( $param )
 	{
-		return $this->_aParameters[ $s ];
+		return $this->_aParameters[ $param ];
 	}
 	//endregion
 
@@ -194,15 +194,15 @@ abstract class ApplicationBase extends Log\LoggableBase implements IApplication
 
 	/**
 	 * @param $s
-	 * @param int $iLevel
+	 * @param $iLevel
 	 *
 	 * Writes to the logger. Defaults to debug level.
 	 * Data is only written to the log based on the loggers run-level.
 	 */
 
-	public function log( $s, $iLevel = self::DEBUG )
+	public function log( $text, $iLevel = self::DEBUG )
 	{
-		$this->_Logger->log( get_class( $this ).': '.$s, $iLevel );
+		$this->_Logger->log( get_class( $this ).': '.$text, $iLevel );
 	}
 	//endregion
 
