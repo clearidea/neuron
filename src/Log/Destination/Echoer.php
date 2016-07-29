@@ -8,11 +8,12 @@ use Neuron\Log;
  * Outputs information using the php echo command. (non stdout)
  */
 
-class Echoer
-	extends DestinationBase
+class Echoer extends DestinationBase
 {
 	public function open( array $aParams )
-	{ return true; }
+	{
+		return true;
+	}
 
 	public function close()
 	{}

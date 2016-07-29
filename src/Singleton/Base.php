@@ -2,8 +2,7 @@
 
 namespace Neuron\Singleton;
 
-abstract class Base
-	implements ISingleton
+abstract class Base implements ISingleton
 {
 	public static function getInstance()
 	{

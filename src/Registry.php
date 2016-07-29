@@ -9,8 +9,7 @@
 namespace Neuron;
 
 
-class Registry
-	extends Singleton\Memory
+class Registry extends Singleton\Memory
 {
 	private $_Objects = [];
 

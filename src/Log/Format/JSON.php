@@ -8,8 +8,7 @@ use \Neuron\Log;
  * Formats data as plain text.
  */
 
-class JSON
-	implements IFormat
+class JSON implements IFormat
 {
 	public function format( Log\Data $Data )
 	{

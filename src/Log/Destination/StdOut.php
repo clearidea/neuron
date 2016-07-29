@@ -8,8 +8,7 @@ use Neuron\Log;
  * Outputs to stdout
  */
 
-class StdOut
-	extends DestinationBase
+class StdOut extends DestinationBase
 {
 	public function open( array $aParams )
 	{ return true; }

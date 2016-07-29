@@ -6,8 +6,7 @@ namespace Neuron\Data\Validation;
  * Url validation.
  */
 
-class Url
-	extends ValidatorBase
+class Url extends ValidatorBase
 {
 	protected function validate( $url )
 	{

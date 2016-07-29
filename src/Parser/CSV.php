@@ -2,8 +2,7 @@
 
 namespace Neuron\Parser;
 
-class CSV
-	implements IParser
+class CSV implements IParser
 {
 	public $_aResults;
 

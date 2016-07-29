@@ -150,7 +150,9 @@ abstract class ApplicationBase extends Log\LoggableBase implements IApplication
 		catch( \Exception $Ex )
 		{
 			if( !$this->onError( $Ex ) )
+			{
 				return false;
+			}
 		}
 
 		$this->onFinish();
@@ -226,5 +228,4 @@ abstract class ApplicationBase extends Log\LoggableBase implements IApplication
 		return $this->_Registry->get( $name );
 	}
 	//endregion
-
 }

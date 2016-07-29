@@ -8,7 +8,6 @@
 
 namespace Neuron\Data\Validation;
 
-
 class DateRange extends Date
 {
 	private $_sMinDate;
@@ -17,11 +16,13 @@ class DateRange extends Date
 	protected function validate( $date )
 	{
 		if( !parent::validate( $date ) )
+		{
 			return false;
+		}
 
-		$startTS	= strtotime( $this->_sMinDate );
-		$endTS	= strtotime( $this->_sMaxDate );
-		$dateTS	= strtotime( $date );
+		$startTS = strtotime( $this->_sMinDate );
+		$endTS   = strtotime( $this->_sMaxDate );
+		$dateTS  = strtotime( $date );
 
 		return ( ( $dateTS >= $startTS ) && ( $dateTS <= $endTS ) );
 	}

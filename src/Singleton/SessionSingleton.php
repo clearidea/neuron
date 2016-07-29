@@ -2,8 +2,7 @@
 
 namespace Neuron\Singleton;
 
-class SessionSingleton
-	extends Base
+class SessionSingleton extends Base
 {
 	public function serialize()
 	{

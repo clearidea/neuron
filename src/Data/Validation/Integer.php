@@ -6,8 +6,7 @@ namespace Neuron\Data\Validation;
  * Integer validation.
  */
 
-class Integer
-	extends ValidatorBase
+class Integer extends ValidatorBase
 {
 	protected function validate( $integer )
 	{

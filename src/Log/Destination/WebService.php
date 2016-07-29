@@ -6,8 +6,7 @@ use Neuron\Log;
 
 // todo: webservice..
 
-class WebService
-	extends DestinationBase
+class WebService extends DestinationBase
 {
 	private $_sEndPoint;
 

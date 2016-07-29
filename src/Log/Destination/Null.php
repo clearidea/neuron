@@ -12,10 +12,14 @@ class Null
 	extends DestinationBase
 {
 	public function open( array $aParams )
-	{ return true; }
+	{
+		return true;
+	}
 
 	public function close()
-	{}
+	{
+
+	}
 
 	public function write( $s, Log\Data $Data )
 	{

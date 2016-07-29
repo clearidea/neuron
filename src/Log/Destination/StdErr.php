@@ -8,8 +8,7 @@ use Neuron\Log;
  * Outputs to stderr
  */
 
-class StdErr
-	extends DestinationBase
+class StdErr extends DestinationBase
 {
 	public function open( array $aParams )
 	{ return true; }

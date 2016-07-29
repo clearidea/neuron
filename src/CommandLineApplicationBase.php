@@ -48,7 +48,8 @@ abstract class CommandLineApplicationBase extends ApplicationBase
 
 	protected function processParameters()
 	{
-		for( $c = 0; $c < count( $this->getParameters() ); $c++ )
+		$paramcount count( $this->getParameters() );
+		for( $c = 0; $c < $paramcount; $c++ )
 		{
 			$sParam = $this->getParameters()[ $c ];
 

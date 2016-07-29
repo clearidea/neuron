@@ -8,8 +8,7 @@ use \Neuron\Log;
  * Formats data as plain text.
  */
 
-class PlainText
-	implements IFormat
+class PlainText implements IFormat
 {
 	private $_bShowDate;
 
@@ -20,14 +19,14 @@ class PlainText
 
 	public function format( Log\Data $Data )
 	{
-		$s = '';
+		$output = '';
 
 		if( $this->_bShowDate )
 		{
-			$s .= date( "[Y-m-d G:i:s]", $Data->_TimeStamp );
+			$output .= date( "[Y-m-d G:i:s]", $Data->_TimeStamp );
 		}
 
-		return  $s."[$Data->_sLevel] $Data->_sText";
+		return  $output."[$Data->_sLevel] $Data->_sText";
 	}
 }
 

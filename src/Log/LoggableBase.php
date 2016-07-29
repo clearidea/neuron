@@ -2,8 +2,7 @@
 
 namespace Neuron\Log;
 
-class LoggableBase
-	implements ILogger
+class LoggableBase implements ILogger
 {
 	private $_Logger;
 
