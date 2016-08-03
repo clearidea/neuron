@@ -26,12 +26,15 @@ class LoggableBase implements ILogger
 
 	/**
 	 * @param $s
-	 * @param int $iLevel
+	 * @param $iLevel
+	 *
+	 * Writes to the logger. Defaults to debug level.
+	 * Data is only written to the log based on the loggers run-level.
 	 */
 
-	public function log( $s, $iLevel = self::DEBUG )
+	public function log( $text, $iLevel = self::DEBUG )
 	{
-		$this->_Logger->log( get_class( $this ).': '.$s, $iLevel );
+		$this->_Logger->log( get_class( $this ).': '.$text, $iLevel );
 	}
 
 	/**
@@ -47,9 +50,9 @@ class LoggableBase implements ILogger
 	 * @param $s
 	 */
 
-	public function debug( $s )
+	public function debug( $text )
 	{
-		$this->_Logger->debug( $s );
+		$this->_Logger->debug( $text );
 	}
 
 	/**

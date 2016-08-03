@@ -16,10 +16,10 @@ class StdOut extends DestinationBase
 	public function close()
 	{}
 
-	public function write( $s, Log\Data $Data )
+	public function write( $text, Log\Data $Data )
 	{
 		if(!defined('STDOUT')) define('STDOUT', fopen('php://stdout', 'w'));
 
-		fwrite( STDOUT, $s."\r\n" );
+		fwrite( STDOUT, $text."\r\n" );
 	}
 }

@@ -18,12 +18,12 @@ class CSV implements IParser
 
 		$aData = str_getcsv( $sText );
 
-		$i = 0;
+		$idx = 0;
 
 		foreach( $aColumns as $sColumn )
 		{
-			$aResults[ $sColumn ] = $aData[ $i ];
-			++$i;
+			$aResults[ $sColumn ] = $aData[ $idx ];
+			++$idx;
 		}
 
 		if( count( $aColumns ) != count( $aData ) )

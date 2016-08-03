@@ -20,7 +20,7 @@ class Template
 		}
 		else
 		{
-			die( "Template not found: $file." );
+			return null;
 		}
 
 		return self::fromText( $text, $fields );

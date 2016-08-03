@@ -17,9 +17,9 @@ abstract class Base implements ISingleton
 		else
 		{
 			$sClass = get_called_class();
-			$c = new $sClass;
-			$c->serialize();
-			return $c;
+			$obj = new $sClass;
+			$obj->serialize();
+			return $obj;
 		}
 
 		return null;

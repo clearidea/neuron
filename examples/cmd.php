@@ -23,8 +23,7 @@ require_once( '../vendor/autoload.php' );
 
 use Neuron\Log;
 
-class cmd
-	extends Neuron\CommandLineApplicationBase
+class cmd extends Neuron\CommandLineApplicationBase
 {
 	public function getVersion()
 	{
@@ -41,9 +40,9 @@ class cmd
 		echo date( 'H:m:j' )." ";
 	}
 
-	protected function say( $s )
+	protected function say( $text )
 	{
-		echo $s."\n";
+		echo $text."\n";
 	}
 
 	protected function onStart()

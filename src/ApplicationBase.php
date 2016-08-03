@@ -192,18 +192,6 @@ abstract class ApplicationBase extends Log\LoggableBase implements IApplication
 		return $this->_Logger;
 	}
 
-	/**
-	 * @param $s
-	 * @param $iLevel
-	 *
-	 * Writes to the logger. Defaults to debug level.
-	 * Data is only written to the log based on the loggers run-level.
-	 */
-
-	public function log( $text, $iLevel = self::DEBUG )
-	{
-		$this->_Logger->log( get_class( $this ).': '.$text, $iLevel );
-	}
 	//endregion
 
 	//region Registry
