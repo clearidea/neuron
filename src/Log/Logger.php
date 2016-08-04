@@ -6,8 +6,7 @@ namespace Neuron\Log;
  * Class for writing formatted output to specific destinations.
  */
 
-class Logger
-	implements ILogger
+class Logger implements ILogger
 {
 	private $_iRunLevel = ILogger::ERROR;
 	private $_Destination;

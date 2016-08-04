@@ -7,11 +7,10 @@ namespace Neuron\Data\Validation;
  * Email address validation.
  */
 
-class Email
-	extends ValidatorBase
+class Email extends ValidatorBase
 {
-	protected function validate( $s )
+	protected function validate( $email )
 	{
-		return filter_var( $s, FILTER_VALIDATE_EMAIL ) ? true : false;
+		return filter_var( $email, FILTER_VALIDATE_EMAIL ) ? true : false;
 	}
 }

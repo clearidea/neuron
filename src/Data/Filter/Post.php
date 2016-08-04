@@ -2,9 +2,7 @@
 
 namespace Neuron\Data\Filter;
 
-
-class Post
-	implements IFilter
+class Post implements IFilter
 {
 	public function filterScalar( $data )
 	{

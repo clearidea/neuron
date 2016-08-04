@@ -2,8 +2,7 @@
 
 namespace Neuron\Parser;
 
-class Positional
-	implements IParser
+class Positional implements IParser
 {
    /**
     * @param $sText

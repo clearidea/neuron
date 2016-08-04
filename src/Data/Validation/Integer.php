@@ -6,14 +6,13 @@ namespace Neuron\Data\Validation;
  * Integer validation.
  */
 
-class Integer
-	extends ValidatorBase
+class Integer extends ValidatorBase
 {
-	protected function validate( $i )
+	protected function validate( $integer )
 	{
-		if( is_int( $i ) )
+		if( is_int( $integer ) )
 			return true;
 
-		return ctype_digit( $i );
+		return ctype_digit( $integer );
 	}
 }

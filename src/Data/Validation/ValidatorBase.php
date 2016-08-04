@@ -8,7 +8,6 @@ namespace Neuron\Data\Validation;
 
 abstract class ValidatorBase implements IValidator
 {
-
 	abstract protected function validate( $data );
 
 	public function __construct()
@@ -17,6 +16,8 @@ abstract class ValidatorBase implements IValidator
 	}
 
 	/**
+	 * Returns true if validation is successful
+	 *
 	 * @param $data
 	 * @return bool
 	 */

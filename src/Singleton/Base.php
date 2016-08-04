@@ -2,8 +2,7 @@
 
 namespace Neuron\Singleton;
 
-abstract class Base
-	implements ISingleton
+abstract class Base implements ISingleton
 {
 	public static function getInstance()
 	{
@@ -18,9 +17,11 @@ abstract class Base
 		else
 		{
 			$sClass = get_called_class();
-			$c = new $sClass;
-			$c->serialize();
-			return $c;;
+			$obj = new $sClass;
+			$obj->serialize();
+			return $obj;
 		}
+
+		return null;
 	}
 }

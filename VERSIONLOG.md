@@ -1,5 +1,19 @@
 # Versions
 
+## 0.5.27
+
+* Adds Criteria pattern.
+* Adds ArrayHelper.
+* Adds DateRange, NotNull and NotEmpty validators.
+
+## 0.5.26
+
+* Data filters for get and post.
+
+## 0.5.25
+
+* Adds column vs data sanity check in CSV parser.
+
 ## 0.5.24 2015-12-27
 * Fix to IApplication registry methods.
 

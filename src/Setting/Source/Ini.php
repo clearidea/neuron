@@ -2,8 +2,7 @@
 
 namespace Neuron\Setting\Source;
 
-class Ini
-	implements ISettingSource
+class Ini implements ISettingSource
 {
 	private $_aSettings = array();
 

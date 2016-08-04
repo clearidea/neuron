@@ -72,7 +72,7 @@ class SettingManager
 
 	public function getSectionSettingNames( $sSection )
 	{
-		return $this->getSource()->getSectionSettingNames();
+		return $this->getSource()->getSectionSettingNames( $sSection );
 	}
 }
 

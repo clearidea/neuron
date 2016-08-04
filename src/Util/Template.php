@@ -2,7 +2,7 @@
 
 namespace Neuron\Util;
 
-class Template 
+class Template
 {
 	/**
 	 * @param $file
@@ -15,9 +15,13 @@ class Template
 		$file = "templates/$file";
 
 		if( file_exists( $file ) )
+		{
 			$text = @file_get_contents( $file );
+		}
 		else
-			die( "Template not found: $file." );
+		{
+			return null;
+		}
 
 		return self::fromText( $text, $fields );
 	}

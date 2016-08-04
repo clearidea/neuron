@@ -7,11 +7,10 @@ namespace Neuron\Data\Validation;
  * IPAddress validation.
  */
 
-class IPAddress
-	extends ValidatorBase
+class IPAddress extends ValidatorBase
 {
-	protected function validate( $s )
+	protected function validate( $address )
 	{
-		return filter_var( $s, FILTER_VALIDATE_IP )? true : false;
+		return filter_var( $address, FILTER_VALIDATE_IP )? true : false;
 	}
 }

@@ -6,11 +6,10 @@ namespace Neuron\Data\Validation;
  * String string validation.
  */
 
-class String
-	extends ValidatorBase
+class String extends ValidatorBase
 {
-	protected function validate( $s )
+	protected function validate( $string )
 	{
-		return is_string( $s );
+		return is_string( $string );
 	}
 }

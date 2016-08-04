@@ -12,17 +12,8 @@ namespace Neuron\Data\Validation;
 
 class MultiValidator
 {
-	private $_aAnds	= array();
-	private $_aOrs		= array();
-
 	public function __construct()
 	{
 		return $this;
 	}
-
-	public function _and()
-	{}
-
-	public function _or()
-	{}
 }

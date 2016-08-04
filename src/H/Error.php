@@ -2,6 +2,8 @@
 
 namespace Neuron\H;
 
+// @codingStandardsIgnoreStart
+
 class Error
 {
 	const EPERM				= 1;      /* Operation not permitted */

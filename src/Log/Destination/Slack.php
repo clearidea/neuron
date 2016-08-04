@@ -6,8 +6,7 @@ use Neuron\Log;
 
 // todo: slack..
 
-class Slack
-	extends DestinationBase
+class Slack extends DestinationBase
 {
 	private $_sApiToken;
 	private $_sRoom;

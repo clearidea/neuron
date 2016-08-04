@@ -9,8 +9,7 @@
 namespace Neuron\Parser;
 
 
-class LastFirstMI
-	implements IParser
+class LastFirstMI implements IParser
 {
 	/**
 	 * Parses Last, First M

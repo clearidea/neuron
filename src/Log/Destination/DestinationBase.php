@@ -25,13 +25,13 @@ abstract class DestinationBase
 	private $_Format;
 
 	/**
-	 * @param $i
+	 * @param $iLevel
 	 * @return string
 	 */
 
-	public function getLevelText( $i )
+	public function getLevelText( $iLevel )
 	{
-		switch( $i )
+		switch( $iLevel )
 		{
 			case Log\ILogger::DEBUG:
 				return "Debug";
@@ -70,12 +70,12 @@ abstract class DestinationBase
 	{ $this->_Format = $Format; }
 
 	/**
-	 * @param $s
+	 * @param $text
 	 * @param Log\Data $Data
 	 * @return mixed
 	 */
 
-	protected abstract function write( $s, Log\Data $Data );
+	protected abstract function write( $text, Log\Data $Data );
 
 	/**
 	 * @param array $aParams
@@ -85,15 +85,15 @@ abstract class DestinationBase
 	public abstract function open( array $aParams );
 
 	/**
-	 * @param $s
+	 * @param $text
 	 * @param $iLevel
 	 */
 
-	public function log( $s, $iLevel )
+	public function log( $text, $iLevel )
 	{
-		$Log = new Log\Data( time(), $s, $iLevel, $this->getLevelText( $iLevel ) );
-		$s = $this->_Format->format( $Log );
+		$Log = new Log\Data( time(), $text, $iLevel, $this->getLevelText( $iLevel ) );
+		$text = $this->_Format->format( $Log );
 
-		$this->write( $s, $Log );
+		$this->write( $text, $Log );
 	}
 }

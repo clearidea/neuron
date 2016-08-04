@@ -9,8 +9,7 @@ use Neuron\Log;
  * Use the 'file_name' parameter in the open param array.
  */
 
-class File
-	extends DestinationBase
+class File extends DestinationBase
 {
 	private $_sName;
 	private $_hFile;

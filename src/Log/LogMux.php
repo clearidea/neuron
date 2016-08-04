@@ -9,14 +9,12 @@
 namespace Neuron\Log;
 
 
-class LogMux
-	implements ILogger
+class LogMux implements ILogger
 {
 	private $_aLogs = [];
 
 	/**
 	 * @param ILogger $Log
-	 * @param int $iLevel
 	 */
 
 	public function addLog( ILogger $Log )

@@ -8,9 +8,7 @@
 
 namespace Neuron;
 
-
-interface IApplication
-	extends Log\ILogger
+interface IApplication extends Log\ILogger
 {
 	public function getSetting( $sName, $sSection = 'default' );
 	public function setSetting( $sName, $sValue, $sSection = 'default' );

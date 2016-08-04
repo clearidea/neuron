@@ -48,7 +48,8 @@ abstract class CommandLineApplicationBase extends ApplicationBase
 
 	protected function processParameters()
 	{
-		for( $c = 0; $c < count( $this->getParameters() ); $c++ )
+		$paramcount = count( $this->getParameters() );
+		for( $c = 0; $c < $paramcount; $c++ )
 		{
 			$sParam = $this->getParameters()[ $c ];
 
@@ -72,7 +73,7 @@ abstract class CommandLineApplicationBase extends ApplicationBase
 	}
 
 	/**
-	 * Activated by he --help parameter. Shows all configured switches and their
+	 * Activated by the --help parameter. Shows all configured switches and their
 	 * hints.
 	 */
 
@@ -89,6 +90,12 @@ abstract class CommandLineApplicationBase extends ApplicationBase
 			echo str_pad( $sSwitch, 20 )."$aInfo[description]\n";
 		}
 	}
+
+	/**
+	 * Called by ApplicationBase. Returning false terminates the application.
+	 *
+	 * @return bool
+	 */
 
 	protected function onStart()
 	{

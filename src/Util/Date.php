@@ -36,10 +36,10 @@ class Date
 			$sDate = date( 'Y-m-d' );
 		}
 
-		$jd = \Neuron\Util\Date::dateToJulian( $sDate );
-		$jd -= $iDays;
+		$julian = self::dateToJulian( $sDate );
+		$julian -= $iDays;
 
-		return Date::julianToDate( $jd );
+		return Date::julianToDate( $julian );
 	}
 
 	//////////////////////////////////////////////////////////////////////////
@@ -52,10 +52,10 @@ class Date
 
 	static function getCurrentMonthStartDate()
 	{
-		$dt = date( "Y-m" );
-		$dt .= "-1";
+		$date = date( "Y-m" );
+		$date .= "-1";
 
-		return $dt;
+		return $date;
 	}
 
 	//////////////////////////////////////////////////////////////////////////
@@ -64,12 +64,17 @@ class Date
 	/// Being as it dosn't take the year as a parameter, it can't handle
 	/// leap year.
 	///
-	/// @param $month The month number - 1-12
+	/// @param $iMonth The month number - 1-12
+	/// @param $iYear
 	///
 	/// @return
 	///	1-31
+	/// @SuppressWarnings(PHPMD)
 	//////////////////////////////////////////////////////////////////////////
 
+	/**
+	@SuppressWarnings(PHPMD)
+	 */
 	static function getDaysInMonth( $iMonth, $iYear = null )
 	{
 		$days = 0;
@@ -130,13 +135,24 @@ class Date
 
 	static function getCurrentMonthEndDate()
 	{
-		$dt = date( "Y-m" );
+		$date = date( "Y-m" );
 
 		$days = Util\Date::getDaysInMonth( date( "n" ) );
 
-		$dt .= "-".$days;
+		$date .= "-".$days;
 
-		return $dt;
+		return $date;
+	}
+
+	static function isSqlDateTime( $date_time )
+	{
+		if( $date_time[ 4 ] == '-' )
+			return $date_time;			// already in sql format..
+
+		if( strlen( $date_time ) == 0 )
+			return "0000-00-00";
+
+		return null;
 	}
 
 	//////////////////////////////////////////////////////////////////////////
@@ -154,21 +170,19 @@ class Date
 
 	static function getMySqlDateTime( $date_time )
 	{
-		if( $date_time[ 4 ] == '-' )
-			return $date_time;			// already in sql format..
+		$sqldatetime = self::isSqlDateTime( $date_time );
+		if( $sqldatetime )
+			return $sqldatetime;
 
-		if( strlen( $date_time ) == 0 )
-			return "0000-00-00";
+		$dt1 = substr( $date_time, 6, 4 );
+		$dt1 .= "-";
+		$dt1 .= substr( $date_time, 3, 2 );
+		$dt1 .= "-";
+		$dt1 .= substr( $date_time, 0, 2 );
+		$dt1 .= " ";
+		$dt1 .= substr( $date_time, 11, 8 );
 
-		$dt = substr( $date_time, 6, 4 );
-		$dt .= "-";
-		$dt .= substr( $date_time, 3, 2 );
-		$dt .= "-";
-		$dt .= substr( $date_time, 0, 2 );
-		$dt .= " ";
-		$dt .= substr( $date_time, 11, 8 );
-
-		return $dt;
+		return $dt1;
 	}
 
 	//////////////////////////////////////////////////////////////////////////
@@ -183,19 +197,17 @@ class Date
 
 	static function getMySqlDate( $date_time )
 	{
-		if( $date_time[ 4 ] == '-' )
-			return $date_time;			// already in sql format..
+		$sqldatetime = self::isSqlDateTime( $date_time );
+		if( $sqldatetime )
+			return $sqldatetime;
 
-		if( strlen( $date_time ) == 0 )
-			return "0000-00-00";
+		$dt1 = substr( $date_time, 6, 4 );
+		$dt1 .= "-";
+		$dt1 .= substr( $date_time, 3, 2 );
+		$dt1 .= "-";
+		$dt1 .= substr( $date_time, 0, 2 );
 
-		$dt = substr( $date_time, 6, 4 );
-		$dt .= "-";
-		$dt .= substr( $date_time, 3, 2 );
-		$dt .= "-";
-		$dt .= substr( $date_time, 0, 2 );
-
-		return $dt;
+		return $dt1;
 	}
 
 	//////////////////////////////////////////////////////////////////////////
@@ -208,13 +220,13 @@ class Date
 	///	Julian date.
 	//////////////////////////////////////////////////////////////////////////
 
-	static function dateToJulian( $dt )
+	static function dateToJulian( $date )
 	{
 		$dformat = "-";
 
 		// YYYY-MM-DD
 
-		$date_parts = explode( $dformat, $dt );
+		$date_parts = explode( $dformat, $date );
 		$start_date = gregoriantojd( $date_parts[ 1 ], $date_parts[ 2 ], $date_parts[ 0 ] );
 		return $start_date;
 	}
@@ -229,9 +241,9 @@ class Date
 	///	A string in yyyy-mm-dd mysql format.
 	//////////////////////////////////////////////////////////////////////////
 
-	static function julianToDate( $dt )
+	static function julianToDate( $dt1 )
 	{
-		$date = jdtogregorian( $dt );
+		$date = jdtogregorian( $dt1 );
 
 		$date = strtotime( $date );
 
@@ -268,55 +280,55 @@ class Date
 	///
 	//////////////////////////////////////////////////////////////////////////
 
-	static function normalizeDate( $dt )
+	static function normalizeDate( $date )
 	{
-		if( strlen( $dt < 6 ) )
+		if( strlen( $date < 6 ) )
 			return false;
 
-		if( 	$dt[ 0 ] != '-' &&
-			$dt[ 1 ] != '-' &&
-			$dt[ 2 ] != '-' &&
-			$dt[ 3 ] != '-' )
+		if( 	$date[ 0 ] != '-' &&
+			$date[ 1 ] != '-' &&
+			$date[ 2 ] != '-' &&
+			$date[ 3 ] != '-' )
 		{
 			// 2006-1-1
-			if( $dt[ 6 ] == '-' )
+			if( $date[ 6 ] == '-' )
 			{
-				$begin 	= substr( $dt, 0, 5 );
-				$end		= substr( $dt, 5, strlen( $dt ) - 5 );
+				$begin 	= substr( $date, 0, 5 );
+				$end		= substr( $date, 5, strlen( $date ) - 5 );
 
 				// echo " 1begin $begin, end $end";
 
-				$dt = $begin."0".$end;
+				$date = $begin."0".$end;
 			}
 
 			// 2006-01-1
-			if( !is_numeric( $dt[ 9 ] ) )
+			if( !is_numeric( $date[ 9 ] ) )
 			{
-				$begin 	= substr( $dt, 0, 8 );
-				$end		= substr( $dt, 8, strlen( $dt ) - 8 );
+				$begin 	= substr( $date, 0, 8 );
+				$end		= substr( $date, 8, strlen( $date ) - 8 );
 
 				// echo " 2begin $begin, end $end";
 
-				$dt = $begin."0".$end;
+				$date = $begin."0".$end;
 			}
 		}
 		else
 		{
 			// 1-1-2006
-			if( $dt[ 1 ] == '-' )
-				$dt = "0".$dt;
+			if( $date[ 1 ] == '-' )
+				$date = "0".$date;
 
 			// 01-1-2006
-			if( $dt[ 4 ] == '-' )
+			if( $date[ 4 ] == '-' )
 			{
-				$begin 	= substr( $dt, 0, 3 );
-				$end		= substr( $dt, 3, strlen( $dt ) - 3 );
+				$begin 	= substr( $date, 0, 3 );
+				$end		= substr( $date, 3, strlen( $date ) - 3 );
 
-				$dt = $begin."0".$end;
+				$date = $begin."0".$end;
 			}
 		}
 
-		return $dt;
+		return $date;
 	}
 }
 

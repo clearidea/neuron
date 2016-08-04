@@ -2,9 +2,7 @@
 
 namespace Neuron\Data\Filter;
 
-
-class Get
-	implements IFilter
+class Get implements IFilter
 {
 	public function filterScalar( $data )
 	{

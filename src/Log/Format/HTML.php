@@ -8,8 +8,7 @@ use Neuron\Log;
  * Formats log data as html.
  */
 
-class HTML
-	implements IFormat
+class HTML implements IFormat
 {
 	public function format( Log\Data $Data )
 	{

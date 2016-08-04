@@ -2,8 +2,7 @@
 
 namespace Neuron\Singleton;
 
-class Memory
-	extends Base
+class Memory extends Base
 {
 	static $_instance;
 

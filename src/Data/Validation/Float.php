@@ -6,11 +6,10 @@ namespace Neuron\Data\Validation;
  * Floating point validation.
  */
 
-class Float
-	extends ValidatorBase
+class Float extends ValidatorBase
 {
-	protected function validate( $f )
+	protected function validate( $float )
 	{
-		return is_float( $f );
+		return is_float( $float );
 	}
 }

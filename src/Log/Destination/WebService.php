@@ -6,8 +6,7 @@ use Neuron\Log;
 
 // todo: webservice..
 
-class WebService
-	extends DestinationBase
+class WebService extends DestinationBase
 {
 	private $_sEndPoint;
 
@@ -21,7 +20,14 @@ class WebService
 	{
 	}
 
-	public function write( $s, Log\Data $Data )
+	/**
+	 * @param $text
+	 * @param Log\Data $Data
+	 *
+	 * @SuppressWarnings(PHPMD)
+	 */
+
+	public function write( $text, Log\Data $Data )
 	{
 	}
 }

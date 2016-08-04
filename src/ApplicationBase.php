@@ -10,8 +10,7 @@ use Neuron\Util;
  * Defines base functionality for applications.
  */
 
-abstract class ApplicationBase extends Log\LoggableBase
-	implements IApplication
+abstract class ApplicationBase extends Log\LoggableBase implements IApplication
 {
 	private		$_Logger;
 	private		$_Registry;
@@ -88,8 +87,6 @@ abstract class ApplicationBase extends Log\LoggableBase
 
 	protected function onStart()
 	{
-		$this->log( 'Application started '.date( 'Y-m-d H:i:s' ), Log\ILogger::INFO );
-
 		return true;
 	}
 
@@ -99,7 +96,6 @@ abstract class ApplicationBase extends Log\LoggableBase
 
 	protected function onFinish()
 	{
-		$this->log( 'Application finished '.date( 'Y-m-d H:i:s' ), Log\ILogger::INFO );
 	}
 
 	/**
@@ -108,9 +104,9 @@ abstract class ApplicationBase extends Log\LoggableBase
 	 * Called for any unhandled exceptions.
 	 */
 
-	protected function onError( \Exception $ex )
+	protected function onError( \Exception $exception )
 	{
-		$this->log( get_class( $ex ).', msg: '.$ex->getMessage(), Log\ILogger::ERROR );
+		$this->log( get_class( $exception ).', msg: '.$exception->getMessage(), Log\ILogger::ERROR );
 
 		// Returning false skips executing onFinish.
 
@@ -151,10 +147,12 @@ abstract class ApplicationBase extends Log\LoggableBase
 		{
 			$this->onRun();
 		}
-		catch( \Exception $Ex )
+		catch( \Exception $exception )
 		{
-			if( !$this->onError( $Ex ) )
+			if( !$this->onError( $exception ) )
+			{
 				return false;
+			}
 		}
 
 		$this->onFinish();
@@ -178,9 +176,9 @@ abstract class ApplicationBase extends Log\LoggableBase
 	 * @return mixed
 	 */
 
-	public function getParameter( $s )
+	public function getParameter( $param )
 	{
-		return $this->_aParameters[ $s ];
+		return $this->_aParameters[ $param ];
 	}
 	//endregion
 
@@ -194,18 +192,6 @@ abstract class ApplicationBase extends Log\LoggableBase
 		return $this->_Logger;
 	}
 
-	/**
-	 * @param $s
-	 * @param int $iLevel
-	 *
-	 * Writes to the logger. Defaults to debug level.
-	 * Data is only written to the log based on the loggers run-level.
-	 */
-
-	public function log( $s, $iLevel = self::DEBUG )
-	{
-		$this->_Logger->log( get_class( $this ).': '.$s, $iLevel );
-	}
 	//endregion
 
 	//region Registry
@@ -230,5 +216,4 @@ abstract class ApplicationBase extends Log\LoggableBase
 		return $this->_Registry->get( $name );
 	}
 	//endregion
-
 }

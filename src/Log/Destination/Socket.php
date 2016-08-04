@@ -4,8 +4,7 @@ namespace Neuron\Log\Destination;
 
 use Neuron\Log;
 
-class Socket
-	extends DestinationBase
+class Socket extends DestinationBase
 {
 	private $_sAddress;
 

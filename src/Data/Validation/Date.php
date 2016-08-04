@@ -6,15 +6,14 @@ namespace Neuron\Data\Validation;
  * Date validation.
  */
 
-class Date
-	extends ValidatorBase
+class Date extends ValidatorBase
 {
 	private $_sFormat = 'Y-m-d';
 
-	protected function validate( $date )
+	protected function validate( $CheckDate )
 	{
-		$d = \DateTime::createFromFormat( $this->_sFormat, $date );
-		return $d && $d->format( $this->_sFormat ) == $date;
+		$Date = \DateTime::createFromFormat( $this->_sFormat, $CheckDate );
+		return $Date && $Date->format( $this->_sFormat ) == $CheckDate;
 	}
 
 	/**

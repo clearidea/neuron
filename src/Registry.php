@@ -9,8 +9,7 @@
 namespace Neuron;
 
 
-class Registry
-	extends Singleton\Memory
+class Registry extends Singleton\Memory
 {
 	private $_Objects = [];
 
@@ -35,7 +34,7 @@ class Registry
 	public function get( $name )
 	{
 		if( !array_key_exists( $name, $this->_Objects ) )
-			return false;
+			return null;
 
 		return $this->_Objects[ $name ];
 	}

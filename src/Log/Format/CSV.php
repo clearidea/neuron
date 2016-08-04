@@ -8,8 +8,7 @@ use Neuron\Log;
  * Formats log data into a CSV format.
  */
 
-class CSV
-	implements IFormat
+class CSV implements IFormat
 {
 	public function format( Log\Data $Data )
 	{
