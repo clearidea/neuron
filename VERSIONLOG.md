@@ -1,5 +1,11 @@
 # Versions
 
+## 0.5.27
+
+* Adds Criteria pattern.
+* Adds ArrayHelper.
+* Adds DateRange, NotNull and NotEmpty validators.
+
 ## 0.5.26
 
 * Data filters for get and post.
