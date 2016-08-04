@@ -1,5 +1,9 @@
 # Versions
 
+## 0.5.28
+
+* Updates travis config.
+
 ## 0.5.27
 
 * Adds Criteria pattern.
