@@ -10,17 +10,30 @@ class ArrayHelper
 {
 	/**
 	 * @param array $aData
-	 * @param $Item
+	 * @param $Value
+	 * @param $Key
 	 * @return bool
 	 */
 
-	public static function contains( array $aData, $Item )
+	public static function contains( array $aData, $Value, $Key = null )
 	{
-		if( in_array( $Item, $aData ) )
+		if( !$Key )
 		{
-			return true;
+			if( in_array( $Value, $aData ) )
+			{
+				return true;
+			}
 		}
-
+		else
+		{
+			foreach( $aData as $Item )
+			{
+				if( $Item[ $Key ] == $Value )
+				{
+					return true;
+				}
+			}
+		}
 		return false;
 	}
 

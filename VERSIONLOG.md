@@ -1,5 +1,10 @@
 # Versions
 
+## 0.5.29
+
+* Includes tests for Criteria pattern And, Or and Not.
+* Adds KeyValue Criterion.
+
 ## 0.5.28
 
 * Updates travis config.

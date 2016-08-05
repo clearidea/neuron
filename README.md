@@ -18,6 +18,11 @@ is to provide mostly decoupled php components that aid in any sort of applicatio
 
 ## Parsers
 
+## Patterns
+
+Criteria
+Implementation of the Criteria pattern including And, Or and Not.
+
 ## Applications
 
 ### Generic Application

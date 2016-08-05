@@ -24,7 +24,7 @@ class OrCriteria extends LogicBase implements ICriteria
 
 		foreach( $aOtherCriteriaItems as $Item )
 		{
-			if( !ArrayHelper::contains( $aOtherCriteriaItems, $Item ) )
+			if( !ArrayHelper::contains( $aFirstCriteriaItems, $Item ) )
 			{
 				$aFirstCriteriaItems[] = $Item;
 			}
