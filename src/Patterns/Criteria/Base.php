@@ -22,8 +22,8 @@ abstract class Base implements ICriteria
 		return new OrCriteria( $this, $OtherCriteria );
 	}
 
-	public function _not( ICriteria $Criteria )
+	public function _not()
 	{
-		return new NotCriteria( $Criteria );
+		return new NotCriteria( $this );
 	}
 }
