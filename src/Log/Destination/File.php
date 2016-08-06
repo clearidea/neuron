@@ -14,6 +14,11 @@ class File extends DestinationBase
 	private $_sName;
 	private $_hFile;
 
+	/**
+	 * @param array $aParams
+	 * @return bool
+	 */
+
 	public function open( array $aParams )
 	{
 		$this->_sName = $aParams[ 'file_name' ];
@@ -32,9 +37,17 @@ class File extends DestinationBase
 			fclose( $this->_hFile );
 	}
 
-	public function write( $s, Log\Data $Data )
+	/**
+	 * @param $text
+	 * @param Log\Data $Data
+	 * @return void
+	 *
+	 * @SuppressWarnings(PHPMD)
+	 */
+
+	public function write( $text, Log\Data $Data )
 	{
 		fwrite(	$this->_hFile,
-					"$s\r\n" );
+					"$text\r\n" );
 	}
 }

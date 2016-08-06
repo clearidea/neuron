@@ -10,15 +10,35 @@ use Neuron\Log;
 
 class StdOut extends DestinationBase
 {
+	/**
+	 * @param array $aParams
+	 * @return bool
+	 *
+	 * @SuppressWarnings(PHPMD)
+	 */
+
 	public function open( array $aParams )
-	{ return true; }
+	{
+		return true;
+	}
 
 	public function close()
 	{}
 
+	/**
+	 * @param $text
+	 * @param Log\Data $Data
+	 * @return void
+	 *
+	 * @SuppressWarnings(PHPMD)
+	 */
+
 	public function write( $text, Log\Data $Data )
 	{
-		if(!defined('STDOUT')) define('STDOUT', fopen('php://stdout', 'w'));
+		if( !defined( 'STDOUT') )
+		{
+			define( 'STDOUT', fopen( 'php://stdout', 'w' ) );
+		}
 
 		fwrite( STDOUT, $text."\r\n" );
 	}

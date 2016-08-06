@@ -28,7 +28,7 @@ class Registry extends Singleton\Memory
 
 	/**
 	 * @param $name
-	 * @return bool
+	 * @return value
 	 */
 
 	public function get( $name )

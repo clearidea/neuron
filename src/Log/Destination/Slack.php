@@ -22,7 +22,14 @@ class Slack extends DestinationBase
 	{
 	}
 
-	public function write( $s, Log\Data $Data )
+	/**
+	 * @param $text
+	 * @param Log\Data $Data
+	 *
+	 * @SuppressWarnings(PHPMD)
+	 */
+
+	public function write( $text, Log\Data $Data )
 	{
 	}
 }

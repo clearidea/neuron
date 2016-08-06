@@ -17,7 +17,7 @@ class Date extends ValidatorBase
 	}
 
 	/**
-	 * @param $sFormat Specify the date format to validate to. Defaults to Y-m-d
+	 * @param $sFormat - Specify the date format to validate to. Defaults to Y-m-d
 	 */
 
 	public function setFormat( $sFormat )

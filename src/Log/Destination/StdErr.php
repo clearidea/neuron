@@ -10,14 +10,31 @@ use Neuron\Log;
 
 class StdErr extends DestinationBase
 {
+	/**
+	 * @param array $aParams
+	 * @return bool
+	 *
+	 * @SuppressWarnings(PHPMD)
+	 */
+
 	public function open( array $aParams )
-	{ return true; }
+	{
+		return true;
+	}
 
 	public function close()
 	{}
 
-	public function write( $s, Log\Data $Data )
+	/**
+	 * @param $s
+	 * @param Log\Data $Data
+	 * @return void
+	 *
+	 * @SuppressWarnings(PHPMD)
+	 */
+
+	public function write( $text, Log\Data $Data )
 	{
-		fwrite( STDERR, $s."\r\n" );
+		fwrite( STDERR, $text."\r\n" );
 	}
 }
