@@ -1,5 +1,9 @@
 # Versions
 
+## 0.6.1
+
+* Fix to observer variadic parameters.
+
 ## 0.6.0
 
 * Fixes phpcs/phpmd warnings.
