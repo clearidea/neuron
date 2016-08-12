@@ -15,5 +15,5 @@ interface IObserver
 	 * @return mixed
 	 */
 
-	function notify( Observable $Observable, $param );
+	function notify( Observable $Observable, ...$param );
 }
