@@ -1,10 +1,4 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: lee
- * Date: 9/5/15
- * Time: 4:29 PM
- */
 
 class DateUtilTest extends PHPUnit_Framework_TestCase
 {
@@ -12,7 +6,11 @@ class DateUtilTest extends PHPUnit_Framework_TestCase
 	{
 	}
 
-	public function testPass()
+	protected function tearDown()
+	{
+	}
+
+	public function testLeapYear()
 	{
 		$this->assertTrue(
 			Neuron\Util\Date::isLeapYear( 2004 )
@@ -21,7 +19,10 @@ class DateUtilTest extends PHPUnit_Framework_TestCase
 		$this->assertFalse(
 			Neuron\Util\Date::isLeapYear( 2003 )
 		);
+	}
 
+	public function testDaysInMonth()
+	{
 		$this->assertTrue(
 			Neuron\Util\Date::getDaysInMonth( 1 ) == 31
 		);
@@ -33,11 +34,17 @@ class DateUtilTest extends PHPUnit_Framework_TestCase
 		$this->assertTrue(
 			Neuron\Util\Date::getDaysInMonth( 2, 1805 ) == 28
 		);
+	}
 
+	public function testDiff()
+	{
 		$this->assertTrue(
 			Neuron\Util\Date::diff( date( 'Y-m-d' ), date( 'Y-m-d', strtotime( "-30 days" ) ) ) == 30
 		);
+	}
 
+	public function testSubtractDays()
+	{
 		$this->assertTrue(
 			Neuron\Util\Date::subtractDays( 8, '2015-01-30' ) == '2015-01-22'
 		);
@@ -45,10 +52,5 @@ class DateUtilTest extends PHPUnit_Framework_TestCase
 		$this->assertFalse(
 			Neuron\Util\Date::subtractDays( 8, '2015-01-30' ) == '2015-01-21'
 		);
-
-	}
-
-	protected function tearDown()
-	{
 	}
 }

@@ -1,13 +1,7 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: lee
- * Date: 12/26/15
- * Time: 1:52 PM
- */
+namespace Neuron\Patterns;
 
-namespace Neuron;
-
+use Neuron\Patterns\Singleton;
 
 class Registry extends Singleton\Memory
 {

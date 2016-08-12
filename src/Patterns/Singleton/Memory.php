@@ -1,6 +1,6 @@
 <?php
 
-namespace Neuron\Singleton;
+namespace Neuron\Patterns\Singleton;
 
 class Memory extends Base
 {

@@ -1,9 +1,18 @@
 <?php
 
-namespace Neuron\Singleton;
+namespace Neuron\Patterns\Singleton;
+
+/**
+ * Class Base
+ * @package Neuron\Patterns\Singleton
+ */
 
 abstract class Base implements ISingleton
 {
+	/**
+	 * @return null
+	 */
+
 	public static function getInstance()
 	{
 		if( static::instance() )
