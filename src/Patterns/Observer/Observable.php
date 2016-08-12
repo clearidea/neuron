@@ -24,7 +24,7 @@ class Observable
 	{
 		foreach( $this->_aObservers as $Observer )
 		{
-			$Observer->notify( $this, $params );
+			$Observer->notify( $this, ...$params );
 		}
 	}
 }
