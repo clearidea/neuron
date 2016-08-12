@@ -6,9 +6,12 @@
  * - Registry
  */
 
-namespace Neuron;
+namespace Neuron\Application;
 
-interface IApplication extends Log\ILogger
+use Neuron\Patterns;
+use Neuron\Log;
+
+interface IApplication extends Log\ILogger, Patterns\IRunnable
 {
 	public function getSetting( $sName, $sSection = 'default' );
 	public function setSetting( $sName, $sValue, $sSection = 'default' );

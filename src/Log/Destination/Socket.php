@@ -8,6 +8,11 @@ class Socket extends DestinationBase
 {
 	private $_sAddress;
 
+	/**
+	 * @param array $aParams
+	 * @return bool
+	 */
+
 	public function open( array $aParams )
 	{
 		$this->_sAddress = $aParams[ 'ip_address' ];
@@ -19,6 +24,11 @@ class Socket extends DestinationBase
 	{
 	}
 
+	/**
+	 * @param $sMsg
+	 * @throws \Exception
+	 */
+
 	protected function error( $sMsg )
 	{
 		$errorcode = socket_last_error();
@@ -27,7 +37,15 @@ class Socket extends DestinationBase
 		throw new \Exception( "$sMsg: [$errorcode] $errormsg\n" );
 	}
 
-	public function write( $s, Log\Data $Data )
+	/**
+	 * @param $text
+	 * @param Log\Data $Data
+	 * @return void
+	 *
+	 * @SuppressWarnings(PHPMD)
+	 */
+
+	public function write( $text, Log\Data $Data )
 	{
 		if( !($sock = socket_create(AF_INET, SOCK_STREAM, 0)))
 		{
@@ -39,7 +57,7 @@ class Socket extends DestinationBase
 			$this->error( 'Could not connect' );
 		}
 
-		if( !socket_send ( $sock , $s, strlen( $s ) , 0))
+		if( !socket_send ( $sock , $text, strlen( $text ) , 0))
 		{
 			$this->error( 'Write failed' );
 		}

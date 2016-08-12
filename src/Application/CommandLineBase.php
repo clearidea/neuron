@@ -1,6 +1,6 @@
 <?php
 
-namespace Neuron;
+namespace Neuron\Application;
 
 /**
  * Command line applications are designed to only be executed from the context
@@ -8,7 +8,7 @@ namespace Neuron;
  * Allows for easy addition and handling of command line parameters.
  */
 
-abstract class CommandLineApplicationBase extends ApplicationBase
+abstract class CommandLineBase extends Base
 {
 	private $_aHandlers;
 

@@ -31,8 +31,8 @@ class Logger implements ILogger
 	 * @param $i
 	 */
 
-	public function setRunLevel( $i )
-	{ $this->_iRunLevel = $i; }
+	public function setRunLevel( $iLevel )
+	{ $this->_iRunLevel = $iLevel; }
 
 	/**
 	 * @return int
@@ -71,61 +71,61 @@ class Logger implements ILogger
 	}
 
 	/**
-	 * @param $s
+	 * @param $text
 	 * @param $iLevel
 	 */
 
-	public function log( $s, $iLevel )
+	public function log( $text, $iLevel )
 	{
 		if( $iLevel >= $this->getRunLevel() )
 		{
-			$this->getDestination()->log( $s, $iLevel );
+			$this->getDestination()->log( $text, $iLevel );
 		}
 	}
 
 	/**
-	 * @param $s
+	 * @param $text
 	 */
 
-	public function debug( $s )
+	public function debug( $text )
 	{
-		$this->log( $s, self::DEBUG );
+		$this->log( $text, self::DEBUG );
 	}
 
 	/**
-	 * @param $s
+	 * @param $text
 	 */
 
-	public function info( $s )
+	public function info( $text )
 	{
-		$this->log( $s, self::INFO );
+		$this->log( $text, self::INFO );
 	}
 
 	/**
-	 * @param $s
+	 * @param $text
 	 */
 
-	public function warning( $s )
+	public function warning( $text )
 	{
-		$this->log( $s, self::WARNING );
+		$this->log( $text, self::WARNING );
 	}
 
 	/**
-	 * @param $s
+	 * @param $text
 	 */
 
-	public function error( $s )
+	public function error( $text )
 	{
-		$this->log( $s, self::ERROR );
+		$this->log( $text, self::ERROR );
 	}
 
 	/**
-	 * @param $s
+	 * @param $text
 	 */
 
-	public function fatal( $s )
+	public function fatal( $text )
 	{
-		$this->log( $s, self::FATAL );
+		$this->log( $text, self::FATAL );
 	}
 
 };

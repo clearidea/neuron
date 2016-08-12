@@ -1,16 +1,17 @@
 <?php
 
-namespace Neuron;
+namespace Neuron\Application;
 
 use Neuron\Setting;
 use Neuron\Log;
 use Neuron\Util;
+use Neuron\Patterns\Registry;
 
 /**
  * Defines base functionality for applications.
  */
 
-abstract class ApplicationBase extends Log\LoggableBase implements IApplication
+abstract class Base extends Log\LoggableBase implements IApplication
 {
 	private		$_Logger;
 	private		$_Registry;
@@ -99,7 +100,7 @@ abstract class ApplicationBase extends Log\LoggableBase implements IApplication
 	}
 
 	/**
-	 * @param \Exception $ex
+	 * @param \Exception $exception
 	 * @return bool
 	 * Called for any unhandled exceptions.
 	 */
@@ -172,7 +173,7 @@ abstract class ApplicationBase extends Log\LoggableBase implements IApplication
 	}
 
 	/**
-	 * @param $s
+	 * @param $param
 	 * @return mixed
 	 */
 

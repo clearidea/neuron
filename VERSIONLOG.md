@@ -1,5 +1,12 @@
 # Versions
 
+## 0.6.0
+
+* Fixes phpcs/phpmd warnings.
+* Adds IRunnable interface.
+* Adds Observer pattern.
+* Refactors namespaces relating to patterns.
+
 ## 0.5.29
 
 * Includes tests for Criteria pattern And, Or and Not.

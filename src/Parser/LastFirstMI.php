@@ -15,8 +15,10 @@ class LastFirstMI implements IParser
 	 * Parses Last, First M
 	 *
 	 * @param $sText
-	 * @param array unused
+	 * @param array $aLocations
 	 * @return array first, middle, last
+	 *
+	 * @SuppressWarnings(PHPMD)
 	 */
 
 	public function parse( $sText, $aLocations = array() )

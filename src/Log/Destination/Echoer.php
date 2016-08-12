@@ -10,6 +10,13 @@ use Neuron\Log;
 
 class Echoer extends DestinationBase
 {
+	/**
+	 * @param array $aParams
+	 * @return bool
+	 *
+	 * @SuppressWarnings(PHPMD)
+	 */
+
 	public function open( array $aParams )
 	{
 		return true;
@@ -18,8 +25,16 @@ class Echoer extends DestinationBase
 	public function close()
 	{}
 
-	public function write( $s, Log\Data $Data )
+	/**
+	 * @param $text
+	 * @param Log\Data $Data
+	 * @return void
+	 *
+	 * @SuppressWarnings(PHPMD)
+	 */
+
+	public function write( $text, Log\Data $Data )
 	{
-		echo $s."\r\n";
+		echo $text."\r\n";
 	}
 }

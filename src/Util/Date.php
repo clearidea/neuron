@@ -20,7 +20,7 @@ class Date
 
 	static function isLeapYear( $iYear )
 	{
-		return ((($iYear % 4) == 0) && ((($iYear % 100) != 0) || (($iYear %400) == 0)));
+		return ( ( ( $iYear % 4 ) == 0 ) && ( ( ( $iYear % 100 ) != 0 ) || ( ( $iYear % 400 ) == 0 ) ) );
 	}
 
 	/**
@@ -73,8 +73,9 @@ class Date
 	//////////////////////////////////////////////////////////////////////////
 
 	/**
-	@SuppressWarnings(PHPMD)
+	 * @SuppressWarnings(PHPMD)
 	 */
+
 	static function getDaysInMonth( $iMonth, $iYear = null )
 	{
 		$days = 0;
@@ -83,43 +84,43 @@ class Date
 		{
 			case 1:
 				$days = 31;
-			break;
+				break;
 			case 2:
 				if( self::isLeapYear( $iYear ) )
 					$days = 29;
 				else
 					$days = 28;
-			break;
+				break;
 			case 3:
 				$days = 31;
-			break;
+				break;
 			case 4:
 				$days = 30;
-			break;
+				break;
 			case 5:
 				$days = 31;
-			break;
+				break;
 			case 6:
 				$days = 30;
-			break;
+				break;
 			case 7:
 				$days = 31;
-			break;
+				break;
 			case 8:
 				$days = 31;
-			break;
+				break;
 			case 9:
 				$days = 30;
-			break;
+				break;
 			case 10:
 				$days = 31;
-			break;
+				break;
 			case 11:
 				$days = 30;
-			break;
+				break;
 			case 12:
 				$days = 31;
-			break;
+				break;
 		}
 
 		return $days;
@@ -139,7 +140,7 @@ class Date
 
 		$days = Util\Date::getDaysInMonth( date( "n" ) );
 
-		$date .= "-".$days;
+		$date .= "-" . $days;
 
 		return $date;
 	}
@@ -147,7 +148,7 @@ class Date
 	static function isSqlDateTime( $date_time )
 	{
 		if( $date_time[ 4 ] == '-' )
-			return $date_time;			// already in sql format..
+			return $date_time;         // already in sql format..
 
 		if( strlen( $date_time ) == 0 )
 			return "0000-00-00";
@@ -263,73 +264,9 @@ class Date
 
 	static function diff( $endDate, $beginDate )
 	{
-		$start_date =  Util\Date::dateToJulian( $beginDate );
-		$end_date	=	Util\Date::dateToJulian( $endDate );
+		$start_date = Util\Date::dateToJulian( $beginDate );
+		$end_date = Util\Date::dateToJulian( $endDate );
 
 		return $end_date - $start_date;
 	}
-
-	//////////////////////////////////////////////////////////////////////////
-	///
-	/// Takes a date/time string where the date format is uncertain and reformats
-	/// the date to a mysql usable format.
-	///
-	/// @param $date_time A date/time string.
-	///
-	/// @return A date/time string in mysql format (YYYY-MM-DD tttttt...) (wrong)
-	///
-	//////////////////////////////////////////////////////////////////////////
-
-	static function normalizeDate( $date )
-	{
-		if( strlen( $date < 6 ) )
-			return false;
-
-		if( 	$date[ 0 ] != '-' &&
-			$date[ 1 ] != '-' &&
-			$date[ 2 ] != '-' &&
-			$date[ 3 ] != '-' )
-		{
-			// 2006-1-1
-			if( $date[ 6 ] == '-' )
-			{
-				$begin 	= substr( $date, 0, 5 );
-				$end		= substr( $date, 5, strlen( $date ) - 5 );
-
-				// echo " 1begin $begin, end $end";
-
-				$date = $begin."0".$end;
-			}
-
-			// 2006-01-1
-			if( !is_numeric( $date[ 9 ] ) )
-			{
-				$begin 	= substr( $date, 0, 8 );
-				$end		= substr( $date, 8, strlen( $date ) - 8 );
-
-				// echo " 2begin $begin, end $end";
-
-				$date = $begin."0".$end;
-			}
-		}
-		else
-		{
-			// 1-1-2006
-			if( $date[ 1 ] == '-' )
-				$date = "0".$date;
-
-			// 01-1-2006
-			if( $date[ 4 ] == '-' )
-			{
-				$begin 	= substr( $date, 0, 3 );
-				$end		= substr( $date, 3, strlen( $date ) - 3 );
-
-				$date = $begin."0".$end;
-			}
-		}
-
-		return $date;
-	}
 }
-
-?>

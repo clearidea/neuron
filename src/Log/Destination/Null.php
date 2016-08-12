@@ -11,6 +11,13 @@ use Neuron\Log;
 class Null
 	extends DestinationBase
 {
+	/**
+	 * @param array $aParams
+	 * @return bool
+	 *
+	 * @SuppressWarnings(PHPMD)
+	 */
+
 	public function open( array $aParams )
 	{
 		return true;
@@ -20,6 +27,13 @@ class Null
 	{
 
 	}
+
+	/**
+	 * @param $s
+	 * @param Log\Data $Data
+	 *
+	 * @SuppressWarnings(PHPMD)
+	 */
 
 	public function write( $s, Log\Data $Data )
 	{

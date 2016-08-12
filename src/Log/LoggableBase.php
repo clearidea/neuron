@@ -25,7 +25,7 @@ class LoggableBase implements ILogger
 	}
 
 	/**
-	 * @param $s
+	 * @param $text
 	 * @param $iLevel
 	 *
 	 * Writes to the logger. Defaults to debug level.
@@ -47,7 +47,7 @@ class LoggableBase implements ILogger
 	}
 
 	/**
-	 * @param $s
+	 * @param $text
 	 */
 
 	public function debug( $text )
@@ -56,38 +56,38 @@ class LoggableBase implements ILogger
 	}
 
 	/**
-	 * @param $s
+	 * @param $text
 	 */
 
-	public function info( $s )
+	public function info( $text )
 	{
-		$this->_Logger->info( $s );
+		$this->_Logger->info( $text );
 	}
 
 	/**
-	 * @param $s
+	 * @param $text
 	 */
 
-	public function warning( $s )
+	public function warning( $text )
 	{
-		$this->_Logger->warning( $s );
+		$this->_Logger->warning( $text );
 	}
 
 	/**
-	 * @param $s
+	 * @param $text
 	 */
 
-	public function error( $s )
+	public function error( $text )
 	{
-		$this->_Logger->error( $s );
+		$this->_Logger->error( $text );
 	}
 
 	/**
-	 * @param $s
+	 * @param $text
 	 */
 
-	public function fatal( $s )
+	public function fatal( $text )
 	{
-		$this->_Logger->fatal( $s );
+		$this->_Logger->fatal( $text );
 	}
 }

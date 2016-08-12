@@ -20,17 +20,17 @@ interface ILogger
 	const FATAL		= 40;		// Log fatal
 
 	/**
-	 * @param $s
+	 * @param $text
 	 * @param $iLevel
 	 */
 
-	public function log( $s, $iLevel );
+	public function log( $text, $iLevel );
 	public function setRunLevel( $iLevel );
 
-	public function debug( $s );
-	public function info( $s );
-	public function warning( $s );
-	public function error( $s );
-	public function fatal( $s );
+	public function debug( $text );
+	public function info( $text );
+	public function warning( $text );
+	public function error( $text );
+	public function fatal( $text );
 }
 ?>
