@@ -2,6 +2,11 @@
 
 namespace Neuron\Util;
 
+/**
+ * System level methods.
+ * @package Neuron\Util
+ */
+
 class System
 {
 	/**

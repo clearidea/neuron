@@ -1,5 +1,4 @@
 <?php
-
 namespace Neuron\Patterns\Observer;
 
 /**
@@ -10,6 +9,11 @@ namespace Neuron\Patterns\Observer;
 class Observable
 {
 	private $_aObservers = [];
+
+	/**
+	 * Add an observer to the notification list.
+	 * @param IObserver $Observer
+	 */
 
 	public function register( IObserver $Observer )
 	{
