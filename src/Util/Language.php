@@ -5,7 +5,6 @@ namespace Neuron\Util;
 use \Neuron\Patterns\Singleton;
 use \Neuron\Parser\CSV;
 
-
 class Language extends Singleton\Memcache
 {
 	const LANGUAGE = 'language';
@@ -39,8 +38,10 @@ class Language extends Singleton\Memcache
 		{
 			$Line = $Csv->parse( $Text, [ self::LANGUAGE, self::ID, self::TEXT ] );
 
-			print_r( $Line );
-			$this->_aText[ $Line[ self::LANGUAGE ] ][ $Line[ self::ID ] ] = trim( $Line[ self::TEXT ] );
+			$lang  = trim( $Line[ self::LANGUAGE ] );
+			$ident = trim( $Line[ self::ID ] );
+
+			$this->_aText[ $lang ][ $ident ] = trim( $Line[ self::TEXT ] );
 		}
 
 		return true;

@@ -23,8 +23,6 @@ class LanguageTest extends PHPUnit_Framework_TestCase
 
 		$out = $Language->getText( 'title', 'english' );
 
-		echo $out;
-
 		$this->assertEquals(
 			'Awesome program',
 			$out
