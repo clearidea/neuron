@@ -6,7 +6,7 @@ namespace Neuron\Data\Validation;
  * Date validation.
  */
 
-class Date extends ValidatorBase
+class Date extends Base
 {
 	private $_sFormat = 'Y-m-d';
 

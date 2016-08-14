@@ -11,7 +11,7 @@ use Neuron\Patterns\Registry;
  * Defines base functionality for applications.
  */
 
-abstract class Base extends Log\LoggableBase implements IApplication
+abstract class Base extends Log\Base implements IApplication
 {
 	private		$_Logger;
 	private		$_Registry;

@@ -2,7 +2,7 @@
 
 namespace Neuron\Log;
 
-class LoggableBase implements ILogger
+class Base implements ILogger
 {
 	private $_Logger;
 
@@ -16,7 +16,7 @@ class LoggableBase implements ILogger
 	}
 
 	/**
-	 * @return Logger
+	 * @return ILogger
 	 */
 
 	public function getLogger()

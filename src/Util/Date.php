@@ -265,7 +265,7 @@ class Date
 	static function diff( $endDate, $beginDate )
 	{
 		$start_date = Util\Date::dateToJulian( $beginDate );
-		$end_date = Util\Date::dateToJulian( $endDate );
+		$end_date   = Util\Date::dateToJulian( $endDate );
 
 		return $end_date - $start_date;
 	}

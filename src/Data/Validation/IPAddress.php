@@ -7,7 +7,7 @@ namespace Neuron\Data\Validation;
  * IPAddress validation.
  */
 
-class IPAddress extends ValidatorBase
+class IPAddress extends Base
 {
 	protected function validate( $address )
 	{

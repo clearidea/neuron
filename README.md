@@ -23,6 +23,13 @@ is to provide mostly decoupled php components that aid in any sort of applicatio
 Criteria
 Implementation of the Criteria pattern including And, Or and Not.
 
+Observer
+
+Registry
+
+Singleton
+
+
 ## Applications
 
 ### Generic Application

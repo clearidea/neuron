@@ -1,5 +1,12 @@
 # Versions
 
+## 0.6.3
+
+* Adds Language text mapper.
+* Adds memcache singleton.
+* More tests.
+* Adds Memory settings - mostly only useful for tests.
+
 ## 0.6.1
 
 * Fix to observer variadic parameters.
