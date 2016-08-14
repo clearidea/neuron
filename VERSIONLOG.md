@@ -1,6 +1,6 @@
 # Versions
 
-## 0.6.2
+## 0.6.3
 
 * Adds Language text mapper.
 * Adds memcache singleton.
