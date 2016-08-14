@@ -7,7 +7,7 @@ namespace Neuron\Data\Validation;
  * Email address validation.
  */
 
-class Email extends ValidatorBase
+class Email extends Base
 {
 	protected function validate( $email )
 	{

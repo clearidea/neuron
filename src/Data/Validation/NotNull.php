@@ -9,7 +9,7 @@
 namespace Neuron\Data\Validation;
 
 
-class NotNull extends ValidatorBase
+class NotNull extends Base
 {
 	protected function validate( $data )
 	{

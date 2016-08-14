@@ -8,10 +8,11 @@
  */
 class LogTestBase extends PHPUnit_Framework_TestCase
 {
+	const INPUT = 'Test log.';
 	public $Data;
 
 	public function setup()
 	{
-		$this->Data = new \Neuron\Log\Data( time(), 'Test log', \Neuron\Log\ILogger::DEBUG, 'DEBUG' );
+		$this->Data = new \Neuron\Log\Data( time(), self::INPUT, \Neuron\Log\ILogger::DEBUG, 'DEBUG' );
 	}
 }
