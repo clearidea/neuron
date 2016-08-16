@@ -2,7 +2,7 @@ composer.phar
 composer.lock
 composer-test.lock
 vendor/
-doc/*.pyc
+doc/
 doc/phpdoc-cache*
 node_modules
 docs-cache

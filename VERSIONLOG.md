@@ -1,5 +1,9 @@
 # Versions
 
+## 0.6.4 2016-08-16
+
+* Adds server filter.
+
 ## 0.6.3
 
 * Adds Language text mapper.
