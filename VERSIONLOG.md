@@ -1,6 +1,6 @@
 # Versions
 
-## 0.6.4
+## 0.6.4 2016-08-16
 
 * Adds server filter.
 
