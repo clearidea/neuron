@@ -1,5 +1,9 @@
 # Versions
 
+## 0.6.4
+
+* Adds server filter.
+
 ## 0.6.3
 
 * Adds Language text mapper.

@@ -23,7 +23,7 @@ abstract class Base extends Log\Base implements IApplication
 	 * @return $this
 	 */
 
-	public function setConfig( Setting\Source\ISettingSource $Source )
+	public function setSettingSource( Setting\Source\ISettingSource $Source )
 	{
 		$this->_Settings = new Setting\SettingManager( $Source );
 		return $this;
