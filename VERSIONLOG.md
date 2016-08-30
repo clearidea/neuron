@@ -1,6 +1,6 @@
 # Versions
 
-## 0.6.6
+## 0.6.6 2016-08-29
 
 * Adds Util/Timer.
 * Adds differenceAsText.
