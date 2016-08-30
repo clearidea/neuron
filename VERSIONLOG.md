@@ -3,6 +3,7 @@
 ## 0.6.6
 
 * Adds Util/Timer.
+* Adds differenceAsText.
 
 ## 0.6.4 2016-08-16
 

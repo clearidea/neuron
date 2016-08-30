@@ -14,6 +14,46 @@ use Neuron\Util;
 class Date
 {
 	/**
+	 * Turns a time difference into a text format.
+	 *
+	 * @param $time
+	 * @parom $until
+	 * @return string
+	 */
+
+	static function differenceAsText( $time, $until = null )
+	{
+		if( $until == null )
+		{
+			$until = time();
+		}
+
+		$time = $until - $time;
+		$time = ( $time < 1 ) ? 1 : $time;
+
+		$tokens = [
+			31536000 => 'year',
+			2592000  => 'month',
+			604800   => 'week',
+			86400    => 'day',
+			3600     => 'hour',
+			60       => 'minute',
+			1        => 'second'
+		];
+
+		foreach( $tokens as $unit => $text)
+		{
+			if( $time < $unit )
+			{
+				continue;
+			}
+			$numberOfUnits = floor( $time / $unit );
+
+			return $numberOfUnits.' '.$text.( ( $numberOfUnits > 1) ? 's' : '' );
+		}
+	}
+
+	/**
 	 * @param $iYear
 	 * @return bool
 	 */
