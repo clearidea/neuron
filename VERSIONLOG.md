@@ -1,5 +1,9 @@
 # Versions
 
+## 0.6.7
+
+* Adds GpsPoint data object.
+
 ## 0.6.6 2016-08-29
 
 * Adds Util/Timer.
