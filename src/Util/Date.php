@@ -41,7 +41,7 @@ class Date
 			1        => 'second'
 		];
 
-		foreach( $tokens as $unit => $text)
+		foreach( $tokens as $unit => $text )
 		{
 			if( $time < $unit )
 			{
