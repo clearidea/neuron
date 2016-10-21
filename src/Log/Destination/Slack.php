@@ -11,10 +11,15 @@ class Slack extends DestinationBase
 	private $_sApiToken;
 	private $_sRoom;
 
+	/**
+	 * Call with [ 'api_token' => '', 'room' => '' ]
+	 * @param array $aParams
+	 * @return bool
+	 */
 	public function open( array $aParams )
 	{
 		$this->_sApiToken = $aParams[ 'api_token' ];
-		$this->_sRoom		= $aParams[ 'room' ];
+		$this->_sRoom     = $aParams[ 'room' ];
 		return true;
 	}
 
@@ -25,6 +30,7 @@ class Slack extends DestinationBase
 	/**
 	 * @param $text
 	 * @param Log\Data $Data
+	 * @return void
 	 *
 	 * @SuppressWarnings(PHPMD)
 	 */
