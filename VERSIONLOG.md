@@ -1,6 +1,6 @@
 # Versions
 
-## 0.6.8
+## 0.6.8 2016-10-21
 
 * Adds GpsPoint constructor.
 * Adds File\Temporary.
