@@ -25,7 +25,7 @@ class DateRangeTest extends PHPUnit_Framework_TestCase
 		$dn->setFormat( 'Y-m-d' );
 		$dn->setRange( '2000-01-01', '2000-01-02');
 
-		$this->assertFalse( $dn->isValid( '01-01-2015' ) );
+		$this->assertFalse( $dn->isValid( '2015-01-01' ) );
 	}
 
 	public function testRangePass()
