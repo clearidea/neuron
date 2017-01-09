@@ -1,5 +1,9 @@
 # Versions
 
+## 0.6.9 2017-01-09
+
+* Adds filerArray method in Post.
+
 ## 0.6.8 2016-10-21
 
 * Adds GpsPoint constructor.
