@@ -8,4 +8,9 @@ class Post implements IFilter
 	{
 		return filter_input(INPUT_POST, $data );
 	}
+
+	public function filterArray( $data )
+	{
+		return filter_input(INPUT_POST, $data,FILTER_DEFAULT, FILTER_REQUIRE_ARRAY);
+	}
 }
