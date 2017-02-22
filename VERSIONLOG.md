@@ -1,5 +1,7 @@
 # Versions
 
+## 0.6.11
+
 ## 0.6.10 2017-02-22
 
 * Adds Time Validation
