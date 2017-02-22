@@ -1,5 +1,9 @@
 # Versions
 
+## 0.6.10 2017-02-22
+
+* Adds Time Validation
+
 ## 0.6.9 2017-01-09
 
 * Adds filerArray method in Post.
