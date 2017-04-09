@@ -76,7 +76,7 @@ class Date
 			$sDate = date( 'Y-m-d' );
 		}
 
-		$julian = self::dateToJulian( $sDate );
+		$julian  = self::dateToJulian( $sDate );
 		$julian -= $iDays;
 
 		return Date::julianToDate( $julian );
@@ -127,9 +127,13 @@ class Date
 				break;
 			case 2:
 				if( self::isLeapYear( $iYear ) )
+				{
 					$days = 29;
+				}
 				else
+				{
 					$days = 28;
+				}
 				break;
 			case 3:
 				$days = 31;
@@ -188,10 +192,14 @@ class Date
 	static function isSqlDateTime( $date_time )
 	{
 		if( $date_time[ 4 ] == '-' )
-			return $date_time;         // already in sql format..
+		{
+			return $date_time;
+		}         // already in sql format..
 
 		if( strlen( $date_time ) == 0 )
+		{
 			return "0000-00-00";
+		}
 
 		return null;
 	}
@@ -212,8 +220,11 @@ class Date
 	static function getMySqlDateTime( $date_time )
 	{
 		$sqldatetime = self::isSqlDateTime( $date_time );
+
 		if( $sqldatetime )
+		{
 			return $sqldatetime;
+		}
 
 		$dt1 = substr( $date_time, 6, 4 );
 		$dt1 .= "-";

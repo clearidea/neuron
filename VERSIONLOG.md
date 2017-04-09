@@ -1,12 +1,19 @@
 # Versions
 
+## 0.6.11
+
+* Fixups for php7
+* Adds PolicyTrait
+
 ## 0.6.10 2017-02-22
 
 * Adds Time Validation
 
+* Added StringData class.
+
 ## 0.6.9 2017-01-09
 
-* Adds filerArray method in Post.
+* Adds filterArray method in Post.
 
 ## 0.6.8 2016-10-21
 

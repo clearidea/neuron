@@ -30,11 +30,14 @@ class DateRange extends Date
 	/**
 	 * @param $sMin
 	 * @param $sMax
+	 * @return $this
 	 */
 
 	public function setRange( $sMin, $sMax )
 	{
 		$this->_sMinDate = $sMin;
 		$this->_sMaxDate = $sMax;
+
+		return $this;
 	}
 }
