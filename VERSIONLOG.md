@@ -2,6 +2,9 @@
 
 ## 0.6.11
 
+* Fixups for php7
+* Adds PolicyTrait
+
 ## 0.6.10 2017-02-22
 
 * Adds Time Validation

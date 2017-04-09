@@ -18,10 +18,13 @@ class Date extends Base
 
 	/**
 	 * @param $sFormat - Specify the date format to validate to. Defaults to Y-m-d
+	 * @return $this
 	 */
 
 	public function setFormat( $sFormat )
 	{
 		$this->_sFormat = $sFormat;
+
+		return $this;
 	}
 }

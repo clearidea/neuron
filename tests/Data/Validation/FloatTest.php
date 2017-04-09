@@ -12,14 +12,14 @@ class FloatTest
 {
 	public function testFail()
 	{
-		$dn = new \Neuron\Data\Validation\Float();
+		$dn = new \Neuron\Data\Validation\FloatingPoint();
 
 		$this->assertFalse( $dn->isValid( 'string' ) );
 	}
 
 	public function testPass()
 	{
-		$dn = new \Neuron\Data\Validation\Float();
+		$dn = new \Neuron\Data\Validation\FloatingPoint();
 
 		$this->assertTrue( $dn->isValid( 3.14) );
 	}
