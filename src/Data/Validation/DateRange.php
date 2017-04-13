@@ -1,43 +1,28 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: lee
- * Date: 7/27/16
- * Time: 6:43 PM
- */
 
 namespace Neuron\Data\Validation;
 
+use Neuron\Data\Object;
+
 class DateRange extends Date
 {
-	private $_sMinDate;
-	private $_sMaxDate;
-
-	protected function validate( $date )
+	protected function validate( $Range )
 	{
-		if( !parent::validate( $date ) )
+		// validate the format of start
+		if( !parent::validate( $Range->Start ) )
 		{
 			return false;
 		}
 
-		$startTS = strtotime( $this->_sMinDate );
-		$endTS   = strtotime( $this->_sMaxDate );
-		$dateTS  = strtotime( $date );
+		// validate the format of end
+		if( !parent::validate( $Range->End ) )
+		{
+			return false;
+		}
 
-		return ( ( $dateTS >= $startTS ) && ( $dateTS <= $endTS ) );
-	}
+		$startTS = strtotime( $Range->Start );
+		$endTS   = strtotime( $Range->End );
 
-	/**
-	 * @param $sMin
-	 * @param $sMax
-	 * @return $this
-	 */
-
-	public function setRange( $sMin, $sMax )
-	{
-		$this->_sMinDate = $sMin;
-		$this->_sMaxDate = $sMax;
-
-		return $this;
+		return ( $startTS < $endTS );
 	}
 }

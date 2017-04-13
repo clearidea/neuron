@@ -1,7 +1,9 @@
 # Versions
 
 ## 0.6.12
-
+* Added DateRange object.
+* Refactored DateRange validator to DateWithinRange validator.
+* Added DateRange validator.
 
 ## 0.6.11
 
