@@ -1,13 +1,6 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: lee
- * Date: 9/29/15
- * Time: 10:59 AM
- */
 
 namespace Neuron\Log;
-
 
 class LogMux implements ILogger
 {
@@ -46,7 +39,7 @@ class LogMux implements ILogger
 	 * Sync run levels for all loggers.
 	 */
 
-	public function setRunLevel( $iLevel )
+	public function setRunLevel( $iLevel ) : void
 	{
 		foreach( $this->getLogs() as $Log )
 		{
@@ -60,7 +53,7 @@ class LogMux implements ILogger
 	 * @param $iLevel
 	 */
 
-	public function log( $text, $iLevel )
+	public function log( $text, $iLevel ) : void
 	{
 		foreach( $this->getLogs() as $Log )
 		{
@@ -72,7 +65,7 @@ class LogMux implements ILogger
 	 * @param $text
 	 */
 
-	public function debug( $text )
+	public function debug( $text ) : void
 	{
 		$this->log( $text, self::DEBUG );
 	}
@@ -81,7 +74,7 @@ class LogMux implements ILogger
 	 * @param $text
 	 */
 
-	public function info( $text )
+	public function info( $text ) : void
 	{
 		$this->log( $text, self::INFO );
 	}
@@ -90,7 +83,7 @@ class LogMux implements ILogger
 	 * @param $text
 	 */
 
-	public function warning( $text )
+	public function warning( $text ) : void
 	{
 		$this->log( $text, self::WARNING );
 	}
@@ -99,7 +92,7 @@ class LogMux implements ILogger
 	 * @param $text
 	 */
 
-	public function error( $text )
+	public function error( $text ) : void
 	{
 		$this->log( $text, self::ERROR );
 	}
@@ -108,7 +101,7 @@ class LogMux implements ILogger
 	 * @param $text
 	 */
 
-	public function fatal( $text )
+	public function fatal( $text ) : void
 	{
 		$this->log( $text, self::FATAL );
 	}

@@ -1,5 +1,9 @@
 # Versions
 
+## 0.6.13
+* Added Log singleton.
+* Fixes an issue with inheriting from the singleton memory class.
+
 ## 0.6.12
 * Added DateRange object.
 * Refactored DateRange validator to DateWithinRange validator.

@@ -1,13 +1,6 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: lee
- * Date: 9/5/15
- * Time: 1:14 PM
- */
 
-class LogMuxTest
-	extends PHPUnit_Framework_TestCase
+class LogMuxTest extends PHPUnit_Framework_TestCase
 {
 	public $_Mux;
 
