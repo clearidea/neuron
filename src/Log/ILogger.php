@@ -23,41 +23,41 @@ interface ILogger
 	 * @param $text
 	 * @param $iLevel
 	 */
-	public function log( $text, $iLevel ) : void;
+	public function log( string $text, int $iLevel ) : void;
 
 	/**
 	 * @param $iLevel
 	 * @return mixed
 	 */
-	public function setRunLevel( $iLevel ) : void;
+	public function setRunLevel( int $iLevel ) : void;
 
 	/**
 	 * @param $text
 	 * @return mixed
 	 */
-	public function debug( $text ) : void;
+	public function debug( string $text ) : void;
 
 	/**
 	 * @param $text
 	 * @return mixed
 	 */
-	public function info( $text ) : void;
+	public function info( string $text ) : void;
 
 	/**
 	 * @param $text
 	 * @return mixed
 	 */
-	public function warning( $text ) : void;
+	public function warning( string $text ) : void;
 
 	/**
 	 * @param $text
 	 * @return mixed
 	 */
-	public function error( $text ) : void;
+	public function error( string $text ) : void;
 
 	/**
 	 * @param $text
 	 * @return mixed
 	 */
-	public function fatal( $text ) : void;
+	public function fatal( string $text ) : void;
 }

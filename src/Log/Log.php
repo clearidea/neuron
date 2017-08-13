@@ -3,7 +3,6 @@
 namespace Neuron\Log;
 
 use Neuron\Log\Destination\Echoer;
-use Neuron\Log\Destination\StdOut;
 use Neuron\Log\Format\PlainText;
 use Neuron\Patterns\Singleton\Memory;
 
@@ -11,47 +10,76 @@ class Log extends Memory
 {
 	public $Logger;
 
-	public function init()
+	public function initIfNeeded()
 	{
-		$this->Logger = new \Neuron\Log\Logger(
-			new Echoer( new PlainText() )
-		);
+		if( !$this->Logger )
+		{
+			$this->Logger = new \Neuron\Log\Logger(
+				new Echoer( new PlainText() )
+			);
 
-		$this->serialize();
+			$this->serialize();
+		}
 	}
 
-	public static function log( $text, $iLevel )
+	/**
+	 * @param $text
+	 * @param $iLevel
+	 */
+	public static function _log( $text, $iLevel )
 	{
-		self::getInstance()->Logger->log( $text, $iLevel );
+		$Log = self::getInstance();
+		$Log->initIfNeeded();
+		$Log->Logger->log( $text, $iLevel );
 	}
 
+	/**
+	 * @param $iLevel
+	 */
 	public static function setRunLevel( $iLevel )
 	{
-		self::getInstance()->Logger->setRunLevel( $iLevel );
+		$Log = self::getInstance();
+		$Log->initIfNeeded();
+		$Log->Logger->setRunLevel( $iLevel );
 	}
 
+	/**
+	 * @param $text
+	 */
 	public static function debug( $text )
 	{
-		self::log( $text, ILogger::DEBUG );
+		self::_log( $text, ILogger::DEBUG );
 	}
 
+	/**
+	 * @param $text
+	 */
 	public static function info( $text )
 	{
-		self::log( $text, ILogger::INFO );
+		self::_log( $text, ILogger::INFO );
 	}
 
+	/**
+	 * @param $text
+	 */
 	public static function warning( $text )
 	{
-		self::log( $text, ILogger::WARNING );
+		self::_log( $text, ILogger::WARNING );
 	}
 
+	/**
+	 * @param $text
+	 */
 	public static function error( $text )
 	{
-		self::log( $text, ILogger::ERROR );
+		self::_log( $text, ILogger::ERROR );
 	}
 
+	/**
+	 * @param $text
+	 */
 	public static function fatal( $text )
 	{
-		self::log( $text, ILogger::FATAL );
+		self::_log( $text, ILogger::FATAL );
 	}
 }

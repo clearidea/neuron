@@ -1,8 +1,9 @@
 # Versions
 
-## 0.6.13
-* Added Log singleton.
+## 0.7.0
+* Added Log singleton wrapper.
 * Fixes an issue with inheriting from the singleton memory class.
+* PHP7.1 updates to ILogger.
 
 ## 0.6.12
 * Added DateRange object.
