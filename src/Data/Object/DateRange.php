@@ -12,5 +12,4 @@ class DateRange
 		$this->Start = $Start;
 		$this->End   = $End;
 	}
-
 }
