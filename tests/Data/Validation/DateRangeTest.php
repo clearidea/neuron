@@ -1,41 +1,51 @@
 <?php
 
-/**
- * Created by PhpStorm.
- * User: lee
- * Date: 7/27/16
- * Time: 6:55 PM
- */
 class DateRangeTest extends PHPUnit_Framework_TestCase
 {
-	public function testFormatFail()
+	public function testStartFormatFail()
 	{
-		$dn = new \Neuron\Data\Validation\DateRange();
+		$Validator = new \Neuron\Data\Validation\DateRange();
+		$Validator->setFormat( 'Y-m-d' );
 
-		$dn->setFormat( 'Y-m-d' );
-		$dn->setRange( '2000-01-01', '2020-01-02');
+		$Range = new \Neuron\Data\Object\DateRange( '01-01-2000', '2000-01-02' );
 
-		$this->assertFalse( $dn->isValid( '01-01-2015' ) );
+		$this->assertFalse( $Validator->isValid( $Range ) );
+	}
+
+	public function testEndFormatFail()
+	{
+		$Validator = new \Neuron\Data\Validation\DateRange();
+		$Validator->setFormat( 'Y-m-d' );
+
+		$Range = new \Neuron\Data\Object\DateRange( '2000-01-01', '01-02-2000' );
+
+		$this->assertFalse( $Validator->isValid( $Range ) );
 	}
 
 	public function testRangeFail()
 	{
-		$dn = new \Neuron\Data\Validation\DateRange();
+		$Validator = new \Neuron\Data\Validation\DateRange();
 
-		$dn->setFormat( 'Y-m-d' );
-		$dn->setRange( '2000-01-01', '2000-01-02');
+		$Validator->setFormat( 'Y-m-d' );
 
-		$this->assertFalse( $dn->isValid( '2015-01-01' ) );
+		$this->assertFalse(
+			$Validator->isValid(
+				new \Neuron\Data\Object\DateRange( '2000-01-01', '2000-01-01' )
+			)
+		);
 	}
 
 	public function testRangePass()
 	{
-		$dn = new \Neuron\Data\Validation\DateRange();
+		$Validator = new \Neuron\Data\Validation\DateRange();
 
-		$dn->setFormat( 'Y-m-d' );
-		$dn->setRange( '2000-01-01', '2020-01-02');
+		$Validator->setFormat( 'Y-m-d' );
 
-		$this->assertTrue( $dn->isValid( '2015-01-01' ) );
+		$this->assertTrue(
+			$Validator->isValid(
+				new \Neuron\Data\Object\DateRange( '2000-01-01', '2000-01-03' )
+			)
+		);
 	}
 
 }

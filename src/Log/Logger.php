@@ -18,28 +18,36 @@ class Logger implements ILogger
 	 */
 
 	public function setDestination( Destination\DestinationBase $Dest )
-	{ $this->_Destination = $Dest; }
+	{
+		$this->_Destination = $Dest;
+	}
 
 	/**
 	 * @return mixed
 	 */
 
 	public function getDestination()
-	{ return $this->_Destination; }
+	{
+		return $this->_Destination;
+	}
 
 	/**
-	 * @param $i
+	 * @param $iLevel
 	 */
 
-	public function setRunLevel( $iLevel )
-	{ $this->_iRunLevel = $iLevel; }
+	public function setRunLevel( int $iLevel ) : void
+	{
+		$this->_iRunLevel = $iLevel;
+	}
 
 	/**
 	 * @return int
 	 */
 
-	public function getRunLevel()
-	{ return $this->_iRunLevel; }
+	public function getRunLevel() : int
+	{
+		return $this->_iRunLevel;
+	}
 
 	//////////////////////////////////////////////////////////////////////////
 
@@ -75,7 +83,7 @@ class Logger implements ILogger
 	 * @param $iLevel
 	 */
 
-	public function log( $text, $iLevel )
+	public function log( string $text, int $iLevel ) : void
 	{
 		if( $iLevel >= $this->getRunLevel() )
 		{
@@ -87,7 +95,7 @@ class Logger implements ILogger
 	 * @param $text
 	 */
 
-	public function debug( $text )
+	public function debug( string $text ) : void
 	{
 		$this->log( $text, self::DEBUG );
 	}
@@ -96,7 +104,7 @@ class Logger implements ILogger
 	 * @param $text
 	 */
 
-	public function info( $text )
+	public function info( string $text ) : void
 	{
 		$this->log( $text, self::INFO );
 	}
@@ -105,7 +113,7 @@ class Logger implements ILogger
 	 * @param $text
 	 */
 
-	public function warning( $text )
+	public function warning( string $text ) : void
 	{
 		$this->log( $text, self::WARNING );
 	}
@@ -114,7 +122,7 @@ class Logger implements ILogger
 	 * @param $text
 	 */
 
-	public function error( $text )
+	public function error( string $text ) : void
 	{
 		$this->log( $text, self::ERROR );
 	}
@@ -123,11 +131,9 @@ class Logger implements ILogger
 	 * @param $text
 	 */
 
-	public function fatal( $text )
+	public function fatal( string $text ) : void
 	{
 		$this->log( $text, self::FATAL );
 	}
+}
 
-};
-
-?>

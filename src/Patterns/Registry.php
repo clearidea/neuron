@@ -28,7 +28,9 @@ class Registry extends Singleton\Memory
 	public function get( $name )
 	{
 		if( !array_key_exists( $name, $this->_Objects ) )
+		{
 			return null;
+		}
 
 		return $this->_Objects[ $name ];
 	}

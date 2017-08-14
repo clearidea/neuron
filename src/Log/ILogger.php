@@ -13,24 +13,51 @@ namespace Neuron\Log;
 
 interface ILogger
 {
-	const DEBUG 	= 0;		// Log all
-	const INFO		= 10;		// Log informational
-	const WARNING	= 20;		// Log warning
-	const ERROR		= 30;		// Log error
-	const FATAL		= 40;		// Log fatal
+	const DEBUG   = 0;		// Log all
+	const INFO    = 10;		// Log informational
+	const WARNING = 20;		// Log warning
+	const ERROR   = 30;		// Log error
+	const FATAL   = 40;		// Log fatal
 
 	/**
 	 * @param $text
 	 * @param $iLevel
 	 */
+	public function log( string $text, int $iLevel ) : void;
 
-	public function log( $text, $iLevel );
-	public function setRunLevel( $iLevel );
+	/**
+	 * @param $iLevel
+	 * @return mixed
+	 */
+	public function setRunLevel( int $iLevel ) : void;
 
-	public function debug( $text );
-	public function info( $text );
-	public function warning( $text );
-	public function error( $text );
-	public function fatal( $text );
+	/**
+	 * @param $text
+	 * @return mixed
+	 */
+	public function debug( string $text ) : void;
+
+	/**
+	 * @param $text
+	 * @return mixed
+	 */
+	public function info( string $text ) : void;
+
+	/**
+	 * @param $text
+	 * @return mixed
+	 */
+	public function warning( string $text ) : void;
+
+	/**
+	 * @param $text
+	 * @return mixed
+	 */
+	public function error( string $text ) : void;
+
+	/**
+	 * @param $text
+	 * @return mixed
+	 */
+	public function fatal( string $text ) : void;
 }
-?>

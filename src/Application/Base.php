@@ -68,8 +68,8 @@ abstract class Base extends Log\Base implements IApplication
 	{
 		$this->_Registry = Registry::getInstance();
 
-		$Destination	= new Log\Destination\StdOut( new Log\Format\PlainText );
-		$Log 				= new Log\Logger( $Destination );
+		$Destination = new Log\Destination\StdOut( new Log\Format\PlainText );
+		$Log         = new Log\Logger( $Destination );
 
 		$this->_Logger = new Log\LogMux();
 		$this->_Logger->addLog( $Log );
