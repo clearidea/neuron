@@ -1,6 +1,6 @@
 # Versions
 
-## 0.7.0
+## 0.7.0 2017-08-14
 * Added Log singleton wrapper.
 * Fixes an issue with inheriting from the singleton memory class.
 * PHP7.1 updates to ILogger.
