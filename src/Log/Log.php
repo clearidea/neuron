@@ -41,6 +41,7 @@ class Log extends Memory
 		$Log = self::getInstance();
 		$Log->initIfNeeded();
 		$Log->Logger->setRunLevel( $iLevel );
+		$this->serialize();
 	}
 
 	/**

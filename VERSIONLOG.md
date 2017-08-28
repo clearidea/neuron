@@ -1,6 +1,7 @@
 # Versions
 
 ## 0.7.1
+* Fixes an issue with setting log level in singleton.
 
 ## 0.7.0 2017-08-14
 * Added Log singleton wrapper.
