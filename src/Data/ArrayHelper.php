@@ -39,6 +39,25 @@ class ArrayHelper
 
 	/**
 	 * @param array $aData
+	 * @param $Key
+	 * @return bool
+	 */
+
+	public static function hasKey( array $aData, $Key )
+	{
+		foreach( $aData as $key => $value )
+		{
+			if ( $Key === $key )
+			{
+				return true;
+			}
+		}
+
+		return false;
+	}
+
+	/**
+	 * @param array $aData
 	 * @param $sKey
 	 * @param null $Default
 	 * @return mixed|null

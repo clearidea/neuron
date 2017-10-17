@@ -26,6 +26,21 @@ class ArrayHelperTest extends PHPUnit_Framework_TestCase
 		$this->assertTrue( ArrayHelper::contains( $aTest, 'two' ) );
 	}
 
+	public function testHasKey()
+	{
+		$aTest = [
+			'one' => 1,
+			'two' => 2,
+			'three' => 3
+		];
+
+		// sad
+		$this->assertFalse( ArrayHelper::hasKey( $aTest, 'four' ) );
+
+		// happy
+		$this->assertTrue( ArrayHelper::hasKey( $aTest, 'two' ) );
+	}
+
 	public function testGetElement()
 	{
 		$aTest = [
