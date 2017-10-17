@@ -45,12 +45,9 @@ class ArrayHelper
 
 	public static function hasKey( array $aData, $Key )
 	{
-		foreach( $aData as $key => $value )
+		if ( isset( $aData[ $Key ] ) || array_key_exists( $Key, $aData ) )
 		{
-			if ( $Key === $key )
-			{
-				return true;
-			}
+			return true;
 		}
 
 		return false;
