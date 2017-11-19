@@ -10,61 +10,130 @@ class DatelTest extends PHPUnit_Framework_TestCase
 	{
 	}
 
-	public function testDifferenceAsText()
+	public function testDaysAsText()
+	{
+		$this->assertEquals(
+			Neuron\Util\Date::daysAsText( 1 ),
+			'1 day'
+		);
+
+		$this->assertEquals(
+			Neuron\Util\Date::daysAsText( 2 ),
+			'2 days'
+		);
+
+		$this->assertEquals(
+			Neuron\Util\Date::daysAsText( 7 ),
+			'1 week'
+		);
+
+		$this->assertEquals(
+			Neuron\Util\Date::daysAsText( 14 ),
+			'2 weeks'
+		);
+
+		$this->assertEquals(
+			Neuron\Util\Date::daysAsText( 15 ),
+			'2 weeks, 1 day'
+		);
+
+		$this->assertEquals(
+			Neuron\Util\Date::daysAsText( 16 ),
+			'2 weeks, 2 days'
+		);
+
+		$this->assertEquals(
+			Neuron\Util\Date::daysAsText( 30 ),
+			'1 month'
+		);
+
+		$this->assertEquals(
+			Neuron\Util\Date::daysAsText( 60 ),
+			'2 months'
+		);
+
+		$this->assertEquals(
+			Neuron\Util\Date::daysAsText( 61 ),
+			'2 months, 1 day'
+		);
+
+		$this->assertEquals(
+			Neuron\Util\Date::daysAsText( 62 ),
+			'2 months, 2 days'
+		);
+
+		$this->assertEquals(
+			Neuron\Util\Date::daysAsText( 68 ),
+			'2 months, 1 week, 1 day'
+		);
+
+		$this->assertEquals(
+			Neuron\Util\Date::daysAsText( 365 ),
+			'1 year'
+		);
+
+		$this->assertEquals(
+			Neuron\Util\Date::daysAsText( 365 + 60 + 14 + 2 ),
+			'1 year, 2 months, 2 weeks, 2 days'
+		);
+
+	}
+
+	public function testDifferenceUnitAsText()
 	{
 		// year
 
 		$this->assertEquals(
-			Neuron\Util\Date::differenceAsText( 31536000, 31536000 * 2 ),
+			Neuron\Util\Date::differenceUnitAsText( 31536000, 31536000 * 2 ),
 			'1 year'
 		);
 
 		// years
 
 		$this->assertEquals(
-			Neuron\Util\Date::differenceAsText( 31536000, 31536000 * 3 ),
+			Neuron\Util\Date::differenceUnitAsText( 31536000, 31536000 * 3 ),
 			'2 years'
 		);
 
 		// month
 
 		$this->assertEquals(
-			Neuron\Util\Date::differenceAsText( 2592000, 2592000 * 2 ),
+			Neuron\Util\Date::differenceUnitAsText( 2592000, 2592000 * 2 ),
 			'1 month'
 		);
 
 		// week
 
 		$this->assertEquals(
-			Neuron\Util\Date::differenceAsText( 604800, 604800 * 2 ),
+			Neuron\Util\Date::differenceUnitAsText( 604800, 604800 * 2 ),
 			'1 week'
 		);
 
 		// day
 
 		$this->assertEquals(
-			Neuron\Util\Date::differenceAsText( 86400, 86400 * 2 ),
+			Neuron\Util\Date::differenceUnitAsText( 86400, 86400 * 2 ),
 			'1 day'
 		);
 
 		// hour
 
 		$this->assertEquals(
-			Neuron\Util\Date::differenceAsText( 3600, 3600 * 2 ),
+			Neuron\Util\Date::differenceUnitAsText( 3600, 3600 * 2 ),
 			'1 hour'
 		);
 
 		// minute
 
 		$this->assertEquals(
-			Neuron\Util\Date::differenceAsText( 60, 60 * 2 ),
+			Neuron\Util\Date::differenceUnitAsText( 60, 60 * 2 ),
 			'1 minute'
 		);
 
 		// second
 
 		$this->assertEquals(
-			Neuron\Util\Date::differenceAsText( 1, 1 * 2 ),
+			Neuron\Util\Date::differenceUnitAsText( 1, 1 * 2 ),
 			'1 second'
 		);
 

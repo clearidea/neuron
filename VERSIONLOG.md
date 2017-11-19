@@ -1,5 +1,10 @@
 # Versions
 
+## 0.7.1 2017-11-19
+* Fixes an issue with setting log level in singleton.
+* Refactors differenceUnitAsText
+* Adds daysAsText
+
 ## 0.7.0 2017-08-14
 * Added Log singleton wrapper.
 * Fixes an issue with inheriting from the singleton memory class.
