@@ -14,24 +14,64 @@ use Neuron\Util;
 class Date
 {
 	/**
+	 * @param $Days
+	 * @return mixed|string
+	 */
+	static function daysAsText( $Days )
+	{
+		$Units = [
+			365 => 'year',
+			30  => 'month',
+			7   => 'week',
+			1   => 'day'
+		];
+
+		$Text = null;
+
+		foreach( $Units as $Length => $Unit )
+		{
+			if( $Days >= $Length )
+			{
+				$Count = floor( $Days / $Length );
+
+				if( $Text )
+				{
+					$Text .= ', ';
+				}
+
+				$Text .= $Count.' '.$Unit;
+
+				if( $Count > 1 )
+				{
+					$Text .= 's';
+				}
+
+				$Days -= ( $Count * $Length );
+			}
+		}
+
+		return $Text;
+	}
+
+	/**
 	 * Turns a time difference into a text format.
 	 *
-	 * @param $time
-	 * @parom $until
+	 * @param $Time
+	 * @param $Until
 	 * @return string
 	 */
 
-	static function differenceAsText( $time, $until = null )
+	static function differenceUnitAsText( $Time, $Until = null )
 	{
-		if( $until == null )
+		if( $Until == null )
 		{
-			$until = time();
+			$Until = time();
 		}
 
-		$time = $until - $time;
-		$time = ( $time < 1 ) ? 1 : $time;
+		$Time = $Until - $Time;
+		$Time = ( $Time < 1 ) ? 1 : $Time;
 
-		$tokens = [
+		$Units = [
 			31536000 => 'year',
 			2592000  => 'month',
 			604800   => 'week',
@@ -41,15 +81,15 @@ class Date
 			1        => 'second'
 		];
 
-		foreach( $tokens as $unit => $text )
+		foreach( $Units as $Length => $Text )
 		{
-			if( $time < $unit )
+			if( $Time < $Length )
 			{
 				continue;
 			}
-			$numberOfUnits = floor( $time / $unit );
+			$Count = floor( $Time / $Length );
 
-			return $numberOfUnits.' '.$text.( ( $numberOfUnits > 1) ? 's' : '' );
+			return $Count.' '.$Text.( ( $Count > 1) ? 's' : '' );
 		}
 	}
 

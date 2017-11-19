@@ -2,6 +2,8 @@
 
 ## 0.7.1
 * Fixes an issue with setting log level in singleton.
+* Refactors differenceUnitAsText
+* Adds daysAsText
 
 ## 0.7.0 2017-08-14
 * Added Log singleton wrapper.
