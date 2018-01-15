@@ -1,6 +1,6 @@
 # Versions
 
-## 0.7.2
+## 0.7.2 2018-01-15
 * Adds Date::only()
 * Julian date now strips time before processing.
 
