@@ -10,6 +10,14 @@ class DatelTest extends PHPUnit_Framework_TestCase
 	{
 	}
 
+	public function testDateOnly()
+	{
+		$this->assertEquals(
+			Neuron\Util\Date::only( '2018-01-15 01:02:03' ),
+			'2018-01-15'
+		);
+	}
+
 	public function testDaysAsText()
 	{
 		$this->assertEquals(

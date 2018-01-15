@@ -1,18 +1,20 @@
 <?php
 
-
-
-//////////////////////////////////////////////////////////////////////////
-/// \addtogroup Date/Time
-/// @{
-//////////////////////////////////////////////////////////////////////////
-
 namespace Neuron\Util;
 
 use Neuron\Util;
 
 class Date
 {
+	/**
+	 * @param $DateTime
+	 * @return false|string
+	 */
+	static function only( $DateTime )
+	{
+		return date( 'Y-m-d', strtotime( $DateTime ) );
+	}
+
 	/**
 	 * @param $Days
 	 * @return mixed|string
@@ -132,7 +134,7 @@ class Date
 
 	static function getCurrentMonthStartDate()
 	{
-		$date = date( "Y-m" );
+		$date  = date( "Y-m" );
 		$date .= "-1";
 
 		return $date;
@@ -312,14 +314,15 @@ class Date
 	///	Julian date.
 	//////////////////////////////////////////////////////////////////////////
 
-	static function dateToJulian( $date )
+	static function dateToJulian( $Date )
 	{
+		$Date = self::only( $Date );
+
 		$dformat = "-";
 
-		// YYYY-MM-DD
-
-		$date_parts = explode( $dformat, $date );
+		$date_parts = explode( $dformat, $Date );
 		$start_date = gregoriantojd( $date_parts[ 1 ], $date_parts[ 2 ], $date_parts[ 0 ] );
+
 		return $start_date;
 	}
 
