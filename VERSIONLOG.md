@@ -1,5 +1,8 @@
 # Versions
 
+## 0.7.3 2018-02-17
+* Adds Cookie filter.
+
 ## 0.7.2 2018-01-15
 * Adds Date::only()
 * Julian date now strips time before processing.
