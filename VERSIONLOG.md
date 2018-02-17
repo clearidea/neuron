@@ -1,7 +1,7 @@
 # Versions
 
 ## 0.7.3
-
+* Adds Cookie filter.
 
 ## 0.7.2 2018-01-15
 * Adds Date::only()
