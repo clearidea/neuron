@@ -1,5 +1,7 @@
 # Versions
 
+## 0.7.5
+
 ## 0.7.4 2018-04-21
 * Adds Version data object.
 
