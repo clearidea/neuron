@@ -1,5 +1,8 @@
 # Versions
 
+## 0.7.4 2018-04-21
+* Adds Version data object.
+
 ## 0.7.3 2018-02-17
 * Adds Cookie filter.
 
