@@ -57,15 +57,17 @@ abstract class CommandLineBase extends Base
 			{
 				if( $sSwitch == $sParam )
 				{
+					$Method = $aInfo[ 'method' ];
+
 					if( $aInfo[ 'param' ] )
 					{
 						$c++;
 						$param = $this->getParameters()[ $c ];
-						$this->$aInfo[ 'method' ]( $param );
+						$this->$Method( $param );
 					}
 					else
 					{
-						$this->$aInfo[ 'method' ]();
+						$this->$Method();
 					}
 				}
 			}
