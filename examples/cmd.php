@@ -1,29 +1,9 @@
 <?php
-
-/**
- * Created by PhpStorm.
- * User: lee
- * Date: 9/4/15
- * Time: 12:21 PM
- *
- * Test by typing:
- *
- * php cmd.php -d -t
- * 	shows date and time
- *
- * php cmd.php -s "this is a test"
- * 	echos the message to stdout.
- *
- * php cmd.php --help
- *
- * 	shows command switches and descriptions
- */
-
 require_once( '../vendor/autoload.php' );
 
 use Neuron\Log;
 
-class cmd extends Neuron\CommandLineApplicationBase
+class cmd extends Neuron\Application\CommandLineBase
 {
 	public function getVersion()
 	{

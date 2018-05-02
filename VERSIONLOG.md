@@ -1,6 +1,8 @@
 # Versions
 
 ## 0.7.5
+* Version->loadFromFile now defaults to version.json for the filename.
+* Updated commandlinebase to handle parameters in php 7.x
 
 ## 0.7.4 2018-04-21
 * Adds Version data object.

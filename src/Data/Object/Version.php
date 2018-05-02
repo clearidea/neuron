@@ -8,6 +8,9 @@ class Version
 	public $Minor;
 	public $Patch;
 
+	/**
+	 * Version constructor.
+	 */
 	public function __construct()
 	{
 		$this->Major = 0;
@@ -15,6 +18,10 @@ class Version
 		$this->Patch = 0;
 	}
 
+	/**
+	 * @param $Data
+	 * @throws \Exception
+	 */
 	public function loadFromString( $Data )
 	{
 		$Json = json_decode( $Data,true );
@@ -29,7 +36,11 @@ class Version
 		$this->Patch = $Json[ 'patch' ];
 	}
 
-	public function loadFromFile( $File )
+	/**
+	 * @param string $File
+	 * @throws \Exception
+	 */
+	public function loadFromFile( $File = 'version.json' )
 	{
 		if( !file_exists( $File ) )
 		{
