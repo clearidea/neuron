@@ -1,12 +1,5 @@
 <?php
 
-/**
- * Created by PhpStorm.
- * User: lee
- * Date: 4/9/17
- * Time: 6:58 AM
- */
-
 class PolicyTest extends PHPUnit_Framework_TestCase
 {
 	private $PolicyTraitObj;
