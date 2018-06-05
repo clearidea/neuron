@@ -1,5 +1,7 @@
 # Versions
 
+## 0.7.7
+
 ## 0.7.6 2018-06-05
 * Regressed to make compatible with php 5.6
 
@@ -39,8 +41,7 @@
 
 ## 0.6.10 2017-02-22
 
-* Adds Time Validation
-
+* Adds Time Validation.
 * Added StringData class.
 
 ## 0.6.9 2017-01-09
