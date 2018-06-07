@@ -1,6 +1,11 @@
 # Versions
 
 ## 0.7.7
+* Adds session filter.
+* Adds filterArray to all filter classes.
+* Adds Currency validator.
+* Adds Positive validator.
+* Adds Validator Collection.
 
 ## 0.7.6 2018-06-05
 * Regressed to make compatible with php 5.6
@@ -25,7 +30,7 @@
 * Adds daysAsText
 
 ## 0.7.0 2017-08-14
-* Added Log singleton wrapper.
+* Adds Log singleton wrapper.
 * Fixes an issue with inheriting from the singleton memory class.
 * PHP7.1 updates to ILogger.
 

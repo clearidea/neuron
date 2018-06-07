@@ -17,6 +17,13 @@ class PolicyTest extends PHPUnit_Framework_TestCase
 			'DateRule',
 			$DateRange
 		);
+
+		$PositiveCurrency = new \Neuron\Data\Validation\Collection();
+
+		$PositiveCurrency->add( 'Positive', new \Neuron\Data\Validation\Positive() );
+		$PositiveCurrency->add( 'Currency', new \Neuron\Data\Validation\Currency() );
+
+		$this->PolicyTraitObj->addRule( 'PositiveCurrency', $PositiveCurrency );
 	}
 
 	public function testDateRange()
@@ -27,5 +34,21 @@ class PolicyTest extends PHPUnit_Framework_TestCase
 		$this->assertTrue(
 			$this->PolicyTraitObj->isRuleValid( 'DateRule', '2001-01-01' )
 		);
+	}
+
+	public function testCurrency()
+	{
+		$this->assertFalse(
+			$this->PolicyTraitObj->isRuleValid( 'PositiveCurrency', 'meh' )
+		);
+
+		$this->assertFalse(
+			$this->PolicyTraitObj->isRuleValid( 'PositiveCurrency', -1 )
+		);
+
+		$this->assertTrue(
+			$this->PolicyTraitObj->isRuleValid( 'PositiveCurrency', '1.00' )
+		);
+
 	}
 }
