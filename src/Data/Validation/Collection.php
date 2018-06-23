@@ -7,23 +7,21 @@ class Collection extends Base
 	private $_Validators;
 	private $_Failed;
 
-	protected function validate( $data )
+	protected function validate( $Data )
 	{
 		$this->_Failed = [];
 
-		$Result = true;
+		array_walk( $this->_Validators, [ $this, 'validateItem' ], $Data );
 
-		foreach( $this->_Validators as $Name => $Validator )
+		return count( $this->_Failed ) > 0 ? false : true;
+	}
+
+	public function validateItem( $Validator, $Name, $Data )
+	{
+		if( !$Validator->isValid( $Data ) )
 		{
-			if( !$Validator->isValid( $data ) )
-			{
-				$this->_Failed[] = $Name;
-
-				$Result = false;
-			}
+			$this->_Failed[] = $Name;
 		}
-
-		return $Result;
 	}
 
 	public function add( $Name, IValidator $Validator )

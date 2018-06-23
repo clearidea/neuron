@@ -90,4 +90,15 @@ class StringDataTest extends PHPUnit_Framework_TestCase
 			$this->String->deQuote()
 		);
 	}
+
+	public function testQuote()
+	{
+		$this->String->Value = ' 123 ';
+
+		$this->assertEquals(
+			'"123"',
+			$this->String->quote()
+		);
+	}
+
 }

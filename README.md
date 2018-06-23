@@ -36,9 +36,5 @@ Singleton
 
 ### Commandline Application
 
-### WebApplication
-
-The web application components have been spun off into another project that supports routing and dispatching etc.
-See [Concept](http://www.github.com/clearidea/concept)
 
 ## Concept

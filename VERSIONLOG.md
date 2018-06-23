@@ -1,11 +1,12 @@
 # Versions
 
 ## 0.7.7
-* Adds session filter.
-* Adds filterArray to all filter classes.
-* Adds Currency validator.
-* Adds Positive validator.
-* Adds Validator Collection.
+* Added session filter.
+* Added filterArray to all filter classes.
+* Added Currency validator.
+* Added Positive validator.
+* Added Validator Collection.
+* Added StringData quote.
 
 ## 0.7.6 2018-06-05
 * Regressed to make compatible with php 5.6

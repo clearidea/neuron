@@ -66,4 +66,12 @@ class StringData
 	{
 		return trim( $this->Value, '"' );
 	}
+
+	/**
+	 * @return string
+	 */
+	public function quote()
+	{
+		return '"'.$this->trim().'"';
+	}
 }
