@@ -2,6 +2,7 @@
 
 ## 0.7.9
 * Added Name validator.
+* Added PhoneNumber validator.
 
 ## 0.7.8
 * Added the validatable interface.
