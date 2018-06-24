@@ -2,7 +2,7 @@
 
 namespace Neuron\Data\Validation;
 
-class Collection extends Base
+class Collection extends Base implements ICollection
 {
 	private $_Validators;
 	private $_Failed;
@@ -16,6 +16,7 @@ class Collection extends Base
 		return count( $this->_Failed ) > 0 ? false : true;
 	}
 
+
 	public function validateItem( $Validator, $Name, $Data )
 	{
 		if( !$Validator->isValid( $Data ) )
@@ -24,6 +25,13 @@ class Collection extends Base
 		}
 	}
 
+	/**
+	 * @param $Name
+	 * @param IValidator $Validator
+	 * @return $this
+	 *
+	 * Add a validator to the collection.
+	 */
 	public function add( $Name, IValidator $Validator )
 	{
 		$this->_Validators[ $Name ] = $Validator;
@@ -31,7 +39,12 @@ class Collection extends Base
 		return $this;
 	}
 
-	public function getFailedList()
+	/**
+	 * @return mixed
+	 *
+	 * Returns the list of failed validations.
+	 */
+	public function getViolations() : array
 	{
 		return $this->_Failed;
 	}
