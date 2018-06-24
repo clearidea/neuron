@@ -6,7 +6,7 @@
  * Date: 8/3/16
  * Time: 11:11 AM
  */
-class NotEmptyTest extends PHPUnit_Framework_TestCase
+class NotEmptyTest extends PHPUnit\Framework\TestCase
 {
 	public function testNotEmpty()
 	{

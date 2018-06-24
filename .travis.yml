@@ -1,7 +1,6 @@
 language: php
 php:
   - 7.1
-  - 5.6
 
 before_script: composer install
 
@@ -9,4 +8,4 @@ script:
   - vendor/bin/phpunit tests
 
 notifications:
-  slack: clearidea:UL7PtI529f0u9rcGW108IoE0
+  slack: dragonflyrg:w3hYXjTOZjrmBGQuszMILN7K#opensource_notify

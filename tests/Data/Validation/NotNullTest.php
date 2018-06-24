@@ -6,7 +6,7 @@
  * Date: 8/3/16
  * Time: 10:57 AM
  */
-class NotNullTest extends PHPUnit_Framework_TestCase
+class NotNullTest extends PHPUnit\Framework\TestCase
 {
 	public function testNotNull()
 	{

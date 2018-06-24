@@ -2,7 +2,7 @@
 
 use Neuron\Patterns\Registry;
 
-class RegistrylTest extends PHPUnit_Framework_TestCase
+class RegistrylTest extends PHPUnit\Framework\TestCase
 {
 	protected function setUp()
 	{

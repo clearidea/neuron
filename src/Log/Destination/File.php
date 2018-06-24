@@ -26,7 +26,9 @@ class File extends DestinationBase
 		$this->_hFile = @fopen( $this->_sName, 'a' );
 
 		if( !$this->_hFile )
+		{
 			return false;
+		}
 
 		return true;
 	}
@@ -34,7 +36,9 @@ class File extends DestinationBase
 	public function close()
 	{
 		if( $this->_hFile )
+		{
 			fclose( $this->_hFile );
+		}
 	}
 
 	/**

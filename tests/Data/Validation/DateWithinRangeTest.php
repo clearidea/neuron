@@ -6,7 +6,7 @@
  * Date: 7/27/16
  * Time: 6:55 PM
  */
-class DateWithinRangeTest extends PHPUnit_Framework_TestCase
+class DateWithinRangeTest extends PHPUnit\Framework\TestCase
 {
 
 	public function testWithinRangeFail()

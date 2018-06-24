@@ -4,13 +4,13 @@ namespace Neuron\Data\Filter;
 
 class Post implements IFilter
 {
-	public function filterScalar( $data )
+	public function filterScalar( $Data )
 	{
-		return filter_input(INPUT_POST, $data );
+		return filter_input(INPUT_POST, $Data );
 	}
 
-	public function filterArray( $data )
+	public function filterArray( array $Data )
 	{
-		return filter_input(INPUT_POST, $data,FILTER_DEFAULT, FILTER_REQUIRE_ARRAY);
+		return filter_input(INPUT_POST, $Data,FILTER_DEFAULT, FILTER_REQUIRE_ARRAY );
 	}
 }

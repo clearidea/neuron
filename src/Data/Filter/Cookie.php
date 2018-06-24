@@ -4,13 +4,13 @@ namespace Neuron\Data\Filter;
 
 class Cookie implements IFilter
 {
-	public function filterScalar( $data )
+	public function filterScalar( $Data )
 	{
-		return filter_input(INPUT_COOKIE, $data );
+		return filter_input(INPUT_COOKIE, $Data );
 	}
 
-	public function filterArray( $data )
+	public function filterArray( array $Data )
 	{
-		return filter_input(INPUT_COOKIE, $data,FILTER_DEFAULT, FILTER_REQUIRE_ARRAY);
+		return filter_input(INPUT_COOKIE, $Data,FILTER_DEFAULT, FILTER_REQUIRE_ARRAY);
 	}
 }

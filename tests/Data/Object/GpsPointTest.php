@@ -1,6 +1,6 @@
 <?php
 
-class GpsPointTest extends PHPUnit_Framework_TestCase
+class GpsPointTest extends PHPUnit\Framework\TestCase
 {
 	public function testConstruct()
 	{

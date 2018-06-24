@@ -1,5 +1,13 @@
 # Versions
 
+## 0.7.7
+* Added session filter.
+* Added filterArray to all filter classes.
+* Added Currency validator.
+* Added Positive validator.
+* Added Validator Collection.
+* Added StringData quote.
+
 ## 0.7.6 2018-06-05
 * Regressed to make compatible with php 5.6
 
@@ -8,10 +16,10 @@
 * Updated commandlinebase to handle parameters in php 7.x
 
 ## 0.7.4 2018-04-21
-* Adds Version data object.
+* Added Version data object.
 
 ## 0.7.3 2018-02-17
-* Adds Cookie filter.
+* Added Cookie filter.
 
 ## 0.7.2 2018-01-15
 * Adds Date::only()
@@ -23,7 +31,7 @@
 * Adds daysAsText
 
 ## 0.7.0 2017-08-14
-* Added Log singleton wrapper.
+* Adds Log singleton wrapper.
 * Fixes an issue with inheriting from the singleton memory class.
 * PHP7.1 updates to ILogger.
 
@@ -39,8 +47,7 @@
 
 ## 0.6.10 2017-02-22
 
-* Adds Time Validation
-
+* Adds Time Validation.
 * Added StringData class.
 
 ## 0.6.9 2017-01-09

@@ -6,7 +6,7 @@
  * Time: 1:46 PM
  */
 
-class PositionalTest extends PHPUnit_Framework_TestCase
+class PositionalTest extends PHPUnit\Framework\TestCase
 {
 	protected function setUp()
 	{

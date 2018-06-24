@@ -1,6 +1,6 @@
 <?php
 
-class LogMuxTest extends PHPUnit_Framework_TestCase
+class LogMuxTest extends PHPUnit\Framework\TestCase
 {
 	public $_Mux;
 

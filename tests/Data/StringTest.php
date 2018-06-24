@@ -6,7 +6,7 @@
  * Date: 1/31/17
  * Time: 9:58 AM
  */
-class StringDataTest extends PHPUnit_Framework_TestCase
+class StringDataTest extends PHPUnit\Framework\TestCase
 {
 	const DATA = '123456789';
 
@@ -90,4 +90,15 @@ class StringDataTest extends PHPUnit_Framework_TestCase
 			$this->String->deQuote()
 		);
 	}
+
+	public function testQuote()
+	{
+		$this->String->Value = ' 123 ';
+
+		$this->assertEquals(
+			'"123"',
+			$this->String->quote()
+		);
+	}
+
 }

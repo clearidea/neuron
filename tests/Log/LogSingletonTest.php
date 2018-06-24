@@ -2,7 +2,7 @@
 
 use Neuron\Log\Log;
 
-class LogSingletonTest extends PHPUnit_Framework_TestCase
+class LogSingletonTest extends PHPUnit\Framework\TestCase
 {
 	public function setUp()
 	{
