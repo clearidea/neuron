@@ -1,5 +1,8 @@
 # Versions
 
+## 0.7.9
+* Added Name validator.
+
 ## 0.7.8
 * Added the validatable interface.
 * Slight refactoring to support validators using the visitor pattern.
