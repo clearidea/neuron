@@ -1,6 +1,6 @@
 <?php
 
-class PositiveTest extends PHPUnit_Framework_TestCase
+class PositiveTest extends PHPUnit\Framework\TestCase
 {
 	public function testFail()
 	{

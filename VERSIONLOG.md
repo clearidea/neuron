@@ -16,10 +16,10 @@
 * Updated commandlinebase to handle parameters in php 7.x
 
 ## 0.7.4 2018-04-21
-* Adds Version data object.
+* Added Version data object.
 
 ## 0.7.3 2018-02-17
-* Adds Cookie filter.
+* Added Cookie filter.
 
 ## 0.7.2 2018-01-15
 * Adds Date::only()

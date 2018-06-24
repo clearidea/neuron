@@ -1,5 +1,5 @@
 <?php
-class CSVTest extends PHPUnit_Framework_TestCase
+class CSVTest extends PHPUnit\Framework\TestCase
 {
 	protected function setUp()
 	{

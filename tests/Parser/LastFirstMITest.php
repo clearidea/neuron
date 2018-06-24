@@ -6,7 +6,7 @@
  * Time: 1:46 PM
  */
 
-class LastFirstMITest extends PHPUnit_Framework_TestCase
+class LastFirstMITest extends PHPUnit\Framework\TestCase
 {
 	protected function setUp()
 	{

@@ -7,7 +7,7 @@
  * Time: 11:07 AM
  */
 class DateTest
-	extends PHPUnit_Framework_TestCase
+	extends PHPUnit\Framework\TestCase
 {
 	public function testFail()
 	{

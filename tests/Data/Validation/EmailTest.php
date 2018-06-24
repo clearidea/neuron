@@ -8,7 +8,7 @@
  */
 
 class EmailTest
-	extends PHPUnit_Framework_TestCase
+	extends PHPUnit\Framework\TestCase
 {
 	public function testFail()
 	{

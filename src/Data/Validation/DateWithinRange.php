@@ -8,7 +8,7 @@
 
 namespace Neuron\Data\Validation;
 
-use Neuron\Data\Object;
+use Neuron\Data\Object\DateRange;
 
 class DateWithinRange extends Date
 {
@@ -33,7 +33,7 @@ class DateWithinRange extends Date
 	 * @return $this
 	 */
 
-	public function setRange( Object\DateRange $Range )
+	public function setRange( DateRange $Range )
 	{
 		$this->_Range = $Range;
 

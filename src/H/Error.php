@@ -4,6 +4,13 @@ namespace Neuron\H;
 
 // @codingStandardsIgnoreStart
 
+/**
+ * Class Error
+ * @package Neuron\H
+ *
+ * A php implementation of error.h to enable paralleling of c error handling.
+ */
+
 class Error
 {
 	const EPERM				= 1;      /* Operation not permitted */

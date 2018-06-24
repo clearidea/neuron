@@ -3,7 +3,7 @@
  *	http://stackoverflow.com/questions/190295/testing-abstract-classes
  */
 
-class ApplicationTest extends PHPUnit_Framework_TestCase
+class ApplicationTest extends PHPUnit\Framework\TestCase
 {
 	private $_App;
 

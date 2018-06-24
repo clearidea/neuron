@@ -6,7 +6,7 @@
  * Time: 1:46 PM
  */
 
-class MemoryTest extends PHPUnit_Framework_TestCase
+class MemoryTest extends PHPUnit\Framework\TestCase
 {
 	protected function setUp()
 	{

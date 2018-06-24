@@ -6,7 +6,7 @@
  * Date: 1/31/17
  * Time: 9:58 AM
  */
-class StringDataTest extends PHPUnit_Framework_TestCase
+class StringDataTest extends PHPUnit\Framework\TestCase
 {
 	const DATA = '123456789';
 

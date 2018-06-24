@@ -3,7 +3,7 @@ require_once( '../vendor/autoload.php' );
 
 use Neuron\Log;
 
-class cmd extends Neuron\Application\CommandLineBase
+class cli extends Neuron\Application\CommandLineBase
 {
 	public function getVersion()
 	{
@@ -66,6 +66,6 @@ class cmd extends Neuron\Application\CommandLineBase
 date_default_timezone_set( 'UTC' );
 
 
-$app = new cmd();
+$app = new cli();
 
 $app->run( $argv );

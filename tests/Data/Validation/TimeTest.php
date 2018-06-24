@@ -8,7 +8,7 @@
 
 use Neuron\Data\Validation;
 
-class TimeTest extends PHPUnit_Framework_TestCase
+class TimeTest extends PHPUnit\Framework\TestCase
 {
 	public function testFail()
 	{

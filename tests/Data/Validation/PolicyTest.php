@@ -1,6 +1,6 @@
 <?php
 
-class PolicyTest extends PHPUnit_Framework_TestCase
+class PolicyTest extends PHPUnit\Framework\TestCase
 {
 	private $PolicyTraitObj;
 

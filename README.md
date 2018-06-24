@@ -2,33 +2,35 @@
 
 # About Neuron PHP
 
-Neuron is a PHP library that is largely under construction at the moment.
-Although, based on the 'Application' classes it would appear that Neuron is a framework, the goal of this project
-is to provide mostly decoupled php components that aid in any sort of application development effort.
+Neuron is a PHP utility library. Although, it contains a basic
+application class for CLI and Web, the gooal of this project is in
+no way to become a framework.
 
 ## Data
+
 ### Filtering
+
 ### Validation
  
 ## Logging
 
-## Settings
+A fairly full featured logging mechanism that supports many formats
+and destinations.
 
-## Registry
+## Settings
 
 ## Parsers
 
 ## Patterns
 
-Criteria
+### Criteria
 Implementation of the Criteria pattern including And, Or and Not.
 
-Observer
+### Observer
 
-Registry
+### Registry
 
-Singleton
-
+### Singleton
 
 ## Applications
 
@@ -36,5 +38,7 @@ Singleton
 
 ### Commandline Application
 
+## Versioning
 
-## Concept
+The Version data object is design to couple with the [Bump](https://github.com/ljonesfl/bump)
+utility to reference version information.

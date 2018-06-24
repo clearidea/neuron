@@ -3,7 +3,7 @@
 use \Neuron\Patterns\Criteria\KeyValue;
 use \Neuron\Data\ArrayHelper;
 
-class CriteriaTest extends PHPUnit_Framework_TestCase
+class CriteriaTest extends PHPUnit\Framework\TestCase
 {
 	public function testAndCriteria()
 	{

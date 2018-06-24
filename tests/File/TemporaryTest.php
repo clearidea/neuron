@@ -1,6 +1,6 @@
 <?php
 
-class TemporaryTest extends PHPUnit_Framework_TestCase
+class TemporaryTest extends PHPUnit\Framework\TestCase
 {
 	public function testGetFile()
 	{

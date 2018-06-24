@@ -9,7 +9,7 @@
 
 use Neuron\Data\ArrayHelper;
 
-class ArrayHelperTest extends PHPUnit_Framework_TestCase
+class ArrayHelperTest extends PHPUnit\Framework\TestCase
 {
 	public function testContains()
 	{

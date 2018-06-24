@@ -1,6 +1,6 @@
 <?php
 
-class DateRangeTest extends PHPUnit_Framework_TestCase
+class DateRangeTest extends PHPUnit\Framework\TestCase
 {
 	public function testStartFormatFail()
 	{
