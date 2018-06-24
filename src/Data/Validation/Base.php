@@ -22,7 +22,7 @@ abstract class Base implements IValidator
 	 * @return bool
 	 */
 
-	public function isValid( $data )
+	public function isValid( $data ) : bool
 	{
 		return $this->validate( $data );
 	}

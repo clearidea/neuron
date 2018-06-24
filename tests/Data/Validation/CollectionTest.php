@@ -25,23 +25,23 @@ class CollectionTest extends PHPUnit\Framework\TestCase
 		$this->Collection->isValid( 1.00 );
 
 		$this->assertTrue(
-			\Neuron\Data\ArrayHelper::contains( $this->Collection->getFailedList(), 'Int' )
+			\Neuron\Data\ArrayHelper::contains( $this->Collection->getViolations(), 'Int' )
 		);
 
 		$this->Collection->isValid( -1 );
 
 		$this->assertTrue(
-			\Neuron\Data\ArrayHelper::contains( $this->Collection->getFailedList(),'Positive' )
+			\Neuron\Data\ArrayHelper::contains( $this->Collection->getViolations(),'Positive' )
 		);
 
 		$this->Collection->isValid( -1.01 );
 
 		$this->assertTrue(
-			\Neuron\Data\ArrayHelper::contains( $this->Collection->getFailedList(),'Positive' )
+			\Neuron\Data\ArrayHelper::contains( $this->Collection->getViolations(),'Positive' )
 		);
 
 		$this->assertTrue(
-			\Neuron\Data\ArrayHelper::contains( $this->Collection->getFailedList(),'Int' )
+			\Neuron\Data\ArrayHelper::contains( $this->Collection->getViolations(),'Int' )
 		);
 
 	}

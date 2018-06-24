@@ -1,5 +1,10 @@
 # Versions
 
+## 0.7.8
+* Added the validatable interface.
+* Slight refactoring to support validators using the visitor pattern.
+* Added ICollection to validation.
+
 ## 0.7.7
 * Added session filter.
 * Added filterArray to all filter classes.
