@@ -15,5 +15,4 @@ class IntegerTest extends PHPUnit\Framework\TestCase
 
 		$this->assertTrue( $Integer->isValid( 1 ) );
 	}
-
 }

@@ -3,6 +3,10 @@
 ## 0.7.9
 * Added Name validator.
 * Added PhoneNumber validator.
+* Added NumericRange datatype.
+* Added NumericRange validator.
+* Added NumberWithinRange validator.
+* Added EIN validator.
 
 ## 0.7.8
 * Added the validatable interface.
