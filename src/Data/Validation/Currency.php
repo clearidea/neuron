@@ -2,6 +2,10 @@
 
 namespace Neuron\Data\Validation;
 
+/**
+ * Class Currency
+ * @package Neuron\Data\Validation
+ */
 class Currency extends Base
 {
 	public function validate( $data )

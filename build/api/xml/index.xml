@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<index xmlns="http://xml.phpdox.net/src" basedir="/Volumes/Storage/Projects/clearidea/open-source/Neuron/src">
+  <namespace name="Neuron\Application">
+    <class name="Base" src="Application/Base.php" description="Defines base functionality for applications." xml="classes/Neuron_Application_Base.xml"/>
+    <class name="CommandLineBase" src="Application/CommandLineBase.php" description="Command line applications are designed to only be executed from the context of the command line." xml="classes/Neuron_Application_CommandLineBase.xml"/>
+    <interface name="IApplication" src="Application/IApplication.php" xml="interfaces/Neuron_Application_IApplication.xml"/>
+  </namespace>
+  <namespace name="Neuron\Data">
+    <class name="ArrayHelper" src="Data/ArrayHelper.php" xml="classes/Neuron_Data_ArrayHelper.xml"/>
+    <class name="Formatter" src="Data/Formatter.php" xml="classes/Neuron_Data_Formatter.xml"/>
+    <class name="StringData" src="Data/StringData.php" xml="classes/Neuron_Data_StringData.xml"/>
+  </namespace>
+  <namespace name="Neuron\Data\Filter">
+    <class name="Cookie" src="Data/Filter/Cookie.php" xml="classes/Neuron_Data_Filter_Cookie.xml"/>
+    <class name="Get" src="Data/Filter/Get.php" xml="classes/Neuron_Data_Filter_Get.xml"/>
+    <interface name="IFilter" src="Data/Filter/IFilter.php" xml="interfaces/Neuron_Data_Filter_IFilter.xml"/>
+    <class name="Post" src="Data/Filter/Post.php" xml="classes/Neuron_Data_Filter_Post.xml"/>
+    <class name="Server" src="Data/Filter/Server.php" xml="classes/Neuron_Data_Filter_Server.xml"/>
+    <class name="Session" src="Data/Filter/Session.php" xml="classes/Neuron_Data_Filter_Session.xml"/>
+  </namespace>
+  <namespace name="Neuron\Data\Object">
+    <class name="DateRange" src="Data/Object/DateRange.php" xml="classes/Neuron_Data_Object_DateRange.xml"/>
+    <class name="GpsPoint" src="Data/Object/GpsPoint.php" description="Class GpsPoint" xml="classes/Neuron_Data_Object_GpsPoint.xml"/>
+    <class name="NumericRange" src="Data/Object/NumericRange.php" xml="classes/Neuron_Data_Object_NumericRange.xml"/>
+    <class name="Version" src="Data/Object/Version.php" xml="classes/Neuron_Data_Object_Version.xml"/>
+  </namespace>
+  <namespace name="Neuron\Data\Validation">
+    <class name="Base" src="Data/Validation/Base.php" description="Validator base class." xml="classes/Neuron_Data_Validation_Base.xml"/>
+    <class name="Collection" src="Data/Validation/Collection.php" description="Class Collection" xml="classes/Neuron_Data_Validation_Collection.xml"/>
+    <class name="Currency" src="Data/Validation/Currency.php" description="Class Currency" xml="classes/Neuron_Data_Validation_Currency.xml"/>
+    <class name="Date" src="Data/Validation/Date.php" description="Class Date" xml="classes/Neuron_Data_Validation_Date.xml"/>
+    <class name="DateRange" src="Data/Validation/DateRange.php" description="Class DateRange" xml="classes/Neuron_Data_Validation_DateRange.xml"/>
+    <class name="DateWithinRange" src="Data/Validation/DateWithinRange.php" description="Class DateWithinRange" xml="classes/Neuron_Data_Validation_DateWithinRange.xml"/>
+    <class name="Ein" src="Data/Validation/Ein.php" description="Class Ein" xml="classes/Neuron_Data_Validation_Ein.xml"/>
+    <class name="Email" src="Data/Validation/Email.php" description="Class Email" xml="classes/Neuron_Data_Validation_Email.xml"/>
+    <class name="FloatingPoint" src="Data/Validation/FloatingPoint.php" description="Class FloatingPoint" xml="classes/Neuron_Data_Validation_FloatingPoint.xml"/>
+    <interface name="ICollection" src="Data/Validation/ICollection.php" xml="interfaces/Neuron_Data_Validation_ICollection.xml"/>
+    <class name="Integer" src="Data/Validation/Integer.php" description="Class Integer" xml="classes/Neuron_Data_Validation_Integer.xml"/>
+    <class name="IPAddress" src="Data/Validation/IPAddress.php" description="Class IPAddress" xml="classes/Neuron_Data_Validation_IPAddress.xml"/>
+    <interface name="IValidator" src="Data/Validation/IValidator.php" xml="interfaces/Neuron_Data_Validation_IValidator.xml"/>
+    <class name="Name" src="Data/Validation/Name.php" description="Class Name" xml="classes/Neuron_Data_Validation_Name.xml"/>
+    <class name="NotEmpty" src="Data/Validation/NotEmpty.php" description="Class NotEmpty" xml="classes/Neuron_Data_Validation_NotEmpty.xml"/>
+    <class name="NotNull" src="Data/Validation/NotNull.php" description="Class NotNull" xml="classes/Neuron_Data_Validation_NotNull.xml"/>
+    <class name="NumberWithinRange" src="Data/Validation/NumberWithinRange.php" description="Class NumberWithinRange" xml="classes/Neuron_Data_Validation_NumberWithinRange.xml"/>
+    <class name="NumericRange" src="Data/Validation/NumericRange.php" description="Class NumericRange" xml="classes/Neuron_Data_Validation_NumericRange.xml"/>
+    <class name="PhoneNumber" src="Data/Validation/PhoneNumber.php" description="Class PhoneNumber" xml="classes/Neuron_Data_Validation_PhoneNumber.xml"/>
+    <trait name="Policy" src="Data/Validation/Policy.php" xml="traits/Neuron_Data_Validation_Policy.xml"/>
+    <class name="Positive" src="Data/Validation/Positive.php" description="Class Positive" xml="classes/Neuron_Data_Validation_Positive.xml"/>
+    <class name="StringData" src="Data/Validation/StringData.php" description="Class StringData" xml="classes/Neuron_Data_Validation_StringData.xml"/>
+    <class name="Time" src="Data/Validation/Time.php" description="Class Time" xml="classes/Neuron_Data_Validation_Time.xml"/>
+    <class name="Url" src="Data/Validation/Url.php" description="Class Url" xml="classes/Neuron_Data_Validation_Url.xml"/>
+  </namespace>
+  <namespace name="Neuron\File">
+    <class name="Temporary" src="File/Temporary.php" description="Class Temporary" xml="classes/Neuron_File_Temporary.xml"/>
+  </namespace>
+  <namespace name="Neuron\H">
+    <class name="Error" src="H/Error.php" description="Class Error" xml="classes/Neuron_H_Error.xml"/>
+  </namespace>
+  <namespace name="Neuron\Log">
+    <class name="Base" src="Log/Base.php" xml="classes/Neuron_Log_Base.xml"/>
+    <class name="Data" src="Log/Data.php" description="Class Data" xml="classes/Neuron_Log_Data.xml"/>
+    <interface name="ILogger" src="Log/ILogger.php" description="Interface ILogger" xml="interfaces/Neuron_Log_ILogger.xml"/>
+    <class name="Log" src="Log/Log.php" xml="classes/Neuron_Log_Log.xml"/>
+    <class name="Logger" src="Log/Logger.php" description="Class for writing formatted output to specific destinations." xml="classes/Neuron_Log_Logger.xml"/>
+    <class name="LogMux" src="Log/LogMux.php" xml="classes/Neuron_Log_LogMux.xml"/>
+  </namespace>
+  <namespace name="Neuron\Log\Destination">
+    <class name="DestinationBase" src="Log/Destination/DestinationBase.php" description="Class DestinationBase" xml="classes/Neuron_Log_Destination_DestinationBase.xml"/>
+    <class name="Echoer" src="Log/Destination/Echoer.php" description="Outputs information using the php echo command. (non stdout)" xml="classes/Neuron_Log_Destination_Echoer.xml"/>
+    <class name="Email" src="Log/Destination/Email.php" xml="classes/Neuron_Log_Destination_Email.xml"/>
+    <class name="File" src="Log/Destination/File.php" description="Writes log data to a file." xml="classes/Neuron_Log_Destination_File.xml"/>
+    <class name="Null" src="Log/Destination/Null.php" description="Performs to output. Use as dev/null." xml="classes/Neuron_Log_Destination_Null.xml"/>
+    <class name="Slack" src="Log/Destination/Slack.php" xml="classes/Neuron_Log_Destination_Slack.xml"/>
+    <class name="Socket" src="Log/Destination/Socket.php" xml="classes/Neuron_Log_Destination_Socket.xml"/>
+    <class name="StdErr" src="Log/Destination/StdErr.php" description="Outputs to stderr" xml="classes/Neuron_Log_Destination_StdErr.xml"/>
+    <class name="StdOut" src="Log/Destination/StdOut.php" description="Outputs to stdout" xml="classes/Neuron_Log_Destination_StdOut.xml"/>
+    <class name="WebService" src="Log/Destination/WebService.php" xml="classes/Neuron_Log_Destination_WebService.xml"/>
+  </namespace>
+  <namespace name="Neuron\Log\Format">
+    <class name="CSV" src="Log/Format/CSV.php" description="Formats log data into a CSV format." xml="classes/Neuron_Log_Format_CSV.xml"/>
+    <class name="HTML" src="Log/Format/HTML.php" description="Formats log data as html." xml="classes/Neuron_Log_Format_HTML.xml"/>
+    <interface name="IFormat" src="Log/Format/IFormat.php" description="Interface IFormat" xml="interfaces/Neuron_Log_Format_IFormat.xml"/>
+    <class name="JSON" src="Log/Format/JSON.php" description="Formats data as plain text." xml="classes/Neuron_Log_Format_JSON.xml"/>
+    <class name="PlainText" src="Log/Format/PlainText.php" description="Formats data as plain text." xml="classes/Neuron_Log_Format_PlainText.xml"/>
+  </namespace>
+  <namespace name="Neuron\Parser">
+    <class name="CSV" src="Parser/CSV.php" xml="classes/Neuron_Parser_CSV.xml"/>
+    <interface name="IParser" src="Parser/IParser.php" xml="interfaces/Neuron_Parser_IParser.xml"/>
+    <class name="LastFirstMI" src="Parser/LastFirstMI.php" xml="classes/Neuron_Parser_LastFirstMI.xml"/>
+    <class name="Positional" src="Parser/Positional.php" xml="classes/Neuron_Parser_Positional.xml"/>
+  </namespace>
+  <namespace name="Neuron\Patterns\Criteria">
+    <class name="AndCriteria" src="Patterns/Criteria/AndCriteria.php" xml="classes/Neuron_Patterns_Criteria_AndCriteria.xml"/>
+    <class name="Base" src="Patterns/Criteria/Base.php" xml="classes/Neuron_Patterns_Criteria_Base.xml"/>
+    <interface name="ICriteria" src="Patterns/Criteria/ICriteria.php" xml="interfaces/Neuron_Patterns_Criteria_ICriteria.xml"/>
+    <class name="KeyValue" src="Patterns/Criteria/KeyValue.php" xml="classes/Neuron_Patterns_Criteria_KeyValue.xml"/>
+    <class name="LogicBase" src="Patterns/Criteria/LogicBase.php" xml="classes/Neuron_Patterns_Criteria_LogicBase.xml"/>
+    <class name="NotCriteria" src="Patterns/Criteria/NotCriteria.php" xml="classes/Neuron_Patterns_Criteria_NotCriteria.xml"/>
+    <class name="OrCriteria" src="Patterns/Criteria/OrCriteria.php" xml="classes/Neuron_Patterns_Criteria_OrCriteria.xml"/>
+  </namespace>
+  <namespace name="Neuron\Patterns">
+    <interface name="IRunnable" src="Patterns/IRunnable.php" description="Interface IRunnable" xml="interfaces/Neuron_Patterns_IRunnable.xml"/>
+    <class name="Registry" src="Patterns/Registry.php" xml="classes/Neuron_Patterns_Registry.xml"/>
+  </namespace>
+  <namespace name="Neuron\Patterns\Observer">
+    <interface name="IObserver" src="Patterns/Observer/IObserver.php" description="Interface IObserver" xml="interfaces/Neuron_Patterns_Observer_IObserver.xml"/>
+    <class name="Observable" src="Patterns/Observer/Observable.php" description="Class Observable" xml="classes/Neuron_Patterns_Observer_Observable.xml"/>
+  </namespace>
+  <namespace name="Neuron\Patterns\Singleton">
+    <class name="Base" src="Patterns/Singleton/Base.php" description="Class Base" xml="classes/Neuron_Patterns_Singleton_Base.xml"/>
+    <interface name="ISingleton" src="Patterns/Singleton/ISingleton.php" xml="interfaces/Neuron_Patterns_Singleton_ISingleton.xml"/>
+    <class name="Memcache" src="Patterns/Singleton/Memcache.php" xml="classes/Neuron_Patterns_Singleton_Memcache.xml"/>
+    <class name="Memory" src="Patterns/Singleton/Memory.php" xml="classes/Neuron_Patterns_Singleton_Memory.xml"/>
+    <class name="SessionSingleton" src="Patterns/Singleton/Singleton.php" xml="classes/Neuron_Patterns_Singleton_SessionSingleton.xml"/>
+  </namespace>
+  <namespace name="Neuron\Setting">
+    <class name="SettingManager" src="Setting/SettingManager.php" xml="classes/Neuron_Setting_SettingManager.xml"/>
+  </namespace>
+  <namespace name="Neuron\Setting\Source">
+    <class name="Ini" src="Setting/Source/Ini.php" xml="classes/Neuron_Setting_Source_Ini.xml"/>
+    <interface name="ISettingSource" src="Setting/Source/ISettingSource.php" xml="interfaces/Neuron_Setting_Source_ISettingSource.xml"/>
+    <class name="Memory" src="Setting/Source/Memory.php" xml="classes/Neuron_Setting_Source_Memory.xml"/>
+  </namespace>
+  <namespace name="Neuron\Util">
+    <class name="Date" src="Util/Date.php" xml="classes/Neuron_Util_Date.xml"/>
+    <class name="Email" src="Util/Email.php" xml="classes/Neuron_Util_Email.xml"/>
+    <class name="Language" src="Util/Language.php" xml="classes/Neuron_Util_Language.xml"/>
+    <class name="System" src="Util/System.php" description="System level methods." xml="classes/Neuron_Util_System.xml"/>
+    <class name="Template" src="Util/Template.php" xml="classes/Neuron_Util_Template.xml"/>
+    <class name="Timer" src="Util/Timer.php" description="Class Timer" xml="classes/Neuron_Util_Timer.xml"/>
+  </namespace>
+</index>

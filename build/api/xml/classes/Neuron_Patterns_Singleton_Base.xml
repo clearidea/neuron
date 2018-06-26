@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class xmlns="http://xml.phpdox.net/src" full="Neuron\Patterns\Singleton\Base" namespace="Neuron\Patterns\Singleton" name="Base" abstract="true" final="false" start="10" end="37">
+  <file path="/Volumes/Storage/Projects/clearidea/open-source/Neuron/src/Patterns/Singleton" file="Base.php" realpath="/Volumes/Storage/Projects/clearidea/open-source/Neuron/src/Patterns/Singleton/Base.php" size="496" time="2017-08-14T13:31:29+00:00" unixtime="1502717489" sha1="4b0160d8539bae98bc73a5fd95aa0555f7cfb5e5" relative="Patterns/Singleton/Base.php"/>
+  <docblock>
+    <description compact="Class Base"/>
+    <package value="Neuron\Patterns\Singleton"/>
+  </docblock>
+  <implements full="Neuron\Patterns\Singleton\ISingleton" namespace="Neuron\Patterns\Singleton" name="ISingleton"/>
+  <method name="getInstance" start="16" end="36" abstract="false" final="false" static="true" visibility="public">
+    <docblock>
+      <description/>
+      <return type="null"/>
+    </docblock>
+  </method>
+  <extenders>
+    <extender full="Neuron\Log\Log" namespace="Neuron\Log" name="Log"/>
+    <extender full="Neuron\Patterns\Registry" namespace="Neuron\Patterns" name="Registry"/>
+    <extender full="Neuron\Patterns\Singleton\Memcache" namespace="Neuron\Patterns\Singleton" name="Memcache"/>
+    <extender full="Neuron\Patterns\Singleton\Memory" namespace="Neuron\Patterns\Singleton" name="Memory"/>
+    <extender full="Neuron\Patterns\Singleton\SessionSingleton" namespace="Neuron\Patterns\Singleton" name="SessionSingleton"/>
+    <extender full="Neuron\Util\Language" namespace="Neuron\Util" name="Language"/>
+  </extenders>
+  <interface full="Neuron\Patterns\Singleton\ISingleton" namespace="Neuron\Patterns\Singleton" name="ISingleton">
+    <method name="serialize" start="7" end="7" abstract="false" final="false" static="false" visibility="public"/>
+    <method name="invalidate" start="8" end="8" abstract="false" final="false" static="true" visibility="public"/>
+    <method name="instance" start="9" end="9" abstract="false" final="false" static="true" visibility="public"/>
+  </interface>
+</class>

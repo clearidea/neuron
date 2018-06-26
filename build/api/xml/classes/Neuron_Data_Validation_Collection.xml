@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class xmlns="http://xml.phpdox.net/src" full="Neuron\Data\Validation\Collection" namespace="Neuron\Data\Validation" name="Collection" abstract="false" final="false" start="9" end="55">
+  <file path="/Volumes/Storage/Projects/clearidea/open-source/Neuron/src/Data/Validation" file="Collection.php" realpath="/Volumes/Storage/Projects/clearidea/open-source/Neuron/src/Data/Validation/Collection.php" size="929" time="2018-06-25T22:42:10+00:00" unixtime="1529966530" sha1="63a10ea5016b0f3d530c1dd1b4646c661988f034" relative="Data/Validation/Collection.php"/>
+  <docblock>
+    <description compact="Class Collection"/>
+    <package value="Neuron\Data\Validation"/>
+  </docblock>
+  <extends full="Neuron\Data\Validation\Base" namespace="Neuron\Data\Validation" name="Base"/>
+  <implements full="Neuron\Data\Validation\ICollection" namespace="Neuron\Data\Validation" name="ICollection"/>
+  <member name="_Validators" visibility="private" static="false" line="11"/>
+  <member name="_Failed" visibility="private" static="false" line="12"/>
+  <method name="validate" start="14" end="21" abstract="false" final="false" static="false" visibility="protected">
+    <parameter name="Data" byreference="false" type="{unknown}"/>
+  </method>
+  <method name="validateItem" start="24" end="30" abstract="false" final="false" static="false" visibility="public">
+    <parameter name="Validator" byreference="false" type="{unknown}"/>
+    <parameter name="Name" byreference="false" type="{unknown}"/>
+    <parameter name="Data" byreference="false" type="{unknown}"/>
+  </method>
+  <method name="add" start="39" end="44" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <param variable="$Name"/>
+      <param type="object" variable="$Validator">
+        <type full="Neuron\Data\Validation\IValidator" namespace="Neuron\Data\Validation" name="IValidator"/>
+      </param>
+      <return type="object">Add a validator to the collection.<type full="Neuron\Data\Validation\$this" namespace="Neuron\Data\Validation" name="$this"/></return>
+    </docblock>
+    <parameter name="Name" byreference="false" type="{unknown}"/>
+    <parameter name="Validator" byreference="false" type="object">
+      <type full="Neuron\Data\Validation\IValidator" namespace="Neuron\Data\Validation" name="IValidator"/>
+    </parameter>
+  </method>
+  <method name="getViolations" start="51" end="54" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <return type="mixed">Returns the list of failed validations.</return>
+    </docblock>
+    <return type="array" nullable="false"/>
+  </method>
+  <parent full="Neuron\Data\Validation\Base" namespace="Neuron\Data\Validation" name="Base">
+    <implements full="Neuron\Data\Validation\IValidator" namespace="Neuron\Data\Validation" name="IValidator"/>
+    <method name="validate" start="11" end="11" abstract="true" final="false" static="false" visibility="protected">
+      <parameter name="data" byreference="false" type="{unknown}"/>
+    </method>
+    <constructor name="__construct" start="13" end="16" abstract="false" final="false" static="false" visibility="public"/>
+    <method name="isValid" start="25" end="28" abstract="false" final="false" static="false" visibility="public">
+      <docblock>
+        <description compact="Returns true if validation is successful"/>
+        <param variable="$data"/>
+        <return type="object">
+          <type full="Neuron\Data\Validation\bool" namespace="Neuron\Data\Validation" name="bool"/>
+        </return>
+      </docblock>
+      <return type="bool" nullable="false"/>
+      <parameter name="data" byreference="false" type="{unknown}"/>
+    </method>
+  </parent>
+  <interface full="Neuron\Data\Validation\IValidator" namespace="Neuron\Data\Validation" name="IValidator">
+    <method name="isValid" start="7" end="7" abstract="false" final="false" static="false" visibility="public">
+      <return type="bool" nullable="false"/>
+      <parameter name="data" byreference="false" type="{unknown}"/>
+    </method>
+  </interface>
+  <interface full="Neuron\Data\Validation\ICollection" namespace="Neuron\Data\Validation" name="ICollection">
+    <extends full="Neuron\Data\Validation\IValidator" namespace="Neuron\Data\Validation" name="IValidator"/>
+    <method name="add" start="20" end="20" abstract="false" final="false" static="false" visibility="public">
+      <docblock>
+        <description/>
+        <param variable="$Name"/>
+        <param type="object" variable="$Validator">
+          <type full="Neuron\Data\Validation\IValidator" namespace="Neuron\Data\Validation" name="IValidator"/>
+        </param>
+        <return type="object">Add a validator to the collection.<type full="Neuron\Data\Validation\$this" namespace="Neuron\Data\Validation" name="$this"/></return>
+      </docblock>
+      <parameter name="Name" byreference="false" type="{unknown}"/>
+      <parameter name="Validator" byreference="false" type="object">
+        <type full="Neuron\Data\Validation\IValidator" namespace="Neuron\Data\Validation" name="IValidator"/>
+      </parameter>
+    </method>
+    <method name="getViolations" start="27" end="27" abstract="false" final="false" static="false" visibility="public">
+      <docblock>
+        <description/>
+        <return type="mixed">Returns the list of failed validations.</return>
+      </docblock>
+      <return type="array" nullable="false"/>
+    </method>
+  </interface>
+</class>

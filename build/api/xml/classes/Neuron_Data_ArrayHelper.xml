@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class xmlns="http://xml.phpdox.net/src" full="Neuron\Data\ArrayHelper" namespace="Neuron\Data" name="ArrayHelper" abstract="false" final="false" start="9" end="108">
+  <file path="/Volumes/Storage/Projects/clearidea/open-source/Neuron/src/Data" file="ArrayHelper.php" realpath="/Volumes/Storage/Projects/clearidea/open-source/Neuron/src/Data/ArrayHelper.php" size="1467" time="2017-11-19T18:54:10+00:00" unixtime="1511117650" sha1="6e084110ee003e3a27f32aa9a3b88dd603357464" relative="Data/ArrayHelper.php"/>
+  <method name="contains" start="18" end="38" abstract="false" final="false" static="true" visibility="public">
+    <docblock>
+      <description/>
+      <param type="array" variable="$aData"/>
+      <param variable="$Value"/>
+      <param variable="$Key"/>
+      <return type="object">
+        <type full="Neuron\Data\bool" namespace="Neuron\Data" name="bool"/>
+      </return>
+    </docblock>
+    <parameter name="aData" byreference="false" type="array"/>
+    <parameter name="Value" byreference="false" type="{unknown}"/>
+    <parameter name="Key" byreference="false" type="{unknown}" default="NULL"/>
+  </method>
+  <method name="hasKey" start="46" end="54" abstract="false" final="false" static="true" visibility="public">
+    <docblock>
+      <description/>
+      <param type="array" variable="$aData"/>
+      <param variable="$Key"/>
+      <return type="object">
+        <type full="Neuron\Data\bool" namespace="Neuron\Data" name="bool"/>
+      </return>
+    </docblock>
+    <parameter name="aData" byreference="false" type="array"/>
+    <parameter name="Key" byreference="false" type="{unknown}"/>
+  </method>
+  <method name="getElement" start="63" end="76" abstract="false" final="false" static="true" visibility="public">
+    <docblock>
+      <description/>
+      <param type="array" variable="$aData"/>
+      <param variable="$sKey"/>
+      <param type="null" variable="$Default"/>
+      <return type="object">
+        <type full="Neuron\Data\mixed|null" namespace="Neuron\Data" name="mixed|null"/>
+      </return>
+    </docblock>
+    <parameter name="aData" byreference="false" type="array"/>
+    <parameter name="sKey" byreference="false" type="{unknown}"/>
+    <parameter name="Default" byreference="false" type="{unknown}" default="NULL"/>
+  </method>
+  <method name="indexOf" start="84" end="87" abstract="false" final="false" static="true" visibility="public">
+    <docblock>
+      <description/>
+      <param type="array" variable="$aData"/>
+      <param variable="$Item"/>
+      <return type="mixed"/>
+    </docblock>
+    <parameter name="aData" byreference="false" type="array"/>
+    <parameter name="Item" byreference="false" type="{unknown}"/>
+  </method>
+  <method name="remove" start="95" end="107" abstract="false" final="false" static="true" visibility="public">
+    <docblock>
+      <description/>
+      <param type="array" variable="$aData"/>
+      <param variable="$Item"/>
+      <return type="object">
+        <type full="Neuron\Data\bool" namespace="Neuron\Data" name="bool"/>
+      </return>
+    </docblock>
+    <parameter name="aData" byreference="true" type="array"/>
+    <parameter name="Item" byreference="false" type="{unknown}"/>
+  </method>
+</class>

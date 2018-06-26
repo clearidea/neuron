@@ -2,6 +2,10 @@
 
 namespace Neuron\Data\Validation;
 
+/**
+ * Class Collection
+ * @package Neuron\Data\Validation
+ */
 class Collection extends Base implements ICollection
 {
 	private $_Validators;

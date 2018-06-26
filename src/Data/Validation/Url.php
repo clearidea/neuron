@@ -3,9 +3,9 @@
 namespace Neuron\Data\Validation;
 
 /**
- * Url validation.
+ * Class Url
+ * @package Neuron\Data\Validation
  */
-
 class Url extends Base
 {
 	protected function validate( $url )

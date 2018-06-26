@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class xmlns="http://xml.phpdox.net/src" full="Neuron\Data\Validation\DateRange" namespace="Neuron\Data\Validation" name="DateRange" abstract="false" final="false" start="9" end="30">
+  <file path="/Volumes/Storage/Projects/clearidea/open-source/Neuron/src/Data/Validation" file="DateRange.php" realpath="/Volumes/Storage/Projects/clearidea/open-source/Neuron/src/Data/Validation/DateRange.php" size="497" time="2018-06-25T22:42:10+00:00" unixtime="1529966530" sha1="7a80421119fa79c93ef77950972a0bf1a441f8a4" relative="Data/Validation/DateRange.php"/>
+  <docblock>
+    <description compact="Class DateRange"/>
+    <package value="Neuron\Data\Validation"/>
+  </docblock>
+  <extends full="Neuron\Data\Validation\Date" namespace="Neuron\Data\Validation" name="Date"/>
+  <method name="validate" start="11" end="29" abstract="false" final="false" static="false" visibility="protected">
+    <parameter name="Range" byreference="false" type="{unknown}"/>
+    <inline>
+      <comment value="validate the format of start" line="13"/>
+      <comment value="validate the format of end" line="19"/>
+    </inline>
+  </method>
+  <parent full="Neuron\Data\Validation\Date" namespace="Neuron\Data\Validation" name="Date">
+    <extends full="Neuron\Data\Validation\Base" namespace="Neuron\Data\Validation" name="Base"/>
+    <method name="validate" start="13" end="17" abstract="false" final="false" static="false" visibility="protected">
+      <parameter name="CheckDate" byreference="false" type="{unknown}"/>
+    </method>
+    <method name="setFormat" start="24" end="29" abstract="false" final="false" static="false" visibility="public">
+      <docblock>
+        <description/>
+        <param description="Specify the date format to validate to. Defaults to Y-m-d" variable="$sFormat" type="object">
+          <type full="Neuron\Data\Validation\-" namespace="Neuron\Data\Validation" name="-"/>
+        </param>
+        <return type="object">
+          <type full="Neuron\Data\Validation\$this" namespace="Neuron\Data\Validation" name="$this"/>
+        </return>
+      </docblock>
+      <parameter name="sFormat" byreference="false" type="{unknown}"/>
+    </method>
+  </parent>
+  <parent full="Neuron\Data\Validation\Base" namespace="Neuron\Data\Validation" name="Base">
+    <implements full="Neuron\Data\Validation\IValidator" namespace="Neuron\Data\Validation" name="IValidator"/>
+    <method name="validate" start="11" end="11" abstract="true" final="false" static="false" visibility="protected">
+      <parameter name="data" byreference="false" type="{unknown}"/>
+    </method>
+    <constructor name="__construct" start="13" end="16" abstract="false" final="false" static="false" visibility="public"/>
+    <method name="isValid" start="25" end="28" abstract="false" final="false" static="false" visibility="public">
+      <docblock>
+        <description compact="Returns true if validation is successful"/>
+        <param variable="$data"/>
+        <return type="object">
+          <type full="Neuron\Data\Validation\bool" namespace="Neuron\Data\Validation" name="bool"/>
+        </return>
+      </docblock>
+      <return type="bool" nullable="false"/>
+      <parameter name="data" byreference="false" type="{unknown}"/>
+    </method>
+  </parent>
+  <interface full="Neuron\Data\Validation\IValidator" namespace="Neuron\Data\Validation" name="IValidator">
+    <method name="isValid" start="7" end="7" abstract="false" final="false" static="false" visibility="public">
+      <return type="bool" nullable="false"/>
+      <parameter name="data" byreference="false" type="{unknown}"/>
+    </method>
+  </interface>
+</class>

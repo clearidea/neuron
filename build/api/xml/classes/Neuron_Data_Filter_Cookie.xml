@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class xmlns="http://xml.phpdox.net/src" full="Neuron\Data\Filter\Cookie" namespace="Neuron\Data\Filter" name="Cookie" abstract="false" final="false" start="5" end="16">
+  <file path="/Volumes/Storage/Projects/clearidea/open-source/Neuron/src/Data/Filter" file="Cookie.php" realpath="/Volumes/Storage/Projects/clearidea/open-source/Neuron/src/Data/Filter/Cookie.php" size="296" time="2018-06-24T00:18:28+00:00" unixtime="1529799508" sha1="a916fd1f47fab8c3023c07dca3f2f1c370c378c8" relative="Data/Filter/Cookie.php"/>
+  <implements full="Neuron\Data\Filter\IFilter" namespace="Neuron\Data\Filter" name="IFilter"/>
+  <method name="filterScalar" start="7" end="10" abstract="false" final="false" static="false" visibility="public">
+    <parameter name="Data" byreference="false" type="{unknown}"/>
+  </method>
+  <method name="filterArray" start="12" end="15" abstract="false" final="false" static="false" visibility="public">
+    <parameter name="Data" byreference="false" type="array"/>
+  </method>
+  <interface full="Neuron\Data\Filter\IFilter" namespace="Neuron\Data\Filter" name="IFilter">
+    <method name="filterScalar" start="7" end="7" abstract="false" final="false" static="false" visibility="public">
+      <parameter name="Data" byreference="false" type="{unknown}"/>
+    </method>
+    <method name="filterArray" start="8" end="8" abstract="false" final="false" static="false" visibility="public">
+      <parameter name="Data" byreference="false" type="array"/>
+    </method>
+  </interface>
+</class>

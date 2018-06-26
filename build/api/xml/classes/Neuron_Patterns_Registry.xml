@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class xmlns="http://xml.phpdox.net/src" full="Neuron\Patterns\Registry" namespace="Neuron\Patterns" name="Registry" abstract="false" final="false" start="6" end="37">
+  <file path="/Volumes/Storage/Projects/clearidea/open-source/Neuron/src/Patterns" file="Registry.php" realpath="/Volumes/Storage/Projects/clearidea/open-source/Neuron/src/Patterns/Registry.php" size="497" time="2017-08-14T13:31:29+00:00" unixtime="1502717489" sha1="9de3baf855d4aa763335c02d3df8e0e24f52da62" relative="Patterns/Registry.php"/>
+  <extends full="Neuron\Patterns\Singleton\Memory" namespace="Neuron\Patterns\Singleton" name="Memory"/>
+  <member name="_Objects" default="" type="array" visibility="private" static="false" line="8"/>
+  <constructor name="__construct" start="10" end="11" abstract="false" final="false" static="false" visibility="public"/>
+  <method name="set" start="18" end="21" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <param variable="$name"/>
+      <param variable="$object"/>
+    </docblock>
+    <parameter name="name" byreference="false" type="{unknown}"/>
+    <parameter name="object" byreference="false" type="{unknown}"/>
+  </method>
+  <method name="get" start="28" end="36" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <param variable="$name"/>
+      <return type="object">
+        <type full="Neuron\Patterns\value" namespace="Neuron\Patterns" name="value"/>
+      </return>
+    </docblock>
+    <parameter name="name" byreference="false" type="{unknown}"/>
+  </method>
+  <parent full="Neuron\Patterns\Singleton\Memory" namespace="Neuron\Patterns\Singleton" name="Memory">
+    <extends full="Neuron\Patterns\Singleton\Base" namespace="Neuron\Patterns\Singleton" name="Base"/>
+    <member name="_instance" default="" type="array" visibility="public" static="true" line="7"/>
+    <method name="serialize" start="9" end="12" abstract="false" final="false" static="false" visibility="public"/>
+    <method name="invalidate" start="14" end="17" abstract="false" final="false" static="true" visibility="public"/>
+    <method name="instance" start="19" end="29" abstract="false" final="false" static="true" visibility="public"/>
+  </parent>
+  <parent full="Neuron\Patterns\Singleton\Base" namespace="Neuron\Patterns\Singleton" name="Base">
+    <implements full="Neuron\Patterns\Singleton\ISingleton" namespace="Neuron\Patterns\Singleton" name="ISingleton"/>
+    <method name="getInstance" start="16" end="36" abstract="false" final="false" static="true" visibility="public">
+      <docblock>
+        <description/>
+        <return type="null"/>
+      </docblock>
+    </method>
+  </parent>
+  <interface full="Neuron\Patterns\Singleton\ISingleton" namespace="Neuron\Patterns\Singleton" name="ISingleton">
+    <method name="serialize" start="7" end="7" abstract="false" final="false" static="false" visibility="public"/>
+    <method name="invalidate" start="8" end="8" abstract="false" final="false" static="true" visibility="public"/>
+    <method name="instance" start="9" end="9" abstract="false" final="false" static="true" visibility="public"/>
+  </interface>
+</class>

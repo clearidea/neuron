@@ -4,6 +4,10 @@ namespace Neuron\Data\Validation;
 
 use Neuron\Data;
 
+/**
+ * Class NumberWithinRange
+ * @package Neuron\Data\Validation
+ */
 class NumberWithinRange extends Base
 {
 	private $_Range;

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<interface xmlns="http://xml.phpdox.net/src" full="Neuron\Patterns\Criteria\ICriteria" namespace="Neuron\Patterns\Criteria" name="ICriteria" abstract="false" final="false" start="11" end="19">
+  <file path="/Volumes/Storage/Projects/clearidea/open-source/Neuron/src/Patterns/Criteria" file="ICriteria.php" realpath="/Volumes/Storage/Projects/clearidea/open-source/Neuron/src/Patterns/Criteria/ICriteria.php" size="253" time="2016-08-04T19:53:26+00:00" unixtime="1470340406" sha1="90c58ab347d6bfad08b906008f3ca2db45cb27f1" relative="Patterns/Criteria/ICriteria.php"/>
+  <method name="meetCriteria" start="18" end="18" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <param type="array" variable="$entities"/>
+      <return type="array"/>
+    </docblock>
+    <parameter name="entities" byreference="false" type="array"/>
+  </method>
+  <implementors>
+    <class full="Neuron\Patterns\Criteria\AndCriteria" namespace="Neuron\Patterns\Criteria" name="AndCriteria"/>
+    <class full="Neuron\Patterns\Criteria\AndCriteria" namespace="Neuron\Patterns\Criteria" name="AndCriteria"/>
+    <class full="Neuron\Patterns\Criteria\Base" namespace="Neuron\Patterns\Criteria" name="Base"/>
+    <class full="Neuron\Patterns\Criteria\KeyValue" namespace="Neuron\Patterns\Criteria" name="KeyValue"/>
+    <class full="Neuron\Patterns\Criteria\KeyValue" namespace="Neuron\Patterns\Criteria" name="KeyValue"/>
+    <class full="Neuron\Patterns\Criteria\LogicBase" namespace="Neuron\Patterns\Criteria" name="LogicBase"/>
+    <class full="Neuron\Patterns\Criteria\NotCriteria" namespace="Neuron\Patterns\Criteria" name="NotCriteria"/>
+    <class full="Neuron\Patterns\Criteria\OrCriteria" namespace="Neuron\Patterns\Criteria" name="OrCriteria"/>
+    <class full="Neuron\Patterns\Criteria\OrCriteria" namespace="Neuron\Patterns\Criteria" name="OrCriteria"/>
+  </implementors>
+</interface>

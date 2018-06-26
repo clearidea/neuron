@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <title>phpDox - Neuron\Util\Email</title>
+    <link rel="stylesheet" type="text/css" href="../css/style.css" media="screen"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+  </head>
+  <body>
+    <nav class="topnav">
+      <ul>
+        <li>
+          <div class="logo"><span>/**</span>phpDox</div>
+        </li>
+        <li class="separator">
+          <a href="../index.xhtml">Overview</a>
+        </li>
+        <li class="separator">
+          <a href="../namespaces.xhtml">Namespaces</a>
+        </li>
+        <li>
+          <a href="../interfaces.xhtml">Interfaces</a>
+        </li>
+        <li>
+          <a href="../classes.xhtml">Classes</a>
+        </li>
+        <li>
+          <a href="../traits.xhtml">Traits</a>
+        </li>
+        <li class="separator">
+          <a href="../source/index.xhtml">Source</a>
+        </li>
+      </ul>
+    </nav>
+    <div id="mainstage">
+      <div class="box">
+        <ul class="breadcrumb">
+          <li>
+            <a href="../index.xhtml">Overview</a>
+          </li>
+          <li class="separator">
+            <a href="../classes.xhtml">Classes</a>
+          </li>
+          <li class="separator">
+            <a href="../classes.xhtml#Neuron_Util">Neuron\Util</a>
+          </li>
+          <li class="separator">Email</li>
+        </ul>
+      </div>
+      <nav class="box">
+        <ul>
+          <li>
+            <a href="#introduction">Introduction</a>
+          </li>
+          <li>
+            <a href="#synopsis">Synopsis</a>
+          </li>
+          <li>
+            <a href="#constants">Constants</a>
+          </li>
+          <li>
+            <a href="#members">Members</a>
+          </li>
+          <li>
+            <a href="#methods">Methods</a>
+          </li>
+          <li>
+            <a href="../source/Util/Email.php.xhtml#line5">Source</a>
+          </li>
+        </ul>
+      </nav>
+      <section>
+        <h1 id="introduction"><small>Neuron\Util\</small>Email</h1>
+        <h4/>
+        <p/>
+        <h2 id="synopsis">Synopsis</h2>
+        <div class="synopsis">class Email
+            {<br/><ul class="none"><li>// constants</li><li>const EMAIL_TEXT = 0;</li><li>const EMAIL_HTML = 1;</li></ul><ul class="none"><li>// members</li><li>private array <a href="#members">$_aToList</a> =
+                        ;
+                    </li><li>private array <a href="#members">$_aCCList</a> =
+                        ;
+                    </li><li>private array <a href="#members">$_aBCCList</a> =
+                        ;
+                    </li><li>private array <a href="#members">$_aAttachList</a> =
+                        ;
+                    </li><li>private  <a href="#members">$_sHeaders</a>;
+                    </li><li>private  <a href="#members">$_sMimeBoundry</a>;
+                    </li><li>private  <a href="#members">$_sFrom</a>;
+                    </li><li>private  <a href="#members">$_sSubject</a>;
+                    </li><li>private  <a href="#members">$_sBody</a>;
+                    </li><li>private <a href="#members">$_type</a> =
+                        Email::EMAIL_HTML;
+                    </li></ul><ul class="none"><li>// methods</li><li>public void <a title="Neuron\Util\Email" href="../classes/Neuron_Util_Email/setType.xhtml">setType</a>()
+                    </li><li>public int <a title="Neuron\Util\Email" href="../classes/Neuron_Util_Email/getType.xhtml">getType</a>()
+                    </li><li>public void <a title="Neuron\Util\Email" href="../classes/Neuron_Util_Email/addTo.xhtml">addTo</a>()
+                    </li><li>public array <a title="Neuron\Util\Email" href="../classes/Neuron_Util_Email/getToList.xhtml">getToList</a>()
+                    </li><li>public void <a title="Neuron\Util\Email" href="../classes/Neuron_Util_Email/addCC.xhtml">addCC</a>()
+                    </li><li>public array <a title="Neuron\Util\Email" href="../classes/Neuron_Util_Email/getCCList.xhtml">getCCList</a>()
+                    </li><li>public void <a title="Neuron\Util\Email" href="../classes/Neuron_Util_Email/addBCC.xhtml">addBCC</a>()
+                    </li><li>public array <a title="Neuron\Util\Email" href="../classes/Neuron_Util_Email/getBCCList.xhtml">getBCCList</a>()
+                    </li><li>public void <a title="Neuron\Util\Email" href="../classes/Neuron_Util_Email/attachFile.xhtml">attachFile</a>()
+                    </li><li>public array <a title="Neuron\Util\Email" href="../classes/Neuron_Util_Email/getAttachList.xhtml">getAttachList</a>()
+                    </li><li>public void <a title="Neuron\Util\Email" href="../classes/Neuron_Util_Email/setFrom.xhtml">setFrom</a>()
+                    </li><li>public void <a title="Neuron\Util\Email" href="../classes/Neuron_Util_Email/getFrom.xhtml">getFrom</a>()
+                    </li><li>public void <a title="Neuron\Util\Email" href="../classes/Neuron_Util_Email/setSubject.xhtml">setSubject</a>()
+                    </li><li>public mixed <a title="Neuron\Util\Email" href="../classes/Neuron_Util_Email/getSubject.xhtml">getSubject</a>()
+                    </li><li>public void <a title="Neuron\Util\Email" href="../classes/Neuron_Util_Email/setBody.xhtml">setBody</a>()
+                    </li><li>public mixed <a title="Neuron\Util\Email" href="../classes/Neuron_Util_Email/getBody.xhtml">getBody</a>()
+                    </li><li>protected string <a title="Neuron\Util\Email" href="../classes/Neuron_Util_Email/getArrayList.xhtml">getArrayList</a>()
+                    </li><li>protected string <a title="Neuron\Util\Email" href="../classes/Neuron_Util_Email/getAttachmentCode.xhtml">getAttachmentCode</a>()
+                    </li><li>public bool <a title="Neuron\Util\Email" href="../classes/Neuron_Util_Email/send.xhtml">send</a>()
+                    </li></ul>
+
+            }<br/></div>
+        <h2 id="constants">Constants</h2>
+        <table class="styled">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Value</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td id="EMAIL_TEXT">EMAIL_TEXT</td>
+              <td>0</td>
+            </tr>
+            <tr>
+              <td id="EMAIL_HTML">EMAIL_HTML</td>
+              <td>1</td>
+            </tr>
+          </tbody>
+        </table>
+        <h2 id="members">Members</h2>
+        <div class="styled members">
+          <h4>private</h4>
+          <ul class="members">
+            <li id="_aAttachList">
+              <strong>$_aAttachList</strong>
+            </li>
+            <li id="_aBCCList">
+              <strong>$_aBCCList</strong>
+            </li>
+            <li id="_aCCList">
+              <strong>$_aCCList</strong>
+            </li>
+            <li id="_aToList">
+              <strong>$_aToList</strong>
+            </li>
+            <li id="_sBody">
+              <strong>$_sBody</strong>
+            </li>
+            <li id="_sFrom">
+              <strong>$_sFrom</strong>
+            </li>
+            <li id="_sHeaders">
+              <strong>$_sHeaders</strong>
+            </li>
+            <li id="_sMimeBoundry">
+              <strong>$_sMimeBoundry</strong>
+            </li>
+            <li id="_sSubject">
+              <strong>$_sSubject</strong>
+            </li>
+            <li id="_type">
+              <strong>$_type</strong>
+            </li>
+          </ul>
+        </div>
+        <h2 id="methods">Methods</h2>
+        <div class="styled">
+          <h4>protected</h4>
+          <ul>
+            <li id="getArrayList">
+              <a title="Neuron\Util\Email" href="../classes/Neuron_Util_Email/getArrayList.xhtml">getArrayList()</a>
+            </li>
+            <li id="getAttachmentCode">
+              <a title="Neuron\Util\Email" href="../classes/Neuron_Util_Email/getAttachmentCode.xhtml">getAttachmentCode()</a>
+            </li>
+          </ul>
+          <h4>public</h4>
+          <ul>
+            <li id="addBCC">
+              <a title="Neuron\Util\Email" href="../classes/Neuron_Util_Email/addBCC.xhtml">addBCC()</a>
+            </li>
+            <li id="addCC">
+              <a title="Neuron\Util\Email" href="../classes/Neuron_Util_Email/addCC.xhtml">addCC()</a>
+            </li>
+            <li id="addTo">
+              <a title="Neuron\Util\Email" href="../classes/Neuron_Util_Email/addTo.xhtml">addTo()</a>
+            </li>
+            <li id="attachFile">
+              <a title="Neuron\Util\Email" href="../classes/Neuron_Util_Email/attachFile.xhtml">attachFile()</a>
+            </li>
+            <li id="getAttachList">
+              <a title="Neuron\Util\Email" href="../classes/Neuron_Util_Email/getAttachList.xhtml">getAttachList()</a>
+            </li>
+            <li id="getBCCList">
+              <a title="Neuron\Util\Email" href="../classes/Neuron_Util_Email/getBCCList.xhtml">getBCCList()</a>
+            </li>
+            <li id="getBody">
+              <a title="Neuron\Util\Email" href="../classes/Neuron_Util_Email/getBody.xhtml">getBody()</a>
+            </li>
+            <li id="getCCList">
+              <a title="Neuron\Util\Email" href="../classes/Neuron_Util_Email/getCCList.xhtml">getCCList()</a>
+            </li>
+            <li id="getFrom">
+              <a title="Neuron\Util\Email" href="../classes/Neuron_Util_Email/getFrom.xhtml">getFrom()</a>
+            </li>
+            <li id="getSubject">
+              <a title="Neuron\Util\Email" href="../classes/Neuron_Util_Email/getSubject.xhtml">getSubject()</a>
+            </li>
+            <li id="getToList">
+              <a title="Neuron\Util\Email" href="../classes/Neuron_Util_Email/getToList.xhtml">getToList()</a>
+            </li>
+            <li id="getType">
+              <a title="Neuron\Util\Email" href="../classes/Neuron_Util_Email/getType.xhtml">getType()</a>
+            </li>
+            <li id="send">
+              <a title="Neuron\Util\Email" href="../classes/Neuron_Util_Email/send.xhtml">send()</a>
+            </li>
+            <li id="setBody">
+              <a title="Neuron\Util\Email" href="../classes/Neuron_Util_Email/setBody.xhtml">setBody()</a>
+            </li>
+            <li id="setFrom">
+              <a title="Neuron\Util\Email" href="../classes/Neuron_Util_Email/setFrom.xhtml">setFrom()</a>
+            </li>
+            <li id="setSubject">
+              <a title="Neuron\Util\Email" href="../classes/Neuron_Util_Email/setSubject.xhtml">setSubject()</a>
+            </li>
+            <li id="setType">
+              <a title="Neuron\Util\Email" href="../classes/Neuron_Util_Email/setType.xhtml">setType()</a>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </div>
+    <footer>
+      <span>Generated using phpDox 0.11.2 - Copyright (C) 2010 - 2018 by Arne Blankerts and Contributors</span>
+    </footer>
+  </body>
+</html>

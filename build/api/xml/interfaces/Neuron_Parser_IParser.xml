@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<interface xmlns="http://xml.phpdox.net/src" full="Neuron\Parser\IParser" namespace="Neuron\Parser" name="IParser" abstract="false" final="false" start="5" end="8">
+  <file path="/Volumes/Storage/Projects/clearidea/open-source/Neuron/src/Parser" file="IParser.php" realpath="/Volumes/Storage/Projects/clearidea/open-source/Neuron/src/Parser/IParser.php" size="109" time="2015-09-08T19:49:53+00:00" unixtime="1441741793" sha1="39aa2a3eded08e2b31bc4c36f638ac4d0b8b3b6e" relative="Parser/IParser.php"/>
+  <method name="parse" start="7" end="7" abstract="false" final="false" static="false" visibility="public">
+    <parameter name="sText" byreference="false" type="{unknown}"/>
+    <parameter name="UserData" byreference="false" type="array" default=""/>
+  </method>
+  <implementors>
+    <class full="Neuron\Parser\CSV" namespace="Neuron\Parser" name="CSV"/>
+    <class full="Neuron\Parser\LastFirstMI" namespace="Neuron\Parser" name="LastFirstMI"/>
+    <class full="Neuron\Parser\Positional" namespace="Neuron\Parser" name="Positional"/>
+  </implementors>
+</interface>

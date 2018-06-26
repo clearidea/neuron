@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class xmlns="http://xml.phpdox.net/src" full="Neuron\Data\Validation\Ein" namespace="Neuron\Data\Validation" name="Ein" abstract="false" final="false" start="9" end="15">
+  <file path="/Volumes/Storage/Projects/clearidea/open-source/Neuron/src/Data/Validation" file="Ein.php" realpath="/Volumes/Storage/Projects/clearidea/open-source/Neuron/src/Data/Validation/Ein.php" size="240" time="2018-06-25T22:42:10+00:00" unixtime="1529966530" sha1="828b708f11403dbf1d1f96e53841439bac8e3f24" relative="Data/Validation/Ein.php"/>
+  <docblock>
+    <description compact="Class Ein"/>
+    <package value="Neuron\Data\Validation"/>
+  </docblock>
+  <extends full="Neuron\Data\Validation\Base" namespace="Neuron\Data\Validation" name="Base"/>
+  <method name="validate" start="11" end="14" abstract="false" final="false" static="false" visibility="public">
+    <parameter name="data" byreference="false" type="{unknown}"/>
+  </method>
+  <parent full="Neuron\Data\Validation\Base" namespace="Neuron\Data\Validation" name="Base">
+    <implements full="Neuron\Data\Validation\IValidator" namespace="Neuron\Data\Validation" name="IValidator"/>
+    <method name="validate" start="11" end="11" abstract="true" final="false" static="false" visibility="protected">
+      <parameter name="data" byreference="false" type="{unknown}"/>
+    </method>
+    <constructor name="__construct" start="13" end="16" abstract="false" final="false" static="false" visibility="public"/>
+    <method name="isValid" start="25" end="28" abstract="false" final="false" static="false" visibility="public">
+      <docblock>
+        <description compact="Returns true if validation is successful"/>
+        <param variable="$data"/>
+        <return type="object">
+          <type full="Neuron\Data\Validation\bool" namespace="Neuron\Data\Validation" name="bool"/>
+        </return>
+      </docblock>
+      <return type="bool" nullable="false"/>
+      <parameter name="data" byreference="false" type="{unknown}"/>
+    </method>
+  </parent>
+  <interface full="Neuron\Data\Validation\IValidator" namespace="Neuron\Data\Validation" name="IValidator">
+    <method name="isValid" start="7" end="7" abstract="false" final="false" static="false" visibility="public">
+      <return type="bool" nullable="false"/>
+      <parameter name="data" byreference="false" type="{unknown}"/>
+    </method>
+  </interface>
+</class>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class xmlns="http://xml.phpdox.net/src" full="Neuron\Data\Object\Version" namespace="Neuron\Data\Object" name="Version" abstract="false" final="false" start="5" end="54">
+  <file path="/Volumes/Storage/Projects/clearidea/open-source/Neuron/src/Data/Object" file="Version.php" realpath="/Volumes/Storage/Projects/clearidea/open-source/Neuron/src/Data/Object/Version.php" size="869" time="2018-05-02T12:08:19+00:00" unixtime="1525262899" sha1="705807026d987ba1fcede4aab277889d446d55be" relative="Data/Object/Version.php"/>
+  <member name="Major" visibility="public" static="false" line="7"/>
+  <member name="Minor" visibility="public" static="false" line="8"/>
+  <member name="Patch" visibility="public" static="false" line="9"/>
+  <constructor name="__construct" start="14" end="19" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description compact="Version constructor."/>
+    </docblock>
+  </constructor>
+  <method name="loadFromString" start="25" end="37" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <param variable="$Data"/>
+      <throws type="object">
+        <type full="\Exception" namespace="" name="Exception"/>
+      </throws>
+    </docblock>
+    <parameter name="Data" byreference="false" type="{unknown}"/>
+  </method>
+  <method name="loadFromFile" start="43" end="53" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <param type="string" variable="$File"/>
+      <throws type="object">
+        <type full="\Exception" namespace="" name="Exception"/>
+      </throws>
+    </docblock>
+    <parameter name="File" byreference="false" type="string" default="'version.json'"/>
+  </method>
+</class>

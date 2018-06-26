@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class xmlns="http://xml.phpdox.net/src" full="Neuron\Patterns\Singleton\Memory" namespace="Neuron\Patterns\Singleton" name="Memory" abstract="false" final="false" start="5" end="30">
+  <file path="/Volumes/Storage/Projects/clearidea/open-source/Neuron/src/Patterns/Singleton" file="Memory.php" realpath="/Volumes/Storage/Projects/clearidea/open-source/Neuron/src/Patterns/Singleton/Memory.php" size="484" time="2017-08-14T13:31:29+00:00" unixtime="1502717489" sha1="c6b81f571c8b9adf8ef13f00636c7d9ded3050ab" relative="Patterns/Singleton/Memory.php"/>
+  <extends full="Neuron\Patterns\Singleton\Base" namespace="Neuron\Patterns\Singleton" name="Base"/>
+  <member name="_instance" default="" type="array" visibility="public" static="true" line="7"/>
+  <method name="serialize" start="9" end="12" abstract="false" final="false" static="false" visibility="public"/>
+  <method name="invalidate" start="14" end="17" abstract="false" final="false" static="true" visibility="public"/>
+  <method name="instance" start="19" end="29" abstract="false" final="false" static="true" visibility="public"/>
+  <extenders>
+    <extender full="Neuron\Log\Log" namespace="Neuron\Log" name="Log"/>
+    <extender full="Neuron\Patterns\Registry" namespace="Neuron\Patterns" name="Registry"/>
+  </extenders>
+  <parent full="Neuron\Patterns\Singleton\Base" namespace="Neuron\Patterns\Singleton" name="Base">
+    <implements full="Neuron\Patterns\Singleton\ISingleton" namespace="Neuron\Patterns\Singleton" name="ISingleton"/>
+    <method name="getInstance" start="16" end="36" abstract="false" final="false" static="true" visibility="public">
+      <docblock>
+        <description/>
+        <return type="null"/>
+      </docblock>
+    </method>
+  </parent>
+  <interface full="Neuron\Patterns\Singleton\ISingleton" namespace="Neuron\Patterns\Singleton" name="ISingleton">
+    <method name="serialize" start="7" end="7" abstract="false" final="false" static="false" visibility="public"/>
+    <method name="invalidate" start="8" end="8" abstract="false" final="false" static="true" visibility="public"/>
+    <method name="instance" start="9" end="9" abstract="false" final="false" static="true" visibility="public"/>
+  </interface>
+</class>

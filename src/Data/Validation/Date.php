@@ -3,9 +3,9 @@
 namespace Neuron\Data\Validation;
 
 /**
- * Date validation.
+ * Class Date
+ * @package Neuron\Data\Validation
  */
-
 class Date extends Base
 {
 	private $_sFormat = 'Y-m-d';

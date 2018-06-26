@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class xmlns="http://xml.phpdox.net/src" full="Neuron\Data\Validation\DateWithinRange" namespace="Neuron\Data\Validation" name="DateWithinRange" abstract="false" final="false" start="17" end="46">
+  <file path="/Volumes/Storage/Projects/clearidea/open-source/Neuron/src/Data/Validation" file="DateWithinRange.php" realpath="/Volumes/Storage/Projects/clearidea/open-source/Neuron/src/Data/Validation/DateWithinRange.php" size="721" time="2018-06-25T22:42:10+00:00" unixtime="1529966530" sha1="f1a6ed53ab3946a11e954b19b8a7f816386875d7" relative="Data/Validation/DateWithinRange.php"/>
+  <docblock>
+    <description compact="Class DateWithinRange"/>
+    <package value="Neuron\Data\Validation"/>
+  </docblock>
+  <extends full="Neuron\Data\Validation\Date" namespace="Neuron\Data\Validation" name="Date"/>
+  <member name="_Range" visibility="private" static="false" line="19"/>
+  <method name="validate" start="21" end="33" abstract="false" final="false" static="false" visibility="protected">
+    <parameter name="date" byreference="false" type="{unknown}"/>
+  </method>
+  <method name="setRange" start="40" end="45" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <param variable="$Range"/>
+      <return type="object">
+        <type full="Neuron\Data\Validation\$this" namespace="Neuron\Data\Validation" name="$this"/>
+      </return>
+    </docblock>
+    <parameter name="Range" byreference="false" type="object">
+      <type full="Neuron\Data\Object\DateRange" namespace="Neuron\Data\Object" name="DateRange"/>
+    </parameter>
+  </method>
+  <parent full="Neuron\Data\Validation\Date" namespace="Neuron\Data\Validation" name="Date">
+    <extends full="Neuron\Data\Validation\Base" namespace="Neuron\Data\Validation" name="Base"/>
+    <method name="validate" start="13" end="17" abstract="false" final="false" static="false" visibility="protected">
+      <parameter name="CheckDate" byreference="false" type="{unknown}"/>
+    </method>
+    <method name="setFormat" start="24" end="29" abstract="false" final="false" static="false" visibility="public">
+      <docblock>
+        <description/>
+        <param description="Specify the date format to validate to. Defaults to Y-m-d" variable="$sFormat" type="object">
+          <type full="Neuron\Data\Validation\-" namespace="Neuron\Data\Validation" name="-"/>
+        </param>
+        <return type="object">
+          <type full="Neuron\Data\Validation\$this" namespace="Neuron\Data\Validation" name="$this"/>
+        </return>
+      </docblock>
+      <parameter name="sFormat" byreference="false" type="{unknown}"/>
+    </method>
+  </parent>
+  <parent full="Neuron\Data\Validation\Base" namespace="Neuron\Data\Validation" name="Base">
+    <implements full="Neuron\Data\Validation\IValidator" namespace="Neuron\Data\Validation" name="IValidator"/>
+    <method name="validate" start="11" end="11" abstract="true" final="false" static="false" visibility="protected">
+      <parameter name="data" byreference="false" type="{unknown}"/>
+    </method>
+    <constructor name="__construct" start="13" end="16" abstract="false" final="false" static="false" visibility="public"/>
+    <method name="isValid" start="25" end="28" abstract="false" final="false" static="false" visibility="public">
+      <docblock>
+        <description compact="Returns true if validation is successful"/>
+        <param variable="$data"/>
+        <return type="object">
+          <type full="Neuron\Data\Validation\bool" namespace="Neuron\Data\Validation" name="bool"/>
+        </return>
+      </docblock>
+      <return type="bool" nullable="false"/>
+      <parameter name="data" byreference="false" type="{unknown}"/>
+    </method>
+  </parent>
+  <interface full="Neuron\Data\Validation\IValidator" namespace="Neuron\Data\Validation" name="IValidator">
+    <method name="isValid" start="7" end="7" abstract="false" final="false" static="false" visibility="public">
+      <return type="bool" nullable="false"/>
+      <parameter name="data" byreference="false" type="{unknown}"/>
+    </method>
+  </interface>
+</class>

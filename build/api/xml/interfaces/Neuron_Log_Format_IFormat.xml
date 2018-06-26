@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<interface xmlns="http://xml.phpdox.net/src" full="Neuron\Log\Format\IFormat" namespace="Neuron\Log\Format" name="IFormat" abstract="false" final="false" start="11" end="14">
+  <file path="/Volumes/Storage/Projects/clearidea/open-source/Neuron/src/Log/Format" file="IFormat.php" realpath="/Volumes/Storage/Projects/clearidea/open-source/Neuron/src/Log/Format/IFormat.php" size="149" time="2015-12-11T21:46:38+00:00" unixtime="1449870398" sha1="a44735dd005571bd383fa226da07b3178e51b013" relative="Log/Format/IFormat.php"/>
+  <docblock>
+    <description compact="Interface IFormat"/>
+  </docblock>
+  <method name="format" start="13" end="13" abstract="false" final="false" static="false" visibility="public">
+    <parameter name="data" byreference="false" type="object">
+      <type full="Neuron\Log\Data" namespace="Neuron\Log" name="Data"/>
+    </parameter>
+  </method>
+  <implementors>
+    <class full="Neuron\Log\Format\CSV" namespace="Neuron\Log\Format" name="CSV"/>
+    <class full="Neuron\Log\Format\HTML" namespace="Neuron\Log\Format" name="HTML"/>
+    <class full="Neuron\Log\Format\JSON" namespace="Neuron\Log\Format" name="JSON"/>
+    <class full="Neuron\Log\Format\PlainText" namespace="Neuron\Log\Format" name="PlainText"/>
+  </implementors>
+</interface>

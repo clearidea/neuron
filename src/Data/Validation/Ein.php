@@ -2,6 +2,10 @@
 
 namespace Neuron\Data\Validation;
 
+/**
+ * Class Ein
+ * @package Neuron\Data\Validation
+ */
 class Ein extends Base
 {
 	public function validate( $data )

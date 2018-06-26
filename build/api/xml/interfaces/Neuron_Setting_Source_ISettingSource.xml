@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<interface xmlns="http://xml.phpdox.net/src" full="Neuron\Setting\Source\ISettingSource" namespace="Neuron\Setting\Source" name="ISettingSource" abstract="false" final="false" start="9" end="17">
+  <file path="/Volumes/Storage/Projects/clearidea/open-source/Neuron/src/Setting/Source" file="ISettingSource.php" realpath="/Volumes/Storage/Projects/clearidea/open-source/Neuron/src/Setting/Source/ISettingSource.php" size="295" time="2015-10-05T00:36:22+00:00" unixtime="1444005382" sha1="d8c2d6337d4b00026e4d1b0d95d9677f16fd013e" relative="Setting/Source/ISettingSource.php"/>
+  <method name="get" start="11" end="11" abstract="false" final="false" static="false" visibility="public">
+    <parameter name="sSection" byreference="false" type="{unknown}"/>
+    <parameter name="sName" byreference="false" type="{unknown}"/>
+  </method>
+  <method name="set" start="12" end="12" abstract="false" final="false" static="false" visibility="public">
+    <parameter name="sName" byreference="false" type="{unknown}"/>
+    <parameter name="sSection" byreference="false" type="{unknown}"/>
+    <parameter name="sValue" byreference="false" type="{unknown}"/>
+  </method>
+  <method name="getSectionNames" start="13" end="13" abstract="false" final="false" static="false" visibility="public"/>
+  <method name="getSectionSettingNames" start="14" end="14" abstract="false" final="false" static="false" visibility="public">
+    <parameter name="sSection" byreference="false" type="{unknown}"/>
+  </method>
+  <method name="save" start="16" end="16" abstract="false" final="false" static="false" visibility="public"/>
+  <implementors>
+    <class full="Neuron\Setting\Source\Ini" namespace="Neuron\Setting\Source" name="Ini"/>
+    <class full="Neuron\Setting\Source\Memory" namespace="Neuron\Setting\Source" name="Memory"/>
+  </implementors>
+</interface>

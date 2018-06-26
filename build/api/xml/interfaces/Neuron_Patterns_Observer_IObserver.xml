@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<interface xmlns="http://xml.phpdox.net/src" full="Neuron\Patterns\Observer\IObserver" namespace="Neuron\Patterns\Observer" name="IObserver" abstract="false" final="false" start="10" end="19">
+  <file path="/Volumes/Storage/Projects/clearidea/open-source/Neuron/src/Patterns/Observer" file="IObserver.php" realpath="/Volumes/Storage/Projects/clearidea/open-source/Neuron/src/Patterns/Observer/IObserver.php" size="273" time="2016-08-12T19:22:31+00:00" unixtime="1471029751" sha1="4d1d47a7c843706d7c3acea4d5216706293037fb" relative="Patterns/Observer/IObserver.php"/>
+  <docblock>
+    <description compact="Interface IObserver"/>
+    <package value="Neuron\Patterns\Observer"/>
+  </docblock>
+  <method name="notify" start="18" end="18" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <param type="object" variable="$Observable">
+        <type full="Neuron\Patterns\Observer\Observable" namespace="Neuron\Patterns\Observer" name="Observable"/>
+      </param>
+      <param variable="$param"/>
+      <return type="mixed"/>
+    </docblock>
+    <parameter name="Observable" byreference="false" type="object">
+      <type full="Neuron\Patterns\Observer\Observable" namespace="Neuron\Patterns\Observer" name="Observable"/>
+    </parameter>
+    <parameter name="param" byreference="false" type="{unknown}"/>
+  </method>
+</interface>

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class xmlns="http://xml.phpdox.net/src" full="Neuron\Setting\SettingManager" namespace="Neuron\Setting" name="SettingManager" abstract="false" final="false" start="5" end="77">
+  <file path="/Volumes/Storage/Projects/clearidea/open-source/Neuron/src/Setting" file="SettingManager.php" realpath="/Volumes/Storage/Projects/clearidea/open-source/Neuron/src/Setting/SettingManager.php" size="1152" time="2016-08-04T19:53:26+00:00" unixtime="1470340406" sha1="3d776b2188a148d9077e519e0275dee2ad7d6e18" relative="Setting/SettingManager.php"/>
+  <member name="_Source" visibility="private" static="false" line="7"/>
+  <constructor name="__construct" start="13" end="16" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <param type="object" variable="$Source">
+        <type full="Neuron\Setting\Source\ISettingSource" namespace="Neuron\Setting\Source" name="ISettingSource"/>
+      </param>
+    </docblock>
+    <parameter name="Source" byreference="false" type="object">
+      <type full="Neuron\Setting\Source\ISettingSource" namespace="Neuron\Setting\Source" name="ISettingSource"/>
+    </parameter>
+  </constructor>
+  <method name="getSource" start="22" end="25" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <return type="mixed"/>
+    </docblock>
+  </method>
+  <method name="setSource" start="31" end="34" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <param type="object" variable="$Source">
+        <type full="Neuron\Setting\Source\ISettingSource" namespace="Neuron\Setting\Source" name="ISettingSource"/>
+      </param>
+    </docblock>
+    <parameter name="Source" byreference="false" type="object">
+      <type full="Neuron\Setting\Source\ISettingSource" namespace="Neuron\Setting\Source" name="ISettingSource"/>
+    </parameter>
+  </method>
+  <method name="get" start="42" end="45" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <param variable="$sSection"/>
+      <param variable="$sName"/>
+      <return type="mixed"/>
+    </docblock>
+    <parameter name="sSection" byreference="false" type="{unknown}"/>
+    <parameter name="sName" byreference="false" type="{unknown}"/>
+  </method>
+  <method name="set" start="53" end="57" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <param variable="$sSection"/>
+      <param variable="$sName"/>
+      <param variable="$sValue"/>
+    </docblock>
+    <parameter name="sSection" byreference="false" type="{unknown}"/>
+    <parameter name="sName" byreference="false" type="{unknown}"/>
+    <parameter name="sValue" byreference="false" type="{unknown}"/>
+  </method>
+  <method name="getSectionNames" start="63" end="66" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <return type="mixed"/>
+    </docblock>
+  </method>
+  <method name="getSectionSettingNames" start="73" end="76" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <param variable="$sSection"/>
+      <return type="mixed"/>
+    </docblock>
+    <parameter name="sSection" byreference="false" type="{unknown}"/>
+  </method>
+</class>

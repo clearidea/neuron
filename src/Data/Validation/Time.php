@@ -9,9 +9,9 @@
 namespace Neuron\Data\Validation;
 
 /**
- * Time Validation
+ * Class Time
+ * @package Neuron\Data\Validation
  */
-
 class Time extends Base
 {
 	private $_sFormat = 'g:i:s A';

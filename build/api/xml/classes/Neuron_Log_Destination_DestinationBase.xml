@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class xmlns="http://xml.phpdox.net/src" full="Neuron\Log\Destination\DestinationBase" namespace="Neuron\Log\Destination" name="DestinationBase" abstract="true" final="false" start="23" end="99">
+  <file path="/Volumes/Storage/Projects/clearidea/open-source/Neuron/src/Log/Destination" file="DestinationBase.php" realpath="/Volumes/Storage/Projects/clearidea/open-source/Neuron/src/Log/Destination/DestinationBase.php" size="1610" time="2016-08-04T19:53:26+00:00" unixtime="1470340406" sha1="eba881ccdcb8061c522d64cdae946eea61e0289f" relative="Log/Destination/DestinationBase.php"/>
+  <docblock>
+    <description compact="Class DestinationBase"/>
+    <package value="Neuron\Log\Destination"/>
+  </docblock>
+  <member name="_Format" visibility="private" static="false" line="25"/>
+  <method name="getLevelText" start="32" end="54" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <param variable="$iLevel"/>
+      <return type="string"/>
+    </docblock>
+    <parameter name="iLevel" byreference="false" type="{unknown}"/>
+  </method>
+  <constructor name="__construct" start="60" end="63" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <param type="object" variable="$Format">
+        <type full="Neuron\Log\Destination\Format\IFormat" namespace="Neuron\Log\Destination\Format" name="IFormat"/>
+      </param>
+    </docblock>
+    <parameter name="Format" byreference="false" type="object">
+      <type full="Neuron\Log\Format\IFormat" namespace="Neuron\Log\Format" name="IFormat"/>
+    </parameter>
+  </constructor>
+  <method name="setFormat" start="69" end="70" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <param type="object" variable="$Format">
+        <type full="Neuron\Log\Destination\Format\IFormat" namespace="Neuron\Log\Destination\Format" name="IFormat"/>
+      </param>
+    </docblock>
+    <parameter name="Format" byreference="false" type="object">
+      <type full="Neuron\Log\Format\IFormat" namespace="Neuron\Log\Format" name="IFormat"/>
+    </parameter>
+  </method>
+  <method name="write" start="78" end="78" abstract="true" final="false" static="false" visibility="protected">
+    <docblock>
+      <description/>
+      <param variable="$text"/>
+      <param type="object" variable="$Data">
+        <type full="Neuron\Log\Destination\Log\Data" namespace="Neuron\Log\Destination\Log" name="Data"/>
+      </param>
+      <return type="mixed"/>
+    </docblock>
+    <parameter name="text" byreference="false" type="{unknown}"/>
+    <parameter name="Data" byreference="false" type="object">
+      <type full="Neuron\Log\Data" namespace="Neuron\Log" name="Data"/>
+    </parameter>
+  </method>
+  <method name="open" start="85" end="85" abstract="true" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <param type="array" variable="$aParams"/>
+      <return type="mixed"/>
+    </docblock>
+    <parameter name="aParams" byreference="false" type="array"/>
+  </method>
+  <method name="log" start="92" end="98" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <param variable="$text"/>
+      <param variable="$iLevel"/>
+    </docblock>
+    <parameter name="text" byreference="false" type="{unknown}"/>
+    <parameter name="iLevel" byreference="false" type="{unknown}"/>
+  </method>
+  <extenders>
+    <extender full="Neuron\Log\Destination\Echoer" namespace="Neuron\Log\Destination" name="Echoer"/>
+    <extender full="Neuron\Log\Destination\File" namespace="Neuron\Log\Destination" name="File"/>
+    <extender full="Neuron\Log\Destination\Null" namespace="Neuron\Log\Destination" name="Null"/>
+    <extender full="Neuron\Log\Destination\Slack" namespace="Neuron\Log\Destination" name="Slack"/>
+    <extender full="Neuron\Log\Destination\Socket" namespace="Neuron\Log\Destination" name="Socket"/>
+    <extender full="Neuron\Log\Destination\StdErr" namespace="Neuron\Log\Destination" name="StdErr"/>
+    <extender full="Neuron\Log\Destination\StdOut" namespace="Neuron\Log\Destination" name="StdOut"/>
+    <extender full="Neuron\Log\Destination\WebService" namespace="Neuron\Log\Destination" name="WebService"/>
+  </extenders>
+</class>

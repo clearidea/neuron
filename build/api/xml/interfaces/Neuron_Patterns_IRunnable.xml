@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<interface xmlns="http://xml.phpdox.net/src" full="Neuron\Patterns\IRunnable" namespace="Neuron\Patterns" name="IRunnable" abstract="false" final="false" start="9" end="17">
+  <file path="/Volumes/Storage/Projects/clearidea/open-source/Neuron/src/Patterns" file="IRunnable.php" realpath="/Volumes/Storage/Projects/clearidea/open-source/Neuron/src/Patterns/IRunnable.php" size="244" time="2016-08-14T10:21:13+00:00" unixtime="1471170073" sha1="c59d30d4d65c7e695258acd6a21036be46c825f7" relative="Patterns/IRunnable.php"/>
+  <docblock>
+    <description compact="Interface IRunnable"/>
+    <package value="Neuron\Patterns"/>
+  </docblock>
+  <method name="run" start="16" end="16" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description compact="Generic run method."/>
+      <param type="object" variable="$aArgv">
+        <type full="Neuron\Patterns\array|null" namespace="Neuron\Patterns" name="array|null"/>
+      </param>
+      <return type="mixed"/>
+    </docblock>
+    <parameter name="aArgv" byreference="false" type="array" default="NULL"/>
+  </method>
+  <extenders>
+    <extender full="Neuron\Application\IApplication" namespace="Neuron\Application" name="IApplication"/>
+  </extenders>
+</interface>

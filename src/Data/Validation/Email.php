@@ -3,9 +3,9 @@
 namespace Neuron\Data\Validation;
 
 /**
- * Email address validation.
+ * Class Email
+ * @package Neuron\Data\Validation
  */
-
 class Email extends Base
 {
 	protected function validate( $email )

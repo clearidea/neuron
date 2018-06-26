@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class xmlns="http://xml.phpdox.net/src" full="Neuron\Log\LogMux" namespace="Neuron\Log" name="LogMux" abstract="false" final="false" start="5" end="110">
+  <file path="/Volumes/Storage/Projects/clearidea/open-source/Neuron/src/Log" file="LogMux.php" realpath="/Volumes/Storage/Projects/clearidea/open-source/Neuron/src/Log/LogMux.php" size="1296" time="2018-06-05T13:26:26+00:00" unixtime="1528205186" sha1="aae9d6143bf0d531d9af05fc12dfcba7085ada41" relative="Log/LogMux.php"/>
+  <implements full="Neuron\Log\ILogger" namespace="Neuron\Log" name="ILogger"/>
+  <member name="_aLogs" default="" type="array" visibility="private" static="false" line="7"/>
+  <method name="addLog" start="13" end="16" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <param type="object" variable="$Log">
+        <type full="Neuron\Log\ILogger" namespace="Neuron\Log" name="ILogger"/>
+      </param>
+    </docblock>
+    <parameter name="Log" byreference="false" type="object">
+      <type full="Neuron\Log\ILogger" namespace="Neuron\Log" name="ILogger"/>
+    </parameter>
+  </method>
+  <method name="reset" start="22" end="25" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description compact="Clears all attached logs."/>
+    </docblock>
+  </method>
+  <method name="getLogs" start="31" end="34" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <return type="mixed"/>
+    </docblock>
+  </method>
+  <method name="setRunLevel" start="42" end="48" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <param variable="$iLevel">Sync run levels for all loggers.</param>
+    </docblock>
+    <parameter name="iLevel" byreference="false" type="{unknown}"/>
+  </method>
+  <method name="log" start="56" end="62" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <param variable="$text"/>
+      <param variable="$iLevel"/>
+    </docblock>
+    <parameter name="text" byreference="false" type="{unknown}"/>
+    <parameter name="iLevel" byreference="false" type="{unknown}"/>
+  </method>
+  <method name="debug" start="68" end="71" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <param variable="$text"/>
+    </docblock>
+    <parameter name="text" byreference="false" type="{unknown}"/>
+  </method>
+  <method name="info" start="77" end="80" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <param variable="$text"/>
+    </docblock>
+    <parameter name="text" byreference="false" type="{unknown}"/>
+  </method>
+  <method name="warning" start="86" end="89" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <param variable="$text"/>
+    </docblock>
+    <parameter name="text" byreference="false" type="{unknown}"/>
+  </method>
+  <method name="error" start="95" end="98" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <param variable="$text"/>
+    </docblock>
+    <parameter name="text" byreference="false" type="{unknown}"/>
+  </method>
+  <method name="fatal" start="104" end="107" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <param variable="$text"/>
+    </docblock>
+    <parameter name="text" byreference="false" type="{unknown}"/>
+  </method>
+  <interface full="Neuron\Log\ILogger" namespace="Neuron\Log" name="ILogger">
+    <constant type="{unknown}" name="DEBUG" value="0"/>
+    <constant type="{unknown}" name="INFO" value="10"/>
+    <constant type="{unknown}" name="WARNING" value="20"/>
+    <constant type="{unknown}" name="ERROR" value="30"/>
+    <constant type="{unknown}" name="FATAL" value="40"/>
+    <method name="log" start="26" end="26" abstract="false" final="false" static="false" visibility="public">
+      <docblock>
+        <description/>
+        <param variable="$text"/>
+        <param variable="$iLevel"/>
+      </docblock>
+      <parameter name="text" byreference="false" type="{unknown}"/>
+      <parameter name="iLevel" byreference="false" type="{unknown}"/>
+    </method>
+    <method name="setRunLevel" start="32" end="32" abstract="false" final="false" static="false" visibility="public">
+      <docblock>
+        <description/>
+        <param variable="$iLevel"/>
+        <return type="mixed"/>
+      </docblock>
+      <parameter name="iLevel" byreference="false" type="{unknown}"/>
+    </method>
+    <method name="debug" start="38" end="38" abstract="false" final="false" static="false" visibility="public">
+      <docblock>
+        <description/>
+        <param variable="$text"/>
+        <return type="mixed"/>
+      </docblock>
+      <parameter name="text" byreference="false" type="{unknown}"/>
+    </method>
+    <method name="info" start="44" end="44" abstract="false" final="false" static="false" visibility="public">
+      <docblock>
+        <description/>
+        <param variable="$text"/>
+        <return type="mixed"/>
+      </docblock>
+      <parameter name="text" byreference="false" type="{unknown}"/>
+    </method>
+    <method name="warning" start="50" end="50" abstract="false" final="false" static="false" visibility="public">
+      <docblock>
+        <description/>
+        <param variable="$text"/>
+        <return type="mixed"/>
+      </docblock>
+      <parameter name="text" byreference="false" type="{unknown}"/>
+    </method>
+    <method name="error" start="56" end="56" abstract="false" final="false" static="false" visibility="public">
+      <docblock>
+        <description/>
+        <param variable="$text"/>
+        <return type="mixed"/>
+      </docblock>
+      <parameter name="text" byreference="false" type="{unknown}"/>
+    </method>
+    <method name="fatal" start="62" end="62" abstract="false" final="false" static="false" visibility="public">
+      <docblock>
+        <description/>
+        <param variable="$text"/>
+        <return type="mixed"/>
+      </docblock>
+      <parameter name="text" byreference="false" type="{unknown}"/>
+    </method>
+  </interface>
+</class>

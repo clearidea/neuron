@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class xmlns="http://xml.phpdox.net/src" full="Neuron\Patterns\Criteria\NotCriteria" namespace="Neuron\Patterns\Criteria" name="NotCriteria" abstract="false" final="false" start="7" end="39">
+  <file path="/Volumes/Storage/Projects/clearidea/open-source/Neuron/src/Patterns/Criteria" file="NotCriteria.php" realpath="/Volumes/Storage/Projects/clearidea/open-source/Neuron/src/Patterns/Criteria/NotCriteria.php" size="633" time="2016-08-05T12:23:24+00:00" unixtime="1470399804" sha1="a2ad06e771caf1f5e93bca51f8425771afeb294e" relative="Patterns/Criteria/NotCriteria.php"/>
+  <implements full="Neuron\Patterns\Criteria\ICriteria" namespace="Neuron\Patterns\Criteria" name="ICriteria"/>
+  <member name="_Criteria" visibility="private" static="false" line="9"/>
+  <constructor name="__construct" start="16" end="19" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description compact="NotCriteria constructor."/>
+      <param type="object" variable="$Criteria">
+        <type full="Neuron\Patterns\Criteria\ICriteria" namespace="Neuron\Patterns\Criteria" name="ICriteria"/>
+      </param>
+    </docblock>
+    <parameter name="Criteria" byreference="false" type="object">
+      <type full="Neuron\Patterns\Criteria\ICriteria" namespace="Neuron\Patterns\Criteria" name="ICriteria"/>
+    </parameter>
+  </constructor>
+  <method name="meetCriteria" start="26" end="38" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <param type="array" variable="$entities"/>
+      <return type="array"/>
+    </docblock>
+    <parameter name="entities" byreference="false" type="array"/>
+  </method>
+  <interface full="Neuron\Patterns\Criteria\ICriteria" namespace="Neuron\Patterns\Criteria" name="ICriteria">
+    <method name="meetCriteria" start="18" end="18" abstract="false" final="false" static="false" visibility="public">
+      <docblock>
+        <description/>
+        <param type="array" variable="$entities"/>
+        <return type="array"/>
+      </docblock>
+      <parameter name="entities" byreference="false" type="array"/>
+    </method>
+  </interface>
+</class>

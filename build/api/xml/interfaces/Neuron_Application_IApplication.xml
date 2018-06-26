@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<interface xmlns="http://xml.phpdox.net/src" full="Neuron\Application\IApplication" namespace="Neuron\Application" name="IApplication" abstract="false" final="false" start="14" end="21">
+  <file path="/Volumes/Storage/Projects/clearidea/open-source/Neuron/src/Application" file="IApplication.php" realpath="/Volumes/Storage/Projects/clearidea/open-source/Neuron/src/Application/IApplication.php" size="519" time="2016-08-12T11:33:09+00:00" unixtime="1471001589" sha1="4ab9137f6c702a17b7ed660dcb4846afc7b0e92b" relative="Application/IApplication.php"/>
+  <extends full="Neuron\Log\ILogger" namespace="Neuron\Log" name="ILogger"/>
+  <extends full="Neuron\Patterns\IRunnable" namespace="Neuron\Patterns" name="IRunnable"/>
+  <method name="getSetting" start="16" end="16" abstract="false" final="false" static="false" visibility="public">
+    <parameter name="sName" byreference="false" type="{unknown}"/>
+    <parameter name="sSection" byreference="false" type="string" default="'default'"/>
+  </method>
+  <method name="setSetting" start="17" end="17" abstract="false" final="false" static="false" visibility="public">
+    <parameter name="sName" byreference="false" type="{unknown}"/>
+    <parameter name="sValue" byreference="false" type="{unknown}"/>
+    <parameter name="sSection" byreference="false" type="string" default="'default'"/>
+  </method>
+  <method name="setRegistryObject" start="19" end="19" abstract="false" final="false" static="false" visibility="public">
+    <parameter name="name" byreference="false" type="{unknown}"/>
+    <parameter name="object" byreference="false" type="{unknown}"/>
+  </method>
+  <method name="getRegistryObject" start="20" end="20" abstract="false" final="false" static="false" visibility="public">
+    <parameter name="name" byreference="false" type="{unknown}"/>
+  </method>
+  <implementors>
+    <class full="Neuron\Application\Base" namespace="Neuron\Application" name="Base"/>
+    <class full="Neuron\Application\CommandLineBase" namespace="Neuron\Application" name="CommandLineBase"/>
+  </implementors>
+  <parent full="Neuron\Log\ILogger" namespace="Neuron\Log" name="ILogger">
+    <constant type="{unknown}" name="DEBUG" value="0"/>
+    <constant type="{unknown}" name="INFO" value="10"/>
+    <constant type="{unknown}" name="WARNING" value="20"/>
+    <constant type="{unknown}" name="ERROR" value="30"/>
+    <constant type="{unknown}" name="FATAL" value="40"/>
+    <method name="log" start="26" end="26" abstract="false" final="false" static="false" visibility="public">
+      <docblock>
+        <description/>
+        <param variable="$text"/>
+        <param variable="$iLevel"/>
+      </docblock>
+      <parameter name="text" byreference="false" type="{unknown}"/>
+      <parameter name="iLevel" byreference="false" type="{unknown}"/>
+    </method>
+    <method name="setRunLevel" start="32" end="32" abstract="false" final="false" static="false" visibility="public">
+      <docblock>
+        <description/>
+        <param variable="$iLevel"/>
+        <return type="mixed"/>
+      </docblock>
+      <parameter name="iLevel" byreference="false" type="{unknown}"/>
+    </method>
+    <method name="debug" start="38" end="38" abstract="false" final="false" static="false" visibility="public">
+      <docblock>
+        <description/>
+        <param variable="$text"/>
+        <return type="mixed"/>
+      </docblock>
+      <parameter name="text" byreference="false" type="{unknown}"/>
+    </method>
+    <method name="info" start="44" end="44" abstract="false" final="false" static="false" visibility="public">
+      <docblock>
+        <description/>
+        <param variable="$text"/>
+        <return type="mixed"/>
+      </docblock>
+      <parameter name="text" byreference="false" type="{unknown}"/>
+    </method>
+    <method name="warning" start="50" end="50" abstract="false" final="false" static="false" visibility="public">
+      <docblock>
+        <description/>
+        <param variable="$text"/>
+        <return type="mixed"/>
+      </docblock>
+      <parameter name="text" byreference="false" type="{unknown}"/>
+    </method>
+    <method name="error" start="56" end="56" abstract="false" final="false" static="false" visibility="public">
+      <docblock>
+        <description/>
+        <param variable="$text"/>
+        <return type="mixed"/>
+      </docblock>
+      <parameter name="text" byreference="false" type="{unknown}"/>
+    </method>
+    <method name="fatal" start="62" end="62" abstract="false" final="false" static="false" visibility="public">
+      <docblock>
+        <description/>
+        <param variable="$text"/>
+        <return type="mixed"/>
+      </docblock>
+      <parameter name="text" byreference="false" type="{unknown}"/>
+    </method>
+  </parent>
+  <parent full="Neuron\Patterns\IRunnable" namespace="Neuron\Patterns" name="IRunnable">
+    <method name="run" start="16" end="16" abstract="false" final="false" static="false" visibility="public">
+      <docblock>
+        <description compact="Generic run method."/>
+        <param type="object" variable="$aArgv">
+          <type full="Neuron\Patterns\array|null" namespace="Neuron\Patterns" name="array|null"/>
+        </param>
+        <return type="mixed"/>
+      </docblock>
+      <parameter name="aArgv" byreference="false" type="array" default="NULL"/>
+    </method>
+  </parent>
+</interface>

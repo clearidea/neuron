@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class xmlns="http://xml.phpdox.net/src" full="Neuron\Util\Email" namespace="Neuron\Util" name="Email" abstract="false" final="false" start="5" end="269">
+  <file path="/Volumes/Storage/Projects/clearidea/open-source/Neuron/src/Util" file="Email.php" realpath="/Volumes/Storage/Projects/clearidea/open-source/Neuron/src/Util/Email.php" size="4415" time="2015-09-08T19:49:53+00:00" unixtime="1441741793" sha1="22b50d0afa1a53f8dce9d2123f6c53b29077f00a" relative="Util/Email.php"/>
+  <constant type="integer" name="EMAIL_TEXT" value="0"/>
+  <constant type="integer" name="EMAIL_HTML" value="1"/>
+  <member name="_aToList" default="" type="array" visibility="private" static="false" line="10"/>
+  <member name="_aCCList" default="" type="array" visibility="private" static="false" line="11"/>
+  <member name="_aBCCList" default="" type="array" visibility="private" static="false" line="12"/>
+  <member name="_aAttachList" default="" type="array" visibility="private" static="false" line="13"/>
+  <member name="_sHeaders" visibility="private" static="false" line="15"/>
+  <member name="_sMimeBoundry" visibility="private" static="false" line="16"/>
+  <member name="_sFrom" visibility="private" static="false" line="17"/>
+  <member name="_sSubject" visibility="private" static="false" line="18"/>
+  <member name="_sBody" visibility="private" static="false" line="19"/>
+  <member name="_type" default="" type="{unknown}" constant="Email::EMAIL_HTML" visibility="private" static="false" line="21"/>
+  <method name="setType" start="27" end="30" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <param variable="$type"/>
+    </docblock>
+    <parameter name="type" byreference="false" type="{unknown}"/>
+  </method>
+  <method name="getType" start="36" end="37" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <return type="int"/>
+    </docblock>
+  </method>
+  <method name="addTo" start="43" end="46" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <param variable="$sAddr"/>
+    </docblock>
+    <parameter name="sAddr" byreference="false" type="{unknown}"/>
+  </method>
+  <method name="getToList" start="52" end="55" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <return type="array"/>
+    </docblock>
+  </method>
+  <method name="addCC" start="61" end="64" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <param variable="$sAddr"/>
+    </docblock>
+    <parameter name="sAddr" byreference="false" type="{unknown}"/>
+  </method>
+  <method name="getCCList" start="70" end="73" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <return type="array"/>
+    </docblock>
+  </method>
+  <method name="addBCC" start="79" end="82" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <param variable="$sAddr"/>
+    </docblock>
+    <parameter name="sAddr" byreference="false" type="{unknown}"/>
+  </method>
+  <method name="getBCCList" start="88" end="91" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <return type="array"/>
+    </docblock>
+  </method>
+  <method name="attachFile" start="97" end="100" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <param variable="$sFile"/>
+    </docblock>
+    <parameter name="sFile" byreference="false" type="{unknown}"/>
+  </method>
+  <method name="getAttachList" start="106" end="109" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <return type="array"/>
+    </docblock>
+  </method>
+  <method name="setFrom" start="115" end="118" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <param variable="$sFrom"/>
+    </docblock>
+    <parameter name="sFrom" byreference="false" type="{unknown}"/>
+  </method>
+  <method name="getFrom" start="120" end="123" abstract="false" final="false" static="false" visibility="public"/>
+  <method name="setSubject" start="129" end="132" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <param variable="$sSubject"/>
+    </docblock>
+    <parameter name="sSubject" byreference="false" type="{unknown}"/>
+  </method>
+  <method name="getSubject" start="138" end="141" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <return type="mixed"/>
+    </docblock>
+  </method>
+  <method name="setBody" start="147" end="150" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <param variable="$sBody"/>
+    </docblock>
+    <parameter name="sBody" byreference="false" type="{unknown}"/>
+  </method>
+  <method name="getBody" start="156" end="159" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <return type="mixed"/>
+    </docblock>
+  </method>
+  <method name="getArrayList" start="166" end="177" abstract="false" final="false" static="false" visibility="protected">
+    <docblock>
+      <description/>
+      <param variable="$arr"/>
+      <return type="string"/>
+    </docblock>
+    <parameter name="arr" byreference="false" type="{unknown}"/>
+  </method>
+  <method name="getAttachmentCode" start="184" end="223" abstract="false" final="false" static="false" visibility="protected">
+    <docblock>
+      <description/>
+      <param variable="$sName"/>
+      <return type="string"/>
+    </docblock>
+    <parameter name="sName" byreference="false" type="{unknown}"/>
+    <inline>
+      <comment value="Base64 encode the file data" line="205"/>
+      <comment value="Add file attachment to the message" line="208"/>
+    </inline>
+  </method>
+  <method name="send" start="229" end="268" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <return type="object">
+        <type full="Neuron\Util\bool" namespace="Neuron\Util" name="bool"/>
+      </return>
+    </docblock>
+    <inline>
+      <comment value="Send the message" line="256"/>
+    </inline>
+  </method>
+</class>

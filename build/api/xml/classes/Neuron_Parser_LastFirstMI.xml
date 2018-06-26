@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class xmlns="http://xml.phpdox.net/src" full="Neuron\Parser\LastFirstMI" namespace="Neuron\Parser" name="LastFirstMI" abstract="false" final="false" start="12" end="49">
+  <file path="/Volumes/Storage/Projects/clearidea/open-source/Neuron/src/Parser" file="LastFirstMI.php" realpath="/Volumes/Storage/Projects/clearidea/open-source/Neuron/src/Parser/LastFirstMI.php" size="798" time="2016-08-12T11:33:09+00:00" unixtime="1471001589" sha1="8beb67d72db1e18cf0fedd87a68ef23bbed03799" relative="Parser/LastFirstMI.php"/>
+  <implements full="Neuron\Parser\IParser" namespace="Neuron\Parser" name="IParser"/>
+  <method name="parse" start="24" end="48" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description compact="Parses Last, First M"/>
+      <param variable="$sText"/>
+      <param type="array" variable="$aLocations"/>
+      <return description="first, middle, last" type="array"/>
+      <suppresswarnings value="(PHPMD)"/>
+    </docblock>
+    <parameter name="sText" byreference="false" type="{unknown}"/>
+    <parameter name="aLocations" byreference="false" type="array" default=""/>
+  </method>
+  <interface full="Neuron\Parser\IParser" namespace="Neuron\Parser" name="IParser">
+    <method name="parse" start="7" end="7" abstract="false" final="false" static="false" visibility="public">
+      <parameter name="sText" byreference="false" type="{unknown}"/>
+      <parameter name="UserData" byreference="false" type="array" default=""/>
+    </method>
+  </interface>
+</class>

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class xmlns="http://xml.phpdox.net/src" full="Neuron\Log\Destination\Email" namespace="Neuron\Log\Destination" name="Email" abstract="false" final="false" start="15" end="18">
+  <file path="/Volumes/Storage/Projects/clearidea/open-source/Neuron/src/Log/Destination" file="Email.php" realpath="/Volumes/Storage/Projects/clearidea/open-source/Neuron/src/Log/Destination/Email.php" size="171" time="2015-11-09T21:12:55+00:00" unixtime="1447103575" sha1="3509c808f7c193dc722b8b50d80935d9f259694c" relative="Log/Destination/Email.php"/>
+</class>

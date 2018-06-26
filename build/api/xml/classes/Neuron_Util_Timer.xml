@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class xmlns="http://xml.phpdox.net/src" full="Neuron\Util\Timer" namespace="Neuron\Util" name="Timer" abstract="false" final="false" start="9" end="46">
+  <file path="/Volumes/Storage/Projects/clearidea/open-source/Neuron/src/Util" file="Timer.php" realpath="/Volumes/Storage/Projects/clearidea/open-source/Neuron/src/Util/Timer.php" size="628" time="2016-08-30T01:17:02+00:00" unixtime="1472519822" sha1="fa3fac039774f168981804bc79b870390cdc8eac" relative="Util/Timer.php"/>
+  <docblock>
+    <description compact="Class Timer"/>
+    <package value="Neuron\Util"/>
+  </docblock>
+  <member name="_StartTime" default="0" type="integer" visibility="private" static="false" line="11"/>
+  <member name="_StopTime" default="0" type="integer" visibility="private" static="false" line="12"/>
+  <constructor name="__construct" start="18" end="21" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description compact="Timer constructor."/>
+      <param description="used for testing purposes." type="int" variable="$iTime"/>
+    </docblock>
+    <parameter name="iTime" byreference="false" type="integer" default="0"/>
+  </constructor>
+  <method name="start" start="26" end="29" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description compact="Start the timer."/>
+    </docblock>
+  </method>
+  <method name="stop" start="34" end="37" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description compact="Stop the timer."/>
+    </docblock>
+  </method>
+  <method name="getElapsed" start="42" end="45" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <return description="Number of seconds elapsed ." type="int"/>
+    </docblock>
+  </method>
+</class>

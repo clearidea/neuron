@@ -10,6 +10,10 @@ namespace Neuron\Data\Validation;
 
 use Neuron\Data\Object\DateRange;
 
+/**
+ * Class DateWithinRange
+ * @package Neuron\Data\Validation
+ */
 class DateWithinRange extends Date
 {
 	private $_Range;
