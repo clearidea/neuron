@@ -3,7 +3,7 @@
 namespace Neuron\Data\Validation;
 
 /**
- * Class Date
+ * Requires a date with a specific format. Defaults to Y-m-d
  * @package Neuron\Data\Validation
  */
 class Date extends Base

@@ -26,30 +26,30 @@
   </namespace>
   <namespace name="Neuron\Data\Validation">
     <class name="Base" src="Data/Validation/Base.php" description="Validator base class." xml="classes/Neuron_Data_Validation_Base.xml"/>
-    <class name="Collection" src="Data/Validation/Collection.php" description="Class Collection" xml="classes/Neuron_Data_Validation_Collection.xml"/>
-    <class name="Currency" src="Data/Validation/Currency.php" description="Class Currency" xml="classes/Neuron_Data_Validation_Currency.xml"/>
-    <class name="Date" src="Data/Validation/Date.php" description="Class Date" xml="classes/Neuron_Data_Validation_Date.xml"/>
-    <class name="DateRange" src="Data/Validation/DateRange.php" description="Class DateRange" xml="classes/Neuron_Data_Validation_DateRange.xml"/>
-    <class name="DateWithinRange" src="Data/Validation/DateWithinRange.php" description="Class DateWithinRange" xml="classes/Neuron_Data_Validation_DateWithinRange.xml"/>
-    <class name="Ein" src="Data/Validation/Ein.php" description="Class Ein" xml="classes/Neuron_Data_Validation_Ein.xml"/>
-    <class name="Email" src="Data/Validation/Email.php" description="Class Email" xml="classes/Neuron_Data_Validation_Email.xml"/>
-    <class name="FloatingPoint" src="Data/Validation/FloatingPoint.php" description="Class FloatingPoint" xml="classes/Neuron_Data_Validation_FloatingPoint.xml"/>
+    
+    
+    
+    
+    
+    
+    
+    
     <interface name="ICollection" src="Data/Validation/ICollection.php" xml="interfaces/Neuron_Data_Validation_ICollection.xml"/>
-    <class name="Integer" src="Data/Validation/Integer.php" description="Class Integer" xml="classes/Neuron_Data_Validation_Integer.xml"/>
-    <class name="IPAddress" src="Data/Validation/IPAddress.php" description="Class IPAddress" xml="classes/Neuron_Data_Validation_IPAddress.xml"/>
+    
+    
     <interface name="IValidator" src="Data/Validation/IValidator.php" xml="interfaces/Neuron_Data_Validation_IValidator.xml"/>
-    <class name="Name" src="Data/Validation/Name.php" description="Class Name" xml="classes/Neuron_Data_Validation_Name.xml"/>
-    <class name="NotEmpty" src="Data/Validation/NotEmpty.php" description="Class NotEmpty" xml="classes/Neuron_Data_Validation_NotEmpty.xml"/>
-    <class name="NotNull" src="Data/Validation/NotNull.php" description="Class NotNull" xml="classes/Neuron_Data_Validation_NotNull.xml"/>
-    <class name="NumberWithinRange" src="Data/Validation/NumberWithinRange.php" description="Class NumberWithinRange" xml="classes/Neuron_Data_Validation_NumberWithinRange.xml"/>
-    <class name="NumericRange" src="Data/Validation/NumericRange.php" description="Class NumericRange" xml="classes/Neuron_Data_Validation_NumericRange.xml"/>
-    <class name="PhoneNumber" src="Data/Validation/PhoneNumber.php" description="Class PhoneNumber" xml="classes/Neuron_Data_Validation_PhoneNumber.xml"/>
+    
+    
+    
+    
+    
+    
     <trait name="Policy" src="Data/Validation/Policy.php" xml="traits/Neuron_Data_Validation_Policy.xml"/>
-    <class name="Positive" src="Data/Validation/Positive.php" description="Class Positive" xml="classes/Neuron_Data_Validation_Positive.xml"/>
-    <class name="StringData" src="Data/Validation/StringData.php" description="Class StringData" xml="classes/Neuron_Data_Validation_StringData.xml"/>
-    <class name="Time" src="Data/Validation/Time.php" description="Class Time" xml="classes/Neuron_Data_Validation_Time.xml"/>
-    <class name="Url" src="Data/Validation/Url.php" description="Class Url" xml="classes/Neuron_Data_Validation_Url.xml"/>
-  </namespace>
+    
+    
+    
+    
+  <class name="Collection" src="Data/Validation/Collection.php" description="Allows multiple validators to be chained in one item." xml="classes/Neuron_Data_Validation_Collection.xml"/><class name="Currency" src="Data/Validation/Currency.php" description="Requires a number with a maximum of 2 decimal places." xml="classes/Neuron_Data_Validation_Currency.xml"/><class name="Date" src="Data/Validation/Date.php" description="Requires a date with a specific format. Defaults to Y-m-d" xml="classes/Neuron_Data_Validation_Date.xml"/><class name="DateRange" src="Data/Validation/DateRange.php" description="Validates a DateRange data object." xml="classes/Neuron_Data_Validation_DateRange.xml"/><class name="DateWithinRange" src="Data/Validation/DateWithinRange.php" description="Requires a date within a specified range." xml="classes/Neuron_Data_Validation_DateWithinRange.xml"/><class name="Ein" src="Data/Validation/Ein.php" description="Requires a valid ein format of nn-nnnnnnn" xml="classes/Neuron_Data_Validation_Ein.xml"/><class name="Email" src="Data/Validation/Email.php" description="Requires a valid email address format." xml="classes/Neuron_Data_Validation_Email.xml"/><class name="FloatingPoint" src="Data/Validation/FloatingPoint.php" description="Requires a floating point number." xml="classes/Neuron_Data_Validation_FloatingPoint.xml"/><class name="Integer" src="Data/Validation/Integer.php" description="Requires an integer" xml="classes/Neuron_Data_Validation_Integer.xml"/><class name="IPAddress" src="Data/Validation/IPAddress.php" description="Requires a valid IPAddress format." xml="classes/Neuron_Data_Validation_IPAddress.xml"/><class name="Name" src="Data/Validation/Name.php" description="Requires a valid name." xml="classes/Neuron_Data_Validation_Name.xml"/><class name="NotEmpty" src="Data/Validation/NotEmpty.php" description="Requires a non empty variable." xml="classes/Neuron_Data_Validation_NotEmpty.xml"/><class name="NotNull" src="Data/Validation/NotNull.php" description="Requires a non-null variable." xml="classes/Neuron_Data_Validation_NotNull.xml"/><class name="NumberWithinRange" src="Data/Validation/NumberWithinRange.php" description="Requires a number to be within a specific range." xml="classes/Neuron_Data_Validation_NumberWithinRange.xml"/><class name="NumericRange" src="Data/Validation/NumericRange.php" description="Requires the Minimum to be less than the Maximum." xml="classes/Neuron_Data_Validation_NumericRange.xml"/><class name="PhoneNumber" src="Data/Validation/PhoneNumber.php" description="Requires a valid phone number format nnn-nnn-nnnn" xml="classes/Neuron_Data_Validation_PhoneNumber.xml"/><class name="Positive" src="Data/Validation/Positive.php" description="Requires a positive number." xml="classes/Neuron_Data_Validation_Positive.xml"/><class name="StringData" src="Data/Validation/StringData.php" description="Requires a string." xml="classes/Neuron_Data_Validation_StringData.xml"/><class name="Time" src="Data/Validation/Time.php" description="Requires time to be in a specific formate. Defaults to g:i:s A" xml="classes/Neuron_Data_Validation_Time.xml"/><class name="Url" src="Data/Validation/Url.php" description="Requires a valid url format." xml="classes/Neuron_Data_Validation_Url.xml"/></namespace>
   <namespace name="Neuron\File">
     <class name="Temporary" src="File/Temporary.php" description="Class Temporary" xml="classes/Neuron_File_Temporary.xml"/>
   </namespace>

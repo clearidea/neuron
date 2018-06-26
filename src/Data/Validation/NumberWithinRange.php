@@ -5,7 +5,7 @@ namespace Neuron\Data\Validation;
 use Neuron\Data;
 
 /**
- * Class NumberWithinRange
+ * Requires a number to be within a specific range.
  * @package Neuron\Data\Validation
  */
 class NumberWithinRange extends Base

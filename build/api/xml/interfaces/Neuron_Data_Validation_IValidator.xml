@@ -27,7 +27,7 @@
     <class full="Neuron\Data\Validation\StringData" namespace="Neuron\Data\Validation" name="StringData"/>
     <class full="Neuron\Data\Validation\Time" namespace="Neuron\Data\Validation" name="Time"/>
     <class full="Neuron\Data\Validation\Url" namespace="Neuron\Data\Validation" name="Url"/>
-  </implementors>
+  <class full="Neuron\Data\Validation\Url" namespace="Neuron\Data\Validation" name="Url"/></implementors>
   <extenders>
     <extender full="Neuron\Data\Validation\ICollection" namespace="Neuron\Data\Validation" name="ICollection"/>
   </extenders>

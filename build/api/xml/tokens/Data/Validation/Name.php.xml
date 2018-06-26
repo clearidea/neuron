@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <source xmlns="http://xml.phpdox.net/token">
-  <file xmlns="http://xml.phpdox.net/src" path="/Volumes/Storage/Projects/clearidea/open-source/Neuron/src/Data/Validation" file="Name.php" realpath="/Volumes/Storage/Projects/clearidea/open-source/Neuron/src/Data/Validation/Name.php" size="314" time="2018-06-24T17:09:55+00:00" unixtime="1529860195" sha1="10030d5da8dd03779463090b38bca97a108e8b32" relative="Data/Validation/Name.php"/>
+  <file xmlns="http://xml.phpdox.net/src" path="/Volumes/Storage/Projects/clearidea/open-source/Neuron/src/Data/Validation" file="Name.php" realpath="/Volumes/Storage/Projects/clearidea/open-source/Neuron/src/Data/Validation/Name.php" size="363" time="2018-06-26T01:26:24+00:00" unixtime="1529976384" sha1="6bf8a2c9d8956a12683f83023fecc705e67c5654" relative="Data/Validation/Name.php"/>
   <line no="1">
     <token name="T_OPEN_TAG">&lt;?php</token>
   </line>
@@ -20,10 +20,10 @@
     <token name="T_DOC_COMMENT">/**</token>
   </line>
   <line no="6">
-    <token name="T_DOC_COMMENT"> * Class Name</token>
+    <token name="T_DOC_COMMENT"> * Requires a valid name.</token>
   </line>
   <line no="7">
-    <token name="T_DOC_COMMENT"> * @package Neuron\Data\Validation</token>
+    <token name="T_DOC_COMMENT"> * @todo require at least one space.</token>
   </line>
   <line no="8">
     <token name="T_DOC_COMMENT"> *</token>
@@ -44,9 +44,12 @@
     <token name="T_DOC_COMMENT"> *</token>
   </line>
   <line no="14">
-    <token name="T_DOC_COMMENT"> */</token>
+    <token name="T_DOC_COMMENT"> * @package Neuron\Data\Validation</token>
   </line>
   <line no="15">
+    <token name="T_DOC_COMMENT"> */</token>
+  </line>
+  <line no="16">
     <token name="T_CLASS">class</token>
     <token name="T_WHITESPACE"> </token>
     <token name="T_STRING">Name</token>
@@ -55,10 +58,10 @@
     <token name="T_WHITESPACE"> </token>
     <token name="T_STRING">Base</token>
   </line>
-  <line no="16">
+  <line no="17">
     <token name="T_PHPDOX_OPEN_CURLY">{</token>
   </line>
-  <line no="17">
+  <line no="18">
     <token name="T_WHITESPACE">	</token>
     <token name="T_PUBLIC">public</token>
     <token name="T_WHITESPACE"> </token>
@@ -71,11 +74,11 @@
     <token name="T_WHITESPACE"> </token>
     <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
   </line>
-  <line no="18">
+  <line no="19">
     <token name="T_WHITESPACE">	</token>
     <token name="T_PHPDOX_OPEN_CURLY">{</token>
   </line>
-  <line no="19">
+  <line no="20">
     <token name="T_WHITESPACE">		</token>
     <token name="T_RETURN">return</token>
     <token name="T_WHITESPACE"> </token>
@@ -101,12 +104,12 @@
     <token name="T_STRING">false</token>
     <token name="T_PHPDOX_SEMICOLON">;</token>
   </line>
-  <line no="20">
+  <line no="21">
     <token name="T_WHITESPACE">	</token>
     <token name="T_PHPDOX_CLOSE_CURLY">}</token>
   </line>
-  <line no="21">
+  <line no="22">
     <token name="T_PHPDOX_CLOSE_CURLY">}</token>
   </line>
-  <line no="22"/>
+  <line no="23"/>
 </source>

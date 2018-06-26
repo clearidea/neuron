@@ -3,7 +3,7 @@
 namespace Neuron\Data\Validation;
 
 /**
- * Class PhoneNumber
+ * Requires a valid phone number format nnn-nnn-nnnn
  * @package Neuron\Data\Validation
  */
 class PhoneNumber extends Base

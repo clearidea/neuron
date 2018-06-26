@@ -3,7 +3,7 @@
 namespace Neuron\Data\Validation;
 
 /**
- * Class Currency
+ * Requires a number with a maximum of 2 decimal places.
  * @package Neuron\Data\Validation
  */
 class Currency extends Base

@@ -4,7 +4,7 @@
 namespace Neuron\Data\Validation;
 
 /**
- * Class IPAddress
+ * Requires a valid IPAddress format.
  * @package Neuron\Data\Validation
  */
 class IPAddress extends Base

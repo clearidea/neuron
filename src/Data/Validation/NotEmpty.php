@@ -3,7 +3,7 @@
 namespace Neuron\Data\Validation;
 
 /**
- * Class NotEmpty
+ * Requires a non empty variable.
  * @package Neuron\Data\Validation
  */
 class NotEmpty extends Base

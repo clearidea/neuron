@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <source xmlns="http://xml.phpdox.net/token">
-  <file xmlns="http://xml.phpdox.net/src" path="/Volumes/Storage/Projects/clearidea/open-source/Neuron/src/Data/Validation" file="Url.php" realpath="/Volumes/Storage/Projects/clearidea/open-source/Neuron/src/Data/Validation/Url.php" size="233" time="2018-06-25T22:44:12+00:00" unixtime="1529966652" sha1="12c156bf80af130ed559c3ff027215b8fac23265" relative="Data/Validation/Url.php"/>
+  <file xmlns="http://xml.phpdox.net/src" path="/Volumes/Storage/Projects/clearidea/open-source/Neuron/src/Data/Validation" file="Url.php" realpath="/Volumes/Storage/Projects/clearidea/open-source/Neuron/src/Data/Validation/Url.php" size="252" time="2018-06-26T01:26:24+00:00" unixtime="1529976384" sha1="2bc0bfd185deb32f5165b7977138bf4c4845a9bb" relative="Data/Validation/Url.php"/>
   <line no="1">
     <token name="T_OPEN_TAG">&lt;?php</token>
   </line>
@@ -20,7 +20,7 @@
     <token name="T_DOC_COMMENT">/**</token>
   </line>
   <line no="6">
-    <token name="T_DOC_COMMENT"> * Class Url</token>
+    <token name="T_DOC_COMMENT"> * Requires a valid url format.</token>
   </line>
   <line no="7">
     <token name="T_DOC_COMMENT"> * @package Neuron\Data\Validation</token>

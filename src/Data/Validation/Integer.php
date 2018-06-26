@@ -3,7 +3,7 @@
 namespace Neuron\Data\Validation;
 
 /**
- * Class Integer
+ * Requires an integer
  * @package Neuron\Data\Validation
  */
 class Integer extends Base

@@ -3,14 +3,15 @@
 namespace Neuron\Data\Validation;
 
 /**
- * Class Name
- * @package Neuron\Data\Validation
+ * Requires a valid name.
+ * @todo require at least one space.
  *
  * Allows:
  * 	Upper case letters.
  * 	Lower case letters.
  * 	. and ,
  *
+ * @package Neuron\Data\Validation
  */
 class Name extends Base
 {

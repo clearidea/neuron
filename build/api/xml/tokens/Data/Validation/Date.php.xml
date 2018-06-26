@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <source xmlns="http://xml.phpdox.net/token">
-  <file xmlns="http://xml.phpdox.net/src" path="/Volumes/Storage/Projects/clearidea/open-source/Neuron/src/Data/Validation" file="Date.php" realpath="/Volumes/Storage/Projects/clearidea/open-source/Neuron/src/Data/Validation/Date.php" size="545" time="2018-06-25T22:42:10+00:00" unixtime="1529966530" sha1="ad8e35bc363842968a063bb2bc3b160892e5c1ff" relative="Data/Validation/Date.php"/>
+  <file xmlns="http://xml.phpdox.net/src" path="/Volumes/Storage/Projects/clearidea/open-source/Neuron/src/Data/Validation" file="Date.php" realpath="/Volumes/Storage/Projects/clearidea/open-source/Neuron/src/Data/Validation/Date.php" size="592" time="2018-06-26T01:26:24+00:00" unixtime="1529976384" sha1="bf0a0c109c098859aeede601446fe07c570881fc" relative="Data/Validation/Date.php"/>
   <line no="1">
     <token name="T_OPEN_TAG">&lt;?php</token>
   </line>
@@ -20,7 +20,7 @@
     <token name="T_DOC_COMMENT">/**</token>
   </line>
   <line no="6">
-    <token name="T_DOC_COMMENT"> * Class Date</token>
+    <token name="T_DOC_COMMENT"> * Requires a date with a specific format. Defaults to Y-m-d</token>
   </line>
   <line no="7">
     <token name="T_DOC_COMMENT"> * @package Neuron\Data\Validation</token>

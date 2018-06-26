@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <source xmlns="http://xml.phpdox.net/token">
-  <file xmlns="http://xml.phpdox.net/src" path="/Volumes/Storage/Projects/clearidea/open-source/Neuron/src/Data/Validation" file="NumberWithinRange.php" realpath="/Volumes/Storage/Projects/clearidea/open-source/Neuron/src/Data/Validation/NumberWithinRange.php" size="434" time="2018-06-25T22:42:10+00:00" unixtime="1529966530" sha1="64eba05b452e2d6df3dffef6edba98ce3572d4ce" relative="Data/Validation/NumberWithinRange.php"/>
+  <file xmlns="http://xml.phpdox.net/src" path="/Volumes/Storage/Projects/clearidea/open-source/Neuron/src/Data/Validation" file="NumberWithinRange.php" realpath="/Volumes/Storage/Projects/clearidea/open-source/Neuron/src/Data/Validation/NumberWithinRange.php" size="459" time="2018-06-26T01:26:24+00:00" unixtime="1529976384" sha1="186e70750dc4a546581ade005d170bc46aa19491" relative="Data/Validation/NumberWithinRange.php"/>
   <line no="1">
     <token name="T_OPEN_TAG">&lt;?php</token>
   </line>
@@ -29,7 +29,7 @@
     <token name="T_DOC_COMMENT">/**</token>
   </line>
   <line no="8">
-    <token name="T_DOC_COMMENT"> * Class NumberWithinRange</token>
+    <token name="T_DOC_COMMENT"> * Requires a number to be within a specific range.</token>
   </line>
   <line no="9">
     <token name="T_DOC_COMMENT"> * @package Neuron\Data\Validation</token>

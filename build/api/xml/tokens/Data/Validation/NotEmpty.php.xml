@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <source xmlns="http://xml.phpdox.net/token">
-  <file xmlns="http://xml.phpdox.net/src" path="/Volumes/Storage/Projects/clearidea/open-source/Neuron/src/Data/Validation" file="NotEmpty.php" realpath="/Volumes/Storage/Projects/clearidea/open-source/Neuron/src/Data/Validation/NotEmpty.php" size="205" time="2018-06-25T22:42:10+00:00" unixtime="1529966530" sha1="620c62e2bbb33e796694f072cee1a40b77f1cdda" relative="Data/Validation/NotEmpty.php"/>
+  <file xmlns="http://xml.phpdox.net/src" path="/Volumes/Storage/Projects/clearidea/open-source/Neuron/src/Data/Validation" file="NotEmpty.php" realpath="/Volumes/Storage/Projects/clearidea/open-source/Neuron/src/Data/Validation/NotEmpty.php" size="221" time="2018-06-26T01:26:24+00:00" unixtime="1529976384" sha1="d07a626d8c828e77dad203f02c0c3a0ee6995cce" relative="Data/Validation/NotEmpty.php"/>
   <line no="1">
     <token name="T_OPEN_TAG">&lt;?php</token>
   </line>
@@ -20,7 +20,7 @@
     <token name="T_DOC_COMMENT">/**</token>
   </line>
   <line no="6">
-    <token name="T_DOC_COMMENT"> * Class NotEmpty</token>
+    <token name="T_DOC_COMMENT"> * Requires a non empty variable.</token>
   </line>
   <line no="7">
     <token name="T_DOC_COMMENT"> * @package Neuron\Data\Validation</token>

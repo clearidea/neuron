@@ -3,7 +3,7 @@
 namespace Neuron\Data\Validation;
 
 /**
- * Class Positive
+ * Requires a positive number.
  * @package Neuron\Data\Validation
  */
 class Positive extends Base

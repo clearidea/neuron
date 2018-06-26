@@ -9,7 +9,7 @@
 namespace Neuron\Data\Validation;
 
 /**
- * Class Time
+ * Requires time to be in a specific formate. Defaults to g:i:s A
  * @package Neuron\Data\Validation
  */
 class Time extends Base

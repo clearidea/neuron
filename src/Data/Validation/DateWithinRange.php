@@ -11,7 +11,7 @@ namespace Neuron\Data\Validation;
 use Neuron\Data\Object\DateRange;
 
 /**
- * Class DateWithinRange
+ * Requires a date within a specified range.
  * @package Neuron\Data\Validation
  */
 class DateWithinRange extends Date

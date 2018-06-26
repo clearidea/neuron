@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <source xmlns="http://xml.phpdox.net/token">
-  <file xmlns="http://xml.phpdox.net/src" path="/Volumes/Storage/Projects/clearidea/open-source/Neuron/src/Data/Validation" file="FloatingPoint.php" realpath="/Volumes/Storage/Projects/clearidea/open-source/Neuron/src/Data/Validation/FloatingPoint.php" size="219" time="2018-06-25T22:42:10+00:00" unixtime="1529966530" sha1="6ca57583daf90a1c6ea728112aa436c633457127" relative="Data/Validation/FloatingPoint.php"/>
+  <file xmlns="http://xml.phpdox.net/src" path="/Volumes/Storage/Projects/clearidea/open-source/Neuron/src/Data/Validation" file="FloatingPoint.php" realpath="/Volumes/Storage/Projects/clearidea/open-source/Neuron/src/Data/Validation/FloatingPoint.php" size="233" time="2018-06-26T01:26:24+00:00" unixtime="1529976384" sha1="9c83541ac313a199ac7aca0ccd22b6b7225c6940" relative="Data/Validation/FloatingPoint.php"/>
   <line no="1">
     <token name="T_OPEN_TAG">&lt;?php</token>
   </line>
@@ -20,7 +20,7 @@
     <token name="T_DOC_COMMENT">/**</token>
   </line>
   <line no="6">
-    <token name="T_DOC_COMMENT"> * Class FloatingPoint</token>
+    <token name="T_DOC_COMMENT"> * Requires a floating point number.</token>
   </line>
   <line no="7">
     <token name="T_DOC_COMMENT"> * @package Neuron\Data\Validation</token>

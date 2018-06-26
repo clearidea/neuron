@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <source xmlns="http://xml.phpdox.net/token">
-  <file xmlns="http://xml.phpdox.net/src" path="/Volumes/Storage/Projects/clearidea/open-source/Neuron/src/Data/Validation" file="NotNull.php" realpath="/Volumes/Storage/Projects/clearidea/open-source/Neuron/src/Data/Validation/NotNull.php" size="205" time="2018-06-25T22:42:10+00:00" unixtime="1529966530" sha1="3f829d6432caf0d72c04017731f10c3c97ef2272" relative="Data/Validation/NotNull.php"/>
+  <file xmlns="http://xml.phpdox.net/src" path="/Volumes/Storage/Projects/clearidea/open-source/Neuron/src/Data/Validation" file="NotNull.php" realpath="/Volumes/Storage/Projects/clearidea/open-source/Neuron/src/Data/Validation/NotNull.php" size="221" time="2018-06-26T01:26:24+00:00" unixtime="1529976384" sha1="b742002af3083ab5b140bad35e2c33a0e72f9432" relative="Data/Validation/NotNull.php"/>
   <line no="1">
     <token name="T_OPEN_TAG">&lt;?php</token>
   </line>
@@ -20,7 +20,7 @@
     <token name="T_DOC_COMMENT">/**</token>
   </line>
   <line no="6">
-    <token name="T_DOC_COMMENT"> * Class NotNull</token>
+    <token name="T_DOC_COMMENT"> * Requires a non-null variable.</token>
   </line>
   <line no="7">
     <token name="T_DOC_COMMENT"> * @package Neuron\Data\Validation</token>

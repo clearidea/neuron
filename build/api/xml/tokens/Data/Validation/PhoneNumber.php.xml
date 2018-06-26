@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <source xmlns="http://xml.phpdox.net/token">
-  <file xmlns="http://xml.phpdox.net/src" path="/Volumes/Storage/Projects/clearidea/open-source/Neuron/src/Data/Validation" file="PhoneNumber.php" realpath="/Volumes/Storage/Projects/clearidea/open-source/Neuron/src/Data/Validation/PhoneNumber.php" size="265" time="2018-06-25T22:42:10+00:00" unixtime="1529966530" sha1="691adb7170e9a62e03131dc36e2022e6bc175fdc" relative="Data/Validation/PhoneNumber.php"/>
+  <file xmlns="http://xml.phpdox.net/src" path="/Volumes/Storage/Projects/clearidea/open-source/Neuron/src/Data/Validation" file="PhoneNumber.php" realpath="/Volumes/Storage/Projects/clearidea/open-source/Neuron/src/Data/Validation/PhoneNumber.php" size="297" time="2018-06-26T01:26:24+00:00" unixtime="1529976384" sha1="56f86968bbd27783199055fb273b1b51945127b8" relative="Data/Validation/PhoneNumber.php"/>
   <line no="1">
     <token name="T_OPEN_TAG">&lt;?php</token>
   </line>
@@ -20,7 +20,7 @@
     <token name="T_DOC_COMMENT">/**</token>
   </line>
   <line no="6">
-    <token name="T_DOC_COMMENT"> * Class PhoneNumber</token>
+    <token name="T_DOC_COMMENT"> * Requires a valid phone number format nnn-nnn-nnnn</token>
   </line>
   <line no="7">
     <token name="T_DOC_COMMENT"> * @package Neuron\Data\Validation</token>

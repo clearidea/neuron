@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <source xmlns="http://xml.phpdox.net/token">
-  <file xmlns="http://xml.phpdox.net/src" path="/Volumes/Storage/Projects/clearidea/open-source/Neuron/src/Data/Validation" file="Currency.php" realpath="/Volumes/Storage/Projects/clearidea/open-source/Neuron/src/Data/Validation/Currency.php" size="258" time="2018-06-25T22:42:10+00:00" unixtime="1529966530" sha1="46bb0525feb7f5b505dc690ca77854315d228a73" relative="Data/Validation/Currency.php"/>
+  <file xmlns="http://xml.phpdox.net/src" path="/Volumes/Storage/Projects/clearidea/open-source/Neuron/src/Data/Validation" file="Currency.php" realpath="/Volumes/Storage/Projects/clearidea/open-source/Neuron/src/Data/Validation/Currency.php" size="297" time="2018-06-26T01:26:24+00:00" unixtime="1529976384" sha1="36c0d379e3f2f7f39eeee9b8f45fb180c2ce4a8c" relative="Data/Validation/Currency.php"/>
   <line no="1">
     <token name="T_OPEN_TAG">&lt;?php</token>
   </line>
@@ -20,7 +20,7 @@
     <token name="T_DOC_COMMENT">/**</token>
   </line>
   <line no="6">
-    <token name="T_DOC_COMMENT"> * Class Currency</token>
+    <token name="T_DOC_COMMENT"> * Requires a number with a maximum of 2 decimal places.</token>
   </line>
   <line no="7">
     <token name="T_DOC_COMMENT"> * @package Neuron\Data\Validation</token>

@@ -25,7 +25,7 @@
   </method>
   <implementors>
     <class full="Neuron\Data\Validation\Collection" namespace="Neuron\Data\Validation" name="Collection"/>
-  </implementors>
+  <class full="Neuron\Data\Validation\Collection" namespace="Neuron\Data\Validation" name="Collection"/></implementors>
   <parent full="Neuron\Data\Validation\IValidator" namespace="Neuron\Data\Validation" name="IValidator">
     <method name="isValid" start="7" end="7" abstract="false" final="false" static="false" visibility="public">
       <return type="bool" nullable="false"/>

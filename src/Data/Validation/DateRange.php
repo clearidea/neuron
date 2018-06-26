@@ -3,7 +3,8 @@
 namespace Neuron\Data\Validation;
 
 /**
- * Class DateRange
+ * Validates a DateRange data object.
+ * @see Date
  * @package Neuron\Data\Validation
  */
 class DateRange extends Date

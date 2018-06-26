@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <source xmlns="http://xml.phpdox.net/token">
-  <file xmlns="http://xml.phpdox.net/src" path="/Volumes/Storage/Projects/clearidea/open-source/Neuron/src/Data/Validation" file="DateWithinRange.php" realpath="/Volumes/Storage/Projects/clearidea/open-source/Neuron/src/Data/Validation/DateWithinRange.php" size="721" time="2018-06-25T22:42:10+00:00" unixtime="1529966530" sha1="f1a6ed53ab3946a11e954b19b8a7f816386875d7" relative="Data/Validation/DateWithinRange.php"/>
+  <file xmlns="http://xml.phpdox.net/src" path="/Volumes/Storage/Projects/clearidea/open-source/Neuron/src/Data/Validation" file="DateWithinRange.php" realpath="/Volumes/Storage/Projects/clearidea/open-source/Neuron/src/Data/Validation/DateWithinRange.php" size="741" time="2018-06-26T01:26:24+00:00" unixtime="1529976384" sha1="f74761c3a39e14a6f8b8b1dfefb734881d0e59fd" relative="Data/Validation/DateWithinRange.php"/>
   <line no="1">
     <token name="T_OPEN_TAG">&lt;?php</token>
   </line>
@@ -51,7 +51,7 @@
     <token name="T_DOC_COMMENT">/**</token>
   </line>
   <line no="14">
-    <token name="T_DOC_COMMENT"> * Class DateWithinRange</token>
+    <token name="T_DOC_COMMENT"> * Requires a date within a specified range.</token>
   </line>
   <line no="15">
     <token name="T_DOC_COMMENT"> * @package Neuron\Data\Validation</token>

@@ -3,7 +3,7 @@
 namespace Neuron\Data\Validation;
 
 /**
- * Class Collection
+ * Allows multiple validators to be chained in one item.
  * @package Neuron\Data\Validation
  */
 class Collection extends Base implements ICollection

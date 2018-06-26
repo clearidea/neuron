@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <source xmlns="http://xml.phpdox.net/token">
-  <file xmlns="http://xml.phpdox.net/src" path="/Volumes/Storage/Projects/clearidea/open-source/Neuron/src/Data/Validation" file="NumericRange.php" realpath="/Volumes/Storage/Projects/clearidea/open-source/Neuron/src/Data/Validation/NumericRange.php" size="251" time="2018-06-25T22:42:10+00:00" unixtime="1529966530" sha1="cb31c7d18fe4eabfbf597f480a7a9bc2ee330f26" relative="Data/Validation/NumericRange.php"/>
+  <file xmlns="http://xml.phpdox.net/src" path="/Volumes/Storage/Projects/clearidea/open-source/Neuron/src/Data/Validation" file="NumericRange.php" realpath="/Volumes/Storage/Projects/clearidea/open-source/Neuron/src/Data/Validation/NumericRange.php" size="282" time="2018-06-26T01:26:24+00:00" unixtime="1529976384" sha1="73600b7cd310320490f0619b3bd286e2ced27d05" relative="Data/Validation/NumericRange.php"/>
   <line no="1">
     <token name="T_OPEN_TAG">&lt;?php</token>
   </line>
@@ -29,7 +29,7 @@
     <token name="T_DOC_COMMENT">/**</token>
   </line>
   <line no="8">
-    <token name="T_DOC_COMMENT"> * Class NumericRange</token>
+    <token name="T_DOC_COMMENT"> * Requires the Minimum to be less than the Maximum.</token>
   </line>
   <line no="9">
     <token name="T_DOC_COMMENT"> * @package Neuron\Data\Validation</token>

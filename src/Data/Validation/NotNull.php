@@ -3,7 +3,7 @@
 namespace Neuron\Data\Validation;
 
 /**
- * Class NotNull
+ * Requires a non-null variable.
  * @package Neuron\Data\Validation
  */
 class NotNull extends Base

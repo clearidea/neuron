@@ -3,7 +3,7 @@
 namespace Neuron\Data\Validation;
 
 /**
- * Class Ein
+ * Requires a valid ein format of nn-nnnnnnn
  * @package Neuron\Data\Validation
  */
 class Ein extends Base

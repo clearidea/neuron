@@ -3,7 +3,7 @@
 namespace Neuron\Data\Validation;
 
 /**
- * Class StringData
+ * Requires a string.
  * @package Neuron\Data\Validation
  */
 class StringData extends Base

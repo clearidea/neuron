@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <source xmlns="http://xml.phpdox.net/token">
-  <file xmlns="http://xml.phpdox.net/src" path="/Volumes/Storage/Projects/clearidea/open-source/Neuron/src/Data/Validation" file="Positive.php" realpath="/Volumes/Storage/Projects/clearidea/open-source/Neuron/src/Data/Validation/Positive.php" size="201" time="2018-06-25T22:44:13+00:00" unixtime="1529966653" sha1="536c604b52e2707fd1bca8bf0b73697dd75af579" relative="Data/Validation/Positive.php"/>
+  <file xmlns="http://xml.phpdox.net/src" path="/Volumes/Storage/Projects/clearidea/open-source/Neuron/src/Data/Validation" file="Positive.php" realpath="/Volumes/Storage/Projects/clearidea/open-source/Neuron/src/Data/Validation/Positive.php" size="214" time="2018-06-26T01:26:24+00:00" unixtime="1529976384" sha1="119918bb022688d4aea3cd6eff9f53fe296d514b" relative="Data/Validation/Positive.php"/>
   <line no="1">
     <token name="T_OPEN_TAG">&lt;?php</token>
   </line>
@@ -20,7 +20,7 @@
     <token name="T_DOC_COMMENT">/**</token>
   </line>
   <line no="6">
-    <token name="T_DOC_COMMENT"> * Class Positive</token>
+    <token name="T_DOC_COMMENT"> * Requires a positive number.</token>
   </line>
   <line no="7">
     <token name="T_DOC_COMMENT"> * @package Neuron\Data\Validation</token>

@@ -3,7 +3,7 @@
 namespace Neuron\Data\Validation;
 
 /**
- * Class FloatingPoint
+ * Requires a floating point number.
  * @package Neuron\Data\Validation
  */
 class FloatingPoint extends Base

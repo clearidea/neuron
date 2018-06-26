@@ -3,7 +3,7 @@
 namespace Neuron\Data\Validation;
 
 /**
- * Class Email
+ * Requires a valid email address format.
  * @package Neuron\Data\Validation
  */
 class Email extends Base

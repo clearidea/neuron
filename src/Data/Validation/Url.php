@@ -3,7 +3,7 @@
 namespace Neuron\Data\Validation;
 
 /**
- * Class Url
+ * Requires a valid url format.
  * @package Neuron\Data\Validation
  */
 class Url extends Base

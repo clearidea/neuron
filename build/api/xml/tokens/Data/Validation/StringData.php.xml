@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <source xmlns="http://xml.phpdox.net/token">
-  <file xmlns="http://xml.phpdox.net/src" path="/Volumes/Storage/Projects/clearidea/open-source/Neuron/src/Data/Validation" file="StringData.php" realpath="/Volumes/Storage/Projects/clearidea/open-source/Neuron/src/Data/Validation/StringData.php" size="216" time="2018-06-25T22:44:12+00:00" unixtime="1529966652" sha1="04bc3c35d100916d9fb407b3778fafdc31fed9d9" relative="Data/Validation/StringData.php"/>
+  <file xmlns="http://xml.phpdox.net/src" path="/Volumes/Storage/Projects/clearidea/open-source/Neuron/src/Data/Validation" file="StringData.php" realpath="/Volumes/Storage/Projects/clearidea/open-source/Neuron/src/Data/Validation/StringData.php" size="218" time="2018-06-26T01:26:24+00:00" unixtime="1529976384" sha1="ff7e9f4a9bdce68e4ccbf826537055bf8b183a82" relative="Data/Validation/StringData.php"/>
   <line no="1">
     <token name="T_OPEN_TAG">&lt;?php</token>
   </line>
@@ -20,7 +20,7 @@
     <token name="T_DOC_COMMENT">/**</token>
   </line>
   <line no="6">
-    <token name="T_DOC_COMMENT"> * Class StringData</token>
+    <token name="T_DOC_COMMENT"> * Requires a string.</token>
   </line>
   <line no="7">
     <token name="T_DOC_COMMENT"> * @package Neuron\Data\Validation</token>
