@@ -3,7 +3,8 @@
 namespace Neuron\Util;
 
 /**
- * Class Timer
+ * Class for performing stopwatch functions.
+ * @todo add laps.
  * @package Neuron\Util
  */
 class Timer

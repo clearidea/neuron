@@ -7,6 +7,7 @@
 * Added NumericRange validator.
 * Added NumberWithinRange validator.
 * Added EIN validator.
+* Added International validation for PhoneNumber.
 
 ## 0.7.8
 * Added the validatable interface.
