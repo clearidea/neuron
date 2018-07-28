@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class xmlns="http://xml.phpdox.net/src" full="Neuron\Data\Object\DateRange" namespace="Neuron\Data\Object" name="DateRange" abstract="false" final="false" start="5" end="15">
+  <file path="/Volumes/Storage/Projects/clearidea/open-source/Neuron/src/Data/Object" file="DateRange.php" realpath="/Volumes/Storage/Projects/clearidea/open-source/Neuron/src/Data/Object/DateRange.php" size="188" time="2017-08-14T13:31:29+00:00" unixtime="1502717489" sha1="dc801c3d40a0b74c1ae1f82465f407a8ccefa186" relative="Data/Object/DateRange.php"/>
+  <member name="Start" visibility="public" static="false" line="7"/>
+  <member name="End" visibility="public" static="false" line="8"/>
+  <constructor name="__construct" start="10" end="14" abstract="false" final="false" static="false" visibility="public">
+    <parameter name="Start" byreference="false" type="{unknown}"/>
+    <parameter name="End" byreference="false" type="{unknown}"/>
+  </constructor>
+</class>

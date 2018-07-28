@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class xmlns="http://xml.phpdox.net/src" full="Neuron\Data\StringData" namespace="Neuron\Data" name="StringData" abstract="false" final="false" start="5" end="77">
+  <file path="/Volumes/Storage/Projects/clearidea/open-source/Neuron/src/Data" file="StringData.php" realpath="/Volumes/Storage/Projects/clearidea/open-source/Neuron/src/Data/StringData.php" size="1019" time="2018-06-24T00:18:28+00:00" unixtime="1529799508" sha1="2559153673861e60c860c37b1d79ae3d51b26114" relative="Data/StringData.php"/>
+  <member name="Value" visibility="public" static="false" line="7"/>
+  <constructor name="__construct" start="13" end="16" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description compact="StringData constructor."/>
+      <param variable="$String"/>
+    </docblock>
+    <parameter name="String" byreference="false" type="{unknown}"/>
+  </constructor>
+  <method name="length" start="21" end="24" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <return type="int"/>
+    </docblock>
+  </method>
+  <method name="left" start="30" end="33" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <param variable="$Length"/>
+      <return type="string"/>
+    </docblock>
+    <parameter name="Length" byreference="false" type="{unknown}"/>
+  </method>
+  <method name="right" start="39" end="42" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <param variable="$Length"/>
+      <return type="string"/>
+    </docblock>
+    <parameter name="Length" byreference="false" type="{unknown}"/>
+  </method>
+  <method name="mid" start="49" end="52" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <param variable="$Start"/>
+      <param variable="$End"/>
+      <return type="string"/>
+    </docblock>
+    <parameter name="Start" byreference="false" type="{unknown}"/>
+    <parameter name="End" byreference="false" type="{unknown}"/>
+  </method>
+  <method name="trim" start="57" end="60" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <return type="string"/>
+    </docblock>
+  </method>
+  <method name="deQuote" start="65" end="68" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <return type="string"/>
+    </docblock>
+  </method>
+  <method name="quote" start="73" end="76" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <return type="string"/>
+    </docblock>
+  </method>
+</class>

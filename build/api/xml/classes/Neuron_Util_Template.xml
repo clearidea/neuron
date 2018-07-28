@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class xmlns="http://xml.phpdox.net/src" full="Neuron\Util\Template" namespace="Neuron\Util" name="Template" abstract="false" final="false" start="5" end="46">
+  <file path="/Volumes/Storage/Projects/clearidea/open-source/Neuron/src/Util" file="Template.php" realpath="/Volumes/Storage/Projects/clearidea/open-source/Neuron/src/Util/Template.php" size="603" time="2016-08-04T19:53:26+00:00" unixtime="1470340406" sha1="080f62aa0b67ba154bdb1c8bf1e17f39cc1467ab" relative="Util/Template.php"/>
+  <method name="fromFile" start="13" end="27" abstract="false" final="false" static="true" visibility="public">
+    <docblock>
+      <description/>
+      <param variable="$file"/>
+      <param variable="$fields"/>
+      <return type="mixed"/>
+    </docblock>
+    <parameter name="file" byreference="false" type="{unknown}"/>
+    <parameter name="fields" byreference="false" type="{unknown}"/>
+  </method>
+  <method name="fromText" start="35" end="45" abstract="false" final="false" static="true" visibility="public">
+    <docblock>
+      <description/>
+      <param variable="$text"/>
+      <param variable="$fields"/>
+      <return type="mixed"/>
+    </docblock>
+    <parameter name="text" byreference="false" type="{unknown}"/>
+    <parameter name="fields" byreference="false" type="{unknown}"/>
+  </method>
+</class>

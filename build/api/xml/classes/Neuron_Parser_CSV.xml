@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class xmlns="http://xml.phpdox.net/src" full="Neuron\Parser\CSV" namespace="Neuron\Parser" name="CSV" abstract="false" final="false" start="5" end="37">
+  <file path="/Volumes/Storage/Projects/clearidea/open-source/Neuron/src/Parser" file="CSV.php" realpath="/Volumes/Storage/Projects/clearidea/open-source/Neuron/src/Parser/CSV.php" size="521" time="2016-08-04T19:53:26+00:00" unixtime="1470340406" sha1="b114d1648369cebf464b842cd5480cd0ca4e624d" relative="Parser/CSV.php"/>
+  <implements full="Neuron\Parser\IParser" namespace="Neuron\Parser" name="IParser"/>
+  <member name="_aResults" visibility="public" static="false" line="7"/>
+  <method name="parse" start="15" end="36" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <param variable="$sText"/>
+      <param type="array" variable="$aColumns"/>
+      <return type="object">
+        <type full="Neuron\Parser\array|bool" namespace="Neuron\Parser" name="array|bool"/>
+      </return>
+    </docblock>
+    <parameter name="sText" byreference="false" type="{unknown}"/>
+    <parameter name="aColumns" byreference="false" type="array" default=""/>
+  </method>
+  <interface full="Neuron\Parser\IParser" namespace="Neuron\Parser" name="IParser">
+    <method name="parse" start="7" end="7" abstract="false" final="false" static="false" visibility="public">
+      <parameter name="sText" byreference="false" type="{unknown}"/>
+      <parameter name="UserData" byreference="false" type="array" default=""/>
+    </method>
+  </interface>
+</class>

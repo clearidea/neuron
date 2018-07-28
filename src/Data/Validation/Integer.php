@@ -3,9 +3,9 @@
 namespace Neuron\Data\Validation;
 
 /**
- * Integer validation.
+ * Requires an integer
+ * @package Neuron\Data\Validation
  */
-
 class Integer extends Base
 {
 	protected function validate( $integer )

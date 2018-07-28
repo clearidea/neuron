@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class xmlns="http://xml.phpdox.net/src" full="Neuron\Log\Destination\StdOut" namespace="Neuron\Log\Destination" name="StdOut" abstract="false" final="false" start="11" end="45">
+  <file path="/Volumes/Storage/Projects/clearidea/open-source/Neuron/src/Log/Destination" file="StdOut.php" realpath="/Volumes/Storage/Projects/clearidea/open-source/Neuron/src/Log/Destination/StdOut.php" size="591" time="2016-08-12T11:33:09+00:00" unixtime="1471001589" sha1="06de65124f34c77333404c54cb8b4a6d48ca3646" relative="Log/Destination/StdOut.php"/>
+  <docblock>
+    <description compact="Outputs to stdout"/>
+  </docblock>
+  <extends full="Neuron\Log\Destination\DestinationBase" namespace="Neuron\Log\Destination" name="DestinationBase"/>
+  <method name="open" start="20" end="23" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <param type="array" variable="$aParams"/>
+      <return type="object">
+        <type full="Neuron\Log\Destination\bool" namespace="Neuron\Log\Destination" name="bool"/>
+      </return>
+      <suppresswarnings value="(PHPMD)"/>
+    </docblock>
+    <parameter name="aParams" byreference="false" type="array"/>
+  </method>
+  <method name="close" start="25" end="26" abstract="false" final="false" static="false" visibility="public"/>
+  <method name="write" start="36" end="44" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <param variable="$text"/>
+      <param type="object" variable="$Data">
+        <type full="Neuron\Log\Destination\Log\Data" namespace="Neuron\Log\Destination\Log" name="Data"/>
+      </param>
+      <return type="object">
+        <type full="Neuron\Log\Destination\void" namespace="Neuron\Log\Destination" name="void"/>
+      </return>
+      <suppresswarnings value="(PHPMD)"/>
+    </docblock>
+    <parameter name="text" byreference="false" type="{unknown}"/>
+    <parameter name="Data" byreference="false" type="object">
+      <type full="Neuron\Log\Data" namespace="Neuron\Log" name="Data"/>
+    </parameter>
+  </method>
+  <parent full="Neuron\Log\Destination\DestinationBase" namespace="Neuron\Log\Destination" name="DestinationBase">
+    <method name="getLevelText" start="32" end="54" abstract="false" final="false" static="false" visibility="public">
+      <docblock>
+        <description/>
+        <param variable="$iLevel"/>
+        <return type="string"/>
+      </docblock>
+      <parameter name="iLevel" byreference="false" type="{unknown}"/>
+    </method>
+    <constructor name="__construct" start="60" end="63" abstract="false" final="false" static="false" visibility="public">
+      <docblock>
+        <description/>
+        <param type="object" variable="$Format">
+          <type full="Neuron\Log\Destination\Format\IFormat" namespace="Neuron\Log\Destination\Format" name="IFormat"/>
+        </param>
+      </docblock>
+      <parameter name="Format" byreference="false" type="object">
+        <type full="Neuron\Log\Format\IFormat" namespace="Neuron\Log\Format" name="IFormat"/>
+      </parameter>
+    </constructor>
+    <method name="setFormat" start="69" end="70" abstract="false" final="false" static="false" visibility="public">
+      <docblock>
+        <description/>
+        <param type="object" variable="$Format">
+          <type full="Neuron\Log\Destination\Format\IFormat" namespace="Neuron\Log\Destination\Format" name="IFormat"/>
+        </param>
+      </docblock>
+      <parameter name="Format" byreference="false" type="object">
+        <type full="Neuron\Log\Format\IFormat" namespace="Neuron\Log\Format" name="IFormat"/>
+      </parameter>
+    </method>
+    <method name="write" start="78" end="78" abstract="true" final="false" static="false" visibility="protected">
+      <docblock>
+        <description/>
+        <param variable="$text"/>
+        <param type="object" variable="$Data">
+          <type full="Neuron\Log\Destination\Log\Data" namespace="Neuron\Log\Destination\Log" name="Data"/>
+        </param>
+        <return type="mixed"/>
+      </docblock>
+      <parameter name="text" byreference="false" type="{unknown}"/>
+      <parameter name="Data" byreference="false" type="object">
+        <type full="Neuron\Log\Data" namespace="Neuron\Log" name="Data"/>
+      </parameter>
+    </method>
+    <method name="open" start="85" end="85" abstract="true" final="false" static="false" visibility="public">
+      <docblock>
+        <description/>
+        <param type="array" variable="$aParams"/>
+        <return type="mixed"/>
+      </docblock>
+      <parameter name="aParams" byreference="false" type="array"/>
+    </method>
+    <method name="log" start="92" end="98" abstract="false" final="false" static="false" visibility="public">
+      <docblock>
+        <description/>
+        <param variable="$text"/>
+        <param variable="$iLevel"/>
+      </docblock>
+      <parameter name="text" byreference="false" type="{unknown}"/>
+      <parameter name="iLevel" byreference="false" type="{unknown}"/>
+    </method>
+  </parent>
+</class>

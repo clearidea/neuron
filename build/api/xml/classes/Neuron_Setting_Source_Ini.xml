@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class xmlns="http://xml.phpdox.net/src" full="Neuron\Setting\Source\Ini" namespace="Neuron\Setting\Source" name="Ini" abstract="false" final="false" start="5" end="50">
+  <file path="/Volumes/Storage/Projects/clearidea/open-source/Neuron/src/Setting/Source" file="Ini.php" realpath="/Volumes/Storage/Projects/clearidea/open-source/Neuron/src/Setting/Source/Ini.php" size="940" time="2016-08-04T19:53:26+00:00" unixtime="1470340406" sha1="78030bbb119d377b03286d055fffcf05152c5505" relative="Setting/Source/Ini.php"/>
+  <implements full="Neuron\Setting\Source\ISettingSource" namespace="Neuron\Setting\Source" name="ISettingSource"/>
+  <member name="_aSettings" default="" type="array" visibility="private" static="false" line="7"/>
+  <constructor name="__construct" start="9" end="15" abstract="false" final="false" static="false" visibility="public">
+    <parameter name="sFile" byreference="false" type="{unknown}"/>
+  </constructor>
+  <method name="get" start="17" end="29" abstract="false" final="false" static="false" visibility="public">
+    <parameter name="sSection" byreference="false" type="{unknown}"/>
+    <parameter name="sName" byreference="false" type="{unknown}"/>
+  </method>
+  <method name="set" start="31" end="34" abstract="false" final="false" static="false" visibility="public">
+    <parameter name="sSection" byreference="false" type="{unknown}"/>
+    <parameter name="sName" byreference="false" type="{unknown}"/>
+    <parameter name="sValue" byreference="false" type="{unknown}"/>
+  </method>
+  <method name="getSectionNames" start="36" end="39" abstract="false" final="false" static="false" visibility="public"/>
+  <method name="getSectionSettingNames" start="41" end="44" abstract="false" final="false" static="false" visibility="public">
+    <parameter name="sSection" byreference="false" type="{unknown}"/>
+  </method>
+  <method name="save" start="46" end="49" abstract="false" final="false" static="false" visibility="public"/>
+  <interface full="Neuron\Setting\Source\ISettingSource" namespace="Neuron\Setting\Source" name="ISettingSource">
+    <method name="get" start="11" end="11" abstract="false" final="false" static="false" visibility="public">
+      <parameter name="sSection" byreference="false" type="{unknown}"/>
+      <parameter name="sName" byreference="false" type="{unknown}"/>
+    </method>
+    <method name="set" start="12" end="12" abstract="false" final="false" static="false" visibility="public">
+      <parameter name="sName" byreference="false" type="{unknown}"/>
+      <parameter name="sSection" byreference="false" type="{unknown}"/>
+      <parameter name="sValue" byreference="false" type="{unknown}"/>
+    </method>
+    <method name="getSectionNames" start="13" end="13" abstract="false" final="false" static="false" visibility="public"/>
+    <method name="getSectionSettingNames" start="14" end="14" abstract="false" final="false" static="false" visibility="public">
+      <parameter name="sSection" byreference="false" type="{unknown}"/>
+    </method>
+    <method name="save" start="16" end="16" abstract="false" final="false" static="false" visibility="public"/>
+  </interface>
+</class>

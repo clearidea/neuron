@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class xmlns="http://xml.phpdox.net/src" full="Neuron\Log\Format\PlainText" namespace="Neuron\Log\Format" name="PlainText" abstract="false" final="false" start="11" end="31">
+  <file path="/Volumes/Storage/Projects/clearidea/open-source/Neuron/src/Log/Format" file="PlainText.php" realpath="/Volumes/Storage/Projects/clearidea/open-source/Neuron/src/Log/Format/PlainText.php" size="459" time="2016-08-04T19:53:26+00:00" unixtime="1470340406" sha1="b2f8e23cd9af034d42d0794258e418ad0e1fa4f3" relative="Log/Format/PlainText.php"/>
+  <docblock>
+    <description compact="Formats data as plain text."/>
+  </docblock>
+  <implements full="Neuron\Log\Format\IFormat" namespace="Neuron\Log\Format" name="IFormat"/>
+  <member name="_bShowDate" visibility="private" static="false" line="13"/>
+  <constructor name="__construct" start="15" end="18" abstract="false" final="false" static="false" visibility="public">
+    <parameter name="bShowDate" byreference="false" type="boolean" default="true"/>
+  </constructor>
+  <method name="format" start="20" end="30" abstract="false" final="false" static="false" visibility="public">
+    <parameter name="Data" byreference="false" type="object">
+      <type full="Neuron\Log\Data" namespace="Neuron\Log" name="Data"/>
+    </parameter>
+  </method>
+  <interface full="Neuron\Log\Format\IFormat" namespace="Neuron\Log\Format" name="IFormat">
+    <method name="format" start="13" end="13" abstract="false" final="false" static="false" visibility="public">
+      <parameter name="data" byreference="false" type="object">
+        <type full="Neuron\Log\Data" namespace="Neuron\Log" name="Data"/>
+      </parameter>
+    </method>
+  </interface>
+</class>

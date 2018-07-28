@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<interface xmlns="http://xml.phpdox.net/src" full="Neuron\Data\Filter\IFilter" namespace="Neuron\Data\Filter" name="IFilter" abstract="false" final="false" start="5" end="9">
+  <file path="/Volumes/Storage/Projects/clearidea/open-source/Neuron/src/Data/Filter" file="IFilter.php" realpath="/Volumes/Storage/Projects/clearidea/open-source/Neuron/src/Data/Filter/IFilter.php" size="145" time="2018-06-24T00:18:28+00:00" unixtime="1529799508" sha1="489c8a2cf9170e5d6905a862e0e4529accecc0f0" relative="Data/Filter/IFilter.php"/>
+  <method name="filterScalar" start="7" end="7" abstract="false" final="false" static="false" visibility="public">
+    <parameter name="Data" byreference="false" type="{unknown}"/>
+  </method>
+  <method name="filterArray" start="8" end="8" abstract="false" final="false" static="false" visibility="public">
+    <parameter name="Data" byreference="false" type="array"/>
+  </method>
+  <implementors>
+    <class full="Neuron\Data\Filter\Cookie" namespace="Neuron\Data\Filter" name="Cookie"/>
+    <class full="Neuron\Data\Filter\Get" namespace="Neuron\Data\Filter" name="Get"/>
+    <class full="Neuron\Data\Filter\Post" namespace="Neuron\Data\Filter" name="Post"/>
+    <class full="Neuron\Data\Filter\Server" namespace="Neuron\Data\Filter" name="Server"/>
+    <class full="Neuron\Data\Filter\Session" namespace="Neuron\Data\Filter" name="Session"/>
+  </implementors>
+</interface>

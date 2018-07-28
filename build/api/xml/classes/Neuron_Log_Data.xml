@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class xmlns="http://xml.phpdox.net/src" full="Neuron\Log\Data" namespace="Neuron\Log" name="Data" abstract="false" final="false" start="10" end="31">
+  <file path="/Volumes/Storage/Projects/clearidea/open-source/Neuron/src/Log" file="Data.php" realpath="/Volumes/Storage/Projects/clearidea/open-source/Neuron/src/Log/Data.php" size="455" time="2015-09-08T19:49:53+00:00" unixtime="1441741793" sha1="0f08c0cb75e5e91891e28665fe803b37cb985f6b" relative="Log/Data.php"/>
+  <docblock>
+    <description compact="Class Data"/>
+    <package value="Neuron\Log"/>
+  </docblock>
+  <member name="_TimeStamp" visibility="public" static="false" line="12"/>
+  <member name="_sText" visibility="public" static="false" line="13"/>
+  <member name="_iLevel" visibility="public" static="false" line="14"/>
+  <member name="_sLevel" visibility="public" static="false" line="15"/>
+  <constructor name="__construct" start="24" end="30" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <param variable="$TimeStamp"/>
+      <param variable="$sText"/>
+      <param variable="$iLevel"/>
+      <param variable="$sLevel"/>
+    </docblock>
+    <parameter name="TimeStamp" byreference="false" type="{unknown}"/>
+    <parameter name="sText" byreference="false" type="{unknown}"/>
+    <parameter name="iLevel" byreference="false" type="{unknown}"/>
+    <parameter name="sLevel" byreference="false" type="{unknown}"/>
+  </constructor>
+</class>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class xmlns="http://xml.phpdox.net/src" full="Neuron\Parser\Positional" namespace="Neuron\Parser" name="Positional" abstract="false" final="false" start="5" end="24">
+  <file path="/Volumes/Storage/Projects/clearidea/open-source/Neuron/src/Parser" file="Positional.php" realpath="/Volumes/Storage/Projects/clearidea/open-source/Neuron/src/Parser/Positional.php" size="458" time="2016-08-04T19:53:26+00:00" unixtime="1470340406" sha1="b7d8a1ae59e5040eb386801c02245f8a159a2f8f" relative="Parser/Positional.php"/>
+  <implements full="Neuron\Parser\IParser" namespace="Neuron\Parser" name="IParser"/>
+  <method name="parse" start="13" end="23" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <param variable="$sText"/>
+      <param description="name, start, length" type="array" variable="$aLocations"/>
+      <return type="array"/>
+    </docblock>
+    <parameter name="sText" byreference="false" type="{unknown}"/>
+    <parameter name="aLocations" byreference="false" type="array" default=""/>
+  </method>
+  <interface full="Neuron\Parser\IParser" namespace="Neuron\Parser" name="IParser">
+    <method name="parse" start="7" end="7" abstract="false" final="false" static="false" visibility="public">
+      <parameter name="sText" byreference="false" type="{unknown}"/>
+      <parameter name="UserData" byreference="false" type="array" default=""/>
+    </method>
+  </interface>
+</class>

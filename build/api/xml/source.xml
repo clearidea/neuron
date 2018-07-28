@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<source xmlns="http://xml.phpdox.net/src">
+  <dir name="/Volumes/Storage/Projects/clearidea/open-source/Neuron/src">
+    <dir name="Application">
+      <file name="Base.php" size="3582" time="2017-08-14T13:31:29+00:00" unixtime="1502717489" sha1="ff78996003aac07162f80e9f840dabd65a753e3f" xml="tokens/Application/Base.php.xml"/>
+      <file name="CommandLineBase.php" size="2406" time="2018-05-02T12:08:19+00:00" unixtime="1525262899" sha1="0bd07df937246ec5fb2450916ec6dbacb78092af" xml="tokens/Application/CommandLineBase.php.xml"/>
+      <file name="IApplication.php" size="519" time="2016-08-12T11:33:09+00:00" unixtime="1471001589" sha1="4ab9137f6c702a17b7ed660dcb4846afc7b0e92b" xml="tokens/Application/IApplication.php.xml"/>
+    </dir>
+    <dir name="Data">
+      <file name="ArrayHelper.php" size="1467" time="2017-11-19T18:54:10+00:00" unixtime="1511117650" sha1="6e084110ee003e3a27f32aa9a3b88dd603357464" xml="tokens/Data/ArrayHelper.php.xml"/>
+      <dir name="Filter">
+        <file name="Cookie.php" size="296" time="2018-06-24T00:18:28+00:00" unixtime="1529799508" sha1="a916fd1f47fab8c3023c07dca3f2f1c370c378c8" xml="tokens/Data/Filter/Cookie.php.xml"/>
+        <file name="Get.php" size="289" time="2018-06-24T00:18:28+00:00" unixtime="1529799508" sha1="768c211631bea7b9e2f822f4594d268a0cad28d0" xml="tokens/Data/Filter/Get.php.xml"/>
+        <file name="IFilter.php" size="145" time="2018-06-24T00:18:28+00:00" unixtime="1529799508" sha1="489c8a2cf9170e5d6905a862e0e4529accecc0f0" xml="tokens/Data/Filter/IFilter.php.xml"/>
+        <file name="Post.php" size="291" time="2018-06-24T00:18:28+00:00" unixtime="1529799508" sha1="cbb89c657f2311861bce74edf8ba3771719649d2" xml="tokens/Data/Filter/Post.php.xml"/>
+        <file name="Server.php" size="297" time="2018-06-24T00:18:28+00:00" unixtime="1529799508" sha1="2e26dd7b5bcaac61dee3bba0b907640281e14195" xml="tokens/Data/Filter/Server.php.xml"/>
+        <file name="Session.php" size="249" time="2018-06-24T00:18:28+00:00" unixtime="1529799508" sha1="febf11954bdffa69f42c5085fb95c3f35537c175" xml="tokens/Data/Filter/Session.php.xml"/>
+      </dir>
+      <file name="Formatter.php" size="511" time="2016-10-21T16:10:58+00:00" unixtime="1477066258" sha1="bd42c6ca85d50d0427b7cc3f8c41834aea2a78be" xml="tokens/Data/Formatter.php.xml"/>
+      <dir name="Object">
+        <file name="DateRange.php" size="188" time="2017-08-14T13:31:29+00:00" unixtime="1502717489" sha1="dc801c3d40a0b74c1ae1f82465f407a8ccefa186" xml="tokens/Data/Object/DateRange.php.xml"/>
+        <file name="GpsPoint.php" size="292" time="2016-10-21T16:10:58+00:00" unixtime="1477066258" sha1="a1a31bc27748338f8b410f9514adbfeb9d1e9061" xml="tokens/Data/Object/GpsPoint.php.xml"/>
+        <file name="NumericRange.php" size="213" time="2018-06-25T21:46:00+00:00" unixtime="1529963160" sha1="058b28124713c2e44ca63ade2ae31fd7e9da089c" xml="tokens/Data/Object/NumericRange.php.xml"/>
+        <file name="Version.php" size="869" time="2018-05-02T12:08:19+00:00" unixtime="1525262899" sha1="705807026d987ba1fcede4aab277889d446d55be" xml="tokens/Data/Object/Version.php.xml"/>
+      </dir>
+      <file name="StringData.php" size="1019" time="2018-06-24T00:18:28+00:00" unixtime="1529799508" sha1="2559153673861e60c860c37b1d79ae3d51b26114" xml="tokens/Data/StringData.php.xml"/>
+      <dir name="Validation">
+        <file name="Base.php" size="401" time="2018-06-24T12:24:24+00:00" unixtime="1529843064" sha1="5b99e36e8c894ca6281a1e80f0f97cea37a1e157" xml="tokens/Data/Validation/Base.php.xml"/>
+        <file name="Collection.php" size="966" time="2018-06-26T01:26:24+00:00" unixtime="1529976384" sha1="855dc892e618019f9a928060cf15ac8d6275fe7c" xml="tokens/Data/Validation/Collection.php.xml"/>
+        <file name="Currency.php" size="297" time="2018-06-26T01:26:24+00:00" unixtime="1529976384" sha1="36c0d379e3f2f7f39eeee9b8f45fb180c2ce4a8c" xml="tokens/Data/Validation/Currency.php.xml"/>
+        <file name="Date.php" size="592" time="2018-06-26T01:26:24+00:00" unixtime="1529976384" sha1="bf0a0c109c098859aeede601446fe07c570881fc" xml="tokens/Data/Validation/Date.php.xml"/>
+        <file name="DateRange.php" size="529" time="2018-06-26T01:26:24+00:00" unixtime="1529976384" sha1="ae3c9cf2627698690240e480a66e8542cde732b6" xml="tokens/Data/Validation/DateRange.php.xml"/>
+        <file name="DateWithinRange.php" size="741" time="2018-06-26T01:26:24+00:00" unixtime="1529976384" sha1="f74761c3a39e14a6f8b8b1dfefb734881d0e59fd" xml="tokens/Data/Validation/DateWithinRange.php.xml"/>
+        <file name="Ein.php" size="272" time="2018-06-26T01:26:24+00:00" unixtime="1529976384" sha1="39facc2eb157750f2d439773d5376e4606cf82dc" xml="tokens/Data/Validation/Ein.php.xml"/>
+        <file name="Email.php" size="270" time="2018-06-26T01:26:24+00:00" unixtime="1529976384" sha1="0bb90c484d0e2d5484424e5baf4d6a8e5f3f61e6" xml="tokens/Data/Validation/Email.php.xml"/>
+        <file name="FloatingPoint.php" size="233" time="2018-06-26T01:26:24+00:00" unixtime="1529976384" sha1="9c83541ac313a199ac7aca0ccd22b6b7225c6940" xml="tokens/Data/Validation/FloatingPoint.php.xml"/>
+        <file name="ICollection.php" size="459" time="2018-06-24T12:24:24+00:00" unixtime="1529843064" sha1="4bf835e49f96a63b825f616da663c38bf393ef28" xml="tokens/Data/Validation/ICollection.php.xml"/>
+        <file name="Integer.php" size="272" time="2018-06-26T01:26:24+00:00" unixtime="1529976384" sha1="13b24316864f8f05a9365479fe505ef871dcfea4" xml="tokens/Data/Validation/Integer.php.xml"/>
+        <file name="IPAddress.php" size="271" time="2018-06-26T01:26:24+00:00" unixtime="1529976384" sha1="5af9db68874e42c5eea508ce93f155a5ca33f109" xml="tokens/Data/Validation/IPAddress.php.xml"/>
+        <file name="IValidator.php" size="109" time="2018-06-24T12:24:24+00:00" unixtime="1529843064" sha1="ddb5f792cbff931fe650deb7417f57a1110db586" xml="tokens/Data/Validation/IValidator.php.xml"/>
+        <file name="Name.php" size="363" time="2018-06-26T01:26:24+00:00" unixtime="1529976384" sha1="6bf8a2c9d8956a12683f83023fecc705e67c5654" xml="tokens/Data/Validation/Name.php.xml"/>
+        <file name="NotEmpty.php" size="221" time="2018-06-26T01:26:24+00:00" unixtime="1529976384" sha1="d07a626d8c828e77dad203f02c0c3a0ee6995cce" xml="tokens/Data/Validation/NotEmpty.php.xml"/>
+        <file name="NotNull.php" size="221" time="2018-06-26T01:26:24+00:00" unixtime="1529976384" sha1="b742002af3083ab5b140bad35e2c33a0e72f9432" xml="tokens/Data/Validation/NotNull.php.xml"/>
+        <file name="NumberWithinRange.php" size="459" time="2018-06-26T01:26:24+00:00" unixtime="1529976384" sha1="186e70750dc4a546581ade005d170bc46aa19491" xml="tokens/Data/Validation/NumberWithinRange.php.xml"/>
+        <file name="NumericRange.php" size="282" time="2018-06-26T01:26:24+00:00" unixtime="1529976384" sha1="73600b7cd310320490f0619b3bd286e2ced27d05" xml="tokens/Data/Validation/NumericRange.php.xml"/>
+        <file name="PhoneNumber.php" size="297" time="2018-06-26T01:26:24+00:00" unixtime="1529976384" sha1="56f86968bbd27783199055fb273b1b51945127b8" xml="tokens/Data/Validation/PhoneNumber.php.xml"/>
+        <file name="Policy.php" size="302" time="2018-06-05T13:26:26+00:00" unixtime="1528205186" sha1="20145e8857817cd302db3ffb819b0583a88e7133" xml="tokens/Data/Validation/Policy.php.xml"/>
+        <file name="Positive.php" size="214" time="2018-06-26T01:26:24+00:00" unixtime="1529976384" sha1="119918bb022688d4aea3cd6eff9f53fe296d514b" xml="tokens/Data/Validation/Positive.php.xml"/>
+        <file name="StringData.php" size="218" time="2018-06-26T01:26:24+00:00" unixtime="1529976384" sha1="ff7e9f4a9bdce68e4ccbf826537055bf8b183a82" xml="tokens/Data/Validation/StringData.php.xml"/>
+        <file name="Time.php" size="655" time="2018-06-26T01:26:24+00:00" unixtime="1529976384" sha1="04bf46a5a4e56804e27466c19ef6f8eb9654abf1" xml="tokens/Data/Validation/Time.php.xml"/>
+        <file name="Url.php" size="252" time="2018-06-26T01:26:24+00:00" unixtime="1529976384" sha1="2bc0bfd185deb32f5165b7977138bf4c4845a9bb" xml="tokens/Data/Validation/Url.php.xml"/>
+      </dir>
+    </dir>
+    <dir name="File">
+      <file name="Temporary.php" size="501" time="2016-10-21T16:10:58+00:00" unixtime="1477066258" sha1="add06552510300207c484a0add2bd4c98344184a" xml="tokens/File/Temporary.php.xml"/>
+    </dir>
+    <dir name="H">
+      <file name="Error.php" size="7785" time="2018-06-24T00:18:28+00:00" unixtime="1529799508" sha1="0f56f8b72b724530df7f432fac047ae6bd1cbe09" xml="tokens/H/Error.php.xml"/>
+    </dir>
+    <dir name="Log">
+      <file name="Base.php" size="1217" time="2018-06-05T13:26:26+00:00" unixtime="1528205186" sha1="fc17dadbe171e11537db15edc6a8492c9ae6c83c" xml="tokens/Log/Base.php.xml"/>
+      <file name="Data.php" size="455" time="2015-09-08T19:49:53+00:00" unixtime="1441741793" sha1="0f08c0cb75e5e91891e28665fe803b37cb985f6b" xml="tokens/Log/Data.php.xml"/>
+      <dir name="Destination">
+        <file name="DestinationBase.php" size="1610" time="2016-08-04T19:53:26+00:00" unixtime="1470340406" sha1="eba881ccdcb8061c522d64cdae946eea61e0289f" xml="tokens/Log/Destination/DestinationBase.php.xml"/>
+        <file name="Echoer.php" size="531" time="2016-08-12T11:33:09+00:00" unixtime="1471001589" sha1="330168bb81d0899c27737f6db71a0402b2a4f662" xml="tokens/Log/Destination/Echoer.php.xml"/>
+        <file name="Email.php" size="171" time="2015-11-09T21:12:55+00:00" unixtime="1447103575" sha1="3509c808f7c193dc722b8b50d80935d9f259694c" xml="tokens/Log/Destination/Email.php.xml"/>
+        <file name="File.php" size="783" time="2018-06-24T00:18:28+00:00" unixtime="1529799508" sha1="5645a885e4b004685e074fc97f70f1ee98985357" xml="tokens/Log/Destination/File.php.xml"/>
+        <file name="Null.php" size="479" time="2016-08-12T11:33:09+00:00" unixtime="1471001589" sha1="4abf4d4d6cd1b1ea090516851c75e5f6f29aba61" xml="tokens/Log/Destination/Null.php.xml"/>
+        <file name="Slack.php" size="602" time="2016-10-21T16:10:58+00:00" unixtime="1477066258" sha1="3b14e5c29f5322ece5557ca45d5a3cf2b6a0cc95" xml="tokens/Log/Destination/Slack.php.xml"/>
+        <file name="Socket.php" size="1026" time="2016-08-12T11:33:09+00:00" unixtime="1471001589" sha1="e3284bdf1bdbace28846c97e240e5cf96dc90c68" xml="tokens/Log/Destination/Socket.php.xml"/>
+        <file name="StdErr.php" size="498" time="2016-08-12T11:33:09+00:00" unixtime="1471001589" sha1="89c8741fcacd3970cd55f17d82fc8fdfd10fd63e" xml="tokens/Log/Destination/StdErr.php.xml"/>
+        <file name="StdOut.php" size="591" time="2016-08-12T11:33:09+00:00" unixtime="1471001589" sha1="06de65124f34c77333404c54cb8b4a6d48ca3646" xml="tokens/Log/Destination/StdOut.php.xml"/>
+        <file name="WebService.php" size="431" time="2016-08-04T19:53:26+00:00" unixtime="1470340406" sha1="27ae73e716326b2f49be1e2abfa652d6191ecc69" xml="tokens/Log/Destination/WebService.php.xml"/>
+      </dir>
+      <dir name="Format">
+        <file name="CSV.php" size="271" time="2016-08-04T19:53:26+00:00" unixtime="1470340406" sha1="dc51383c8c3e9ff247585a272f3c488788801e40" xml="tokens/Log/Format/CSV.php.xml"/>
+        <file name="HTML.php" size="281" time="2016-08-04T19:53:26+00:00" unixtime="1470340406" sha1="a48722c675768e8adbac7a0de0dbc05376625caf" xml="tokens/Log/Format/HTML.php.xml"/>
+        <file name="IFormat.php" size="149" time="2015-12-11T21:46:38+00:00" unixtime="1449870398" sha1="a44735dd005571bd383fa226da07b3178e51b013" xml="tokens/Log/Format/IFormat.php.xml"/>
+        <file name="JSON.php" size="341" time="2016-08-04T19:53:26+00:00" unixtime="1470340406" sha1="8ff070fde359808a54dedad7ff2f1c68f0c860e1" xml="tokens/Log/Format/JSON.php.xml"/>
+        <file name="PlainText.php" size="459" time="2016-08-04T19:53:26+00:00" unixtime="1470340406" sha1="b2f8e23cd9af034d42d0794258e418ad0e1fa4f3" xml="tokens/Log/Format/PlainText.php.xml"/>
+      </dir>
+      <file name="ILogger.php" size="870" time="2018-06-05T13:26:26+00:00" unixtime="1528205186" sha1="8b2876bf24168a7bda558ed532e762e0d3421768" xml="tokens/Log/ILogger.php.xml"/>
+      <file name="Log.php" size="1313" time="2017-11-19T18:54:10+00:00" unixtime="1511117650" sha1="49d82d23249121409c9f8fec9a5ae2351e32494d" xml="tokens/Log/Log.php.xml"/>
+      <file name="Logger.php" size="1878" time="2018-06-05T13:26:26+00:00" unixtime="1528205186" sha1="02880c1f86c317fe4727f6b06fcc6cecfd6f56d9" xml="tokens/Log/Logger.php.xml"/>
+      <file name="LogMux.php" size="1296" time="2018-06-05T13:26:26+00:00" unixtime="1528205186" sha1="aae9d6143bf0d531d9af05fc12dfcba7085ada41" xml="tokens/Log/LogMux.php.xml"/>
+    </dir>
+    <dir name="Parser">
+      <file name="CSV.php" size="521" time="2016-08-04T19:53:26+00:00" unixtime="1470340406" sha1="b114d1648369cebf464b842cd5480cd0ca4e624d" xml="tokens/Parser/CSV.php.xml"/>
+      <file name="IParser.php" size="109" time="2015-09-08T19:49:53+00:00" unixtime="1441741793" sha1="39aa2a3eded08e2b31bc4c36f638ac4d0b8b3b6e" xml="tokens/Parser/IParser.php.xml"/>
+      <file name="LastFirstMI.php" size="798" time="2016-08-12T11:33:09+00:00" unixtime="1471001589" sha1="8beb67d72db1e18cf0fedd87a68ef23bbed03799" xml="tokens/Parser/LastFirstMI.php.xml"/>
+      <file name="Positional.php" size="458" time="2016-08-04T19:53:26+00:00" unixtime="1470340406" sha1="b7d8a1ae59e5040eb386801c02245f8a159a2f8f" xml="tokens/Parser/Positional.php.xml"/>
+    </dir>
+    <dir name="Patterns">
+      <dir name="Criteria">
+        <file name="AndCriteria.php" size="468" time="2016-08-04T19:53:26+00:00" unixtime="1470340406" sha1="5288f75359aeb7b1a1e6596098432bf9c294c131" xml="tokens/Patterns/Criteria/AndCriteria.php.xml"/>
+        <file name="Base.php" size="470" time="2016-08-05T12:23:24+00:00" unixtime="1470399804" sha1="aa0b5889faeb2ce49ed75f4c6508669038edf89c" xml="tokens/Patterns/Criteria/Base.php.xml"/>
+        <file name="ICriteria.php" size="253" time="2016-08-04T19:53:26+00:00" unixtime="1470340406" sha1="90c58ab347d6bfad08b906008f3ca2db45cb27f1" xml="tokens/Patterns/Criteria/ICriteria.php.xml"/>
+        <file name="KeyValue.php" size="451" time="2016-08-05T12:23:24+00:00" unixtime="1470399804" sha1="32e6fa3e24706e1f661c4dad522f75fd3c8cc1fa" xml="tokens/Patterns/Criteria/KeyValue.php.xml"/>
+        <file name="LogicBase.php" size="464" time="2016-08-04T19:53:26+00:00" unixtime="1470340406" sha1="034294a9e571bed726a0c7949ca238cf1dacf210" xml="tokens/Patterns/Criteria/LogicBase.php.xml"/>
+        <file name="NotCriteria.php" size="633" time="2016-08-05T12:23:24+00:00" unixtime="1470399804" sha1="a2ad06e771caf1f5e93bca51f8425771afeb294e" xml="tokens/Patterns/Criteria/NotCriteria.php.xml"/>
+        <file name="OrCriteria.php" size="662" time="2016-08-05T12:23:24+00:00" unixtime="1470399804" sha1="55831aa12c65b4ed4bc1a606c2affd2fff7ba8e2" xml="tokens/Patterns/Criteria/OrCriteria.php.xml"/>
+      </dir>
+      <file name="IRunnable.php" size="244" time="2016-08-14T10:21:13+00:00" unixtime="1471170073" sha1="c59d30d4d65c7e695258acd6a21036be46c825f7" xml="tokens/Patterns/IRunnable.php.xml"/>
+      <dir name="Observer">
+        <file name="IObserver.php" size="273" time="2016-08-12T19:22:31+00:00" unixtime="1471029751" sha1="4d1d47a7c843706d7c3acea4d5216706293037fb" xml="tokens/Patterns/Observer/IObserver.php.xml"/>
+        <file name="Observable.php" size="529" time="2016-08-14T10:21:13+00:00" unixtime="1471170073" sha1="92ac320c6be2c2f85dc0fc416b5d807344438474" xml="tokens/Patterns/Observer/Observable.php.xml"/>
+      </dir>
+      <file name="Registry.php" size="497" time="2017-08-14T13:31:29+00:00" unixtime="1502717489" sha1="9de3baf855d4aa763335c02d3df8e0e24f52da62" xml="tokens/Patterns/Registry.php.xml"/>
+      <dir name="Singleton">
+        <file name="Base.php" size="496" time="2017-08-14T13:31:29+00:00" unixtime="1502717489" sha1="4b0160d8539bae98bc73a5fd95aa0555f7cfb5e5" xml="tokens/Patterns/Singleton/Base.php.xml"/>
+        <file name="ISingleton.php" size="153" time="2016-08-12T11:33:09+00:00" unixtime="1471001589" sha1="d6becbae2901e088ff6dacec5993733e9e98759c" xml="tokens/Patterns/Singleton/ISingleton.php.xml"/>
+        <file name="Memcache.php" size="785" time="2016-08-14T10:21:13+00:00" unixtime="1471170073" sha1="76280c84d1d6ed1fec6dad31e0d933cfaa95e036" xml="tokens/Patterns/Singleton/Memcache.php.xml"/>
+        <file name="Memory.php" size="484" time="2017-08-14T13:31:29+00:00" unixtime="1502717489" sha1="c6b81f571c8b9adf8ef13f00636c7d9ded3050ab" xml="tokens/Patterns/Singleton/Memory.php.xml"/>
+        <file name="Singleton.php" size="390" time="2016-08-14T10:21:13+00:00" unixtime="1471170073" sha1="11626f46e3cd4aadd6a3d18a617d547a49d6016a" xml="tokens/Patterns/Singleton/Singleton.php.xml"/>
+      </dir>
+    </dir>
+    <dir name="Setting">
+      <file name="SettingManager.php" size="1152" time="2016-08-04T19:53:26+00:00" unixtime="1470340406" sha1="3d776b2188a148d9077e519e0275dee2ad7d6e18" xml="tokens/Setting/SettingManager.php.xml"/>
+      <dir name="Source">
+        <file name="Ini.php" size="940" time="2016-08-04T19:53:26+00:00" unixtime="1470340406" sha1="78030bbb119d377b03286d055fffcf05152c5505" xml="tokens/Setting/Source/Ini.php.xml"/>
+        <file name="ISettingSource.php" size="295" time="2015-10-05T00:36:22+00:00" unixtime="1444005382" sha1="d8c2d6337d4b00026e4d1b0d95d9677f16fd013e" xml="tokens/Setting/Source/ISettingSource.php.xml"/>
+        <file name="Memory.php" size="743" time="2016-08-14T10:21:13+00:00" unixtime="1471170073" sha1="e5600db484f8c18430f60f50c5fb0fd2eecfbe5b" xml="tokens/Setting/Source/Memory.php.xml"/>
+      </dir>
+    </dir>
+    <dir name="Util">
+      <file name="Date.php" size="7205" time="2018-01-15T21:18:11+00:00" unixtime="1516051091" sha1="a4e44af2ef9336e48e021385696589123682c52c" xml="tokens/Util/Date.php.xml"/>
+      <file name="Email.php" size="4415" time="2015-09-08T19:49:53+00:00" unixtime="1441741793" sha1="22b50d0afa1a53f8dce9d2123f6c53b29077f00a" xml="tokens/Util/Email.php.xml"/>
+      <file name="Language.php" size="1474" time="2016-08-14T10:21:13+00:00" unixtime="1471170073" sha1="1b21ac331c6e1f58f5c192d4f633d3621d8794af" xml="tokens/Util/Language.php.xml"/>
+      <file name="System.php" size="282" time="2016-08-14T10:21:13+00:00" unixtime="1471170073" sha1="9ec92b856dba4b46a0b40824900e0a34cdf2560d" xml="tokens/Util/System.php.xml"/>
+      <file name="Template.php" size="603" time="2016-08-04T19:53:26+00:00" unixtime="1470340406" sha1="080f62aa0b67ba154bdb1c8bf1e17f39cc1467ab" xml="tokens/Util/Template.php.xml"/>
+      <file name="Timer.php" size="628" time="2016-08-30T01:17:02+00:00" unixtime="1472519822" sha1="fa3fac039774f168981804bc79b870390cdc8eac" xml="tokens/Util/Timer.php.xml"/>
+    </dir>
+  </dir>
+</source>

@@ -2,6 +2,10 @@
 
 namespace Neuron\Data\Validation;
 
+/**
+ * Allows multiple validators to be chained in one item.
+ * @package Neuron\Data\Validation
+ */
 class Collection extends Base implements ICollection
 {
 	private $_Validators;

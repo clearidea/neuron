@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class xmlns="http://xml.phpdox.net/src" full="Neuron\Patterns\Criteria\Base" namespace="Neuron\Patterns\Criteria" name="Base" abstract="true" final="false" start="11" end="29">
+  <file path="/Volumes/Storage/Projects/clearidea/open-source/Neuron/src/Patterns/Criteria" file="Base.php" realpath="/Volumes/Storage/Projects/clearidea/open-source/Neuron/src/Patterns/Criteria/Base.php" size="470" time="2016-08-05T12:23:24+00:00" unixtime="1470399804" sha1="aa0b5889faeb2ce49ed75f4c6508669038edf89c" relative="Patterns/Criteria/Base.php"/>
+  <implements full="Neuron\Patterns\Criteria\ICriteria" namespace="Neuron\Patterns\Criteria" name="ICriteria"/>
+  <member name="_Criteria" visibility="protected" static="false" line="13"/>
+  <method name="_and" start="15" end="18" abstract="false" final="false" static="false" visibility="public">
+    <parameter name="OtherCriteria" byreference="false" type="object">
+      <type full="Neuron\Patterns\Criteria\ICriteria" namespace="Neuron\Patterns\Criteria" name="ICriteria"/>
+    </parameter>
+  </method>
+  <method name="_or" start="20" end="23" abstract="false" final="false" static="false" visibility="public">
+    <parameter name="OtherCriteria" byreference="false" type="object">
+      <type full="Neuron\Patterns\Criteria\ICriteria" namespace="Neuron\Patterns\Criteria" name="ICriteria"/>
+    </parameter>
+  </method>
+  <method name="_not" start="25" end="28" abstract="false" final="false" static="false" visibility="public"/>
+  <extenders>
+    <extender full="Neuron\Patterns\Criteria\AndCriteria" namespace="Neuron\Patterns\Criteria" name="AndCriteria"/>
+    <extender full="Neuron\Patterns\Criteria\KeyValue" namespace="Neuron\Patterns\Criteria" name="KeyValue"/>
+    <extender full="Neuron\Patterns\Criteria\LogicBase" namespace="Neuron\Patterns\Criteria" name="LogicBase"/>
+    <extender full="Neuron\Patterns\Criteria\OrCriteria" namespace="Neuron\Patterns\Criteria" name="OrCriteria"/>
+  </extenders>
+  <interface full="Neuron\Patterns\Criteria\ICriteria" namespace="Neuron\Patterns\Criteria" name="ICriteria">
+    <method name="meetCriteria" start="18" end="18" abstract="false" final="false" static="false" visibility="public">
+      <docblock>
+        <description/>
+        <param type="array" variable="$entities"/>
+        <return type="array"/>
+      </docblock>
+      <parameter name="entities" byreference="false" type="array"/>
+    </method>
+  </interface>
+</class>

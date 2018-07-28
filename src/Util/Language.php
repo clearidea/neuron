@@ -48,7 +48,7 @@ class Language extends Singleton\Memcache
 	}
 
 	/**
-	 * Sets teh current language in a session variable.
+	 * Sets the current language in a session variable.
 	 * @param $sLanguage
 	 */
 

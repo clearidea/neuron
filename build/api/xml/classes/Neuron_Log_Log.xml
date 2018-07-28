@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class xmlns="http://xml.phpdox.net/src" full="Neuron\Log\Log" namespace="Neuron\Log" name="Log" abstract="false" final="false" start="9" end="86">
+  <file path="/Volumes/Storage/Projects/clearidea/open-source/Neuron/src/Log" file="Log.php" realpath="/Volumes/Storage/Projects/clearidea/open-source/Neuron/src/Log/Log.php" size="1313" time="2017-11-19T18:54:10+00:00" unixtime="1511117650" sha1="49d82d23249121409c9f8fec9a5ae2351e32494d" relative="Log/Log.php"/>
+  <extends full="Neuron\Patterns\Singleton\Memory" namespace="Neuron\Patterns\Singleton" name="Memory"/>
+  <member name="Logger" visibility="public" static="false" line="11"/>
+  <method name="initIfNeeded" start="13" end="23" abstract="false" final="false" static="false" visibility="public"/>
+  <method name="_log" start="29" end="34" abstract="false" final="false" static="true" visibility="public">
+    <docblock>
+      <description/>
+      <param variable="$text"/>
+      <param variable="$iLevel"/>
+    </docblock>
+    <parameter name="text" byreference="false" type="{unknown}"/>
+    <parameter name="iLevel" byreference="false" type="{unknown}"/>
+  </method>
+  <method name="setRunLevel" start="39" end="45" abstract="false" final="false" static="true" visibility="public">
+    <docblock>
+      <description/>
+      <param variable="$iLevel"/>
+    </docblock>
+    <parameter name="iLevel" byreference="false" type="{unknown}"/>
+  </method>
+  <method name="debug" start="50" end="53" abstract="false" final="false" static="true" visibility="public">
+    <docblock>
+      <description/>
+      <param variable="$text"/>
+    </docblock>
+    <parameter name="text" byreference="false" type="{unknown}"/>
+  </method>
+  <method name="info" start="58" end="61" abstract="false" final="false" static="true" visibility="public">
+    <docblock>
+      <description/>
+      <param variable="$text"/>
+    </docblock>
+    <parameter name="text" byreference="false" type="{unknown}"/>
+  </method>
+  <method name="warning" start="66" end="69" abstract="false" final="false" static="true" visibility="public">
+    <docblock>
+      <description/>
+      <param variable="$text"/>
+    </docblock>
+    <parameter name="text" byreference="false" type="{unknown}"/>
+  </method>
+  <method name="error" start="74" end="77" abstract="false" final="false" static="true" visibility="public">
+    <docblock>
+      <description/>
+      <param variable="$text"/>
+    </docblock>
+    <parameter name="text" byreference="false" type="{unknown}"/>
+  </method>
+  <method name="fatal" start="82" end="85" abstract="false" final="false" static="true" visibility="public">
+    <docblock>
+      <description/>
+      <param variable="$text"/>
+    </docblock>
+    <parameter name="text" byreference="false" type="{unknown}"/>
+  </method>
+  <parent full="Neuron\Patterns\Singleton\Memory" namespace="Neuron\Patterns\Singleton" name="Memory">
+    <extends full="Neuron\Patterns\Singleton\Base" namespace="Neuron\Patterns\Singleton" name="Base"/>
+    <member name="_instance" default="" type="array" visibility="public" static="true" line="7"/>
+    <method name="serialize" start="9" end="12" abstract="false" final="false" static="false" visibility="public"/>
+    <method name="invalidate" start="14" end="17" abstract="false" final="false" static="true" visibility="public"/>
+    <method name="instance" start="19" end="29" abstract="false" final="false" static="true" visibility="public"/>
+  </parent>
+  <parent full="Neuron\Patterns\Singleton\Base" namespace="Neuron\Patterns\Singleton" name="Base">
+    <implements full="Neuron\Patterns\Singleton\ISingleton" namespace="Neuron\Patterns\Singleton" name="ISingleton"/>
+    <method name="getInstance" start="16" end="36" abstract="false" final="false" static="true" visibility="public">
+      <docblock>
+        <description/>
+        <return type="null"/>
+      </docblock>
+    </method>
+  </parent>
+  <interface full="Neuron\Patterns\Singleton\ISingleton" namespace="Neuron\Patterns\Singleton" name="ISingleton">
+    <method name="serialize" start="7" end="7" abstract="false" final="false" static="false" visibility="public"/>
+    <method name="invalidate" start="8" end="8" abstract="false" final="false" static="true" visibility="public"/>
+    <method name="instance" start="9" end="9" abstract="false" final="false" static="true" visibility="public"/>
+  </interface>
+</class>

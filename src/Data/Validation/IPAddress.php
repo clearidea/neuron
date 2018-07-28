@@ -4,9 +4,9 @@
 namespace Neuron\Data\Validation;
 
 /**
- * IPAddress validation.
+ * Requires a valid IPAddress format.
+ * @package Neuron\Data\Validation
  */
-
 class IPAddress extends Base
 {
 	protected function validate( $address )

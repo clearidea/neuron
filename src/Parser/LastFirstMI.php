@@ -25,7 +25,7 @@ class LastFirstMI implements IParser
 	{
 		$aName = explode( ',', $sText );
 
-		$sFirst = trim( $aName[ 1 ] );
+		$sFirst  = trim( $aName[ 1 ] );
 		$sMiddle = '';
 
 		$aFirstMiddle = explode( ' ', $sFirst );
@@ -36,13 +36,12 @@ class LastFirstMI implements IParser
 
 			if( strlen( $aFirstMiddle[ 1 ] ) == 1 )
 			{
-				$sFirst = $aFirstMiddle[ 0 ];
+				$sFirst  = $aFirstMiddle[ 0 ];
 				$sMiddle = $aFirstMiddle[ 1 ];
 			}
 		}
 
 		$sLast = trim( $aName[ 0 ] );
-
 
 		return [ $sFirst, $sMiddle, $sLast ];
 	}

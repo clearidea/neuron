@@ -2,6 +2,11 @@
 
 namespace Neuron\Data\Validation;
 
+/**
+ * Validates a DateRange data object.
+ * @see Date
+ * @package Neuron\Data\Validation
+ */
 class DateRange extends Date
 {
 	protected function validate( $Range )

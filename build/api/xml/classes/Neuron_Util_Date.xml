@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class xmlns="http://xml.phpdox.net/src" full="Neuron\Util\Date" namespace="Neuron\Util" name="Date" abstract="false" final="false" start="7" end="366">
+  <file path="/Volumes/Storage/Projects/clearidea/open-source/Neuron/src/Util" file="Date.php" realpath="/Volumes/Storage/Projects/clearidea/open-source/Neuron/src/Util/Date.php" size="7205" time="2018-01-15T21:18:11+00:00" unixtime="1516051091" sha1="a4e44af2ef9336e48e021385696589123682c52c" relative="Util/Date.php"/>
+  <method name="only" start="13" end="16" abstract="false" final="false" static="true" visibility="public">
+    <docblock>
+      <description/>
+      <param variable="$DateTime"/>
+      <return type="object">
+        <type full="Neuron\Util\false|string" namespace="Neuron\Util" name="false|string"/>
+      </return>
+    </docblock>
+    <parameter name="DateTime" byreference="false" type="{unknown}"/>
+  </method>
+  <method name="daysAsText" start="22" end="56" abstract="false" final="false" static="true" visibility="public">
+    <docblock>
+      <description/>
+      <param variable="$Days"/>
+      <return type="object">
+        <type full="Neuron\Util\mixed|string" namespace="Neuron\Util" name="mixed|string"/>
+      </return>
+    </docblock>
+    <parameter name="Days" byreference="false" type="{unknown}"/>
+  </method>
+  <method name="differenceUnitAsText" start="66" end="96" abstract="false" final="false" static="true" visibility="public">
+    <docblock>
+      <description compact="Turns a time difference into a text format."/>
+      <param variable="$Time"/>
+      <param variable="$Until"/>
+      <return type="string"/>
+    </docblock>
+    <parameter name="Time" byreference="false" type="{unknown}"/>
+    <parameter name="Until" byreference="false" type="{unknown}" default="NULL"/>
+  </method>
+  <method name="isLeapYear" start="103" end="106" abstract="false" final="false" static="true" visibility="public">
+    <docblock>
+      <description/>
+      <param variable="$iYear"/>
+      <return type="object">
+        <type full="Neuron\Util\bool" namespace="Neuron\Util" name="bool"/>
+      </return>
+    </docblock>
+    <parameter name="iYear" byreference="false" type="{unknown}"/>
+  </method>
+  <method name="subtractDays" start="114" end="125" abstract="false" final="false" static="true" visibility="public">
+    <docblock>
+      <description/>
+      <param variable="$iDays"/>
+      <param type="string" variable="$sDate"/>
+      <return description="- new date" type="object">
+        <type full="Neuron\Util\bool|string" namespace="Neuron\Util" name="bool|string"/>
+      </return>
+    </docblock>
+    <parameter name="iDays" byreference="false" type="{unknown}"/>
+    <parameter name="sDate" byreference="false" type="string" default="''"/>
+  </method>
+  <method name="getCurrentMonthStartDate" start="135" end="141" abstract="false" final="false" static="true" visibility="public"/>
+  <method name="getDaysInMonth" start="161" end="213" abstract="false" final="false" static="true" visibility="public">
+    <docblock>
+      <description/>
+      <suppresswarnings value="(PHPMD)"/>
+    </docblock>
+    <parameter name="iMonth" byreference="false" type="{unknown}"/>
+    <parameter name="iYear" byreference="false" type="{unknown}" default="NULL"/>
+  </method>
+  <method name="getCurrentMonthEndDate" start="223" end="232" abstract="false" final="false" static="true" visibility="public"/>
+  <method name="isSqlDateTime" start="234" end="247" abstract="false" final="false" static="true" visibility="public">
+    <parameter name="date_time" byreference="false" type="{unknown}"/>
+    <inline>
+      <comment value="already in sql format.." line="239"/>
+    </inline>
+  </method>
+  <method name="getMySqlDateTime" start="262" end="280" abstract="false" final="false" static="true" visibility="public">
+    <parameter name="date_time" byreference="false" type="{unknown}"/>
+  </method>
+  <method name="getMySqlDate" start="292" end="305" abstract="false" final="false" static="true" visibility="public">
+    <parameter name="date_time" byreference="false" type="{unknown}"/>
+  </method>
+  <method name="dateToJulian" start="317" end="327" abstract="false" final="false" static="true" visibility="public">
+    <parameter name="Date" byreference="false" type="{unknown}"/>
+  </method>
+  <method name="julianToDate" start="339" end="346" abstract="false" final="false" static="true" visibility="public">
+    <parameter name="dt1" byreference="false" type="{unknown}"/>
+  </method>
+  <method name="diff" start="359" end="365" abstract="false" final="false" static="true" visibility="public">
+    <parameter name="endDate" byreference="false" type="{unknown}"/>
+    <parameter name="beginDate" byreference="false" type="{unknown}"/>
+  </method>
+</class>

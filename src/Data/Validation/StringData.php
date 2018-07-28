@@ -3,9 +3,9 @@
 namespace Neuron\Data\Validation;
 
 /**
- * StringData string validation.
+ * Requires a string.
+ * @package Neuron\Data\Validation
  */
-
 class StringData extends Base
 {
 	protected function validate( $string )

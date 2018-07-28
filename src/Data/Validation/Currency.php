@@ -2,6 +2,10 @@
 
 namespace Neuron\Data\Validation;
 
+/**
+ * Requires a number with a maximum of 2 decimal places.
+ * @package Neuron\Data\Validation
+ */
 class Currency extends Base
 {
 	public function validate( $data )

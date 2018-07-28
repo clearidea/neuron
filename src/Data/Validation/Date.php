@@ -3,9 +3,9 @@
 namespace Neuron\Data\Validation;
 
 /**
- * Date validation.
+ * Requires a date with a specific format. Defaults to Y-m-d
+ * @package Neuron\Data\Validation
  */
-
 class Date extends Base
 {
 	private $_sFormat = 'Y-m-d';

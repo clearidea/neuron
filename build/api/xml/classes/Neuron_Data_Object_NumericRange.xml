@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class xmlns="http://xml.phpdox.net/src" full="Neuron\Data\Object\NumericRange" namespace="Neuron\Data\Object" name="NumericRange" abstract="false" final="false" start="5" end="15">
+  <file path="/Volumes/Storage/Projects/clearidea/open-source/Neuron/src/Data/Object" file="NumericRange.php" realpath="/Volumes/Storage/Projects/clearidea/open-source/Neuron/src/Data/Object/NumericRange.php" size="213" time="2018-06-25T21:46:00+00:00" unixtime="1529963160" sha1="058b28124713c2e44ca63ade2ae31fd7e9da089c" relative="Data/Object/NumericRange.php"/>
+  <member name="Minimum" visibility="public" static="false" line="7"/>
+  <member name="Maximum" visibility="public" static="false" line="8"/>
+  <constructor name="__construct" start="10" end="14" abstract="false" final="false" static="false" visibility="public">
+    <parameter name="Minimum" byreference="false" type="{unknown}"/>
+    <parameter name="Maximum" byreference="false" type="{unknown}"/>
+  </constructor>
+</class>

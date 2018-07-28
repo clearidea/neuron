@@ -1,0 +1,352 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class xmlns="http://xml.phpdox.net/src" full="Neuron\Application\CommandLineBase" namespace="Neuron\Application" name="CommandLineBase" abstract="true" final="false" start="11" end="116">
+  <file path="/Volumes/Storage/Projects/clearidea/open-source/Neuron/src/Application" file="CommandLineBase.php" realpath="/Volumes/Storage/Projects/clearidea/open-source/Neuron/src/Application/CommandLineBase.php" size="2406" time="2018-05-02T12:08:19+00:00" unixtime="1525262899" sha1="0bd07df937246ec5fb2450916ec6dbacb78092af" relative="Application/CommandLineBase.php"/>
+  <docblock>
+    <description compact="Command line applications are designed to only be executed from the context of the command line.">Allows for easy addition and handling of command line parameters.</description>
+  </docblock>
+  <extends full="Neuron\Application\Base" namespace="Neuron\Application" name="Base"/>
+  <member name="_aHandlers" visibility="private" static="false" line="13"/>
+  <method name="getHandlers" start="19" end="22" abstract="false" final="false" static="false" visibility="protected">
+    <docblock>
+      <description/>
+      <return description="- accessor for the parameter array." type="array"/>
+    </docblock>
+  </method>
+  <method name="addHandler" start="36" end="43" abstract="false" final="false" static="false" visibility="protected">
+    <docblock>
+      <description/>
+      <param variable="$sSwitch"/>
+      <param variable="$sDescription"/>
+      <param variable="$method"/>
+      <param type="object" variable="$bParam">Adds a handler for command line parameters.
+The switch is the parameter that causes the specified method to be called.
+If the bParam parameter is set to true, the token immediately follwing the
+switch on the command line will be passed as the parameter to the handler.<type full="Neuron\Application\bool|false" namespace="Neuron\Application" name="bool|false"/></param>
+    </docblock>
+    <parameter name="sSwitch" byreference="false" type="{unknown}"/>
+    <parameter name="sDescription" byreference="false" type="{unknown}"/>
+    <parameter name="method" byreference="false" type="{unknown}"/>
+    <parameter name="bParam" byreference="false" type="boolean" default="false"/>
+  </method>
+  <method name="processParameters" start="49" end="75" abstract="false" final="false" static="false" visibility="protected">
+    <docblock>
+      <description compact="Processes the argv array."/>
+    </docblock>
+  </method>
+  <method name="help" start="82" end="94" abstract="false" final="false" static="false" visibility="protected">
+    <docblock>
+      <description compact="Activated by the --help parameter. Shows all configured switches and their hints."/>
+    </docblock>
+  </method>
+  <method name="onStart" start="102" end="115" abstract="false" final="false" static="false" visibility="protected">
+    <docblock>
+      <description compact="Called by ApplicationBase. Returning false terminates the application."/>
+      <return type="object">
+        <type full="Neuron\Application\bool" namespace="Neuron\Application" name="bool"/>
+      </return>
+    </docblock>
+  </method>
+  <parent full="Neuron\Application\Base" namespace="Neuron\Application" name="Base">
+    <extends full="Neuron\Log\Base" namespace="Neuron\Log" name="Base"/>
+    <implements full="Neuron\Application\IApplication" namespace="Neuron\Application" name="IApplication"/>
+    <member name="_aParameters" visibility="protected" static="false" line="18"/>
+    <member name="_Settings" visibility="protected" static="false" line="19"/>
+    <method name="setSettingSource" start="26" end="30" abstract="false" final="false" static="false" visibility="public">
+      <docblock>
+        <description/>
+        <param type="object" variable="$Source">
+          <type full="Neuron\Application\Setting\Source\ISettingSource" namespace="Neuron\Application\Setting\Source" name="ISettingSource"/>
+        </param>
+        <return type="object">
+          <type full="Neuron\Application\$this" namespace="Neuron\Application" name="$this"/>
+        </return>
+      </docblock>
+      <parameter name="Source" byreference="false" type="object">
+        <type full="Neuron\Setting\Source\ISettingSource" namespace="Neuron\Setting\Source" name="ISettingSource"/>
+      </parameter>
+    </method>
+    <method name="getSetting" start="38" end="41" abstract="false" final="false" static="false" visibility="public">
+      <docblock>
+        <description/>
+        <param variable="$sName"/>
+        <param type="string" variable="$sSection"/>
+        <return type="mixed"/>
+      </docblock>
+      <parameter name="sName" byreference="false" type="{unknown}"/>
+      <parameter name="sSection" byreference="false" type="string" default="'default'"/>
+    </method>
+    <method name="setSetting" start="49" end="52" abstract="false" final="false" static="false" visibility="public">
+      <docblock>
+        <description/>
+        <param variable="$sName"/>
+        <param variable="$sValue"/>
+        <param type="string" variable="$sSection"/>
+      </docblock>
+      <parameter name="sName" byreference="false" type="{unknown}"/>
+      <parameter name="sValue" byreference="false" type="{unknown}"/>
+      <parameter name="sSection" byreference="false" type="string" default="'default'"/>
+    </method>
+    <method name="isCommandLine" start="58" end="61" abstract="false" final="false" static="false" visibility="public">
+      <docblock>
+        <description/>
+        <return type="object">
+          <type full="Neuron\Application\bool" namespace="Neuron\Application" name="bool"/>
+        </return>
+      </docblock>
+    </method>
+    <constructor name="__construct" start="67" end="80" abstract="false" final="false" static="false" visibility="public">
+      <docblock>
+        <description compact="Creates and configures the default logger."/>
+      </docblock>
+    </constructor>
+    <method name="onStart" start="89" end="92" abstract="false" final="false" static="false" visibility="protected">
+      <docblock>
+        <description/>
+        <return type="object">Called before onRun. If false is returned, application terminates
+without executing onRun.<type full="Neuron\Application\bool" namespace="Neuron\Application" name="bool"/></return>
+      </docblock>
+    </method>
+    <method name="onFinish" start="98" end="100" abstract="false" final="false" static="false" visibility="protected">
+      <docblock>
+        <description compact="Called immediately after onRun."/>
+      </docblock>
+    </method>
+    <method name="onError" start="108" end="115" abstract="false" final="false" static="false" visibility="protected">
+      <docblock>
+        <description/>
+        <param type="object" variable="$exception">
+          <type full="\Exception" namespace="" name="Exception"/>
+        </param>
+        <return type="object">Called for any unhandled exceptions.<type full="Neuron\Application\bool" namespace="Neuron\Application" name="bool"/></return>
+      </docblock>
+      <parameter name="exception" byreference="false" type="object">
+        <type full="Exception" namespace="" name="Exception"/>
+      </parameter>
+      <inline>
+        <comment value="Returning false skips executing onFinish." line="112"/>
+      </inline>
+    </method>
+    <method name="onRun" start="122" end="122" abstract="true" final="false" static="false" visibility="protected">
+      <docblock>
+        <description/>
+        <return type="mixed">Must be implemented by derived classes.</return>
+      </docblock>
+    </method>
+    <method name="getVersion" start="130" end="130" abstract="true" final="false" static="false" visibility="public">
+      <docblock>
+        <description/>
+        <return type="string">Application version number.
+Must be implemented by derived classes.</return>
+      </docblock>
+    </method>
+    <method name="run" start="137" end="161" abstract="false" final="false" static="false" visibility="public">
+      <docblock>
+        <description/>
+        <param type="object" variable="$aArgv">
+          <type full="Neuron\Application\array|null" namespace="Neuron\Application" name="array|null"/>
+        </param>
+        <return type="object">
+          <type full="Neuron\Application\bool" namespace="Neuron\Application" name="bool"/>
+        </return>
+      </docblock>
+      <parameter name="aArgv" byreference="false" type="array" default="NULL"/>
+    </method>
+    <method name="getParameters" start="170" end="173" abstract="false" final="false" static="false" visibility="protected">
+      <docblock>
+        <description/>
+        <return type="array">returns parameters passed to the run method.</return>
+      </docblock>
+    </method>
+    <method name="getParameter" start="180" end="183" abstract="false" final="false" static="false" visibility="public">
+      <docblock>
+        <description/>
+        <param variable="$param"/>
+        <return type="mixed"/>
+      </docblock>
+      <parameter name="param" byreference="false" type="{unknown}"/>
+    </method>
+    <method name="getLogger" start="191" end="194" abstract="false" final="false" static="false" visibility="public">
+      <docblock>
+        <description/>
+        <return type="object">
+          <type full="Neuron\Application\Log\LogMux" namespace="Neuron\Application\Log" name="LogMux"/>
+        </return>
+      </docblock>
+    </method>
+    <method name="setRegistryObject" start="205" end="208" abstract="false" final="false" static="false" visibility="public">
+      <docblock>
+        <description/>
+        <param variable="$name"/>
+        <param variable="$object"/>
+      </docblock>
+      <parameter name="name" byreference="false" type="{unknown}"/>
+      <parameter name="object" byreference="false" type="{unknown}"/>
+    </method>
+    <method name="getRegistryObject" start="215" end="218" abstract="false" final="false" static="false" visibility="public">
+      <docblock>
+        <description/>
+        <param variable="$name"/>
+        <return type="mixed"/>
+      </docblock>
+      <parameter name="name" byreference="false" type="{unknown}"/>
+    </method>
+  </parent>
+  <parent full="Neuron\Log\Base" namespace="Neuron\Log" name="Base">
+    <implements full="Neuron\Log\ILogger" namespace="Neuron\Log" name="ILogger"/>
+    <constructor name="__construct" start="13" end="16" abstract="false" final="false" static="false" visibility="public">
+      <docblock>
+        <description/>
+        <param type="object" variable="$Logger">
+          <type full="Neuron\Log\ILogger" namespace="Neuron\Log" name="ILogger"/>
+        </param>
+      </docblock>
+      <parameter name="Logger" byreference="false" type="object">
+        <type full="Neuron\Log\ILogger" namespace="Neuron\Log" name="ILogger"/>
+      </parameter>
+    </constructor>
+    <method name="getLogger" start="22" end="25" abstract="false" final="false" static="false" visibility="public">
+      <docblock>
+        <description/>
+        <return type="object">
+          <type full="Neuron\Log\ILogger" namespace="Neuron\Log" name="ILogger"/>
+        </return>
+      </docblock>
+    </method>
+    <method name="log" start="35" end="38" abstract="false" final="false" static="false" visibility="public">
+      <docblock>
+        <description/>
+        <param variable="$text"/>
+        <param variable="$iLevel">Writes to the logger. Defaults to debug level.
+Data is only written to the log based on the loggers run-level.</param>
+      </docblock>
+      <parameter name="text" byreference="false" type="{unknown}"/>
+      <parameter name="iLevel" byreference="false" type="{unknown}" default="" constant="self::DEBUG"/>
+    </method>
+    <method name="setRunLevel" start="44" end="47" abstract="false" final="false" static="false" visibility="public">
+      <docblock>
+        <description/>
+        <param variable="$iLevel"/>
+      </docblock>
+      <parameter name="iLevel" byreference="false" type="{unknown}"/>
+    </method>
+    <method name="debug" start="53" end="56" abstract="false" final="false" static="false" visibility="public">
+      <docblock>
+        <description/>
+        <param variable="$text"/>
+      </docblock>
+      <parameter name="text" byreference="false" type="{unknown}"/>
+    </method>
+    <method name="info" start="62" end="65" abstract="false" final="false" static="false" visibility="public">
+      <docblock>
+        <description/>
+        <param variable="$text"/>
+      </docblock>
+      <parameter name="text" byreference="false" type="{unknown}"/>
+    </method>
+    <method name="warning" start="71" end="74" abstract="false" final="false" static="false" visibility="public">
+      <docblock>
+        <description/>
+        <param variable="$text"/>
+      </docblock>
+      <parameter name="text" byreference="false" type="{unknown}"/>
+    </method>
+    <method name="error" start="80" end="83" abstract="false" final="false" static="false" visibility="public">
+      <docblock>
+        <description/>
+        <param variable="$text"/>
+      </docblock>
+      <parameter name="text" byreference="false" type="{unknown}"/>
+    </method>
+    <method name="fatal" start="89" end="92" abstract="false" final="false" static="false" visibility="public">
+      <docblock>
+        <description/>
+        <param variable="$text"/>
+      </docblock>
+      <parameter name="text" byreference="false" type="{unknown}"/>
+    </method>
+  </parent>
+  <interface full="Neuron\Log\ILogger" namespace="Neuron\Log" name="ILogger">
+    <constant type="{unknown}" name="DEBUG" value="0"/>
+    <constant type="{unknown}" name="INFO" value="10"/>
+    <constant type="{unknown}" name="WARNING" value="20"/>
+    <constant type="{unknown}" name="ERROR" value="30"/>
+    <constant type="{unknown}" name="FATAL" value="40"/>
+    <method name="log" start="26" end="26" abstract="false" final="false" static="false" visibility="public">
+      <docblock>
+        <description/>
+        <param variable="$text"/>
+        <param variable="$iLevel"/>
+      </docblock>
+      <parameter name="text" byreference="false" type="{unknown}"/>
+      <parameter name="iLevel" byreference="false" type="{unknown}"/>
+    </method>
+    <method name="setRunLevel" start="32" end="32" abstract="false" final="false" static="false" visibility="public">
+      <docblock>
+        <description/>
+        <param variable="$iLevel"/>
+        <return type="mixed"/>
+      </docblock>
+      <parameter name="iLevel" byreference="false" type="{unknown}"/>
+    </method>
+    <method name="debug" start="38" end="38" abstract="false" final="false" static="false" visibility="public">
+      <docblock>
+        <description/>
+        <param variable="$text"/>
+        <return type="mixed"/>
+      </docblock>
+      <parameter name="text" byreference="false" type="{unknown}"/>
+    </method>
+    <method name="info" start="44" end="44" abstract="false" final="false" static="false" visibility="public">
+      <docblock>
+        <description/>
+        <param variable="$text"/>
+        <return type="mixed"/>
+      </docblock>
+      <parameter name="text" byreference="false" type="{unknown}"/>
+    </method>
+    <method name="warning" start="50" end="50" abstract="false" final="false" static="false" visibility="public">
+      <docblock>
+        <description/>
+        <param variable="$text"/>
+        <return type="mixed"/>
+      </docblock>
+      <parameter name="text" byreference="false" type="{unknown}"/>
+    </method>
+    <method name="error" start="56" end="56" abstract="false" final="false" static="false" visibility="public">
+      <docblock>
+        <description/>
+        <param variable="$text"/>
+        <return type="mixed"/>
+      </docblock>
+      <parameter name="text" byreference="false" type="{unknown}"/>
+    </method>
+    <method name="fatal" start="62" end="62" abstract="false" final="false" static="false" visibility="public">
+      <docblock>
+        <description/>
+        <param variable="$text"/>
+        <return type="mixed"/>
+      </docblock>
+      <parameter name="text" byreference="false" type="{unknown}"/>
+    </method>
+  </interface>
+  <interface full="Neuron\Application\IApplication" namespace="Neuron\Application" name="IApplication">
+    <extends full="Neuron\Log\ILogger" namespace="Neuron\Log" name="ILogger"/>
+    <extends full="Neuron\Patterns\IRunnable" namespace="Neuron\Patterns" name="IRunnable"/>
+    <method name="getSetting" start="16" end="16" abstract="false" final="false" static="false" visibility="public">
+      <parameter name="sName" byreference="false" type="{unknown}"/>
+      <parameter name="sSection" byreference="false" type="string" default="'default'"/>
+    </method>
+    <method name="setSetting" start="17" end="17" abstract="false" final="false" static="false" visibility="public">
+      <parameter name="sName" byreference="false" type="{unknown}"/>
+      <parameter name="sValue" byreference="false" type="{unknown}"/>
+      <parameter name="sSection" byreference="false" type="string" default="'default'"/>
+    </method>
+    <method name="setRegistryObject" start="19" end="19" abstract="false" final="false" static="false" visibility="public">
+      <parameter name="name" byreference="false" type="{unknown}"/>
+      <parameter name="object" byreference="false" type="{unknown}"/>
+    </method>
+    <method name="getRegistryObject" start="20" end="20" abstract="false" final="false" static="false" visibility="public">
+      <parameter name="name" byreference="false" type="{unknown}"/>
+    </method>
+  </interface>
+</class>

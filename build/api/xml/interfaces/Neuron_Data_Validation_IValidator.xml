@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<interface xmlns="http://xml.phpdox.net/src" full="Neuron\Data\Validation\IValidator" namespace="Neuron\Data\Validation" name="IValidator" abstract="false" final="false" start="5" end="8">
+  <file path="/Volumes/Storage/Projects/clearidea/open-source/Neuron/src/Data/Validation" file="IValidator.php" realpath="/Volumes/Storage/Projects/clearidea/open-source/Neuron/src/Data/Validation/IValidator.php" size="109" time="2018-06-24T12:24:24+00:00" unixtime="1529843064" sha1="ddb5f792cbff931fe650deb7417f57a1110db586" relative="Data/Validation/IValidator.php"/>
+  <method name="isValid" start="7" end="7" abstract="false" final="false" static="false" visibility="public">
+    <return type="bool" nullable="false"/>
+    <parameter name="data" byreference="false" type="{unknown}"/>
+  </method>
+  <implementors>
+    <class full="Neuron\Data\Validation\Base" namespace="Neuron\Data\Validation" name="Base"/>
+    <class full="Neuron\Data\Validation\Collection" namespace="Neuron\Data\Validation" name="Collection"/>
+    <class full="Neuron\Data\Validation\Currency" namespace="Neuron\Data\Validation" name="Currency"/>
+    <class full="Neuron\Data\Validation\Date" namespace="Neuron\Data\Validation" name="Date"/>
+    <class full="Neuron\Data\Validation\DateRange" namespace="Neuron\Data\Validation" name="DateRange"/>
+    <class full="Neuron\Data\Validation\DateWithinRange" namespace="Neuron\Data\Validation" name="DateWithinRange"/>
+    <class full="Neuron\Data\Validation\Ein" namespace="Neuron\Data\Validation" name="Ein"/>
+    <class full="Neuron\Data\Validation\Email" namespace="Neuron\Data\Validation" name="Email"/>
+    <class full="Neuron\Data\Validation\FloatingPoint" namespace="Neuron\Data\Validation" name="FloatingPoint"/>
+    <class full="Neuron\Data\Validation\Integer" namespace="Neuron\Data\Validation" name="Integer"/>
+    <class full="Neuron\Data\Validation\IPAddress" namespace="Neuron\Data\Validation" name="IPAddress"/>
+    <class full="Neuron\Data\Validation\Name" namespace="Neuron\Data\Validation" name="Name"/>
+    <class full="Neuron\Data\Validation\NotEmpty" namespace="Neuron\Data\Validation" name="NotEmpty"/>
+    <class full="Neuron\Data\Validation\NotNull" namespace="Neuron\Data\Validation" name="NotNull"/>
+    <class full="Neuron\Data\Validation\NumberWithinRange" namespace="Neuron\Data\Validation" name="NumberWithinRange"/>
+    <class full="Neuron\Data\Validation\NumericRange" namespace="Neuron\Data\Validation" name="NumericRange"/>
+    <class full="Neuron\Data\Validation\PhoneNumber" namespace="Neuron\Data\Validation" name="PhoneNumber"/>
+    <class full="Neuron\Data\Validation\Positive" namespace="Neuron\Data\Validation" name="Positive"/>
+    <class full="Neuron\Data\Validation\StringData" namespace="Neuron\Data\Validation" name="StringData"/>
+    <class full="Neuron\Data\Validation\Time" namespace="Neuron\Data\Validation" name="Time"/>
+    <class full="Neuron\Data\Validation\Url" namespace="Neuron\Data\Validation" name="Url"/>
+  <class full="Neuron\Data\Validation\Url" namespace="Neuron\Data\Validation" name="Url"/></implementors>
+  <extenders>
+    <extender full="Neuron\Data\Validation\ICollection" namespace="Neuron\Data\Validation" name="ICollection"/>
+  </extenders>
+</interface>

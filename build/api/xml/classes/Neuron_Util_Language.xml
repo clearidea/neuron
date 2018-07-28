@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class xmlns="http://xml.phpdox.net/src" full="Neuron\Util\Language" namespace="Neuron\Util" name="Language" abstract="false" final="false" start="8" end="90">
+  <file path="/Volumes/Storage/Projects/clearidea/open-source/Neuron/src/Util" file="Language.php" realpath="/Volumes/Storage/Projects/clearidea/open-source/Neuron/src/Util/Language.php" size="1474" time="2016-08-14T10:21:13+00:00" unixtime="1471170073" sha1="1b21ac331c6e1f58f5c192d4f633d3621d8794af" relative="Util/Language.php"/>
+  <extends full="Neuron\Patterns\Singleton\Memcache" namespace="Neuron\Patterns\Singleton" name="Memcache"/>
+  <constant type="string" name="LANGUAGE" value="'language'"/>
+  <constant type="string" name="ID" value="'id'"/>
+  <constant type="string" name="TEXT" value="'text'"/>
+  <member name="_aText" visibility="private" static="false" line="14"/>
+  <method name="load" start="21" end="48" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description compact="Loads csv data from a string. Format: language, id, text"/>
+      <param variable="$sText"/>
+      <return type="object">
+        <type full="Neuron\Util\bool" namespace="Neuron\Util" name="bool"/>
+      </return>
+    </docblock>
+    <parameter name="sText" byreference="false" type="{unknown}"/>
+  </method>
+  <method name="setLanguage" start="55" end="58" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description compact="Sets teh current language in a session variable."/>
+      <param variable="$sLanguage"/>
+    </docblock>
+    <parameter name="sLanguage" byreference="false" type="{unknown}"/>
+  </method>
+  <method name="getText" start="66" end="89" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description compact="Gets the current language text for an id."/>
+      <param variable="$sId"/>
+      <param type="string" variable="$sLanguage"/>
+      <return type="string"/>
+    </docblock>
+    <parameter name="sId" byreference="false" type="{unknown}"/>
+    <parameter name="sLanguage" byreference="false" type="string" default="''"/>
+  </method>
+  <parent full="Neuron\Patterns\Singleton\Memcache" namespace="Neuron\Patterns\Singleton" name="Memcache">
+    <extends full="Neuron\Patterns\Singleton\Base" namespace="Neuron\Patterns\Singleton" name="Base"/>
+    <method name="getMemcache" start="15" end="25" abstract="false" final="false" static="true" visibility="protected"/>
+    <method name="instance" start="27" end="31" abstract="false" final="false" static="true" visibility="public"/>
+    <method name="serialize" start="33" end="37" abstract="false" final="false" static="false" visibility="public"/>
+    <method name="invalidate" start="39" end="43" abstract="false" final="false" static="true" visibility="public"/>
+  </parent>
+  <parent full="Neuron\Patterns\Singleton\Base" namespace="Neuron\Patterns\Singleton" name="Base">
+    <implements full="Neuron\Patterns\Singleton\ISingleton" namespace="Neuron\Patterns\Singleton" name="ISingleton"/>
+    <method name="getInstance" start="16" end="36" abstract="false" final="false" static="true" visibility="public">
+      <docblock>
+        <description/>
+        <return type="null"/>
+      </docblock>
+    </method>
+  </parent>
+  <interface full="Neuron\Patterns\Singleton\ISingleton" namespace="Neuron\Patterns\Singleton" name="ISingleton">
+    <method name="serialize" start="7" end="7" abstract="false" final="false" static="false" visibility="public"/>
+    <method name="invalidate" start="8" end="8" abstract="false" final="false" static="true" visibility="public"/>
+    <method name="instance" start="9" end="9" abstract="false" final="false" static="true" visibility="public"/>
+  </interface>
+</class>

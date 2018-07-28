@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class xmlns="http://xml.phpdox.net/src" full="Neuron\Patterns\Singleton\Memcache" namespace="Neuron\Patterns\Singleton" name="Memcache" abstract="false" final="false" start="11" end="44">
+  <file path="/Volumes/Storage/Projects/clearidea/open-source/Neuron/src/Patterns/Singleton" file="Memcache.php" realpath="/Volumes/Storage/Projects/clearidea/open-source/Neuron/src/Patterns/Singleton/Memcache.php" size="785" time="2016-08-14T10:21:13+00:00" unixtime="1471170073" sha1="76280c84d1d6ed1fec6dad31e0d933cfaa95e036" relative="Patterns/Singleton/Memcache.php"/>
+  <extends full="Neuron\Patterns\Singleton\Base" namespace="Neuron\Patterns\Singleton" name="Base"/>
+  <member name="_memcache" visibility="private" static="true" line="13"/>
+  <method name="getMemcache" start="15" end="25" abstract="false" final="false" static="true" visibility="protected"/>
+  <method name="instance" start="27" end="31" abstract="false" final="false" static="true" visibility="public"/>
+  <method name="serialize" start="33" end="37" abstract="false" final="false" static="false" visibility="public"/>
+  <method name="invalidate" start="39" end="43" abstract="false" final="false" static="true" visibility="public"/>
+  <parent full="Neuron\Patterns\Singleton\Base" namespace="Neuron\Patterns\Singleton" name="Base">
+    <implements full="Neuron\Patterns\Singleton\ISingleton" namespace="Neuron\Patterns\Singleton" name="ISingleton"/>
+    <method name="getInstance" start="16" end="36" abstract="false" final="false" static="true" visibility="public">
+      <docblock>
+        <description/>
+        <return type="null"/>
+      </docblock>
+    </method>
+  </parent>
+  <interface full="Neuron\Patterns\Singleton\ISingleton" namespace="Neuron\Patterns\Singleton" name="ISingleton">
+    <method name="serialize" start="7" end="7" abstract="false" final="false" static="false" visibility="public"/>
+    <method name="invalidate" start="8" end="8" abstract="false" final="false" static="true" visibility="public"/>
+    <method name="instance" start="9" end="9" abstract="false" final="false" static="true" visibility="public"/>
+  </interface>
+  <extenders>
+    <extender full="Neuron\Util\Language" namespace="Neuron\Util" name="Language"/>
+  </extenders>
+</class>

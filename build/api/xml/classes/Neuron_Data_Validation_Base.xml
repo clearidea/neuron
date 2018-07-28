@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class xmlns="http://xml.phpdox.net/src" full="Neuron\Data\Validation\Base" namespace="Neuron\Data\Validation" name="Base" abstract="true" final="false" start="9" end="29">
+  <file path="/Volumes/Storage/Projects/clearidea/open-source/Neuron/src/Data/Validation" file="Base.php" realpath="/Volumes/Storage/Projects/clearidea/open-source/Neuron/src/Data/Validation/Base.php" size="401" time="2018-06-24T12:24:24+00:00" unixtime="1529843064" sha1="5b99e36e8c894ca6281a1e80f0f97cea37a1e157" relative="Data/Validation/Base.php"/>
+  <docblock>
+    <description compact="Validator base class."/>
+  </docblock>
+  <implements full="Neuron\Data\Validation\IValidator" namespace="Neuron\Data\Validation" name="IValidator"/>
+  <method name="validate" start="11" end="11" abstract="true" final="false" static="false" visibility="protected">
+    <parameter name="data" byreference="false" type="{unknown}"/>
+  </method>
+  <constructor name="__construct" start="13" end="16" abstract="false" final="false" static="false" visibility="public"/>
+  <method name="isValid" start="25" end="28" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description compact="Returns true if validation is successful"/>
+      <param variable="$data"/>
+      <return type="object">
+        <type full="Neuron\Data\Validation\bool" namespace="Neuron\Data\Validation" name="bool"/>
+      </return>
+    </docblock>
+    <return type="bool" nullable="false"/>
+    <parameter name="data" byreference="false" type="{unknown}"/>
+  </method>
+  <interface full="Neuron\Data\Validation\IValidator" namespace="Neuron\Data\Validation" name="IValidator">
+    <method name="isValid" start="7" end="7" abstract="false" final="false" static="false" visibility="public">
+      <return type="bool" nullable="false"/>
+      <parameter name="data" byreference="false" type="{unknown}"/>
+    </method>
+  </interface>
+  <extenders>
+    <extender full="Neuron\Data\Validation\Collection" namespace="Neuron\Data\Validation" name="Collection"/>
+    <extender full="Neuron\Data\Validation\Currency" namespace="Neuron\Data\Validation" name="Currency"/>
+    <extender full="Neuron\Data\Validation\Date" namespace="Neuron\Data\Validation" name="Date"/>
+    <extender full="Neuron\Data\Validation\DateRange" namespace="Neuron\Data\Validation" name="DateRange"/>
+    <extender full="Neuron\Data\Validation\DateWithinRange" namespace="Neuron\Data\Validation" name="DateWithinRange"/>
+    <extender full="Neuron\Data\Validation\Ein" namespace="Neuron\Data\Validation" name="Ein"/>
+    <extender full="Neuron\Data\Validation\Email" namespace="Neuron\Data\Validation" name="Email"/>
+    <extender full="Neuron\Data\Validation\FloatingPoint" namespace="Neuron\Data\Validation" name="FloatingPoint"/>
+    <extender full="Neuron\Data\Validation\Integer" namespace="Neuron\Data\Validation" name="Integer"/>
+    <extender full="Neuron\Data\Validation\IPAddress" namespace="Neuron\Data\Validation" name="IPAddress"/>
+    <extender full="Neuron\Data\Validation\Name" namespace="Neuron\Data\Validation" name="Name"/>
+    <extender full="Neuron\Data\Validation\NotEmpty" namespace="Neuron\Data\Validation" name="NotEmpty"/>
+    <extender full="Neuron\Data\Validation\NotNull" namespace="Neuron\Data\Validation" name="NotNull"/>
+    <extender full="Neuron\Data\Validation\NumberWithinRange" namespace="Neuron\Data\Validation" name="NumberWithinRange"/>
+    <extender full="Neuron\Data\Validation\NumericRange" namespace="Neuron\Data\Validation" name="NumericRange"/>
+    <extender full="Neuron\Data\Validation\PhoneNumber" namespace="Neuron\Data\Validation" name="PhoneNumber"/>
+    <extender full="Neuron\Data\Validation\Positive" namespace="Neuron\Data\Validation" name="Positive"/>
+    <extender full="Neuron\Data\Validation\StringData" namespace="Neuron\Data\Validation" name="StringData"/>
+    <extender full="Neuron\Data\Validation\Time" namespace="Neuron\Data\Validation" name="Time"/>
+    <extender full="Neuron\Data\Validation\Url" namespace="Neuron\Data\Validation" name="Url"/>
+  </extenders>
+</class>

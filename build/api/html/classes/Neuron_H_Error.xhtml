@@ -1,0 +1,585 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <title>phpDox - Neuron\H\Error</title>
+    <link rel="stylesheet" type="text/css" href="../css/style.css" media="screen"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+  </head>
+  <body>
+    <nav class="topnav">
+      <ul>
+        <li>
+          <div class="logo"><span>/**</span>phpDox</div>
+        </li>
+        <li class="separator">
+          <a href="../index.xhtml">Overview</a>
+        </li>
+        <li class="separator">
+          <a href="../namespaces.xhtml">Namespaces</a>
+        </li>
+        <li>
+          <a href="../interfaces.xhtml">Interfaces</a>
+        </li>
+        <li>
+          <a href="../classes.xhtml">Classes</a>
+        </li>
+        <li>
+          <a href="../traits.xhtml">Traits</a>
+        </li>
+        <li class="separator">
+          <a href="../source/index.xhtml">Source</a>
+        </li>
+      </ul>
+    </nav>
+    <div id="mainstage">
+      <div class="box">
+        <ul class="breadcrumb">
+          <li>
+            <a href="../index.xhtml">Overview</a>
+          </li>
+          <li class="separator">
+            <a href="../classes.xhtml">Classes</a>
+          </li>
+          <li class="separator">
+            <a href="../classes.xhtml#Neuron_H">Neuron\H</a>
+          </li>
+          <li class="separator">Error</li>
+        </ul>
+      </div>
+      <nav class="box">
+        <ul>
+          <li>
+            <a href="#introduction">Introduction</a>
+          </li>
+          <li>
+            <a href="#synopsis">Synopsis</a>
+          </li>
+          <li>
+            <a href="#constants">Constants</a>
+          </li>
+          <li>
+            <a href="../source/H/Error.php.xhtml#line14">Source</a>
+          </li>
+        </ul>
+      </nav>
+      <section>
+        <h1 id="introduction"><small>Neuron\H\</small>Error</h1>
+        <h4>Class Error</h4>
+        <p/>
+        <ul/>
+        <h2 id="synopsis">Synopsis</h2>
+        <div class="synopsis">class Error
+            {<br/><ul class="none"><li>// constants</li><li>const EPERM = 1;</li><li>const ENOENT = 2;</li><li>const ESRCH = 3;</li><li>const EINTR = 4;</li><li>const EIO = 5;</li><li>const ENXIO = 6;</li><li>const E2BIG = 7;</li><li>const ENOEXEC = 8;</li><li>const EBADF = 9;</li><li>const ECHILD = 0;</li><li>const EAGAIN = 11;</li><li>const ENOMEM = 12;</li><li>const EACCES = 13;</li><li>const EFAULT = 14;</li><li>const ENOTBLK = 15;</li><li>const EBUSY = 16;</li><li>const EEXIST = 17;</li><li>const EXDEV = 18;</li><li>const ENODEV = 19;</li><li>const ENOTDIR = 20;</li><li>const EISDIR = 21;</li><li>const EINVAL = 22;</li><li>const ENFILE = 23;</li><li>const EMFILE = 24;</li><li>const ENOTTY = 25;</li><li>const ETXTBSY = 26;</li><li>const EFBIG = 27;</li><li>const ENOSPC = 28;</li><li>const ESPIPE = 29;</li><li>const EROFS = 30;</li><li>const EMLINK = 31;</li><li>const EPIPE = 32;</li><li>const EDOM = 33;</li><li>const ERANGE = 34;</li><li>const EDEADLK = 35;</li><li>const ENAMETOOLONG = 36;</li><li>const ENOLCK = 37;</li><li>const ENOSYS = 38;</li><li>const ENOTEMPTY = 39;</li><li>const ELOOP = 40;</li><li>const EWOULDBLOCK = 11;</li><li>const ENOMSG = 42;</li><li>const EIDRM = 43;</li><li>const ECHRNG = 44;</li><li>const EL2NSYNC = 45;</li><li>const EL3HLT = 46;</li><li>const EL3RST = 47;</li><li>const ELNRNG = 48;</li><li>const EUNATCH = 49;</li><li>const ENOCSI = 50;</li><li>const EL2HLT = 51;</li><li>const EBADE = 52;</li><li>const EBADR = 53;</li><li>const EXFULL = 54;</li><li>const ENOANO = 55;</li><li>const EBADRQC = 56;</li><li>const EBADSLT = 57;</li><li>const EDEADLOCK = 58;</li><li>const EBFONT = 59;</li><li>const ENOSTR = 60;</li><li>const ENODATA = 61;</li><li>const ETIME = 62;</li><li>const ENOSR = 63;</li><li>const ENONET = 64;</li><li>const ENOPKG = 65;</li><li>const EREMOTE = 66;</li><li>const ENOLINK = 67;</li><li>const EADV = 68;</li><li>const ESRMNT = 69;</li><li>const ECOMM = 70;</li><li>const EPROTO = 71;</li><li>const EMULTIHOP = 72;</li><li>const EDOTDOT = 73;</li><li>const EBADMSG = 74;</li><li>const EOVERFLOW = 75;</li><li>const ENOTUNIQ = 76;</li><li>const EBADFD = 77;</li><li>const EREMCHG = 78;</li><li>const ELIBACC = 79;</li><li>const ELIBBAD = 80;</li><li>const ELIBSCN = 81;</li><li>const ELIBMAX = 82;</li><li>const ELIBEXEC = 83;</li><li>const EILSEQ = 84;</li><li>const ERESTART = 85;</li><li>const ESTRPIPE = 86;</li><li>const EUSERS = 87;</li><li>const ENOTSOCK = 88;</li><li>const EDESTADDRREQ = 89;</li><li>const EMSGSIZE = 90;</li><li>const EPROTOTYPE = 91;</li><li>const ENOPROTOOPT = 92;</li><li>const EPROTONOSUPPORT = 93;</li><li>const ESOCKTNOSUPPORT = 94;</li><li>const EOPNOTSUPP = 95;</li><li>const EPFNOSUPPORT = 96;</li><li>const EAFNOSUPPORT = 97;</li><li>const EADDRINUSE = 98;</li><li>const EADDRNOTAVAIL = 99;</li><li>const ENETDOWN = 100;</li><li>const ENETUNREACH = 101;</li><li>const ENETRESET = 102;</li><li>const ECONNABORTED = 103;</li><li>const ECONNRESET = 104;</li><li>const ENOBUFS = 105;</li><li>const EISCONN = 106;</li><li>const ENOTCONN = 107;</li><li>const ESHUTDOWN = 108;</li><li>const ETOOMANYREFS = 109;</li><li>const ETIMEDOUT = 110;</li><li>const ECONNREFUSED = 111;</li><li>const EHOSTDOWN = 112;</li><li>const EHOSTUNREACH = 113;</li><li>const EALREADY = 114;</li><li>const EINPROGRESS = 115;</li><li>const ESTALE = 116;</li><li>const EUCLEAN = 117;</li><li>const ENOTNAM = 118;</li><li>const ENAVAIL = 119;</li><li>const EISNAM = 120;</li><li>const EREMOTEIO = 121;</li><li>const ERESTARTSYS = 512;</li><li>const ERESTARTNOINTR = 513;</li></ul>
+
+            }<br/></div>
+        <h2 id="constants">Constants</h2>
+        <table class="styled">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Value</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td id="EPERM">EPERM</td>
+              <td>1</td>
+            </tr>
+            <tr>
+              <td id="ENOENT">ENOENT</td>
+              <td>2</td>
+            </tr>
+            <tr>
+              <td id="ESRCH">ESRCH</td>
+              <td>3</td>
+            </tr>
+            <tr>
+              <td id="EINTR">EINTR</td>
+              <td>4</td>
+            </tr>
+            <tr>
+              <td id="EIO">EIO</td>
+              <td>5</td>
+            </tr>
+            <tr>
+              <td id="ENXIO">ENXIO</td>
+              <td>6</td>
+            </tr>
+            <tr>
+              <td id="E2BIG">E2BIG</td>
+              <td>7</td>
+            </tr>
+            <tr>
+              <td id="ENOEXEC">ENOEXEC</td>
+              <td>8</td>
+            </tr>
+            <tr>
+              <td id="EBADF">EBADF</td>
+              <td>9</td>
+            </tr>
+            <tr>
+              <td id="ECHILD">ECHILD</td>
+              <td>0</td>
+            </tr>
+            <tr>
+              <td id="EAGAIN">EAGAIN</td>
+              <td>11</td>
+            </tr>
+            <tr>
+              <td id="ENOMEM">ENOMEM</td>
+              <td>12</td>
+            </tr>
+            <tr>
+              <td id="EACCES">EACCES</td>
+              <td>13</td>
+            </tr>
+            <tr>
+              <td id="EFAULT">EFAULT</td>
+              <td>14</td>
+            </tr>
+            <tr>
+              <td id="ENOTBLK">ENOTBLK</td>
+              <td>15</td>
+            </tr>
+            <tr>
+              <td id="EBUSY">EBUSY</td>
+              <td>16</td>
+            </tr>
+            <tr>
+              <td id="EEXIST">EEXIST</td>
+              <td>17</td>
+            </tr>
+            <tr>
+              <td id="EXDEV">EXDEV</td>
+              <td>18</td>
+            </tr>
+            <tr>
+              <td id="ENODEV">ENODEV</td>
+              <td>19</td>
+            </tr>
+            <tr>
+              <td id="ENOTDIR">ENOTDIR</td>
+              <td>20</td>
+            </tr>
+            <tr>
+              <td id="EISDIR">EISDIR</td>
+              <td>21</td>
+            </tr>
+            <tr>
+              <td id="EINVAL">EINVAL</td>
+              <td>22</td>
+            </tr>
+            <tr>
+              <td id="ENFILE">ENFILE</td>
+              <td>23</td>
+            </tr>
+            <tr>
+              <td id="EMFILE">EMFILE</td>
+              <td>24</td>
+            </tr>
+            <tr>
+              <td id="ENOTTY">ENOTTY</td>
+              <td>25</td>
+            </tr>
+            <tr>
+              <td id="ETXTBSY">ETXTBSY</td>
+              <td>26</td>
+            </tr>
+            <tr>
+              <td id="EFBIG">EFBIG</td>
+              <td>27</td>
+            </tr>
+            <tr>
+              <td id="ENOSPC">ENOSPC</td>
+              <td>28</td>
+            </tr>
+            <tr>
+              <td id="ESPIPE">ESPIPE</td>
+              <td>29</td>
+            </tr>
+            <tr>
+              <td id="EROFS">EROFS</td>
+              <td>30</td>
+            </tr>
+            <tr>
+              <td id="EMLINK">EMLINK</td>
+              <td>31</td>
+            </tr>
+            <tr>
+              <td id="EPIPE">EPIPE</td>
+              <td>32</td>
+            </tr>
+            <tr>
+              <td id="EDOM">EDOM</td>
+              <td>33</td>
+            </tr>
+            <tr>
+              <td id="ERANGE">ERANGE</td>
+              <td>34</td>
+            </tr>
+            <tr>
+              <td id="EDEADLK">EDEADLK</td>
+              <td>35</td>
+            </tr>
+            <tr>
+              <td id="ENAMETOOLONG">ENAMETOOLONG</td>
+              <td>36</td>
+            </tr>
+            <tr>
+              <td id="ENOLCK">ENOLCK</td>
+              <td>37</td>
+            </tr>
+            <tr>
+              <td id="ENOSYS">ENOSYS</td>
+              <td>38</td>
+            </tr>
+            <tr>
+              <td id="ENOTEMPTY">ENOTEMPTY</td>
+              <td>39</td>
+            </tr>
+            <tr>
+              <td id="ELOOP">ELOOP</td>
+              <td>40</td>
+            </tr>
+            <tr>
+              <td id="EWOULDBLOCK">EWOULDBLOCK</td>
+              <td>11</td>
+            </tr>
+            <tr>
+              <td id="ENOMSG">ENOMSG</td>
+              <td>42</td>
+            </tr>
+            <tr>
+              <td id="EIDRM">EIDRM</td>
+              <td>43</td>
+            </tr>
+            <tr>
+              <td id="ECHRNG">ECHRNG</td>
+              <td>44</td>
+            </tr>
+            <tr>
+              <td id="EL2NSYNC">EL2NSYNC</td>
+              <td>45</td>
+            </tr>
+            <tr>
+              <td id="EL3HLT">EL3HLT</td>
+              <td>46</td>
+            </tr>
+            <tr>
+              <td id="EL3RST">EL3RST</td>
+              <td>47</td>
+            </tr>
+            <tr>
+              <td id="ELNRNG">ELNRNG</td>
+              <td>48</td>
+            </tr>
+            <tr>
+              <td id="EUNATCH">EUNATCH</td>
+              <td>49</td>
+            </tr>
+            <tr>
+              <td id="ENOCSI">ENOCSI</td>
+              <td>50</td>
+            </tr>
+            <tr>
+              <td id="EL2HLT">EL2HLT</td>
+              <td>51</td>
+            </tr>
+            <tr>
+              <td id="EBADE">EBADE</td>
+              <td>52</td>
+            </tr>
+            <tr>
+              <td id="EBADR">EBADR</td>
+              <td>53</td>
+            </tr>
+            <tr>
+              <td id="EXFULL">EXFULL</td>
+              <td>54</td>
+            </tr>
+            <tr>
+              <td id="ENOANO">ENOANO</td>
+              <td>55</td>
+            </tr>
+            <tr>
+              <td id="EBADRQC">EBADRQC</td>
+              <td>56</td>
+            </tr>
+            <tr>
+              <td id="EBADSLT">EBADSLT</td>
+              <td>57</td>
+            </tr>
+            <tr>
+              <td id="EDEADLOCK">EDEADLOCK</td>
+              <td>58</td>
+            </tr>
+            <tr>
+              <td id="EBFONT">EBFONT</td>
+              <td>59</td>
+            </tr>
+            <tr>
+              <td id="ENOSTR">ENOSTR</td>
+              <td>60</td>
+            </tr>
+            <tr>
+              <td id="ENODATA">ENODATA</td>
+              <td>61</td>
+            </tr>
+            <tr>
+              <td id="ETIME">ETIME</td>
+              <td>62</td>
+            </tr>
+            <tr>
+              <td id="ENOSR">ENOSR</td>
+              <td>63</td>
+            </tr>
+            <tr>
+              <td id="ENONET">ENONET</td>
+              <td>64</td>
+            </tr>
+            <tr>
+              <td id="ENOPKG">ENOPKG</td>
+              <td>65</td>
+            </tr>
+            <tr>
+              <td id="EREMOTE">EREMOTE</td>
+              <td>66</td>
+            </tr>
+            <tr>
+              <td id="ENOLINK">ENOLINK</td>
+              <td>67</td>
+            </tr>
+            <tr>
+              <td id="EADV">EADV</td>
+              <td>68</td>
+            </tr>
+            <tr>
+              <td id="ESRMNT">ESRMNT</td>
+              <td>69</td>
+            </tr>
+            <tr>
+              <td id="ECOMM">ECOMM</td>
+              <td>70</td>
+            </tr>
+            <tr>
+              <td id="EPROTO">EPROTO</td>
+              <td>71</td>
+            </tr>
+            <tr>
+              <td id="EMULTIHOP">EMULTIHOP</td>
+              <td>72</td>
+            </tr>
+            <tr>
+              <td id="EDOTDOT">EDOTDOT</td>
+              <td>73</td>
+            </tr>
+            <tr>
+              <td id="EBADMSG">EBADMSG</td>
+              <td>74</td>
+            </tr>
+            <tr>
+              <td id="EOVERFLOW">EOVERFLOW</td>
+              <td>75</td>
+            </tr>
+            <tr>
+              <td id="ENOTUNIQ">ENOTUNIQ</td>
+              <td>76</td>
+            </tr>
+            <tr>
+              <td id="EBADFD">EBADFD</td>
+              <td>77</td>
+            </tr>
+            <tr>
+              <td id="EREMCHG">EREMCHG</td>
+              <td>78</td>
+            </tr>
+            <tr>
+              <td id="ELIBACC">ELIBACC</td>
+              <td>79</td>
+            </tr>
+            <tr>
+              <td id="ELIBBAD">ELIBBAD</td>
+              <td>80</td>
+            </tr>
+            <tr>
+              <td id="ELIBSCN">ELIBSCN</td>
+              <td>81</td>
+            </tr>
+            <tr>
+              <td id="ELIBMAX">ELIBMAX</td>
+              <td>82</td>
+            </tr>
+            <tr>
+              <td id="ELIBEXEC">ELIBEXEC</td>
+              <td>83</td>
+            </tr>
+            <tr>
+              <td id="EILSEQ">EILSEQ</td>
+              <td>84</td>
+            </tr>
+            <tr>
+              <td id="ERESTART">ERESTART</td>
+              <td>85</td>
+            </tr>
+            <tr>
+              <td id="ESTRPIPE">ESTRPIPE</td>
+              <td>86</td>
+            </tr>
+            <tr>
+              <td id="EUSERS">EUSERS</td>
+              <td>87</td>
+            </tr>
+            <tr>
+              <td id="ENOTSOCK">ENOTSOCK</td>
+              <td>88</td>
+            </tr>
+            <tr>
+              <td id="EDESTADDRREQ">EDESTADDRREQ</td>
+              <td>89</td>
+            </tr>
+            <tr>
+              <td id="EMSGSIZE">EMSGSIZE</td>
+              <td>90</td>
+            </tr>
+            <tr>
+              <td id="EPROTOTYPE">EPROTOTYPE</td>
+              <td>91</td>
+            </tr>
+            <tr>
+              <td id="ENOPROTOOPT">ENOPROTOOPT</td>
+              <td>92</td>
+            </tr>
+            <tr>
+              <td id="EPROTONOSUPPORT">EPROTONOSUPPORT</td>
+              <td>93</td>
+            </tr>
+            <tr>
+              <td id="ESOCKTNOSUPPORT">ESOCKTNOSUPPORT</td>
+              <td>94</td>
+            </tr>
+            <tr>
+              <td id="EOPNOTSUPP">EOPNOTSUPP</td>
+              <td>95</td>
+            </tr>
+            <tr>
+              <td id="EPFNOSUPPORT">EPFNOSUPPORT</td>
+              <td>96</td>
+            </tr>
+            <tr>
+              <td id="EAFNOSUPPORT">EAFNOSUPPORT</td>
+              <td>97</td>
+            </tr>
+            <tr>
+              <td id="EADDRINUSE">EADDRINUSE</td>
+              <td>98</td>
+            </tr>
+            <tr>
+              <td id="EADDRNOTAVAIL">EADDRNOTAVAIL</td>
+              <td>99</td>
+            </tr>
+            <tr>
+              <td id="ENETDOWN">ENETDOWN</td>
+              <td>100</td>
+            </tr>
+            <tr>
+              <td id="ENETUNREACH">ENETUNREACH</td>
+              <td>101</td>
+            </tr>
+            <tr>
+              <td id="ENETRESET">ENETRESET</td>
+              <td>102</td>
+            </tr>
+            <tr>
+              <td id="ECONNABORTED">ECONNABORTED</td>
+              <td>103</td>
+            </tr>
+            <tr>
+              <td id="ECONNRESET">ECONNRESET</td>
+              <td>104</td>
+            </tr>
+            <tr>
+              <td id="ENOBUFS">ENOBUFS</td>
+              <td>105</td>
+            </tr>
+            <tr>
+              <td id="EISCONN">EISCONN</td>
+              <td>106</td>
+            </tr>
+            <tr>
+              <td id="ENOTCONN">ENOTCONN</td>
+              <td>107</td>
+            </tr>
+            <tr>
+              <td id="ESHUTDOWN">ESHUTDOWN</td>
+              <td>108</td>
+            </tr>
+            <tr>
+              <td id="ETOOMANYREFS">ETOOMANYREFS</td>
+              <td>109</td>
+            </tr>
+            <tr>
+              <td id="ETIMEDOUT">ETIMEDOUT</td>
+              <td>110</td>
+            </tr>
+            <tr>
+              <td id="ECONNREFUSED">ECONNREFUSED</td>
+              <td>111</td>
+            </tr>
+            <tr>
+              <td id="EHOSTDOWN">EHOSTDOWN</td>
+              <td>112</td>
+            </tr>
+            <tr>
+              <td id="EHOSTUNREACH">EHOSTUNREACH</td>
+              <td>113</td>
+            </tr>
+            <tr>
+              <td id="EALREADY">EALREADY</td>
+              <td>114</td>
+            </tr>
+            <tr>
+              <td id="EINPROGRESS">EINPROGRESS</td>
+              <td>115</td>
+            </tr>
+            <tr>
+              <td id="ESTALE">ESTALE</td>
+              <td>116</td>
+            </tr>
+            <tr>
+              <td id="EUCLEAN">EUCLEAN</td>
+              <td>117</td>
+            </tr>
+            <tr>
+              <td id="ENOTNAM">ENOTNAM</td>
+              <td>118</td>
+            </tr>
+            <tr>
+              <td id="ENAVAIL">ENAVAIL</td>
+              <td>119</td>
+            </tr>
+            <tr>
+              <td id="EISNAM">EISNAM</td>
+              <td>120</td>
+            </tr>
+            <tr>
+              <td id="EREMOTEIO">EREMOTEIO</td>
+              <td>121</td>
+            </tr>
+            <tr>
+              <td id="ERESTARTSYS">ERESTARTSYS</td>
+              <td>512</td>
+            </tr>
+            <tr>
+              <td id="ERESTARTNOINTR">ERESTARTNOINTR</td>
+              <td>513</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+    </div>
+    <footer>
+      <span>Generated using phpDox 0.11.2 - Copyright (C) 2010 - 2018 by Arne Blankerts and Contributors</span>
+    </footer>
+  </body>
+</html>

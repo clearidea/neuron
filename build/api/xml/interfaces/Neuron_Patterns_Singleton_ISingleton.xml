@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<interface xmlns="http://xml.phpdox.net/src" full="Neuron\Patterns\Singleton\ISingleton" namespace="Neuron\Patterns\Singleton" name="ISingleton" abstract="false" final="false" start="5" end="10">
+  <file path="/Volumes/Storage/Projects/clearidea/open-source/Neuron/src/Patterns/Singleton" file="ISingleton.php" realpath="/Volumes/Storage/Projects/clearidea/open-source/Neuron/src/Patterns/Singleton/ISingleton.php" size="153" time="2016-08-12T11:33:09+00:00" unixtime="1471001589" sha1="d6becbae2901e088ff6dacec5993733e9e98759c" relative="Patterns/Singleton/ISingleton.php"/>
+  <method name="serialize" start="7" end="7" abstract="false" final="false" static="false" visibility="public"/>
+  <method name="invalidate" start="8" end="8" abstract="false" final="false" static="true" visibility="public"/>
+  <method name="instance" start="9" end="9" abstract="false" final="false" static="true" visibility="public"/>
+  <implementors>
+    <class full="Neuron\Log\Log" namespace="Neuron\Log" name="Log"/>
+    <class full="Neuron\Patterns\Registry" namespace="Neuron\Patterns" name="Registry"/>
+    <class full="Neuron\Patterns\Singleton\Base" namespace="Neuron\Patterns\Singleton" name="Base"/>
+    <class full="Neuron\Patterns\Singleton\Memcache" namespace="Neuron\Patterns\Singleton" name="Memcache"/>
+    <class full="Neuron\Patterns\Singleton\Memory" namespace="Neuron\Patterns\Singleton" name="Memory"/>
+    <class full="Neuron\Patterns\Singleton\SessionSingleton" namespace="Neuron\Patterns\Singleton" name="SessionSingleton"/>
+    <class full="Neuron\Util\Language" namespace="Neuron\Util" name="Language"/>
+  </implementors>
+</interface>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class xmlns="http://xml.phpdox.net/src" full="Neuron\Setting\Source\Memory" namespace="Neuron\Setting\Source" name="Memory" abstract="false" final="false" start="5" end="42">
+  <file path="/Volumes/Storage/Projects/clearidea/open-source/Neuron/src/Setting/Source" file="Memory.php" realpath="/Volumes/Storage/Projects/clearidea/open-source/Neuron/src/Setting/Source/Memory.php" size="743" time="2016-08-14T10:21:13+00:00" unixtime="1471170073" sha1="e5600db484f8c18430f60f50c5fb0fd2eecfbe5b" relative="Setting/Source/Memory.php"/>
+  <implements full="Neuron\Setting\Source\ISettingSource" namespace="Neuron\Setting\Source" name="ISettingSource"/>
+  <member name="_aSettings" default="" type="array" visibility="private" static="false" line="7"/>
+  <method name="get" start="9" end="21" abstract="false" final="false" static="false" visibility="public">
+    <parameter name="sSection" byreference="false" type="{unknown}"/>
+    <parameter name="sName" byreference="false" type="{unknown}"/>
+  </method>
+  <method name="set" start="23" end="26" abstract="false" final="false" static="false" visibility="public">
+    <parameter name="sSection" byreference="false" type="{unknown}"/>
+    <parameter name="sName" byreference="false" type="{unknown}"/>
+    <parameter name="sValue" byreference="false" type="{unknown}"/>
+  </method>
+  <method name="getSectionNames" start="28" end="31" abstract="false" final="false" static="false" visibility="public"/>
+  <method name="getSectionSettingNames" start="33" end="36" abstract="false" final="false" static="false" visibility="public">
+    <parameter name="sSection" byreference="false" type="{unknown}"/>
+  </method>
+  <method name="save" start="38" end="41" abstract="false" final="false" static="false" visibility="public"/>
+  <interface full="Neuron\Setting\Source\ISettingSource" namespace="Neuron\Setting\Source" name="ISettingSource">
+    <method name="get" start="11" end="11" abstract="false" final="false" static="false" visibility="public">
+      <parameter name="sSection" byreference="false" type="{unknown}"/>
+      <parameter name="sName" byreference="false" type="{unknown}"/>
+    </method>
+    <method name="set" start="12" end="12" abstract="false" final="false" static="false" visibility="public">
+      <parameter name="sName" byreference="false" type="{unknown}"/>
+      <parameter name="sSection" byreference="false" type="{unknown}"/>
+      <parameter name="sValue" byreference="false" type="{unknown}"/>
+    </method>
+    <method name="getSectionNames" start="13" end="13" abstract="false" final="false" static="false" visibility="public"/>
+    <method name="getSectionSettingNames" start="14" end="14" abstract="false" final="false" static="false" visibility="public">
+      <parameter name="sSection" byreference="false" type="{unknown}"/>
+    </method>
+    <method name="save" start="16" end="16" abstract="false" final="false" static="false" visibility="public"/>
+  </interface>
+</class>

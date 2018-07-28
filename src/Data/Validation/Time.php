@@ -9,9 +9,9 @@
 namespace Neuron\Data\Validation;
 
 /**
- * Time Validation
+ * Requires time to be in a specific formate. Defaults to g:i:s A
+ * @package Neuron\Data\Validation
  */
-
 class Time extends Base
 {
 	private $_sFormat = 'g:i:s A';

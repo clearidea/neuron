@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<interface xmlns="http://xml.phpdox.net/src" full="Neuron\Data\Validation\ICollection" namespace="Neuron\Data\Validation" name="ICollection" abstract="false" final="false" start="11" end="28">
+  <file path="/Volumes/Storage/Projects/clearidea/open-source/Neuron/src/Data/Validation" file="ICollection.php" realpath="/Volumes/Storage/Projects/clearidea/open-source/Neuron/src/Data/Validation/ICollection.php" size="459" time="2018-06-24T12:24:24+00:00" unixtime="1529843064" sha1="4bf835e49f96a63b825f616da663c38bf393ef28" relative="Data/Validation/ICollection.php"/>
+  <extends full="Neuron\Data\Validation\IValidator" namespace="Neuron\Data\Validation" name="IValidator"/>
+  <method name="add" start="20" end="20" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <param variable="$Name"/>
+      <param type="object" variable="$Validator">
+        <type full="Neuron\Data\Validation\IValidator" namespace="Neuron\Data\Validation" name="IValidator"/>
+      </param>
+      <return type="object">Add a validator to the collection.<type full="Neuron\Data\Validation\$this" namespace="Neuron\Data\Validation" name="$this"/></return>
+    </docblock>
+    <parameter name="Name" byreference="false" type="{unknown}"/>
+    <parameter name="Validator" byreference="false" type="object">
+      <type full="Neuron\Data\Validation\IValidator" namespace="Neuron\Data\Validation" name="IValidator"/>
+    </parameter>
+  </method>
+  <method name="getViolations" start="27" end="27" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description/>
+      <return type="mixed">Returns the list of failed validations.</return>
+    </docblock>
+    <return type="array" nullable="false"/>
+  </method>
+  <implementors>
+    <class full="Neuron\Data\Validation\Collection" namespace="Neuron\Data\Validation" name="Collection"/>
+  <class full="Neuron\Data\Validation\Collection" namespace="Neuron\Data\Validation" name="Collection"/></implementors>
+  <parent full="Neuron\Data\Validation\IValidator" namespace="Neuron\Data\Validation" name="IValidator">
+    <method name="isValid" start="7" end="7" abstract="false" final="false" static="false" visibility="public">
+      <return type="bool" nullable="false"/>
+      <parameter name="data" byreference="false" type="{unknown}"/>
+    </method>
+  </parent>
+</interface>

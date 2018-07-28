@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class xmlns="http://xml.phpdox.net/src" full="Neuron\File\Temporary" namespace="Neuron\File" name="Temporary" abstract="false" final="false" start="10" end="40">
+  <file path="/Volumes/Storage/Projects/clearidea/open-source/Neuron/src/File" file="Temporary.php" realpath="/Volumes/Storage/Projects/clearidea/open-source/Neuron/src/File/Temporary.php" size="501" time="2016-10-21T16:10:58+00:00" unixtime="1477066258" sha1="add06552510300207c484a0add2bd4c98344184a" relative="File/Temporary.php"/>
+  <docblock>
+    <description compact="Class Temporary"/>
+    <package value="Neuron\File"/>
+  </docblock>
+  <method name="getFile" start="17" end="39" abstract="false" final="false" static="true" visibility="public">
+    <docblock>
+      <description/>
+      <param type="string" variable="$sDirectory"/>
+      <return type="string"/>
+    </docblock>
+    <parameter name="sDirectory" byreference="false" type="string" default="''"/>
+  </method>
+</class>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class xmlns="http://xml.phpdox.net/src" full="Neuron\Log\Format\HTML" namespace="Neuron\Log\Format" name="HTML" abstract="false" final="false" start="11" end="17">
+  <file path="/Volumes/Storage/Projects/clearidea/open-source/Neuron/src/Log/Format" file="HTML.php" realpath="/Volumes/Storage/Projects/clearidea/open-source/Neuron/src/Log/Format/HTML.php" size="281" time="2016-08-04T19:53:26+00:00" unixtime="1470340406" sha1="a48722c675768e8adbac7a0de0dbc05376625caf" relative="Log/Format/HTML.php"/>
+  <docblock>
+    <description compact="Formats log data as html."/>
+  </docblock>
+  <implements full="Neuron\Log\Format\IFormat" namespace="Neuron\Log\Format" name="IFormat"/>
+  <method name="format" start="13" end="16" abstract="false" final="false" static="false" visibility="public">
+    <parameter name="Data" byreference="false" type="object">
+      <type full="Neuron\Log\Data" namespace="Neuron\Log" name="Data"/>
+    </parameter>
+  </method>
+  <interface full="Neuron\Log\Format\IFormat" namespace="Neuron\Log\Format" name="IFormat">
+    <method name="format" start="13" end="13" abstract="false" final="false" static="false" visibility="public">
+      <parameter name="data" byreference="false" type="object">
+        <type full="Neuron\Log\Data" namespace="Neuron\Log" name="Data"/>
+      </parameter>
+    </method>
+  </interface>
+</class>

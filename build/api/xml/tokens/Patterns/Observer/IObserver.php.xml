@@ -1,0 +1,79 @@
+<?xml version="1.0"?>
+<source xmlns="http://xml.phpdox.net/token">
+  <file xmlns="http://xml.phpdox.net/src" path="/Volumes/Storage/Projects/clearidea/open-source/Neuron/src/Patterns/Observer" file="IObserver.php" realpath="/Volumes/Storage/Projects/clearidea/open-source/Neuron/src/Patterns/Observer/IObserver.php" size="273" time="2016-08-12T19:22:31+00:00" unixtime="1471029751" sha1="4d1d47a7c843706d7c3acea4d5216706293037fb" relative="Patterns/Observer/IObserver.php"/>
+  <line no="1">
+    <token name="T_OPEN_TAG">&lt;?php</token>
+  </line>
+  <line no="2"/>
+  <line no="3">
+    <token name="T_NAMESPACE">namespace</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_STRING">Neuron</token>
+    <token name="T_NS_SEPARATOR">\</token>
+    <token name="T_STRING">Patterns</token>
+    <token name="T_NS_SEPARATOR">\</token>
+    <token name="T_STRING">Observer</token>
+    <token name="T_PHPDOX_SEMICOLON">;</token>
+  </line>
+  <line no="4"/>
+  <line no="5">
+    <token name="T_DOC_COMMENT">/**</token>
+  </line>
+  <line no="6">
+    <token name="T_DOC_COMMENT"> * Interface IObserver</token>
+  </line>
+  <line no="7">
+    <token name="T_DOC_COMMENT"> * @package Neuron\Patterns\Observer</token>
+  </line>
+  <line no="8">
+    <token name="T_DOC_COMMENT"> */</token>
+  </line>
+  <line no="9"/>
+  <line no="10">
+    <token name="T_INTERFACE">interface</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_STRING">IObserver</token>
+  </line>
+  <line no="11">
+    <token name="T_PHPDOX_OPEN_CURLY">{</token>
+  </line>
+  <line no="12">
+    <token name="T_WHITESPACE">	</token>
+    <token name="T_DOC_COMMENT">/**</token>
+  </line>
+  <line no="13">
+    <token name="T_DOC_COMMENT">	 * @param Observable $Observable</token>
+  </line>
+  <line no="14">
+    <token name="T_DOC_COMMENT">	 * @param $param</token>
+  </line>
+  <line no="15">
+    <token name="T_DOC_COMMENT">	 * @return mixed</token>
+  </line>
+  <line no="16">
+    <token name="T_DOC_COMMENT">	 */</token>
+  </line>
+  <line no="17"/>
+  <line no="18">
+    <token name="T_WHITESPACE">	</token>
+    <token name="T_FUNCTION">function</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_STRING">notify</token>
+    <token name="T_PHPDOX_OPEN_BRACKET">(</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_STRING">Observable</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_VARIABLE">$Observable</token>
+    <token name="T_PHPDOX_COMMA">,</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_ELLIPSIS">...</token>
+    <token name="T_VARIABLE">$param</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
+    <token name="T_PHPDOX_SEMICOLON">;</token>
+  </line>
+  <line no="19">
+    <token name="T_PHPDOX_CLOSE_CURLY">}</token>
+  </line>
+  <line no="20"/>
+</source>

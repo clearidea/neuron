@@ -2,6 +2,10 @@
 
 namespace Neuron\Util;
 
+/**
+ * Basic templating engine. Replaces %item% with $fields[ 'item' ].
+ * @package Neuron\Util
+ */
 class Template
 {
 	/**

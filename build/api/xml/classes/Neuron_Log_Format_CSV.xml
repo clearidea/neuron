@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class xmlns="http://xml.phpdox.net/src" full="Neuron\Log\Format\CSV" namespace="Neuron\Log\Format" name="CSV" abstract="false" final="false" start="11" end="17">
+  <file path="/Volumes/Storage/Projects/clearidea/open-source/Neuron/src/Log/Format" file="CSV.php" realpath="/Volumes/Storage/Projects/clearidea/open-source/Neuron/src/Log/Format/CSV.php" size="271" time="2016-08-04T19:53:26+00:00" unixtime="1470340406" sha1="dc51383c8c3e9ff247585a272f3c488788801e40" relative="Log/Format/CSV.php"/>
+  <docblock>
+    <description compact="Formats log data into a CSV format."/>
+  </docblock>
+  <implements full="Neuron\Log\Format\IFormat" namespace="Neuron\Log\Format" name="IFormat"/>
+  <method name="format" start="13" end="16" abstract="false" final="false" static="false" visibility="public">
+    <parameter name="Data" byreference="false" type="object">
+      <type full="Neuron\Log\Data" namespace="Neuron\Log" name="Data"/>
+    </parameter>
+  </method>
+  <interface full="Neuron\Log\Format\IFormat" namespace="Neuron\Log\Format" name="IFormat">
+    <method name="format" start="13" end="13" abstract="false" final="false" static="false" visibility="public">
+      <parameter name="data" byreference="false" type="object">
+        <type full="Neuron\Log\Data" namespace="Neuron\Log" name="Data"/>
+      </parameter>
+    </method>
+  </interface>
+</class>

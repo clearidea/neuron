@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<trait xmlns="http://xml.phpdox.net/src" full="Neuron\Data\Validation\Policy" namespace="Neuron\Data\Validation" name="Policy" abstract="false" final="false" start="5" end="20">
+  <file path="/Volumes/Storage/Projects/clearidea/open-source/Neuron/src/Data/Validation" file="Policy.php" realpath="/Volumes/Storage/Projects/clearidea/open-source/Neuron/src/Data/Validation/Policy.php" size="302" time="2018-06-05T13:26:26+00:00" unixtime="1528205186" sha1="20145e8857817cd302db3ffb819b0583a88e7133" relative="Data/Validation/Policy.php"/>
+  <member name="_Rules" visibility="private" static="false" line="7"/>
+  <method name="addRule" start="9" end="14" abstract="false" final="false" static="false" visibility="public">
+    <parameter name="Name" byreference="false" type="{unknown}"/>
+    <parameter name="Validator" byreference="false" type="object">
+      <type full="Neuron\Data\Validation\IValidator" namespace="Neuron\Data\Validation" name="IValidator"/>
+    </parameter>
+  </method>
+  <method name="isRuleValid" start="16" end="19" abstract="false" final="false" static="false" visibility="public">
+    <parameter name="Name" byreference="false" type="{unknown}"/>
+    <parameter name="Value" byreference="false" type="{unknown}"/>
+  </method>
+</trait>
