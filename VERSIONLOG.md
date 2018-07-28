@@ -1,6 +1,6 @@
 # Versions
 
-## 0.7.10
+## 0.7.10 2028-07-28
 * Added EIN validator.
 * Added International validation for PhoneNumber.
 * Added getLengthInDays to DateRange.
