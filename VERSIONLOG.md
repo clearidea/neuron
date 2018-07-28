@@ -1,6 +1,6 @@
 # Versions
 
-## 0.7.12
+## 0.7.13
 
 ## 0.7.10 2028-07-28
 * Added EIN validator.
