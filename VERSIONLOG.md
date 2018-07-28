@@ -1,14 +1,16 @@
 # Versions
 
+## 0.7.10
+* Added EIN validator.
+* Added International validation for PhoneNumber.
+* Added getLengthInDays to DateRange.
+
 ## 0.7.9
 * Added Name validator.
 * Added PhoneNumber validator.
 * Added NumericRange datatype.
 * Added NumericRange validator.
 * Added NumberWithinRange validator.
-* Added EIN validator.
-* Added International validation for PhoneNumber.
-* Added getLengthInDays to DateRange.
 
 ## 0.7.8
 * Added the validatable interface.
