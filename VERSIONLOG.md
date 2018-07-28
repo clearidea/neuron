@@ -8,6 +8,7 @@
 * Added NumberWithinRange validator.
 * Added EIN validator.
 * Added International validation for PhoneNumber.
+* Added getLengthInDays to DateRange.
 
 ## 0.7.8
 * Added the validatable interface.
