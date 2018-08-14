@@ -4,22 +4,25 @@ namespace Neuron\Log\Destination;
 
 use Neuron\Log;
 
-// todo: slack..
-
 class Slack extends DestinationBase
 {
-	private $_sApiToken;
-	private $_sRoom;
+	private $_Webhook;
+	private $_Params;
 
 	/**
-	 * Call with [ 'api_token' => '', 'room' => '' ]
-	 * @param array $aParams
+	 * 'channel'     => $channel,
+	 * 'username'    => $bot_name,
+	 * 'text'        => $message,
+	 * 'icon_emoji'  => $icon,
+	 * 'attachments' => $attachments
+	 *
+	 * @param array $Params
 	 * @return bool
 	 */
-	public function open( array $aParams )
+	public function open( array $Params )
 	{
-		$this->_sApiToken = $aParams[ 'api_token' ];
-		$this->_sRoom     = $aParams[ 'room' ];
+		$this->_Webhook = $Params[ 'webhook_url' ];
+		$this->_Params  = $Params[ 'params' ];
 		return true;
 	}
 
@@ -37,5 +40,19 @@ class Slack extends DestinationBase
 
 	public function write( $text, Log\Data $Data )
 	{
+		$DataString = json_encode( $this->_Params );
+		$Handle     = curl_init( $this->_Webhook );
+
+		curl_setopt( $Handle, CURLOPT_CUSTOMREQUEST, "POST" );
+		curl_setopt( $Handle, CURLOPT_POSTFIELDS, $DataString );
+		curl_setopt( $Handle, CURLOPT_RETURNTRANSFER, true );
+		curl_setopt( $Handle, CURLOPT_HTTPHEADER,
+			[
+				'Content-Type: application/json',
+				'Content-Length: ' . strlen( $DataString )
+			]
+		);
+
+		curl_exec( $Handle );
 	}
 }

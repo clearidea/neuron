@@ -1,11 +1,15 @@
 # Versions
 
 ## 0.7.14
+* Modified the Log Singleton to use a LogMux instead of a simple Logger.
+* Finished email log destination.
+* First shot at slack log destination.
 
 ## 0.7.13 2028-07-28
 * Added EIN validator.
 * Added International validation for PhoneNumber.
 * Added getLengthInDays to DateRange.
+
 
 ## 0.7.9
 * Added Name validator.
