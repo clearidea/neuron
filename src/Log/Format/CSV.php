@@ -12,7 +12,7 @@ class CSV implements IFormat
 {
 	public function format( Log\Data $Data )
 	{
-		return date( "[Y-m-d G:i:s]", $Data->_TimeStamp ) . ",$Data->_sLevel,$Data->_sText";
+		return date( "[Y-m-d G:i:s]", $Data->TimeStamp ) . ",$Data->LevelText,$Data->Text";
 	}
 }
 

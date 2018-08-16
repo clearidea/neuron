@@ -3,7 +3,7 @@
 # About Neuron PHP
 
 Neuron is a PHP utility library. Although, it contains a basic
-application class for CLI and Web, the gooal of this project is in
+application class for CLI and Web, the goal of this project is in
 no way to become a framework.
 
 ## Data

@@ -1,18 +1,43 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: lee
- * Date: 11/3/15
- * Time: 1:42 PM
- */
 
 namespace Neuron\Log\Destination;
 
 use Neuron\Log;
 
-// todo: email
-
 class Email
 {
+	private $_To;
+	private $_From;
+	private $_Subject;
 
+	/**
+	 * @param array $Params
+	 * @return bool
+	 */
+
+	public function open( array $Params )
+	{
+		$this->_To      = $Params[ 'to' ];
+		$this->_From    = $Params[ 'from' ];
+		$this->_Subject = $Params[ 'subject' ];
+
+		return true;
+	}
+
+	/**
+	 * @param $Text
+	 * @param Log\Data $Data
+	 * @return void
+	 *
+	 * @SuppressWarnings(PHPMD)
+	 */
+
+	public function write( $Text, Log\Data $Data )
+	{
+		mail(
+			$this->_To,
+			$this->_Subject,
+			$Text
+		);
+	}
 }

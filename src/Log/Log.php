@@ -14,8 +14,14 @@ class Log extends Memory
 	{
 		if( !$this->Logger )
 		{
-			$this->Logger = new \Neuron\Log\Logger(
-				new Echoer( new PlainText() )
+			$this->Logger = new LogMux();
+
+			$this->Logger->addLog(
+				new Logger(
+					new Echoer(
+						new PlainText()
+					)
+				)
 			);
 
 			$this->serialize();

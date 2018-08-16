@@ -23,10 +23,10 @@ class PlainText implements IFormat
 
 		if( $this->_bShowDate )
 		{
-			$output .= date( "[Y-m-d G:i:s]", $Data->_TimeStamp );
+			$output .= date( "[Y-m-d G:i:s]", $Data->TimeStamp );
 		}
 
-		return  $output."[$Data->_sLevel] $Data->_sText";
+		return  $output."[$Data->LevelText] $Data->Text";
 	}
 }
 
