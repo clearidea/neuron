@@ -82,7 +82,7 @@
     <token name="T_WHITESPACE"> </token>
     <token name="T_VARIABLE">$Data</token>
     <token name="T_OBJECT_OPERATOR">-&gt;</token>
-    <token name="T_STRING">_TimeStamp</token>
+    <token name="T_STRING">TimeStamp</token>
     <token name="T_WHITESPACE"> </token>
     <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
     <token name="T_PHPDOX_DOT">.</token>
@@ -90,11 +90,11 @@
     <token name="T_ENCAPSED_AND_WHITESPACE">&lt;/small&gt; </token>
     <token name="T_VARIABLE">$Data</token>
     <token name="T_OBJECT_OPERATOR">-&gt;</token>
-    <token name="T_STRING">_sLevel</token>
+    <token name="T_STRING">LevelText</token>
     <token name="T_ENCAPSED_AND_WHITESPACE"> </token>
     <token name="T_VARIABLE">$Data</token>
     <token name="T_OBJECT_OPERATOR">-&gt;</token>
-    <token name="T_STRING">_sText</token>
+    <token name="T_STRING">Text</token>
     <token name="T_ENCAPSED_AND_WHITESPACE">&lt;br&gt;</token>
     <token name="T_PHPDOX_DOUBLE_QUOTES">"</token>
     <token name="T_PHPDOX_SEMICOLON">;</token>

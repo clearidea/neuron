@@ -91,7 +91,7 @@
     <token name="T_WHITESPACE"> </token>
     <token name="T_VARIABLE">$Data</token>
     <token name="T_OBJECT_OPERATOR">-&gt;</token>
-    <token name="T_STRING">_TimeStamp</token>
+    <token name="T_STRING">TimeStamp</token>
     <token name="T_WHITESPACE"> </token>
     <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
     <token name="T_PHPDOX_COMMA">,</token>
@@ -104,7 +104,7 @@
     <token name="T_WHITESPACE"> </token>
     <token name="T_VARIABLE">$Data</token>
     <token name="T_OBJECT_OPERATOR">-&gt;</token>
-    <token name="T_STRING">_sLevel</token>
+    <token name="T_STRING">LevelText</token>
     <token name="T_PHPDOX_COMMA">,</token>
   </line>
   <line no="18">
@@ -115,7 +115,7 @@
     <token name="T_WHITESPACE"> </token>
     <token name="T_VARIABLE">$Data</token>
     <token name="T_OBJECT_OPERATOR">-&gt;</token>
-    <token name="T_STRING">_sText</token>
+    <token name="T_STRING">Text</token>
   </line>
   <line no="19">
     <token name="T_WHITESPACE">		</token>

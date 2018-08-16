@@ -5,10 +5,10 @@
     <description compact="Class Data"/>
     <package value="Neuron\Log"/>
   </docblock>
-  <member name="_TimeStamp" visibility="public" static="false" line="12"/>
-  <member name="_sText" visibility="public" static="false" line="13"/>
-  <member name="_iLevel" visibility="public" static="false" line="14"/>
-  <member name="_sLevel" visibility="public" static="false" line="15"/>
+  <member name="TimeStamp" visibility="public" static="false" line="12"/>
+  <member name="Text" visibility="public" static="false" line="13"/>
+  <member name="Level" visibility="public" static="false" line="14"/>
+  <member name="LevelText" visibility="public" static="false" line="15"/>
   <constructor name="__construct" start="24" end="30" abstract="false" final="false" static="false" visibility="public">
     <docblock>
       <description/>

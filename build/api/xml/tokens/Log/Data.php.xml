@@ -39,28 +39,28 @@
     <token name="T_WHITESPACE">	</token>
     <token name="T_PUBLIC">public</token>
     <token name="T_WHITESPACE"> </token>
-    <token name="T_VARIABLE">$_TimeStamp</token>
+    <token name="T_VARIABLE">$TimeStamp</token>
     <token name="T_PHPDOX_SEMICOLON">;</token>
   </line>
   <line no="13">
     <token name="T_WHITESPACE">	</token>
     <token name="T_PUBLIC">public</token>
     <token name="T_WHITESPACE"> </token>
-    <token name="T_VARIABLE">$_sText</token>
+    <token name="T_VARIABLE">$Text</token>
     <token name="T_PHPDOX_SEMICOLON">;</token>
   </line>
   <line no="14">
     <token name="T_WHITESPACE">	</token>
     <token name="T_PUBLIC">public</token>
     <token name="T_WHITESPACE"> </token>
-    <token name="T_VARIABLE">$_iLevel</token>
+    <token name="T_VARIABLE">$Level</token>
     <token name="T_PHPDOX_SEMICOLON">;</token>
   </line>
   <line no="15">
     <token name="T_WHITESPACE">	</token>
     <token name="T_PUBLIC">public</token>
     <token name="T_WHITESPACE"> </token>
-    <token name="T_VARIABLE">$_sLevel</token>
+    <token name="T_VARIABLE">$LevelText</token>
     <token name="T_PHPDOX_SEMICOLON">;</token>
   </line>
   <line no="16"/>
@@ -114,7 +114,7 @@
     <token name="T_WHITESPACE">		</token>
     <token name="T_VARIABLE">$this</token>
     <token name="T_OBJECT_OPERATOR">-&gt;</token>
-    <token name="T_STRING">_TimeStamp</token>
+    <token name="T_STRING">TimeStamp</token>
     <token name="T_WHITESPACE">	</token>
     <token name="T_PHPDOX_EQUAL">=</token>
     <token name="T_WHITESPACE"> </token>
@@ -125,7 +125,7 @@
     <token name="T_WHITESPACE">		</token>
     <token name="T_VARIABLE">$this</token>
     <token name="T_OBJECT_OPERATOR">-&gt;</token>
-    <token name="T_STRING">_sText</token>
+    <token name="T_STRING">Text</token>
     <token name="T_WHITESPACE">		</token>
     <token name="T_PHPDOX_EQUAL">=</token>
     <token name="T_WHITESPACE"> </token>
@@ -136,7 +136,7 @@
     <token name="T_WHITESPACE">		</token>
     <token name="T_VARIABLE">$this</token>
     <token name="T_OBJECT_OPERATOR">-&gt;</token>
-    <token name="T_STRING">_iLevel</token>
+    <token name="T_STRING">Level</token>
     <token name="T_WHITESPACE">		</token>
     <token name="T_PHPDOX_EQUAL">=</token>
     <token name="T_WHITESPACE"> </token>
@@ -147,7 +147,7 @@
     <token name="T_WHITESPACE">		</token>
     <token name="T_VARIABLE">$this</token>
     <token name="T_OBJECT_OPERATOR">-&gt;</token>
-    <token name="T_STRING">_sLevel</token>
+    <token name="T_STRING">LevelText</token>
     <token name="T_WHITESPACE">		</token>
     <token name="T_PHPDOX_EQUAL">=</token>
     <token name="T_WHITESPACE"> </token>

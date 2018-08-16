@@ -67,7 +67,9 @@ abstract class DestinationBase
 	 */
 
 	public function setFormat( Format\IFormat $Format )
-	{ $this->_Format = $Format; }
+	{
+		$this->_Format = $Format;
+	}
 
 	/**
 	 * @param $text

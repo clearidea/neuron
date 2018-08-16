@@ -13,9 +13,9 @@ class JSON implements IFormat
 	public function format( Log\Data $Data )
 	{
 		$aData = [
-			'date'	=> date( "[Y-m-d G:i:s]", $Data->_TimeStamp ),
-			'level'	=> $Data->_sLevel,
-			'text'	=> $Data->_sText
+			'date'	=> date( "[Y-m-d G:i:s]", $Data->TimeStamp ),
+			'level'	=> $Data->LevelText,
+			'text'	=> $Data->Text
 		];
 		return json_encode( $aData );
 	}

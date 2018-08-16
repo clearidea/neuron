@@ -4,6 +4,7 @@
 * Modified the Log Singleton to use a LogMux instead of a simple Logger.
 * Finished email log destination.
 * First shot at slack log destination.
+* Slight refactoring for logging.
 
 ## 0.7.13 2028-07-28
 * Added EIN validator.
