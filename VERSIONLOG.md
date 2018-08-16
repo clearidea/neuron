@@ -1,5 +1,7 @@
 # Versions
 
+## 0.7.15
+
 ## 0.7.14 2018-08-16
 * Modified the Log Singleton to use a LogMux instead of a simple Logger.
 * Finished email log destination.
