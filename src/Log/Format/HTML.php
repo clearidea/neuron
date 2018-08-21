@@ -10,7 +10,7 @@ use Neuron\Log;
 
 class HTML implements IFormat
 {
-	public function format( Log\Data $Data )
+	public function format( Log\Data $Data ) : string
 	{
 		return '<small>'.date( "[Y-m-d G:i:s]", $Data->TimeStamp )."</small> $Data->LevelText $Data->Text<br>";
 	}

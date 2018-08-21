@@ -10,7 +10,7 @@ use \Neuron\Log;
 
 class JSON implements IFormat
 {
-	public function format( Log\Data $Data )
+	public function format( Log\Data $Data ) : string
 	{
 		$aData = [
 			'date'	=> date( "[Y-m-d G:i:s]", $Data->TimeStamp ),

@@ -10,9 +10,9 @@ class WebService extends DestinationBase
 {
 	private $_sEndPoint;
 
-	public function open( array $aParams )
+	public function open( array $Params )
 	{
-		$this->_sEndPoint = $aParams[ 'endpoint' ];
+		$this->_sEndPoint = $Params[ 'endpoint' ];
 		return true;
 	}
 

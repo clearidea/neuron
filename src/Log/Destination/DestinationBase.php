@@ -25,13 +25,22 @@ abstract class DestinationBase
 	private $_Format;
 
 	/**
-	 * @param $iLevel
+	 * @param Format\IFormat $Format
+	 */
+
+	public function __construct( Format\IFormat $Format )
+	{
+		$this->setFormat( $Format );
+	}
+
+	/**
+	 * @param $Level
 	 * @return string
 	 */
 
-	public function getLevelText( $iLevel )
+	public function getLevelText( $Level ) : string
 	{
-		switch( $iLevel )
+		switch( $Level )
 		{
 			case Log\ILogger::DEBUG:
 				return "Debug";
@@ -57,22 +66,13 @@ abstract class DestinationBase
 	 * @param Format\IFormat $Format
 	 */
 
-	public function __construct( Format\IFormat $Format )
-	{
-		$this->setFormat( $Format );
-	}
-
-	/**
-	 * @param Format\IFormat $Format
-	 */
-
 	public function setFormat( Format\IFormat $Format )
 	{
 		$this->_Format = $Format;
 	}
 
 	/**
-	 * @param $text
+	 * @param $text - Text m
 	 * @param Log\Data $Data
 	 * @return mixed
 	 */
@@ -80,22 +80,28 @@ abstract class DestinationBase
 	protected abstract function write( $text, Log\Data $Data );
 
 	/**
-	 * @param array $aParams
+	 * @param array $Params
 	 * @return mixed
 	 */
 
-	public abstract function open( array $aParams );
+	public abstract function open( array $Params );
 
 	/**
-	 * @param $text
-	 * @param $iLevel
+	 * @param $Text - Output that has been run through the formatter.
+	 * @param $Level - Text output level.
 	 */
 
-	public function log( $text, $iLevel )
+	public function log( $Text, $Level )
 	{
-		$Log = new Log\Data( time(), $text, $iLevel, $this->getLevelText( $iLevel ) );
-		$text = $this->_Format->format( $Log );
+		$Log = new Log\Data(
+			time(),
+			$Text,
+			$Level,
+			$this->getLevelText( $Level )
+		);
 
-		$this->write( $text, $Log );
+		$Text = $this->_Format->format( $Log );
+
+		$this->write( $Text, $Log );
 	}
 }

@@ -10,6 +10,9 @@ class Log extends Memory
 {
 	public $Logger;
 
+	/**
+	 * Creates and initializes the core logger if needed.
+	 */
 	public function initIfNeeded()
 	{
 		if( !$this->Logger )
