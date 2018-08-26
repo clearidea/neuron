@@ -11,13 +11,13 @@ use Neuron\Log;
 class Echoer extends DestinationBase
 {
 	/**
-	 * @param array $aParams
+	 * @param array $Params
 	 * @return bool
 	 *
 	 * @SuppressWarnings(PHPMD)
 	 */
 
-	public function open( array $aParams )
+	public function open( array $Params )
 	{
 		return true;
 	}

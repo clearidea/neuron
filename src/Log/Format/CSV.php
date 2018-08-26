@@ -10,7 +10,7 @@ use Neuron\Log;
 
 class CSV implements IFormat
 {
-	public function format( Log\Data $Data )
+	public function format( Log\Data $Data ) : string
 	{
 		return date( "[Y-m-d G:i:s]", $Data->TimeStamp ) . ",$Data->LevelText,$Data->Text";
 	}

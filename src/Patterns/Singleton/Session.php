@@ -19,5 +19,3 @@ class SessionSingleton extends Base
 		return isset( $_SESSION[ get_called_class() ] ) ? $_SESSION[ get_called_class() ] : false;
 	}
 }
-
-?>

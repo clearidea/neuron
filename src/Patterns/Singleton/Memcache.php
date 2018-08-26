@@ -15,7 +15,9 @@ class Memcache extends Base
 	protected static function getMemcache()
 	{
 		if( self::$_memcache )
+		{
 			return self::$_memcache;
+		}
 
 		$memcache = new \Memcached();
 		$memcache->addServer( '127.0.0.1', 11211 );

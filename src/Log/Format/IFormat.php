@@ -10,5 +10,9 @@ use Neuron\Log;
 
 interface IFormat
 {
-	public function format( Log\Data $data );
+	/**
+	 * @param Log\Data $data
+	 * @return string
+	 */
+	public function format( Log\Data $data ) : string;
 }

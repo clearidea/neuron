@@ -15,13 +15,13 @@ class File extends DestinationBase
 	private $_hFile;
 
 	/**
-	 * @param array $aParams
+	 * @param array $Params
 	 * @return bool
 	 */
 
-	public function open( array $aParams )
+	public function open( array $Params )
 	{
-		$this->_sName = $aParams[ 'file_name' ];
+		$this->_sName = $Params[ 'file_name' ];
 
 		$this->_hFile = @fopen( $this->_sName, 'a' );
 

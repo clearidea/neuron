@@ -11,8 +11,6 @@ class Logger implements ILogger
 	private $_iRunLevel = ILogger::ERROR;
 	private $_Destination;
 
-	//////////////////////////////////////////////////////////////////////////
-
 	/**
 	 * @param Destination\DestinationBase $Dest
 	 */

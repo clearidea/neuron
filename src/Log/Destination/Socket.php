@@ -9,13 +9,13 @@ class Socket extends DestinationBase
 	private $_sAddress;
 
 	/**
-	 * @param array $aParams
+	 * @param array $Params
 	 * @return bool
 	 */
 
-	public function open( array $aParams )
+	public function open( array $Params )
 	{
-		$this->_sAddress = $aParams[ 'ip_address' ];
+		$this->_sAddress = $Params[ 'ip_address' ];
 
 		return true;
 	}

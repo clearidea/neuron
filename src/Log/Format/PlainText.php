@@ -17,7 +17,7 @@ class PlainText implements IFormat
 		$this->_bShowDate = $bShowDate;
 	}
 
-	public function format( Log\Data $Data )
+	public function format( Log\Data $Data ) : string
 	{
 		$output = '';
 
