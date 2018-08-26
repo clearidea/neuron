@@ -1,6 +1,6 @@
 # Versions
 
-## 0.7.15
+## 0.7.15 2018-08-26
 * Added htmlemail formatter.
 * Enhanced the formatters.
 
