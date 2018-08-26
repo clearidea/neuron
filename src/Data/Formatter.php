@@ -6,24 +6,39 @@ class Formatter
 {
 	/**
 	 * Format currency to n places.
-	 * @param $fNum
+	 * @param $Number
+	 * @param $Format
 	 * @return string
 	 */
 
-	public static function currency( $fNum )
+	public static function currency( $Number, string $Format = "%01.2f", $PadLength = 9 )
 	{
-		$s = "<pre style='display:inline; background-color: inherit; color:white; border: none;'>".str_pad(
-				sprintf( "%01.2f", round($fNum, 2) ), 9, '_', STR_PAD_LEFT )."</pre>";
-		return $s;
-	}
-	
-	public static function dateOnly( $DateTime )
-	{
-		return date( 'Y-m-d', strtotime( $DateTime ) );
+		return
+			"<pre style='display:inline; background-color: inherit; color:white; border: none;'>".
+				str_pad(
+					sprintf(
+						$Format,
+						round( $Number, 2 )
+					),
+					$PadLength,
+					'_',
+					STR_PAD_LEFT
+				).
+			"</pre>";
 	}
 
-	public static function timeOnly( $DateTime )
+	public static function dateTime( $DateTime, string $Format = 'Y-m-d g:i a' )
 	{
-		return date( 'g:i a', strtotime( $DateTime ) );
+		return date( $Format, strtotime( $DateTime ) );
+	}
+
+	public static function dateOnly( string $DateTime, string $Format = 'Y-m-d' )
+	{
+		return date( $Format, strtotime( $DateTime ) );
+	}
+
+	public static function timeOnly( string $DateTime, string $Format = 'g:i a' )
+	{
+		return date( $Format, strtotime( $DateTime ) );
 	}
 }

@@ -1,6 +1,8 @@
 # Versions
 
 ## 0.7.15
+* Added htmlemail formatter.
+* Enhanced the formatters.
 
 ## 0.7.14 2018-08-16
 * Modified the Log Singleton to use a LogMux instead of a simple Logger.
@@ -12,7 +14,6 @@
 * Added EIN validator.
 * Added International validation for PhoneNumber.
 * Added getLengthInDays to DateRange.
-
 
 ## 0.7.9
 * Added Name validator.
