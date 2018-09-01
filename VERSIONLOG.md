@@ -1,5 +1,7 @@
 # Versions
 
+## 0.7.17
+
 ## 0.7.16 2018-09-01
 * Added ArrayData validator.
 
