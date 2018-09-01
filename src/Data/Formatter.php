@@ -27,16 +27,31 @@ class Formatter
 			"</pre>";
 	}
 
+	/**
+	 * @param $DateTime
+	 * @param string $Format
+	 * @return false|string
+	 */
 	public static function dateTime( $DateTime, string $Format = 'Y-m-d g:i a' )
 	{
 		return date( $Format, strtotime( $DateTime ) );
 	}
 
+	/**
+	 * @param string $DateTime
+	 * @param string $Format
+	 * @return false|string
+	 */
 	public static function dateOnly( string $DateTime, string $Format = 'Y-m-d' )
 	{
 		return date( $Format, strtotime( $DateTime ) );
 	}
 
+	/**
+	 * @param string $DateTime
+	 * @param string $Format
+	 * @return false|string
+	 */
 	public static function timeOnly( string $DateTime, string $Format = 'g:i a' )
 	{
 		return date( $Format, strtotime( $DateTime ) );
