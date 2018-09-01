@@ -26,5 +26,4 @@ class DateTest
 
 		$this->assertTrue( $dn->isValid( '2015-01-01' ) );
 	}
-
 }

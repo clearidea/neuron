@@ -6,9 +6,9 @@ namespace Neuron\Data\Validation;
  * Requires a date with a specific format. Defaults to Y-m-d
  * @package Neuron\Data\Validation
  */
-class Date extends Base
+class DateTime extends Base
 {
-	private $_Format = 'Y-m-d';
+	private $_Format = 'Y-m-d H:i:s';
 
 	protected function validate( $CheckDate )
 	{
