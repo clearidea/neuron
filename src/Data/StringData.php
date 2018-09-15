@@ -74,4 +74,28 @@ class StringData
 	{
 		return '"'.$this->trim().'"';
 	}
+
+	/**
+	 * @param bool $CapitalizeFirst
+	 * @return mixed|string
+	 */
+	public function toCamelCase( bool $CapitalizeFirst = true )
+	{
+		$Str = str_replace('_', '', ucwords( $this->Value, '_'));
+
+		if( !$CapitalizeFirst )
+		{
+			$Str = lcfirst( $Str );
+		}
+
+		return $Str;
+	}
+
+	/**
+	 * @return string
+	 */
+	public function toSnakeCase()
+	{
+		return strtolower( preg_replace('/(?<!^)[A-Z]/', '_$0', $this->Value ) );
+	}
 }

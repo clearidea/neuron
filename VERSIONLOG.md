@@ -1,5 +1,9 @@
 # Versions
 
+## 0.7.18 2018-09-15
+* Added Boolean validator.
+* Added toCamelCase and toSnakeCase methods to StringData.
+
 ## 0.7.17 2018-09-01
 * Added DateTime validator. Updated date validation logic.
 
