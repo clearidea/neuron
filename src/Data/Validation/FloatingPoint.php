@@ -8,8 +8,8 @@ namespace Neuron\Data\Validation;
  */
 class FloatingPoint extends Base
 {
-	protected function validate( $float )
+	protected function validate( $Value )
 	{
-		return is_float( $float );
+		return is_float( $Value );
 	}
 }
