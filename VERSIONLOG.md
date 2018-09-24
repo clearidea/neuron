@@ -1,5 +1,7 @@
 # Versions
 
+## 0.7.20
+
 ## 0.7.19 2019-09-24
 * Added 'loose' matching to boolean validation that checks for int 0 or 1.
 
