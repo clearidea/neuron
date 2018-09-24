@@ -8,8 +8,23 @@ namespace Neuron\Data\Validation;
  */
 class Boolean extends Base
 {
-	protected function validate( $float )
+	private $_Loose;
+
+	public function __construct( $Loose = false )
 	{
-		return is_bool( $float );
+		$this->_Loose = $Loose;
+	}
+
+	protected function validate( $Value )
+	{
+		if( $this->_Loose )
+		{
+			if( $Value === 0 || $Value === 1 )
+			{
+				return true;
+			}
+		}
+
+		return is_bool( $Value );
 	}
 }

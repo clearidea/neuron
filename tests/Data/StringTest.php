@@ -103,12 +103,21 @@ class StringDataTest extends PHPUnit\Framework\TestCase
 
 	public function testToCamelCase()
 	{
-
 		$this->String->Value = 'this_is_a_test';
 
 		$this->assertEquals(
 			'ThisIsATest',
 			$this->String->toCamelCase()
+		);
+	}
+
+	public function testToCamelCaseNoCap()
+	{
+		$this->String->Value = 'this_is_a_test';
+
+		$this->assertEquals(
+			'thisIsATest',
+			$this->String->toCamelCase( false )
 		);
 	}
 
