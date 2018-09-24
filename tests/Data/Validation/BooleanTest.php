@@ -1,7 +1,6 @@
 <?php
 
-class BooleanTestTest
-	extends PHPUnit\Framework\TestCase
+class BooleanTestTest extends PHPUnit\Framework\TestCase
 {
 	public function testFail()
 	{
@@ -23,7 +22,14 @@ class BooleanTestTest
 
 		$this->assertTrue( $Validator->isValid( 0 ) );
 		$this->assertTrue( $Validator->isValid( 1 ) );
+
 		$this->assertTrue( !$Validator->isValid( 2 ) );
 		$this->assertTrue( !$Validator->isValid( 'test' ) );
+
+		$this->assertTrue( $Validator->isValid( '0' ) );
+		$this->assertTrue( $Validator->isValid( '1' ) );
+
+		$this->assertTrue( $Validator->isValid( 'TRUE' ) );
+		$this->assertTrue( $Validator->isValid( 'FALSE' ) );
 	}
 }

@@ -1,7 +1,16 @@
 <?php
-/**
- *	http://stackoverflow.com/questions/190295/testing-abstract-classes
- */
+
+class AppMock extends \Neuron\Application\Base
+{
+	public function getVersion()
+	{
+		return '1';
+	}
+
+	protected function onRun()
+	{
+	}
+}
 
 class ApplicationTest extends PHPUnit\Framework\TestCase
 {
@@ -9,11 +18,7 @@ class ApplicationTest extends PHPUnit\Framework\TestCase
 
 	public function setup()
 	{
-		$this->_App = $this->getMockForAbstractClass( '\Neuron\Application\Base' );
-
-		$this->_App->expects( $this->any() )
-			->method( 'onRun' )
-			->will( $this->returnValue( true ) );
+		$this->_App = new AppMock();
 	}
 
 	public function testRun()
@@ -37,6 +42,20 @@ class ApplicationTest extends PHPUnit\Framework\TestCase
 	{
 		$this->assertTrue(
 			$this->_App->isCommandLine()
+		);
+	}
+
+	public function testSettings()
+	{
+		$Source = new \Neuron\Setting\Source\Ini( 'examples/test.ini' );
+
+		$this->_App->setSettingSource( $Source );
+
+		$Value = $this->_App->getSetting( 'name', 'test' );
+
+		$this->assertEquals(
+			'value',
+			$Value
 		);
 	}
 }
