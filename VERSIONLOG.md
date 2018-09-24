@@ -1,5 +1,7 @@
 # Versions
 
+## 0.7.21
+
 ## 0.7.20 2019-09-24
 * Improved boolean loose mode validation to include '0', '1' and
     'true', 'false.
