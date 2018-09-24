@@ -15,6 +15,35 @@ class VersionTest extends PHPUnit\Framework\TestCase
 		$this->assertEquals( 3, $Version->Patch );
 	}
 
+	public function testLoadFromFile()
+	{
+		$Version = new \Neuron\Data\Object\Version();
+
+		$Version->loadFromFile( 'examples/version.json' );
+
+		$this->assertEquals( 1, $Version->Major );
+		$this->assertEquals( 2, $Version->Minor );
+		$this->assertEquals( 3, $Version->Patch );
+	}
+
+	public function testFailLoadFromFile()
+	{
+		$Version = new \Neuron\Data\Object\Version();
+
+		$Success = true;
+
+		try
+		{
+			$Version->loadFromFile( 'DoesNotExist' );
+		}
+		catch( Exception $Exception )
+		{
+			$Success = false;
+		}
+
+		$this->assertFalse( $Success );
+	}
+
 	public function testFailLoadFromString()
 	{
 		$Version = new \Neuron\Data\Object\Version();

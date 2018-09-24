@@ -9,7 +9,9 @@ class Ini implements ISettingSource
 	public function __construct( $sFile )
 	{
 		if( !file_exists( $sFile ) )
+		{
 			throw new \Exception( "Setting\Source\Ini Cannot open $sFile" );
+		}
 
 		$this->_aSettings = parse_ini_file( $sFile, true );
 	}

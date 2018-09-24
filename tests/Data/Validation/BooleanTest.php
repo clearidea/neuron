@@ -1,7 +1,6 @@
 <?php
 
-class BooleanTestTest
-	extends PHPUnit\Framework\TestCase
+class BooleanTestTest extends PHPUnit\Framework\TestCase
 {
 	public function testFail()
 	{

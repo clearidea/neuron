@@ -28,7 +28,7 @@ class Version
 
 		if( $Json === null )
 		{
-			throw new \Exception( "Unable to parse json from '$File'" );
+			throw new \Exception( "Unable to parse json from '$Data'" );
 		}
 
 		$this->Major = $Json[ 'major' ];
