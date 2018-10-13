@@ -75,5 +75,3 @@ class SettingManager
 		return $this->getSource()->getSectionSettingNames( $sSection );
 	}
 }
-
-?>

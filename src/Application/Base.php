@@ -167,7 +167,7 @@ abstract class Base extends Log\Base implements IApplication
 	 * returns parameters passed to the run method.
 	 */
 
-	protected function getParameters()
+	public function getParameters()
 	{
 		return $this->_aParameters;
 	}
