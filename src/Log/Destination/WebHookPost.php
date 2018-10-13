@@ -4,7 +4,6 @@ namespace Neuron\Log\Destination;
 
 use Neuron\Data\Validation\Url;
 use Neuron\Log;
-use Neuron\Util\IWebHook;
 
 class WebHookPost extends DestinationBase
 {
@@ -29,13 +28,13 @@ class WebHookPost extends DestinationBase
 	}
 
 	/**
-	 * @param $text
+	 * @param $Text
 	 * @param Log\Data $Data
 	 *
 	 * @SuppressWarnings(PHPMD)
 	 */
 
-	public function write( $text, Log\Data $Data )
+	public function write( $Text, Log\Data $Data )
 	{
 		$Hook = new \Neuron\Util\WebHook();
 
