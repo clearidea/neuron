@@ -188,7 +188,7 @@ abstract class Base extends Log\Base implements IApplication
 	 * @return Log\LogMux
 	 */
 
-	public function getLogger()
+	public function getLogger() : Log\ILogger
 	{
 		return $this->_Logger;
 	}

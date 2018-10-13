@@ -61,4 +61,22 @@ class WebHook implements IWebHook
 
 		curl_close( $Handle );
 	}
+
+	public function postJson( $Url, string $Json )
+	{
+		$Handle = curl_init( $Url );
+
+		curl_setopt( $Handle, CURLOPT_CUSTOMREQUEST, "POST" );
+		curl_setopt( $Handle, CURLOPT_POSTFIELDS, $Json );
+		curl_setopt( $Handle, CURLOPT_RETURNTRANSFER, true );
+		curl_setopt( $Handle, CURLOPT_HTTPHEADER,
+			[
+				'Content-Type: application/json',
+				'Content-Length: ' . strlen( $Json )
+			]
+		);
+
+		curl_exec( $Handle );
+		curl_close( $Handle );
+	}
 }

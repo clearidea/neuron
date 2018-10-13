@@ -9,7 +9,7 @@ class WebHookPost extends DestinationBase
 {
 	private $_EndPoint;
 
-	public function open( array $Params )
+	public function open( array $Params ) : bool
 	{
 		$Validator = new Url();
 
@@ -34,7 +34,7 @@ class WebHookPost extends DestinationBase
 	 * @SuppressWarnings(PHPMD)
 	 */
 
-	public function write( $Text, Log\Data $Data )
+	public function write( string $Text, Log\Data $Data )
 	{
 		$Hook = new \Neuron\Util\WebHook();
 

@@ -33,7 +33,7 @@ class Logger implements ILogger
 	 * @param $iLevel
 	 */
 
-	public function setRunLevel( $iLevel )
+	public function setRunLevel( int $iLevel )
 	{
 		$this->_iRunLevel = $iLevel;
 	}
@@ -42,7 +42,7 @@ class Logger implements ILogger
 	 * @return int
 	 */
 
-	public function getRunLevel()
+	public function getRunLevel() : int
 	{
 		return $this->_iRunLevel;
 	}
@@ -81,7 +81,7 @@ class Logger implements ILogger
 	 * @param $iLevel
 	 */
 
-	public function log( $text, $iLevel )
+	public function log( string $text, int $iLevel )
 	{
 		if( $iLevel >= $this->getRunLevel() )
 		{
@@ -93,7 +93,7 @@ class Logger implements ILogger
 	 * @param $text
 	 */
 
-	public function debug( $text )
+	public function debug( string $text )
 	{
 		$this->log( $text, self::DEBUG );
 	}
@@ -102,7 +102,7 @@ class Logger implements ILogger
 	 * @param $text
 	 */
 
-	public function info( $text )
+	public function info( string $text )
 	{
 		$this->log( $text, self::INFO );
 	}
@@ -111,7 +111,7 @@ class Logger implements ILogger
 	 * @param $text
 	 */
 
-	public function warning( $text )
+	public function warning( string $text )
 	{
 		$this->log( $text, self::WARNING );
 	}
@@ -120,7 +120,7 @@ class Logger implements ILogger
 	 * @param $text
 	 */
 
-	public function error( $text )
+	public function error( string $text )
 	{
 		$this->log( $text, self::ERROR );
 	}
@@ -129,7 +129,7 @@ class Logger implements ILogger
 	 * @param $text
 	 */
 
-	public function fatal( $text )
+	public function fatal( string $text )
 	{
 		$this->log( $text, self::FATAL );
 	}

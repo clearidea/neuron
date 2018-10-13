@@ -15,7 +15,7 @@ class Email
 	 * @return bool
 	 */
 
-	public function open( array $Params )
+	public function open( array $Params ) : bool
 	{
 		$this->_To      = $Params[ 'to' ];
 		$this->_From    = $Params[ 'from' ];
@@ -32,7 +32,7 @@ class Email
 	 * @SuppressWarnings(PHPMD)
 	 */
 
-	public function write( $Text, Log\Data $Data )
+	public function write( string $Text, Log\Data $Data )
 	{
 		mail(
 			$this->_To,
