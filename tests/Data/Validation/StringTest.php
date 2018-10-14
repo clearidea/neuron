@@ -1,14 +1,5 @@
 <?php
-
-/**
- * Created by PhpStorm.
- * User: lee
- * Date: 9/5/15
- * Time: 11:07 AM
- */
-
-class StringTest
-	extends PHPUnit\Framework\TestCase
+class StringTest extends PHPUnit\Framework\TestCase
 {
 	public function testFail()
 	{
