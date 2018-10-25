@@ -1,27 +1,25 @@
 <?php
 
-/**
- * Created by PhpStorm.
- * User: lee
- * Date: 9/5/15
- * Time: 11:07 AM
- */
-
-class FloatTest
-	extends PHPUnit\Framework\TestCase
+class FloatTest extends PHPUnit\Framework\TestCase
 {
 	public function testFail()
 	{
-		$dn = new \Neuron\Data\Validation\FloatingPoint();
+		$Validator = new \Neuron\Data\Validation\FloatingPoint();
 
-		$this->assertFalse( $dn->isValid( 'string' ) );
+		$this->assertFalse( $Validator->isValid( 'string' ) );
 	}
 
 	public function testPass()
 	{
-		$dn = new \Neuron\Data\Validation\FloatingPoint();
+		$Validator = new \Neuron\Data\Validation\FloatingPoint();
 
-		$this->assertTrue( $dn->isValid( 3.14) );
+		$this->assertTrue( $Validator->isValid( 3.14 ) );
 	}
 
+	public function testStringPass()
+	{
+		$Validator = new \Neuron\Data\Validation\FloatingPoint();
+
+		$this->assertTrue( $Validator->isValid( "3.14" ) );
+	}
 }
