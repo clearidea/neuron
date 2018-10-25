@@ -1,8 +1,6 @@
 # Versions
 
-
-
-## 0.7.21
+## 0.7.21 2018-10-25
 * Added WebHook and IWebHook.
 * Implemented WebHookPost log destination.
 * Added StringLength validator.
