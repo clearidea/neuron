@@ -1,5 +1,11 @@
 # Versions
 
+## 0.7.21 2018-10-25
+* Added WebHook and IWebHook.
+* Implemented WebHookPost log destination.
+* Added StringLength validator.
+* Fixed up float validator to accommodate floats in strings.
+
 ## 0.7.20 2019-09-24
 * Improved boolean loose mode validation to include '0', '1' and
     'true', 'false.

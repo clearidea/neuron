@@ -50,8 +50,8 @@ class StringDataTest extends PHPUnit\Framework\TestCase
 	public function testLeft()
 	{
 		$this->assertEquals(
-			$this->String->length(),
-			9
+			'123',
+			$this->String->left( 3 )
 		);
 	}
 

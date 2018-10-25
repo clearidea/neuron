@@ -18,7 +18,7 @@ class Null
 	 * @SuppressWarnings(PHPMD)
 	 */
 
-	public function open( array $Params )
+	public function open( array $Params ) : bool
 	{
 		return true;
 	}
@@ -35,7 +35,7 @@ class Null
 	 * @SuppressWarnings(PHPMD)
 	 */
 
-	public function write( $s, Log\Data $Data )
+	public function write( string $Text, Log\Data $Data )
 	{
 		// asm nop;
 	}

@@ -29,7 +29,7 @@ class StringData
 	 */
 	public function left( $Length )
 	{
-		return $this->mid( 0, $Length );
+		return $this->mid( 0, $Length - 1 );
 	}
 
 	/**

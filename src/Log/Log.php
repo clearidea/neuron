@@ -35,7 +35,7 @@ class Log extends Memory
 	 * @param $text
 	 * @param $iLevel
 	 */
-	public static function _log( $text, $iLevel )
+	public static function _log( string $text, int $iLevel )
 	{
 		$Log = self::getInstance();
 		$Log->initIfNeeded();
@@ -45,7 +45,7 @@ class Log extends Memory
 	/**
 	 * @param $iLevel
 	 */
-	public static function setRunLevel( $iLevel )
+	public static function setRunLevel( int $iLevel )
 	{
 		$Log = self::getInstance();
 		$Log->initIfNeeded();
@@ -56,7 +56,7 @@ class Log extends Memory
 	/**
 	 * @param $text
 	 */
-	public static function debug( $text )
+	public static function debug( string $text )
 	{
 		self::_log( $text, ILogger::DEBUG );
 	}
@@ -64,7 +64,7 @@ class Log extends Memory
 	/**
 	 * @param $text
 	 */
-	public static function info( $text )
+	public static function info( string $text )
 	{
 		self::_log( $text, ILogger::INFO );
 	}
@@ -72,7 +72,7 @@ class Log extends Memory
 	/**
 	 * @param $text
 	 */
-	public static function warning( $text )
+	public static function warning( string $text )
 	{
 		self::_log( $text, ILogger::WARNING );
 	}
@@ -80,7 +80,7 @@ class Log extends Memory
 	/**
 	 * @param $text
 	 */
-	public static function error( $text )
+	public static function error( string $text )
 	{
 		self::_log( $text, ILogger::ERROR );
 	}
@@ -88,7 +88,7 @@ class Log extends Memory
 	/**
 	 * @param $text
 	 */
-	public static function fatal( $text )
+	public static function fatal( string $text )
 	{
 		self::_log( $text, ILogger::FATAL );
 	}

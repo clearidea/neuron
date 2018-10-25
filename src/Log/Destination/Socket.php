@@ -13,7 +13,7 @@ class Socket extends DestinationBase
 	 * @return bool
 	 */
 
-	public function open( array $Params )
+	public function open( array $Params ) : bool
 	{
 		$this->_sAddress = $Params[ 'ip_address' ];
 
@@ -29,10 +29,10 @@ class Socket extends DestinationBase
 	 * @throws \Exception
 	 */
 
-	protected function error( $sMsg )
+	protected function error( string $sMsg )
 	{
 		$errorcode = socket_last_error();
-		$errormsg = socket_strerror($errorcode);
+		$errormsg  = socket_strerror($errorcode);
 
 		throw new \Exception( "$sMsg: [$errorcode] $errormsg\n" );
 	}
@@ -45,7 +45,7 @@ class Socket extends DestinationBase
 	 * @SuppressWarnings(PHPMD)
 	 */
 
-	public function write( $text, Log\Data $Data )
+	public function write( string $text, Log\Data $Data )
 	{
 		if( !($sock = socket_create(AF_INET, SOCK_STREAM, 0)))
 		{

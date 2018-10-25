@@ -10,6 +10,6 @@ class FloatingPoint extends Base
 {
 	protected function validate( $Value )
 	{
-		return is_float( $Value );
+		return ( $Value == ( string)( float)$Value );
 	}
 }

@@ -21,7 +21,7 @@ class Data
 	 * @param $sLevel
 	 */
 
-	public function __construct( $TimeStamp, $sText, $iLevel, $sLevel )
+	public function __construct( int $TimeStamp, string $sText, int $iLevel, string $sLevel )
 	{
 		$this->TimeStamp = $TimeStamp;
 		$this->Text      = $sText;

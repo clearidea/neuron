@@ -2,7 +2,9 @@
 
 namespace Neuron\Log\Destination;
 
+use Neuron\Data\Validation\Url;
 use Neuron\Log;
+use Neuron\Util\WebHook;
 
 class Slack extends DestinationBase
 {
@@ -18,11 +20,21 @@ class Slack extends DestinationBase
 	 *
 	 * @param array $Params
 	 * @return bool
+	 *
+	 * @throws
 	 */
-	public function open( array $Params )
+	public function open( array $Params ) : bool
 	{
-		$this->_Webhook = $Params[ 'webhook_url' ];
+		$Validator = new Url();
+
+		if( !$Validator->isValid( $Params[ 'endpoint' ] ) )
+		{
+			throw new \Exception( $Params[ 'endpoint' ].' is not a valid url.' );
+		}
+
+		$this->_Webhook = $Params[ 'endpoint' ];
 		$this->_Params  = $Params[ 'params' ];
+
 		return true;
 	}
 
@@ -31,28 +43,19 @@ class Slack extends DestinationBase
 	}
 
 	/**
-	 * @param $text
+	 * @param $Text
 	 * @param Log\Data $Data
 	 * @return void
 	 *
 	 * @SuppressWarnings(PHPMD)
 	 */
 
-	public function write( $text, Log\Data $Data )
+	public function write( string $Text, Log\Data $Data )
 	{
+		$this->_Params[ 'text' ] = $Text;
 		$DataString = json_encode( $this->_Params );
-		$Handle     = curl_init( $this->_Webhook );
 
-		curl_setopt( $Handle, CURLOPT_CUSTOMREQUEST, "POST" );
-		curl_setopt( $Handle, CURLOPT_POSTFIELDS, $DataString );
-		curl_setopt( $Handle, CURLOPT_RETURNTRANSFER, true );
-		curl_setopt( $Handle, CURLOPT_HTTPHEADER,
-			[
-				'Content-Type: application/json',
-				'Content-Length: ' . strlen( $DataString )
-			]
-		);
-
-		curl_exec( $Handle );
+		$WebHook = (new WebHook() )
+			->postJson( $this->_Webhook, $DataString );
 	}
 }

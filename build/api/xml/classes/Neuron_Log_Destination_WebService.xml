@@ -2,7 +2,7 @@
 <class xmlns="http://xml.phpdox.net/src" full="Neuron\Log\Destination\WebService" namespace="Neuron\Log\Destination" name="WebService" abstract="false" final="false" start="9" end="33">
   <file path="/Volumes/Storage/Projects/clearidea/open-source/Neuron/src/Log/Destination" file="WebService.php" realpath="/Volumes/Storage/Projects/clearidea/open-source/Neuron/src/Log/Destination/WebService.php" size="431" time="2016-08-04T19:53:26+00:00" unixtime="1470340406" sha1="27ae73e716326b2f49be1e2abfa652d6191ecc69" relative="Log/Destination/WebService.php"/>
   <extends full="Neuron\Log\Destination\DestinationBase" namespace="Neuron\Log\Destination" name="DestinationBase"/>
-  <member name="_sEndPoint" visibility="private" static="false" line="11"/>
+  <member name="_EndPoint" visibility="private" static="false" line="11"/>
   <method name="open" start="13" end="17" abstract="false" final="false" static="false" visibility="public">
     <parameter name="aParams" byreference="false" type="array"/>
   </method>

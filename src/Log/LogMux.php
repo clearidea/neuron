@@ -39,7 +39,7 @@ class LogMux implements ILogger
 	 * Sync run levels for all loggers.
 	 */
 
-	public function setRunLevel( $iLevel )
+	public function setRunLevel( int $iLevel )
 	{
 		foreach( $this->getLogs() as $Log )
 		{
@@ -53,7 +53,7 @@ class LogMux implements ILogger
 	 * @param $iLevel
 	 */
 
-	public function log( $text, $iLevel )
+	public function log( string $text, int $iLevel )
 	{
 		foreach( $this->getLogs() as $Log )
 		{
@@ -65,7 +65,7 @@ class LogMux implements ILogger
 	 * @param $text
 	 */
 
-	public function debug( $text )
+	public function debug( string $text )
 	{
 		$this->log( $text, self::DEBUG );
 	}
@@ -74,7 +74,7 @@ class LogMux implements ILogger
 	 * @param $text
 	 */
 
-	public function info( $text )
+	public function info( string $text )
 	{
 		$this->log( $text, self::INFO );
 	}
@@ -83,7 +83,7 @@ class LogMux implements ILogger
 	 * @param $text
 	 */
 
-	public function warning( $text )
+	public function warning( string $text )
 	{
 		$this->log( $text, self::WARNING );
 	}
@@ -92,7 +92,7 @@ class LogMux implements ILogger
 	 * @param $text
 	 */
 
-	public function error( $text )
+	public function error( string $text )
 	{
 		$this->log( $text, self::ERROR );
 	}
@@ -101,7 +101,7 @@ class LogMux implements ILogger
 	 * @param $text
 	 */
 
-	public function fatal( $text )
+	public function fatal( string $text )
 	{
 		$this->log( $text, self::FATAL );
 	}

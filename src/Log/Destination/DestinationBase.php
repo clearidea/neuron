@@ -77,21 +77,21 @@ abstract class DestinationBase
 	 * @return mixed
 	 */
 
-	protected abstract function write( $text, Log\Data $Data );
+	protected abstract function write( string $text, Log\Data $Data );
 
 	/**
 	 * @param array $Params
 	 * @return mixed
 	 */
 
-	public abstract function open( array $Params );
+	public abstract function open( array $Params ) : bool;
 
 	/**
 	 * @param $Text - Output that has been run through the formatter.
 	 * @param $Level - Text output level.
 	 */
 
-	public function log( $Text, $Level )
+	public function log( string $Text, int $Level )
 	{
 		$Log = new Log\Data(
 			time(),

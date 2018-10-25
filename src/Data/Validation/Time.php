@@ -1,10 +1,4 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: jeremiahyoder
- * Date: 2/22/17
- * Time: 9:10 AM
- */
 
 namespace Neuron\Data\Validation;
 

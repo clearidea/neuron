@@ -17,7 +17,7 @@ class StdOut extends DestinationBase
 	 * @SuppressWarnings(PHPMD)
 	 */
 
-	public function open( array $Params )
+	public function open( array $Params ) : bool
 	{
 		return true;
 	}
@@ -33,7 +33,7 @@ class StdOut extends DestinationBase
 	 * @SuppressWarnings(PHPMD)
 	 */
 
-	public function write( $text, Log\Data $Data )
+	public function write( string $text, Log\Data $Data )
 	{
 		if( !defined( 'STDOUT') )
 		{

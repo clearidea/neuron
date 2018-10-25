@@ -45,7 +45,7 @@
     <token name="T_WHITESPACE">	</token>
     <token name="T_PRIVATE">private</token>
     <token name="T_WHITESPACE"> </token>
-    <token name="T_VARIABLE">$_sEndPoint</token>
+    <token name="T_VARIABLE">$_EndPoint</token>
     <token name="T_PHPDOX_SEMICOLON">;</token>
   </line>
   <line no="12"/>
@@ -72,7 +72,7 @@
     <token name="T_WHITESPACE">		</token>
     <token name="T_VARIABLE">$this</token>
     <token name="T_OBJECT_OPERATOR">-&gt;</token>
-    <token name="T_STRING">_sEndPoint</token>
+    <token name="T_STRING">_EndPoint</token>
     <token name="T_WHITESPACE"> </token>
     <token name="T_PHPDOX_EQUAL">=</token>
     <token name="T_WHITESPACE"> </token>
