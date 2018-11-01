@@ -15,6 +15,20 @@ class VersionTest extends PHPUnit\Framework\TestCase
 		$this->assertEquals( 3, $Version->Patch );
 	}
 
+	public function testLoadFromStringBuild()
+	{
+		$Version = new \Neuron\Data\Object\Version();
+
+		$Version->loadFromString(
+			"{\"major\":1,\"minor\":2,\"patch\":3,\"build\":4}"
+		);
+
+		$this->assertEquals( 1, $Version->Major );
+		$this->assertEquals( 2, $Version->Minor );
+		$this->assertEquals( 3, $Version->Patch );
+		$this->assertEquals( 4, $Version->Build );
+	}
+
 	public function testLoadFromFile()
 	{
 		$Version = new \Neuron\Data\Object\Version();
