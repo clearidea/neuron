@@ -7,6 +7,7 @@ class Version
 	public $Major;
 	public $Minor;
 	public $Patch;
+	public $Build;
 
 	/**
 	 * Version constructor.
@@ -16,6 +17,7 @@ class Version
 		$this->Major = 0;
 		$this->Minor = 0;
 		$this->Patch = 0;
+		$this->Build = 0;
 	}
 
 	/**
@@ -34,6 +36,11 @@ class Version
 		$this->Major = $Json[ 'major' ];
 		$this->Minor = $Json[ 'minor' ];
 		$this->Patch = $Json[ 'patch' ];
+
+		if( array_key_exists( 'build', $Json ) )
+		{
+			$this->Build = $Json[ 'build' ];
+		}
 	}
 
 	/**

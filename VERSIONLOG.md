@@ -1,5 +1,9 @@
 # Versions
 
+## 0.7.22 2018-11-01
+* Updated Version data object to add the build number now supported
+by version.json/bump.
+
 ## 0.7.21 2018-10-25
 * Added WebHook and IWebHook.
 * Implemented WebHookPost log destination.
