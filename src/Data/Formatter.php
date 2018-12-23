@@ -8,6 +8,7 @@ class Formatter
 	 * Format currency to n places.
 	 * @param $Number
 	 * @param $Format
+	 * @param $PadLength
 	 * @return string
 	 */
 
