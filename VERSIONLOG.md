@@ -1,6 +1,9 @@
 # Versions
 
 ## 0.7.23
+* Added tests for WebHook.
+* Added WebHookResponse
+* Added ext-json and ext-curl to composer requirements.
 
 ## 0.7.22 2018-11-01
 * Updated Version data object to add the build number now supported
