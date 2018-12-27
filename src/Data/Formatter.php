@@ -4,6 +4,10 @@ namespace Neuron\Data;
 
 class Formatter
 {
+	/**
+	 * @param array $Parts
+	 * @return bool
+	 */
 	public static function ddmmyyyy( array $Parts )
 	{
 		$Match = true;
@@ -28,6 +32,10 @@ class Formatter
 		return $Match;
 	}
 
+	/**
+	 * @param array $Parts
+	 * @return bool
+	 */
 	public static function mmddyyyy( array $Parts )
 	{
 		$Match = true;
@@ -52,6 +60,10 @@ class Formatter
 		return $Match;
 	}
 
+	/**
+	 * @param array $Parts
+	 * @return bool
+	 */
 	public static function yyyymmdd( array $Parts )
 	{
 		$Match = true;
@@ -76,6 +88,10 @@ class Formatter
 		return $Match;
 	}
 
+	/**
+	 * @param string $Date
+	 * @return string
+	 */
 	public static function normalizeDate( string $Date ) : string
 	{
 		$Delimiter = '';
