@@ -89,6 +89,10 @@ class Formatter
 	}
 
 	/**
+	 * Tries to figure out which format the date is in then translates it to yyyy-mm-dd
+	 * Handles -, / and . as delimiters.
+	 * Takes dd/mm/yyyy, mm/dd/yyyy or yyyy/mm/dd
+	 *
 	 * @param string $Date
 	 * @return string
 	 */
