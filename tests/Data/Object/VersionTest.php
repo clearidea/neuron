@@ -2,6 +2,29 @@
 
 class VersionTest extends PHPUnit\Framework\TestCase
 {
+	public function testGetAsString()
+	{
+		$Version = new \Neuron\Data\Object\Version();
+
+		$Version->loadFromString(
+			"{\"major\":1,\"minor\":2,\"patch\":3}"
+		);
+
+		$this->assertEquals(
+			'1.2.3',
+			$Version->getAsString()
+		);
+
+		$Version->loadFromString(
+			"{\"major\":1,\"minor\":2,\"patch\":3,\"build\":4}"
+		);
+
+		$this->assertEquals(
+			'1.2.3 (4)',
+			$Version->getAsString()
+		);
+	}
+
 	public function testLoadFromString()
 	{
 		$Version = new \Neuron\Data\Object\Version();
