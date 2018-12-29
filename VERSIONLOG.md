@@ -1,5 +1,8 @@
 # Versions
 
+## 0.7.24 2018-12-29
+* Added getAsString to Version.
+
 ## 0.7.23 2018-12-27
 * Added tests for WebHook.
 * Added WebHookResponse

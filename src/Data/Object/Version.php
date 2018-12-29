@@ -24,7 +24,7 @@ class Version
 	 * @param $Data
 	 * @throws \Exception
 	 */
-	public function loadFromString( $Data )
+	public function loadFromString( string $Data )
 	{
 		$Json = json_decode( $Data,true );
 
@@ -47,7 +47,7 @@ class Version
 	 * @param string $File
 	 * @throws \Exception
 	 */
-	public function loadFromFile( $File = 'version.json' )
+	public function loadFromFile( string $File = 'version.json' )
 	{
 		if( !file_exists( $File ) )
 		{
@@ -57,5 +57,19 @@ class Version
 		$Data = file_get_contents( $File );
 
 		$this->loadFromString( $Data );
+	}
+
+	/**
+	 * @return string
+	 */
+	public function getAsString() : string
+	{
+		$Release = "{$this->Major}.{$this->Minor}.{$this->Patch}";
+		if( $this->Build )
+		{
+			$Release .= " ({$this->Build})";
+		}
+
+		return $Release;
 	}
 }
