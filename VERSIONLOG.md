@@ -1,5 +1,7 @@
 # Versions
 
+## 0.7.25
+
 ## 0.7.24 2018-12-29
 * Added getAsString to Version.
 
