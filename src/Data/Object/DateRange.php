@@ -2,6 +2,7 @@
 
 namespace Neuron\Data\Object;
 
+use Neuron\Data\Formatter;
 use Neuron\Util\Date;
 
 class DateRange
@@ -11,8 +12,8 @@ class DateRange
 
 	public function __construct( $Start, $End )
 	{
-		$this->Start = $Start;
-		$this->End   = $End;
+		$this->Start = Formatter::dateOnly( $Start );
+		$this->End   = Formatter::dateOnly( $End );
 	}
 
 	/**

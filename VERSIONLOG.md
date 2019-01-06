@@ -1,5 +1,9 @@
 # Versions
 
+## 0.7.25 2018-01-06
+* Added date normalization to the date range constructor. No longer
+  need the fail cases for the validator because the dates can't fail.
+
 ## 0.7.24 2018-12-29
 * Added getAsString to Version.
 

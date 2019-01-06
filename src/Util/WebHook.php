@@ -84,6 +84,11 @@ class WebHook implements IWebHook
 		return $Response;
 	}
 
+	/**
+	 * @param $Url
+	 * @param string $Json
+	 * @return WebHookResponse
+	 */
 	public function postJson( $Url, string $Json ) : WebHookResponse
 	{
 		curl_setopt_array(
