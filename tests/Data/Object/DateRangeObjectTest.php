@@ -23,4 +23,24 @@ class DateRangeObjectTest extends TestCase
 		);
 
 	}
+
+	public function testGetLengthInDaysFormat()
+	{
+		$Range = new DateRange(
+			date( 'm/d/Y' ),
+			date( 'm/d/Y', strtotime( "+7 days" ) )
+		);
+
+		$this->assertEquals(
+			7,
+			$Range->getLengthInDays()
+		);
+
+		$this->assertNotEquals(
+			8,
+			$Range->getLengthInDays()
+		);
+
+	}
+
 }
