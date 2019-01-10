@@ -1,6 +1,6 @@
 # Versions
 
-## 0.7.26
+## 0.7.26 2019-01-10
 * Updated float validation to handle strings and floats.
 
 ## 0.7.25 2018-01-06
