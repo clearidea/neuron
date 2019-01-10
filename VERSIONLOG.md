@@ -1,6 +1,7 @@
 # Versions
 
 ## 0.7.26
+* Updated float validation to handle strings and floats.
 
 ## 0.7.25 2018-01-06
 * Added date normalization to the date range constructor. No longer
