@@ -15,4 +15,20 @@ class TimerTest extends PHPUnit\Framework\TestCase
 
 		$this->assertEquals( $iElapsed, $iOffset );
 	}
+
+	public function testReset()
+	{
+		$Timer = new \Neuron\Util\Timer();
+
+		$Timer->start();
+
+		sleep( 2 );
+
+		$Timer->reset();
+
+		$this->assertEquals(
+			$Timer->getElapsed(),
+			0
+		);
+	}
 }
