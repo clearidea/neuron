@@ -1,6 +1,6 @@
 # Versions
 
-## 0.7.27
+## 0.7.27 0219-02-16
 * Timer now returns elapsed while not stopped.
 * Added Timer::reset()
 
