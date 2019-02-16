@@ -1,5 +1,9 @@
 # Versions
 
+## 0.7.27 0219-02-16
+* Timer now returns elapsed while not stopped.
+* Added Timer::reset()
+
 ## 0.7.26 2019-01-10
 * Updated float validation to handle strings and floats.
 

@@ -11,6 +11,7 @@ class Timer
 {
 	private $_StartTime = 0;
 	private $_StopTime  = 0;
+	private $_MaxTime   = 0;
 
 	/**
 	 * Timer constructor.
@@ -19,6 +20,13 @@ class Timer
 	public function __construct( $iTime = 0 )
 	{
 		$this->_StopTime = $iTime;
+	}
+
+	public function setMaxTime( int $Max ) : Timer
+	{
+		$this->_MaxTime = $Max;
+
+		return $this;
 	}
 
 	/**
@@ -38,10 +46,31 @@ class Timer
 	}
 
 	/**
+	 * Reset all timer values.
+	 */
+	public function reset()
+	{
+		$this->_StartTime = 0;
+		$this->_StopTime  = 0;
+		$this->_MaxTime   = 0;
+	}
+	/**
 	 * @return int Number of seconds elapsed .
 	 */
 	public function getElapsed()
 	{
+		if( $this->_StartTime && !$this->_StopTime )
+		{
+			return time() - $this->_StartTime;
+		}
+
 		return $this->_StopTime - $this->_StartTime;
+	}
+
+	public function execute( $Function )
+	{
+		$Result = $Function();
+
+		return $Result;
 	}
 }
