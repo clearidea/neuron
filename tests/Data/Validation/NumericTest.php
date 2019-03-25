@@ -10,7 +10,7 @@ class NumericTest extends PHPUnit\Framework\TestCase
 	{
 		parent::setUp();
 		
-		$this->_Validator = new \Neuron\Data\Validation\Numeric();
+		$this->_Validator = new Numeric();
 	}
 
 	public function testPass()
