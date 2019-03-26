@@ -1,6 +1,7 @@
 # Versions
 
-## 0.7.28
+## 0.7.28 2019-03-26
+* Numeric validation class created.
 
 ## 0.7.27 0219-02-16
 * Timer now returns elapsed while not stopped.
