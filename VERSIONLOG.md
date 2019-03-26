@@ -1,5 +1,8 @@
 # Versions
 
+## 0.7.29 2019-03-26
+* Boolean validator refactor to pass values "on, off, yes, no" as boolean.
+
 ## 0.7.28 2019-03-26
 * Numeric validation class created.
 
