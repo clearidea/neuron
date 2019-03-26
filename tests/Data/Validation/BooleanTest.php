@@ -34,7 +34,7 @@ class BooleanTestTest extends PHPUnit\Framework\TestCase
 
 		$this->assertTrue( $Validator->isValid( 'on' ) );
 		$this->assertTrue( $Validator->isValid( 'yes' ) );
-		$this->assertFalse( $Validator->isValid( 'off' ) );
-		$this->assertFalse( $Validator->isValid( 'no' ) );
+		$this->assertTrue( $Validator->isValid( 'off' ) );
+		$this->assertTrue( $Validator->isValid( 'no' ) );
 	}
 }
