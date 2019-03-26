@@ -33,7 +33,7 @@ class Boolean extends Base
 
 			$Value = strtolower( $Value );
 
-			if( $Value === 'false' || $Value == 'true' || $Value == 'on' || $Value == 'yes' )
+			if( $Value === 'false' || $Value == 'true' || $Value == 'on' || $Value == 'yes' || $Value == 'no' || $Value == 'off' )
 			{
 				$Result = true;
 			}
