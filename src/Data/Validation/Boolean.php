@@ -31,11 +31,12 @@ class Boolean extends Base
 				$Result = true;
 			}
 
-			if( strtolower( $Value ) === 'false' || strtolower( $Value ) == 'true' )
+			$Value = strtolower( $Value );
+
+			if( $Value === 'false' || $Value == 'true' || $Value == 'on' || $Value == 'yes' )
 			{
 				$Result = true;
 			}
-
 		}
 		else
 		{
