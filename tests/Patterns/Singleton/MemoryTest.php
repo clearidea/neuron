@@ -7,7 +7,7 @@ class SingletonTest extends \Neuron\Patterns\Singleton\Memory
 
 class MemoryTest extends PHPUnit\Framework\TestCase
 {
-	protected function setUp()
+	protected function setUp(): void
 	{
 	}
 
@@ -26,7 +26,7 @@ class MemoryTest extends PHPUnit\Framework\TestCase
 		);
 	}
 
-	protected function tearDown()
+	protected function tearDown(): void
 	{
 	}
 }

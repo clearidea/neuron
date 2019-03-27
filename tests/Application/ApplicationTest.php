@@ -40,7 +40,7 @@ class ApplicationTest extends PHPUnit\Framework\TestCase
 {
 	private $_App;
 
-	public function setup()
+	public function setup(): void
 	{
 		$this->_App = new AppMock();
 	}

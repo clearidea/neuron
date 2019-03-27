@@ -12,7 +12,7 @@ class StringDataTest extends PHPUnit\Framework\TestCase
 
 	public $String;
 
-	public function setUp()
+	public function setUp(): void
 	{
 		$this->String = new \Neuron\Data\StringData( $this::DATA );
 

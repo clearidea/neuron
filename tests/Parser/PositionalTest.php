@@ -8,7 +8,7 @@
 
 class PositionalTest extends PHPUnit\Framework\TestCase
 {
-	protected function setUp()
+	protected function setUp(): void
 	{
 	}
 
@@ -29,7 +29,7 @@ class PositionalTest extends PHPUnit\Framework\TestCase
 		$this->assertEquals( 'text2', $aRet[ 'col2' ] );
 	}
 
-	protected function tearDown()
+	protected function tearDown(): void
 	{
 	}
 }

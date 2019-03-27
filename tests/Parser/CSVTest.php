@@ -1,7 +1,7 @@
 <?php
 class CSVTest extends PHPUnit\Framework\TestCase
 {
-	protected function setUp()
+	protected function setUp(): void
 	{
 	}
 
@@ -19,7 +19,7 @@ class CSVTest extends PHPUnit\Framework\TestCase
 		$this->assertEquals( 'text4', $aRet[ 'col4' ] );
 	}
 
-	protected function tearDown()
+	protected function tearDown(): void
 	{
 	}
 }

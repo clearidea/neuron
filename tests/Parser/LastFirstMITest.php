@@ -8,7 +8,7 @@
 
 class LastFirstMITest extends PHPUnit\Framework\TestCase
 {
-	protected function setUp()
+	protected function setUp(): void
 	{
 	}
 
@@ -24,7 +24,7 @@ class LastFirstMITest extends PHPUnit\Framework\TestCase
 		$this->assertEquals( $sLast,		'Newman' );
 	}
 
-	protected function tearDown()
+	protected function tearDown(): void
 	{
 	}
 }

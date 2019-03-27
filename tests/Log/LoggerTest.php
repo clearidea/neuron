@@ -11,7 +11,7 @@ class LoggerTest extends PHPUnit\Framework\TestCase
 {
 	public $_Logger;
 
-	public function setUp()
+	public function setUp(): void
 	{
 		$this->_Logger = new Neuron\Log\Logger(
 			new Neuron\Log\Destination\Echoer(
