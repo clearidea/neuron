@@ -11,6 +11,9 @@ class PhoneNumber extends Base
 	const US            = 10;
 	const INTERNATIONAL = 20;
 
+	const US_PATTERN            = "/^[0-9]{3}-[0-9]{3}-[0-9]{4}$/";
+	const INTERNATIONAL_PATTERN = "/^\+(?:[0-9] ?){6,14}[0-9]$/";
+
 	public $_Type;
 
 	/**
@@ -42,9 +45,9 @@ class PhoneNumber extends Base
 	{
 		if( $this->getType() == self::INTERNATIONAL )
 		{
-			return preg_match("/^\+(?:[0-9] ?){6,14}[0-9]$/", $data ) == 1 ? true : false;
+			return preg_match(self::INTERNATIONAL_PATTERN, $data ) == 1 ? true : false;
 		}
 
-		return preg_match("/^[0-9]{3}-[0-9]{3}-[0-9]{4}$/", $data ) == 1 ? true : false;
+		return preg_match(self::US_PATTERN, $data ) == 1 ? true : false;
 	}
 }
