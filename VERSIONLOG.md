@@ -1,6 +1,7 @@
 # Versions
 
-## 0.7.30
+## 0.7.30 2019-05-21
+* Constants defined for international and US phone number regex patterns.
 
 ## 0.7.29 2019-03-26
 * Boolean validator refactor to pass values "on, off, yes, no" as boolean.
