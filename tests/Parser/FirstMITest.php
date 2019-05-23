@@ -1,13 +1,14 @@
 <?php
 
 use Neuron\Parser\FirstMI;
+use PHPUnit\Framework\TestCase;
 
-class FirstMITest extends PHPUnit_Framework_TestCase
+class FirstMITest extends PHPUnit\Framework\TestCase
 {
 
 	public function testParse()
 	{
-		$Parser = new \Neuron\Parser\LastFirstMI();
+		$Parser = new \Neuron\Parser\FirstMI();
 
 		list( $First, $Middle ) = $Parser->parse( "Alfred E" );
 
@@ -17,7 +18,7 @@ class FirstMITest extends PHPUnit_Framework_TestCase
 
 	public function testParseWithPeriod()
 	{
-		$Parser = new \Neuron\Parser\LastFirstMI();
+		$Parser = new \Neuron\Parser\FirstMI();
 
 		list( $First, $Middle ) = $Parser->parse( "Alfred E." );
 
@@ -25,4 +26,13 @@ class FirstMITest extends PHPUnit_Framework_TestCase
 		$this->assertEquals( $Middle,	'E' );
 	}
 
+	public function testFirstOnly()
+	{
+		$Parser = new \Neuron\Parser\FirstMI();
+
+		list( $First, $Middle ) = $Parser->parse( "Alfred" );
+
+		$this->assertEquals( $First,	'Alfred' );
+		$this->assertEquals( $Middle,	'' );
+	}
 }
