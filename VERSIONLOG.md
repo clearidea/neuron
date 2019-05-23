@@ -3,6 +3,8 @@
 ## 0.7.31 2019-05-22
 * Added FirstMI parser.
 
+## 0.7.31
+
 ## 0.7.30 2019-05-21
 * Constants defined for international and US phone number regex patterns.
 
