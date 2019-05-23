@@ -4,5 +4,5 @@ namespace Neuron\Parser;
 
 interface IParser
 {
-	public function parse( $sText, $UserData = array() );
+	public function parse($Text, $UserData = array() );
 }

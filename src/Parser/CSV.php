@@ -7,26 +7,26 @@ class CSV implements IParser
 	public $_aResults;
 
 	/**
-	 * @param $sText
-	 * @param array $aColumns
+	 * @param $Text
+	 * @param array $columns
 	 * @return array|bool
 	 */
 
-	public function parse( $sText, $aColumns = array() )
+	public function parse($Text, $columns = array() )
 	{
 		$aResults = array();
 
-		$aData = str_getcsv( $sText );
+		$aData = str_getcsv( $Text );
 
 		$idx = 0;
 
-		foreach( $aColumns as $sColumn )
+		foreach($columns as $sColumn )
 		{
 			$aResults[ $sColumn ] = $aData[ $idx ];
 			++$idx;
 		}
 
-		if( count( $aColumns ) != count( $aData ) )
+		if( count( $columns ) != count( $aData ) )
 		{
 			$this->_aResults = $aResults;
 			return false;

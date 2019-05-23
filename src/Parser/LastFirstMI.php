@@ -14,16 +14,16 @@ class LastFirstMI implements IParser
 	/**
 	 * Parses Last, First M
 	 *
-	 * @param $sText
-	 * @param array $aLocations
+	 * @param $Text
+	 * @param array $Locations
 	 * @return array first, middle, last
 	 *
 	 * @SuppressWarnings(PHPMD)
 	 */
 
-	public function parse( $sText, $aLocations = array() )
+	public function parse($Text, $Locations = array() )
 	{
-		$aName = explode( ',', $sText );
+		$aName = explode( ',', $Text );
 
 		$sFirst  = trim( $aName[ 1 ] );
 		$sMiddle = '';
