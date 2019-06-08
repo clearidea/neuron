@@ -1,4 +1,5 @@
 ## 0.7.32
+* Updated the timer object to support lap type functionality.
 
 ## 0.7.31 2019-05-22
 * Added FirstMI parser.
