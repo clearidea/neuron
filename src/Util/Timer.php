@@ -4,7 +4,6 @@ namespace Neuron\Util;
 
 /**
  * Class for performing stopwatch functions.
- * @todo add laps.
  * @package Neuron\Util
  */
 class Timer
@@ -12,6 +11,8 @@ class Timer
 	private $_StartTime = 0;
 	private $_StopTime  = 0;
 	private $_MaxTime   = 0;
+
+	private $_Laps = [];
 
 	/**
 	 * Timer constructor.
@@ -54,6 +55,20 @@ class Timer
 		$this->_StopTime  = 0;
 		$this->_MaxTime   = 0;
 	}
+
+	public function lap( string $Name ) : int
+	{
+		$Current              = $this->getElapsed();
+		$this->_Laps[ $Name ] = $Current;
+
+		return $Current;
+	}
+
+	public function getLaps() : array
+	{
+		return $this->_Laps;
+	}
+
 	/**
 	 * @return int Number of seconds elapsed .
 	 */
