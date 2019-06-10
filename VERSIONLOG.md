@@ -1,4 +1,7 @@
 ## 0.7.33
+* Added SystemTimer singleton.
+* Updated timer start to call resit.
+* Added ITimer interface.
 
 ## 0.7.32
 * Updated the timer object to support lap type functionality.
