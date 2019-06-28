@@ -2,10 +2,82 @@
 
 namespace Neuron\Util;
 
+use Neuron\Data\Object\DateRange;
 use Neuron\Util;
 
 class Date
 {
+	/**
+	 * Return today's date
+	 * @return false|string
+	 */
+	static function today()
+	{
+		return date( 'Y-m-d' );
+	}
+
+	/**
+	 * Return tomorrow's date
+	 * @return false|string
+	 */
+	static function tomorrow()
+	{
+		return date( 'Y-m-d', strtotime( 'tomorrow' ) );
+	}
+
+	/**
+	 * Return yesterday's date
+	 * @return false|string
+	 */
+	static function yesterday()
+	{
+		return date( 'Y-m-d', strtotime( '-1 day' ) );
+	}
+
+	/**
+	 * Get the day name for a date.
+	 * @param $Date
+	 * @return false|string
+	 */
+	static function getDay( $Date )
+	{
+		return date('l', strtotime( $Date ) );
+	}
+
+	/**
+	 * Is the date on a weekend?
+	 * @param $Date
+	 * @return bool
+	 */
+	static function isWeekend( $Date )
+	{
+		return ( self::getDay( $Date ) == 'Saturday' ||
+					self::getDay( $Date ) == 'Sunday' );
+	}
+
+	/**
+	 * Get the number of working days in a date range.
+	 * @param DateRange $Range
+	 * @return int
+	 */
+	static function getWorkingDays( DateRange $Range )
+	{
+		$Days = 0;
+
+		$Start = self::dateToJulian( $Range->Start );
+		$End   = self::dateToJulian( $Range->End );
+
+		for( $Julian = $Start; $Julian < $End; $Julian++ )
+		{
+			if( !self::isWeekend( self::julianToDate( $Julian ) ) )
+			{
+				$Days++;
+			}
+		}
+
+		return $Days;
+	}
+
 	/**
 	 * @param $DateTime
 	 * @return false|string
