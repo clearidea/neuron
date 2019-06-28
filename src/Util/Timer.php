@@ -6,7 +6,7 @@ namespace Neuron\Util;
  * Class for performing stopwatch functions.
  * @package Neuron\Util
  */
-class Timer
+class Timer implements ITimer
 {
 	private $_StartTime = 0;
 	private $_StopTime  = 0;
@@ -35,6 +35,7 @@ class Timer
 	 */
 	public function start()
 	{
+		$this->reset();
 		$this->_StartTime = time();
 	}
 
@@ -54,6 +55,7 @@ class Timer
 		$this->_StartTime = 0;
 		$this->_StopTime  = 0;
 		$this->_MaxTime   = 0;
+		$this->_Laps      = [];
 	}
 
 	public function lap( string $Name ) : int

@@ -1,3 +1,9 @@
+## 0.7.33 2019-06-28
+* Added SystemTimer singleton.
+* Updated timer start to call resit.
+* Added ITimer interface.
+* Added date today, tomorrow, yesterday, isWeekend, getDay, getWorkingDays.
+
 ## 0.7.32
 * Updated the timer object to support lap type functionality.
 
