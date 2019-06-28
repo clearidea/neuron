@@ -1,3 +1,5 @@
+## 0.7.34
+
 ## 0.7.33 2019-06-28
 * Added SystemTimer singleton.
 * Updated timer start to call resit.
