@@ -1,3 +1,5 @@
+## 0.7.35
+
 ## 0.7.34 2020-02-25
 * Fixed an issue with filterscalar array using the wrong datatype.
 
