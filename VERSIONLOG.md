@@ -1,4 +1,5 @@
 ## 0.7.34
+* Fixed an issue with filterscalar array using the wrong datatype.
 
 ## 0.7.33 2019-06-28
 * Added SystemTimer singleton.
