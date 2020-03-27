@@ -1,6 +1,8 @@
 <?php
 
-class DatelTest extends PHPUnit\Framework\TestCase
+use Neuron\Util\Date;
+
+class DateUtilTest extends PHPUnit\Framework\TestCase
 {
 	protected function setUp()
 	{
@@ -15,6 +17,30 @@ class DatelTest extends PHPUnit\Framework\TestCase
 		$this->assertEquals(
 			Neuron\Util\Date::only( '2018-01-15 01:02:03' ),
 			'2018-01-15'
+		);
+	}
+
+	public function testToday()
+	{
+		$this->assertEquals(
+			Neuron\Util\Date::today(),
+			date( 'Y-m-d' )
+		);
+	}
+
+	public function testTomorrow()
+	{
+		$this->assertEquals(
+			Neuron\Util\Date::tomorrow(),
+			date( 'Y-m-d', strtotime( 'tomorrow' ) )
+		);
+	}
+
+	public function testYesterday()
+	{
+		$this->assertEquals(
+			Neuron\Util\Date::yesterday(),
+			date( 'Y-m-d', strtotime( 'yesterday' ) )
 		);
 	}
 
@@ -210,12 +236,44 @@ class DatelTest extends PHPUnit\Framework\TestCase
 		);
 
 		$this->assertEquals(
-				1,
+			1,
 			\Neuron\Util\Date::compare(
 				'2020-03-27 13:00:00',
 				'2020-03-27 12:00:00'
 			)
 		);
+	}
 
+	public function testGetDay()
+	{
+		$this->assertEquals(
+			Date::getDay( '2019-06-28' ),
+			'Friday'
+		);
+	}
+
+	public function testIsWeekend()
+	{
+		$this->assertTrue(
+			Date::isWeekend( '2019-06-29' )
+		);
+
+		$this->assertTrue(
+			Date::isWeekend( '2019-06-30' )
+		);
+
+		$this->assertFalse(
+			Date::isWeekend( '2019-06-28' )
+		);
+	}
+
+	public function testWorkingDays()
+	{
+		$this->assertEquals(
+			Date::getWorkingDays(
+				new \Neuron\Data\Object\DateRange( '2019-06-01', '2019-06-30' )
+			),
+			20
+		);
 	}
 }

@@ -1,11 +1,15 @@
-## 0.7.34
+## 0.7.35
 * Added date compare.
 * Added UnitConversion.
 
-## 0.7.33
+## 0.7.34 2020-02-25
+* Fixed an issue with filterscalar array using the wrong datatype.
+
+## 0.7.33 2019-06-28
 * Added SystemTimer singleton.
 * Updated timer start to call resit.
 * Added ITimer interface.
+* Added date today, tomorrow, yesterday, isWeekend, getDay, getWorkingDays.
 
 ## 0.7.32
 * Updated the timer object to support lap type functionality.
