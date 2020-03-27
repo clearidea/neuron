@@ -1,3 +1,7 @@
+## 0.7.35 2020-03-27
+* Added date compare.
+* Added UnitConversion.
+
 ## 0.7.34 2020-02-25
 * Fixed an issue with filterscalar array using the wrong datatype.
 

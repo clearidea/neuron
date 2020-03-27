@@ -217,6 +217,33 @@ class DateUtilTest extends PHPUnit\Framework\TestCase
 		);
 	}
 
+	public function testDiffDateTime()
+	{
+		$this->assertEquals(
+			0,
+			\Neuron\Util\Date::compare(
+				'2020-03-27 12:00:00',
+				'2020-03-27 12:00:00'
+			)
+		);
+
+		$this->assertEquals(
+			-1,
+			\Neuron\Util\Date::compare(
+				'2020-03-27 11:00:00',
+				'2020-03-27 12:00:00'
+			)
+		);
+
+		$this->assertEquals(
+			1,
+			\Neuron\Util\Date::compare(
+				'2020-03-27 13:00:00',
+				'2020-03-27 12:00:00'
+			)
+		);
+	}
+
 	public function testGetDay()
 	{
 		$this->assertEquals(
