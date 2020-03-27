@@ -1,3 +1,7 @@
+## 0.7.34
+* Added date compare.
+* Added UnitConversion.
+
 ## 0.7.33
 * Added SystemTimer singleton.
 * Updated timer start to call resit.

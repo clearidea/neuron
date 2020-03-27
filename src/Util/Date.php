@@ -345,22 +345,24 @@ class Date
 		return date( "Y-m-d", $date );
 	}
 
-	//////////////////////////////////////////////////////////////////////////
-	///
-	/// Computes the difference between two dates.
-	///
-	/// @param $endDate The end of the date range.
-	/// @param $beginDate The beginning of the date range.
-	///
-	/// @return The difference between the two dates it days.
-	///
-	//////////////////////////////////////////////////////////////////////////
-
-	static function diff( $endDate, $beginDate )
+	static function diff( $endDate, $beginDate ) : int
 	{
 		$start_date = Util\Date::dateToJulian( $beginDate );
 		$end_date   = Util\Date::dateToJulian( $endDate );
 
 		return $end_date - $start_date;
+	}
+
+	/**
+	 * @param string $First
+	 * @param string $Second
+	 * @return int
+	 */
+	static function compare(  string $First, string $Second ) : int
+	{
+		$FirstTs  = strtotime( $First );
+		$SecondTs = strtotime( $Second );
+
+		return $FirstTs <=> $SecondTs;
 	}
 }

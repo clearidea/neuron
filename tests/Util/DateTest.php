@@ -190,4 +190,32 @@ class DatelTest extends PHPUnit\Framework\TestCase
 			Neuron\Util\Date::subtractDays( 8, '2015-01-30' ) == '2015-01-21'
 		);
 	}
+
+	public function testDiffDateTime()
+	{
+		$this->assertEquals(
+			0,
+			\Neuron\Util\Date::compare(
+				'2020-03-27 12:00:00',
+				'2020-03-27 12:00:00'
+			)
+		);
+
+		$this->assertEquals(
+			-1,
+			\Neuron\Util\Date::compare(
+				'2020-03-27 11:00:00',
+				'2020-03-27 12:00:00'
+			)
+		);
+
+		$this->assertEquals(
+				1,
+			\Neuron\Util\Date::compare(
+				'2020-03-27 13:00:00',
+				'2020-03-27 12:00:00'
+			)
+		);
+
+	}
 }
