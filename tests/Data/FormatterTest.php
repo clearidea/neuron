@@ -48,4 +48,22 @@ class FormatterTest extends TestCase
 			Formatter::dateOnly( '23/12/2018')
 		);
 	}
+
+	public function testPhoneNumber()
+	{
+		$this->assertEquals(
+			'(123) 456-7890',
+			Formatter::phoneNumber( '123-456-7890' )
+		);
+
+		$this->assertEquals(
+			'(123) 456-7890',
+			Formatter::phoneNumber( '1234567890' )
+		);
+
+		$this->assertEquals(
+			'234567890',
+			Formatter::phoneNumber( '234567890' )
+		);
+	}
 }

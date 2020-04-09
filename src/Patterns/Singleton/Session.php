@@ -2,7 +2,7 @@
 
 namespace Neuron\Patterns\Singleton;
 
-class SessionSingleton extends Base
+class Session extends Base
 {
 	public function serialize()
 	{
