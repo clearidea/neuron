@@ -1,5 +1,6 @@
 ## 0.7.36
 * Renamed SessionSingleton to Session.
+* Added phone number formatter.
 
 ## 0.7.35 2020-03-27
 * Added date compare.
