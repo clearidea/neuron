@@ -8,7 +8,7 @@ class Session implements IFilter
 		return filter_var( $_SESSION[ $Data ] );
 	}
 
-	public function filterArray( array $Data )
+	public function filterArray( $Data )
 	{
 		return filter_var_array( $Data );
 	}
