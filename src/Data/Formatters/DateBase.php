@@ -1,15 +1,8 @@
 <?php
 
-namespace Neuron\Data;
+namespace Neuron\Data\Formatters;
 
-/**
- * Class Formatter
- * @package Neuron\Data
- *
- * @deprecated
- */
-
-class Formatter
+class DateBase
 {
 	/**
 	 * @param array $Parts
@@ -153,91 +146,5 @@ class Formatter
 		}
 
 		return '';
-	}
-
-	/**
-	 * Format currency to n places.
-	 * @param $Number
-	 * @param $Format
-	 * @param $PadLength
-	 * @return string
-	 */
-
-	public static function currency( $Number, string $Format = "%01.2f", $PadLength = 9 )
-	{
-		return
-			"<pre style='display:inline; background-color: inherit; color:white; border: none;'>".
-				str_pad(
-					sprintf(
-						$Format,
-						round( $Number, 2 )
-					),
-					$PadLength,
-					'_',
-					STR_PAD_LEFT
-				).
-			"</pre>";
-	}
-
-	/**
-	 * @param $DateTime
-	 * @param string $Format
-	 * @return false|string
-	 */
-	public static function dateTime( $DateTime, string $Format = 'Y-m-d g:i a' )
-	{
-		$Parts = explode( ' ', $DateTime );
-		$Date  = self::normalizeDate( $Parts[ 0 ] );
-
-		$DateTime = $Date.' '.$Parts[ 1 ];
-
-		if( count( $Parts ) > 2 )
-		{
-			$DateTime .= ' '.$Parts[ 2 ];
-		}
-
-		return date( $Format, strtotime( $DateTime ) );
-	}
-
-	/**
-	 * @param string $Date
-	 * @param string $Format
-	 * @return false|string
-	 */
-	public static function dateOnly( string $Date, string $Format = 'Y-m-d' )
-	{
-		$Date = self::normalizeDate( $Date );
-		return date( $Format, strtotime( $Date ) );
-	}
-
-	/**
-	 * @param string $Time
-	 * @param string $Format
-	 * @return false|string
-	 */
-	public static function timeOnly( string $Time, string $Format = 'g:i a' )
-	{
-		return date( $Format, strtotime( $Time ) );
-	}
-
-	public static function phoneNumber( string $Phone ) : string
-	{
-		$Phone = preg_replace("/[^0-9]/", "", $Phone );
-
-		if( strlen( $Phone ) == 7 )
-		{
-			$Pre   = substr( $Phone, 0, 3 );
-			$Post  = substr( $Phone, 3, 4 );
-			$Phone = "$Pre-$Post";
-		}
-		else if( strlen( $Phone ) == 10 )
-		{
-			$Area  = substr( $Phone, 0, 3 );
-			$Pre   = substr( $Phone, 3, 3 );
-			$Post  = substr( $Phone, 6, 4 );
-			$Phone = "($Area) $Pre-$Post";
-		}
-
-		return $Phone;
 	}
 }

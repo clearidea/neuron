@@ -8,7 +8,7 @@ class Server implements IFilter
 		return filter_input( INPUT_SERVER, $Data );
 	}
 
-	public function filterArray( array $Data )
+	public function filterArray( $Data )
 	{
 		return filter_input(INPUT_SERVER, $Data,FILTER_DEFAULT, FILTER_REQUIRE_ARRAY );
 	}

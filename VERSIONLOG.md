@@ -1,3 +1,5 @@
+## 0.7.37
+
 ## 0.7.36 2020-04-09
 * Renamed SessionSingleton to Session.
 * Added phone number formatter.
